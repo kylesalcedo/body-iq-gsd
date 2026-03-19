@@ -1,0 +1,342 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum EntityStatus {
+  draft
+  needs_review
+  reviewed
+  verified
+  disputed
+}
+
+enum MuscleRole {
+  primary
+  secondary
+  stabilizer
+  synergist
+  common_association
+}
+
+// ─── Anatomy Layer ───────────────────────────────────────────────────────────
+
+model Region {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  joints      Joint[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+model Joint {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  jointType   String?      // e.g. "ball-and-socket", "hinge", "pivot", "condyloid", "saddle", "gliding"
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  regionId    String
+  region      Region       @relation(fields: [regionId], references: [id])
+  movements   Movement[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+model Movement {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  plane       String?      // sagittal, frontal, transverse
+  axis        String?      // e.g. "medial-lateral", "anterior-posterior", "longitudinal"
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  jointId     String
+  joint       Joint        @relation(fields: [jointId], references: [id])
+  muscles     MovementMuscle[]
+  functionalTasks MovementFunctionalTask[]
+  exercises   ExerciseMovement[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+model Muscle {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  // Anatomy
+  origin      String
+  insertion   String
+  action      String
+  innervation String
+  bloodSupply String
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  movements   MovementMuscle[]
+  exercises   ExerciseMuscle[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+// ─── Weighted Join Tables ────────────────────────────────────────────────────
+
+model MovementMuscle {
+  id         String     @id @default(cuid())
+  role       MuscleRole
+  notes      String?
+  // Relations
+  movementId String
+  movement   Movement   @relation(fields: [movementId], references: [id], onDelete: Cascade)
+  muscleId   String
+  muscle     Muscle     @relation(fields: [muscleId], references: [id], onDelete: Cascade)
+
+  @@unique([movementId, muscleId])
+}
+
+model ExerciseMuscle {
+  id         String     @id @default(cuid())
+  role       MuscleRole
+  notes      String?
+  // Relations
+  exerciseId String
+  exercise   Exercise   @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  muscleId   String
+  muscle     Muscle     @relation(fields: [muscleId], references: [id], onDelete: Cascade)
+
+  @@unique([exerciseId, muscleId])
+}
+
+// ─── Programming Layer ───────────────────────────────────────────────────────
+
+model FunctionalTask {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  category    String?      // e.g. "ADL", "occupational", "sport", "mobility"
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  movements   MovementFunctionalTask[]
+  exercises   ExerciseFunctionalTask[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+model MovementFunctionalTask {
+  id               String         @id @default(cuid())
+  relevance        String?        // e.g. "essential", "supportive"
+  notes            String?
+  movementId       String
+  movement         Movement       @relation(fields: [movementId], references: [id], onDelete: Cascade)
+  functionalTaskId String
+  functionalTask   FunctionalTask @relation(fields: [functionalTaskId], references: [id], onDelete: Cascade)
+
+  @@unique([movementId, functionalTaskId])
+}
+
+model Exercise {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  muscles     ExerciseMuscle[]
+  movements   ExerciseMovement[]
+  functionalTasks ExerciseFunctionalTask[]
+  cues        Cue[]
+  regressions Regression[]
+  progressions Progression[]
+  tags        TagOnEntity[]
+  sources     SourceOnEntity[]
+}
+
+model ExerciseMovement {
+  id         String   @id @default(cuid())
+  notes      String?
+  exerciseId String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  movementId String
+  movement   Movement @relation(fields: [movementId], references: [id], onDelete: Cascade)
+
+  @@unique([exerciseId, movementId])
+}
+
+model ExerciseFunctionalTask {
+  id               String         @id @default(cuid())
+  relevance        String?
+  notes            String?
+  exerciseId       String
+  exercise         Exercise       @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  functionalTaskId String
+  functionalTask   FunctionalTask @relation(fields: [functionalTaskId], references: [id], onDelete: Cascade)
+
+  @@unique([exerciseId, functionalTaskId])
+}
+
+model Cue {
+  id         String   @id @default(cuid())
+  text       String
+  cueType    String?  // e.g. "verbal", "tactile", "visual"
+  order      Int      @default(0)
+  exerciseId String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+}
+
+model Regression {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  order       Int      @default(0)
+  exerciseId  String
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+}
+
+model Progression {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  order       Int      @default(0)
+  exerciseId  String
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+}
+
+// ─── Evidence Layer ──────────────────────────────────────────────────────────
+
+model ResearchSource {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  title       String
+  authors     String?
+  year        Int?
+  journal     String?
+  doi         String?
+  url         String?
+  sourceType  String?      // e.g. "textbook", "journal", "guideline", "expert-opinion"
+  description String?
+  // Validation
+  status      EntityStatus @default(draft)
+  confidence  Float        @default(0.5)
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  // Relations
+  entities    SourceOnEntity[]
+}
+
+model SourceOnEntity {
+  id               String         @id @default(cuid())
+  notes            String?
+  // Polymorphic target
+  entityType       String         // "Region", "Joint", "Movement", "Muscle", "FunctionalTask", "Exercise"
+  // Optional FKs — exactly one should be non-null
+  regionId         String?
+  region           Region?        @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  jointId          String?
+  joint            Joint?         @relation(fields: [jointId], references: [id], onDelete: Cascade)
+  movementId       String?
+  movement         Movement?      @relation(fields: [movementId], references: [id], onDelete: Cascade)
+  muscleId         String?
+  muscle           Muscle?        @relation(fields: [muscleId], references: [id], onDelete: Cascade)
+  functionalTaskId String?
+  functionalTask   FunctionalTask? @relation(fields: [functionalTaskId], references: [id], onDelete: Cascade)
+  exerciseId       String?
+  exercise         Exercise?      @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  // Source
+  sourceId         String
+  source           ResearchSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@index([entityType])
+  @@index([sourceId])
+}
+
+// ─── Tagging ─────────────────────────────────────────────────────────────────
+
+model Tag {
+  id       String        @id @default(cuid())
+  slug     String        @unique
+  name     String
+  category String?       // e.g. "body-system", "difficulty", "equipment"
+  entities TagOnEntity[]
+}
+
+model TagOnEntity {
+  id               String         @id @default(cuid())
+  entityType       String
+  // Optional FKs — exactly one should be non-null
+  regionId         String?
+  region           Region?        @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  jointId          String?
+  joint            Joint?         @relation(fields: [jointId], references: [id], onDelete: Cascade)
+  movementId       String?
+  movement         Movement?      @relation(fields: [movementId], references: [id], onDelete: Cascade)
+  muscleId         String?
+  muscle           Muscle?        @relation(fields: [muscleId], references: [id], onDelete: Cascade)
+  functionalTaskId String?
+  functionalTask   FunctionalTask? @relation(fields: [functionalTaskId], references: [id], onDelete: Cascade)
+  exerciseId       String?
+  exercise         Exercise?      @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  // Tag
+  tagId            String
+  tag              Tag            @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@index([entityType])
+  @@index([tagId])
+}

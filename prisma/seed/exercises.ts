@@ -221,7 +221,7 @@ const exercises: ExerciseDef[] = [
     ],
   },
   {
-    slug: "scapular-retraction",
+    slug: "scapular-retraction-exercise",
     name: "Scapular Retraction Exercise",
     description: "Squeeze shoulder blades together in a seated or standing position. Foundational exercise for scapular stability and posture.",
     confidence: 0.85,

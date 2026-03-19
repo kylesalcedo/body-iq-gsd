@@ -11,6 +11,7 @@ interface MuscleDef {
   innervation: string;
   bloodSupply: string;
   confidence: number;
+  notes?: string;
 }
 
 interface MovementMuscleDef {

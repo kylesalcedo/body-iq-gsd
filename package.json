@@ -11,7 +11,8 @@
     "db:seed": "tsx prisma/seed/seed.ts",
     "db:studio": "prisma studio",
     "db:generate": "prisma generate",
-    "validate:schemas": "tsx src/lib/schemas/validate.ts"
+    "validate:schemas": "tsx src/lib/schemas/validate.ts",
+    "data:quality": "tsx scripts/data-quality.ts"
   },
   "dependencies": {
     "next": "^14.2.0",

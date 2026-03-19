@@ -317,6 +317,288 @@ const exercises: ExerciseDef[] = [
       { name: "Single-Leg Mini Squat", description: "Progress to a single-leg mini squat to challenge knee extension in a functional weight-bearing pattern." },
     ],
   },
+  // ── Additional Exercises (covering remaining movement gaps) ─────────────
+  {
+    slug: "overhead-press",
+    name: "Overhead Press (Seated)",
+    description: "Seated shoulder press with dumbbells or resistance band. Combines shoulder flexion and abduction to lift weight overhead. Foundational upper extremity strengthening exercise.",
+    confidence: 0.85,
+    movementSlugs: ["shoulder-flexion", "shoulder-abduction", "elbow-extension"],
+    muscleRoles: [
+      { muscleSlug: "anterior-deltoid", role: "primary" },
+      { muscleSlug: "middle-deltoid", role: "primary" },
+      { muscleSlug: "supraspinatus", role: "synergist", notes: "Initiates abduction" },
+      { muscleSlug: "triceps-brachii", role: "secondary" },
+      { muscleSlug: "trapezius-upper", role: "stabilizer", notes: "Scapular upward rotation" },
+      { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "Scapular stability" },
+    ],
+    functionalTaskSlugs: ["reaching-overhead"],
+    cues: [
+      { text: "Press straight up — don't let the weights drift forward", cueType: "verbal" },
+      { text: "Keep your core braced and back against the chair", cueType: "verbal" },
+      { text: "Lower the weights to shoulder height with control", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Wall Slide", description: "Stand with back against wall, slide arms up in a Y pattern. No external load — focuses on scapular mechanics." },
+      { name: "Band Press", description: "Use a light resistance band instead of weights for reduced load." },
+    ],
+    progressions: [
+      { name: "Standing Overhead Press", description: "Perform standing to increase core stability demand." },
+      { name: "Single-Arm Press", description: "Press one arm at a time to increase unilateral demand and anti-rotation challenge." },
+    ],
+  },
+  {
+    slug: "shoulder-internal-rotation-exercise",
+    name: "Resisted Internal Rotation",
+    description: "Side-lying or standing with band/cable. Rotate forearm inward against resistance while keeping elbow at side. Targets subscapularis and internal rotators.",
+    confidence: 0.85,
+    movementSlugs: ["shoulder-internal-rotation"],
+    muscleRoles: [
+      { muscleSlug: "subscapularis", role: "primary" },
+      { muscleSlug: "pectoralis-major", role: "secondary", notes: "Sternal head assists" },
+      { muscleSlug: "latissimus-dorsi", role: "secondary" },
+      { muscleSlug: "anterior-deltoid", role: "synergist" },
+    ],
+    cues: [
+      { text: "Keep your elbow pinned to your side throughout", cueType: "verbal" },
+      { text: "Rotate inward slowly, then return even slower", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Active-Assisted IR", description: "Use a cane or dowel to assist the movement with the other hand." },
+    ],
+    progressions: [
+      { name: "90/90 Internal Rotation", description: "Shoulder abducted to 90°, elbow at 90°. Rotate forearm down against resistance." },
+    ],
+  },
+  {
+    slug: "wall-push-up",
+    name: "Wall Push-Up",
+    description: "Standing push-up against a wall. Combines shoulder flexion/adduction with elbow extension and scapular protraction. Low-load entry point for pushing exercises.",
+    confidence: 0.9,
+    movementSlugs: ["shoulder-adduction", "shoulder-flexion", "elbow-extension", "scapular-protraction"],
+    muscleRoles: [
+      { muscleSlug: "pectoralis-major", role: "primary" },
+      { muscleSlug: "anterior-deltoid", role: "secondary" },
+      { muscleSlug: "triceps-brachii", role: "secondary" },
+      { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "Scapular protraction at end range" },
+    ],
+    cues: [
+      { text: "Keep your body in a straight line — don't sag at the hips", cueType: "verbal" },
+      { text: "Lower your chest toward the wall, then push back", cueType: "verbal" },
+      { text: "Push through at the end to round your upper back slightly (plus)", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Wall Lean", description: "Just lean into the wall with arms extended. Isometric hold without the push-up motion." },
+    ],
+    progressions: [
+      { name: "Incline Push-Up", description: "Use a counter or bench instead of a wall. Increases the percentage of body weight." },
+      { name: "Floor Push-Up", description: "Standard push-up on the floor." },
+    ],
+  },
+  {
+    slug: "bicep-curl",
+    name: "Bicep Curl",
+    description: "Standing or seated elbow flexion with dumbbell or resistance band. The forearm moves from extension to full flexion. Fundamental upper extremity strengthening.",
+    confidence: 0.9,
+    movementSlugs: ["elbow-flexion", "forearm-supination"],
+    muscleRoles: [
+      { muscleSlug: "biceps-brachii", role: "primary" },
+      { muscleSlug: "brachialis", role: "primary" },
+      { muscleSlug: "supinator", role: "synergist", notes: "Maintains supination" },
+    ],
+    functionalTaskSlugs: ["gripping-cup"],
+    cues: [
+      { text: "Keep your elbows at your sides — don't swing", cueType: "verbal" },
+      { text: "Turn your palm up as you curl (supinate)", cueType: "verbal" },
+      { text: "Lower slowly — the eccentric phase matters", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Gravity-Eliminated Curl", description: "Side-lying with arm supported, curl with no gravity resistance." },
+    ],
+    progressions: [
+      { name: "Hammer Curl", description: "Perform with neutral grip (thumbs up). Increases brachioradialis involvement." },
+      { name: "Eccentric-Focused Curl", description: "Take 5 seconds to lower the weight. Use the other hand to assist the concentric phase if needed." },
+    ],
+  },
+  {
+    slug: "tricep-extension",
+    name: "Tricep Extension (Overhead)",
+    description: "Overhead elbow extension with dumbbell or band. Fully lengthens the long head of the triceps across both joints. Complements pushing exercises.",
+    confidence: 0.85,
+    movementSlugs: ["elbow-extension", "shoulder-extension"],
+    muscleRoles: [
+      { muscleSlug: "triceps-brachii", role: "primary" },
+    ],
+    functionalTaskSlugs: ["pushing-up-from-chair"],
+    cues: [
+      { text: "Keep your upper arm vertical — only the forearm should move", cueType: "verbal" },
+      { text: "Extend fully, then lower with control", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Seated Kickback", description: "Lean forward with elbow at side, extend forearm backward. Reduced shoulder demand." },
+    ],
+    progressions: [
+      { name: "Two-Arm Extension", description: "Use a heavier weight with both hands behind the head." },
+    ],
+  },
+  {
+    slug: "forearm-pronation-supination",
+    name: "Forearm Pronation/Supination with Hammer",
+    description: "Seated with elbow on thigh, rotate forearm using a weighted hammer or dowel. The offset weight creates torque for resisted pronation and supination.",
+    confidence: 0.8,
+    movementSlugs: ["forearm-pronation", "forearm-supination"],
+    muscleRoles: [
+      { muscleSlug: "pronator-teres", role: "primary", notes: "During pronation" },
+      { muscleSlug: "supinator", role: "primary", notes: "During supination" },
+      { muscleSlug: "biceps-brachii", role: "secondary", notes: "Assists supination" },
+    ],
+    functionalTaskSlugs: ["opening-jar"],
+    cues: [
+      { text: "Keep your elbow still — only rotate the forearm", cueType: "verbal" },
+      { text: "Move through full range slowly in both directions", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Unweighted Rotation", description: "Rotate the forearm without resistance, just focusing on full range." },
+    ],
+    progressions: [
+      { name: "Longer Lever", description: "Hold the hammer further from the head to increase torque." },
+    ],
+  },
+  {
+    slug: "wrist-radial-ulnar-deviation",
+    name: "Wrist Deviation Exercise (Radial/Ulnar)",
+    description: "Seated with forearm on thigh, wrist hanging off edge. Move wrist side to side with light weight. Targets wrist deviators used in gripping and tool use.",
+    confidence: 0.75,
+    movementSlugs: ["radial-deviation", "ulnar-deviation"],
+    muscleRoles: [
+      { muscleSlug: "flexor-carpi-radialis", role: "primary", notes: "Radial deviation" },
+      { muscleSlug: "extensor-carpi-radialis-longus", role: "primary", notes: "Radial deviation" },
+      { muscleSlug: "flexor-carpi-ulnaris", role: "primary", notes: "Ulnar deviation" },
+    ],
+    functionalTaskSlugs: ["opening-jar", "typing"],
+    cues: [
+      { text: "Move the wrist side to side — thumb side then pinky side", cueType: "verbal" },
+      { text: "Keep the forearm still on your thigh", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "No Weight", description: "Perform without weight, focusing on range of motion." },
+    ],
+    progressions: [
+      { name: "Hammer Deviation", description: "Hold a hammer by the end — the offset weight increases resistance through deviation range." },
+    ],
+  },
+  {
+    slug: "grip-strengthening",
+    name: "Grip Strengthening (Squeeze Ball)",
+    description: "Squeeze a therapy ball or putty, then release. Trains finger flexion and grip strength used in all hand activities of daily living.",
+    confidence: 0.85,
+    movementSlugs: ["finger-flexion", "finger-extension"],
+    muscleRoles: [
+      { muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
+      { muscleSlug: "extensor-digitorum", role: "secondary", notes: "Active release phase" },
+      { muscleSlug: "opponens-pollicis", role: "synergist", notes: "Thumb positioning" },
+    ],
+    functionalTaskSlugs: ["gripping-cup", "opening-jar"],
+    cues: [
+      { text: "Squeeze firmly and hold for 3-5 seconds", cueType: "verbal" },
+      { text: "Spread your fingers fully between squeezes", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Softer Ball", description: "Use a softer therapy putty or partially inflated ball to reduce resistance." },
+    ],
+    progressions: [
+      { name: "Grip Trainer", description: "Use an adjustable grip trainer to progressively increase resistance." },
+      { name: "Towel Wringing", description: "Wring out a wet towel — combines grip with forearm rotation." },
+    ],
+  },
+  {
+    slug: "thumb-opposition-exercise",
+    name: "Thumb Opposition Exercise",
+    description: "Touch the thumb to each fingertip in sequence, then reverse. Trains opposition coordination used in fine motor tasks.",
+    confidence: 0.8,
+    movementSlugs: ["thumb-opposition"],
+    muscleRoles: [
+      { muscleSlug: "opponens-pollicis", role: "primary" },
+    ],
+    functionalTaskSlugs: ["gripping-cup", "typing"],
+    cues: [
+      { text: "Touch your thumb firmly to each fingertip, making an O shape", cueType: "verbal" },
+      { text: "Go slowly and make each touch precise", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Assisted Opposition", description: "Use the other hand to guide the thumb through the pattern." },
+    ],
+    progressions: [
+      { name: "Putty Pinch", description: "Pinch therapy putty between thumb and each finger for resistive opposition." },
+    ],
+  },
+  {
+    slug: "hip-adduction-sidelying",
+    name: "Sidelying Hip Adduction",
+    description: "Lie on side with top leg forward on a support. Lift the bottom leg toward ceiling. Targets adductor group for medial thigh strengthening.",
+    confidence: 0.8,
+    movementSlugs: ["hip-adduction"],
+    muscleRoles: [
+      { muscleSlug: "adductor-group", role: "primary" },
+    ],
+    functionalTaskSlugs: ["walking"],
+    cues: [
+      { text: "Keep your bottom leg straight as you lift", cueType: "verbal" },
+      { text: "Lift only until you feel the inner thigh working — don't roll your pelvis", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Ball Squeeze", description: "Squeeze a ball between the knees while supine. Isometric adduction with less balance demand." },
+    ],
+    progressions: [
+      { name: "Standing Cable Adduction", description: "Stand and pull a cable inward across the body against resistance." },
+    ],
+  },
+  {
+    slug: "seated-hip-internal-rotation",
+    name: "Seated Hip Internal Rotation",
+    description: "Sit on edge of chair with feet on floor. Rotate the shin outward (foot moves out) to internally rotate the hip. Often limited in hip pathology.",
+    confidence: 0.75,
+    notes: "Hip internal rotation is commonly limited. Assessment of ROM should precede strengthening.",
+    movementSlugs: ["hip-internal-rotation"],
+    muscleRoles: [
+      { muscleSlug: "gluteus-medius", role: "primary", notes: "Anterior fibers" },
+    ],
+    functionalTaskSlugs: ["walking"],
+    cues: [
+      { text: "Keep your knee still — only the foot moves outward", cueType: "verbal" },
+      { text: "You should feel the side of your hip working", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Passive IR Stretch", description: "Gently stretch into internal rotation without active resistance. Focus on ROM first." },
+    ],
+    progressions: [
+      { name: "Band-Resisted IR", description: "Add a resistance band around the ankle for resistive internal rotation." },
+    ],
+  },
+  {
+    slug: "ankle-inversion-eversion",
+    name: "Resisted Ankle Inversion/Eversion",
+    description: "Seated with resistance band around foot. Turn the sole inward (inversion) and outward (eversion) against band resistance. Critical for ankle stability and injury prevention.",
+    confidence: 0.85,
+    movementSlugs: ["foot-inversion", "foot-eversion"],
+    muscleRoles: [
+      { muscleSlug: "tibialis-anterior", role: "primary", notes: "Inversion" },
+      { muscleSlug: "tibialis-posterior", role: "primary", notes: "Inversion" },
+      { muscleSlug: "peroneus-longus", role: "primary", notes: "Eversion" },
+    ],
+    functionalTaskSlugs: ["walking"],
+    cues: [
+      { text: "Turn your sole inward against the band, then slowly release", cueType: "verbal" },
+      { text: "For eversion: turn your sole outward against the band", cueType: "verbal" },
+      { text: "Keep your knee still — only the ankle moves", cueType: "verbal" },
+    ],
+    regressions: [
+      { name: "Active ROM", description: "Perform inversion/eversion without resistance to build motor control." },
+    ],
+    progressions: [
+      { name: "Single-Leg Balance", description: "Stand on one foot on an unstable surface. Challenges dynamic inversion/eversion reactively." },
+    ],
+  },
 ];
 
 export async function seedExercises() {

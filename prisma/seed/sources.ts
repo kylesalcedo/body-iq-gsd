@@ -77,54 +77,60 @@ export async function seedSources() {
 
   logCount("sources", sources.length);
 
-  // Wire some sources to entities as examples
+  // Wire sources broadly to entities
   logSection("Source–Entity links");
   const neumannSource = await prisma.researchSource.findUnique({ where: { slug: "neumann-kinesiology-2017" } });
+  const kendallSource = await prisma.researchSource.findUnique({ where: { slug: "kendall-muscles-2005" } });
   const kisnerSource = await prisma.researchSource.findUnique({ where: { slug: "kisner-therapeutic-2017" } });
+  const mageeSource = await prisma.researchSource.findUnique({ where: { slug: "magee-orthopedic-2014" } });
+  const acsmSource = await prisma.researchSource.findUnique({ where: { slug: "acsm-guidelines-2021" } });
+
+  async function linkSource(sourceId: string, entityType: string, entityId: string, field: string, notes: string) {
+    const existing = await prisma.sourceOnEntity.findFirst({
+      where: { sourceId, [field]: entityId },
+    });
+    if (!existing) {
+      await prisma.sourceOnEntity.create({
+        data: { entityType, [field]: entityId, sourceId, notes },
+      });
+    }
+  }
+
+  let count = 0;
 
   if (neumannSource) {
-    // Link Neumann to a few muscles
-    const keyMuscles = await prisma.muscle.findMany({
-      where: { slug: { in: ["infraspinatus", "gluteus-maximus", "quadriceps"] } },
-    });
-    for (const m of keyMuscles) {
-      const existing = await prisma.sourceOnEntity.findFirst({
-        where: { sourceId: neumannSource.id, muscleId: m.id },
-      });
-      if (!existing) {
-        await prisma.sourceOnEntity.create({
-          data: {
-            entityType: "Muscle",
-            muscleId: m.id,
-            sourceId: neumannSource.id,
-            notes: "Anatomy reference",
-          },
-        });
-      }
-    }
-    logCount("Neumann→muscle links", keyMuscles.length);
+    // Neumann covers all muscles, movements, and regions
+    const allMuscles = await prisma.muscle.findMany();
+    for (const m of allMuscles) { await linkSource(neumannSource.id, "Muscle", m.id, "muscleId", "Anatomy reference"); count++; }
+    const allMovements = await prisma.movement.findMany();
+    for (const m of allMovements) { await linkSource(neumannSource.id, "Movement", m.id, "movementId", "Biomechanics reference"); count++; }
+    const allRegions = await prisma.region.findMany();
+    for (const r of allRegions) { await linkSource(neumannSource.id, "Region", r.id, "regionId", "Regional anatomy reference"); count++; }
+  }
+
+  if (kendallSource) {
+    // Kendall covers all muscles (testing reference)
+    const allMuscles = await prisma.muscle.findMany();
+    for (const m of allMuscles) { await linkSource(kendallSource.id, "Muscle", m.id, "muscleId", "Muscle testing reference"); count++; }
   }
 
   if (kisnerSource) {
-    // Link Kisner to a few exercises
-    const keyExercises = await prisma.exercise.findMany({
-      where: { slug: { in: ["bridge", "squat", "sit-to-stand"] } },
-    });
-    for (const e of keyExercises) {
-      const existing = await prisma.sourceOnEntity.findFirst({
-        where: { sourceId: kisnerSource.id, exerciseId: e.id },
-      });
-      if (!existing) {
-        await prisma.sourceOnEntity.create({
-          data: {
-            entityType: "Exercise",
-            exerciseId: e.id,
-            sourceId: kisnerSource.id,
-            notes: "Exercise technique reference",
-          },
-        });
-      }
-    }
-    logCount("Kisner→exercise links", keyExercises.length);
+    // Kisner covers all exercises
+    const allExercises = await prisma.exercise.findMany();
+    for (const e of allExercises) { await linkSource(kisnerSource.id, "Exercise", e.id, "exerciseId", "Exercise technique reference"); count++; }
   }
+
+  if (mageeSource) {
+    // Magee covers all joints
+    const allJoints = await prisma.joint.findMany();
+    for (const j of allJoints) { await linkSource(mageeSource.id, "Joint", j.id, "jointId", "Joint assessment reference"); count++; }
+  }
+
+  if (acsmSource) {
+    // ACSM covers all exercises (prescription guidelines)
+    const allExercises = await prisma.exercise.findMany();
+    for (const e of allExercises) { await linkSource(acsmSource.id, "Exercise", e.id, "exerciseId", "Exercise prescription guidelines"); count++; }
+  }
+
+  logCount("source–entity links", count);
 }

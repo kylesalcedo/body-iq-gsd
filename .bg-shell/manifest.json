@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "89c70657",
+    "label": "next-dev",
+    "command": "cd \"D:/body-iq-gsd\" && pnpm dev",
+    "cwd": "D:\\body-iq-gsd",
+    "ownerSessionFile": "C:\\Users\\KP\\.gsd\\sessions\\--D--body-iq-gsd--\\2026-03-19T21-35-47-947Z_9d010f15-da9a-41ed-9d73-5b0cf6f0af0e.jsonl",
+    "persistAcrossSessions": false,
+    "startedAt": 1773958525771,
+    "processType": "server",
+    "group": null,
+    "readyPattern": null,
+    "readyPort": 3000,
+    "pid": 29820
+  }
+]

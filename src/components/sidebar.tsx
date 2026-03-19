@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { SearchBar } from "@/components/search";
 
 const navItems = [
+  { label: "Exercise Finder", href: "/finder", icon: "🔍" },
   { label: "Regions", href: "/regions", icon: "🗺️" },
   { label: "Joints", href: "/joints", icon: "🔗" },
   { label: "Movements", href: "/movements", icon: "↔️" },

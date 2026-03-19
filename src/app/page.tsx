@@ -45,9 +45,15 @@ export default async function Home() {
         ))}
       </div>
 
-      <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-4">
-        <h2 className="font-semibold text-amber-800">Quick Actions</h2>
+      <div className="mt-8 rounded-lg border border-indigo-200 bg-indigo-50 p-4">
+        <h2 className="font-semibold text-indigo-800">Tools</h2>
         <div className="mt-2 flex flex-wrap gap-3">
+          <Link
+            href="/finder"
+            className="inline-flex items-center rounded-md bg-indigo-100 px-3 py-1.5 text-sm font-medium text-indigo-800 hover:bg-indigo-200 transition-colors"
+          >
+            🔍 Exercise Finder
+          </Link>
           <Link
             href="/validation"
             className="inline-flex items-center rounded-md bg-amber-100 px-3 py-1.5 text-sm font-medium text-amber-800 hover:bg-amber-200 transition-colors"

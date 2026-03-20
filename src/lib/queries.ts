@@ -81,6 +81,25 @@ export async function getMovements() {
   });
 }
 
+export async function getMovementsGroupedByRegion() {
+  return prisma.region.findMany({
+    orderBy: { name: "asc" },
+    include: {
+      joints: {
+        orderBy: { name: "asc" },
+        include: {
+          movements: {
+            orderBy: { name: "asc" },
+            include: {
+              _count: { select: { muscles: true, exercises: true, functionalTasks: true } },
+            },
+          },
+        },
+      },
+    },
+  });
+}
+
 export async function getMovement(slug: string) {
   return prisma.movement.findUnique({
     where: { slug },

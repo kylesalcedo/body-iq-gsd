@@ -294,6 +294,108 @@ const muscles: MuscleDef[] = [
     bloodSupply: "Superficial palmar branch of radial artery",
     confidence: 0.8,
   },
+  {
+    slug: "abductor-pollicis-brevis",
+    name: "Abductor Pollicis Brevis",
+    description: "Superficial thenar muscle. Abducts the thumb at the CMC and MCP joints.",
+    origin: "Flexor retinaculum, scaphoid, trapezium",
+    insertion: "Lateral side of proximal phalanx of thumb",
+    action: "Thumb abduction, assists opposition",
+    innervation: "Median nerve (recurrent branch, C8, T1)",
+    bloodSupply: "Superficial palmar branch of radial artery",
+    confidence: 0.8,
+  },
+  {
+    slug: "flexor-pollicis-brevis",
+    name: "Flexor Pollicis Brevis",
+    description: "Thenar muscle that flexes the thumb at the MCP joint.",
+    origin: "Superficial head: flexor retinaculum, trapezium; Deep head: trapezoid, capitate",
+    insertion: "Lateral side of proximal phalanx of thumb via lateral sesamoid",
+    action: "Flexion of thumb MCP joint, assists opposition",
+    innervation: "Superficial head: median nerve (C8, T1); Deep head: ulnar nerve (C8, T1)",
+    bloodSupply: "Superficial palmar branch of radial artery",
+    confidence: 0.8,
+  },
+  {
+    slug: "adductor-pollicis",
+    name: "Adductor Pollicis",
+    description: "Deep muscle of the palm with oblique and transverse heads. Adducts the thumb for power grip and pinch.",
+    origin: "Oblique head: capitate, 2nd-3rd metacarpal bases; Transverse head: 3rd metacarpal shaft",
+    insertion: "Medial side of proximal phalanx of thumb via medial sesamoid",
+    action: "Thumb adduction, assists thumb flexion at MCP",
+    innervation: "Ulnar nerve, deep branch (C8, T1)",
+    bloodSupply: "Deep palmar arch",
+    confidence: 0.8,
+  },
+  {
+    slug: "flexor-pollicis-longus",
+    name: "Flexor Pollicis Longus",
+    description: "Deep anterior forearm muscle. Only flexor of the thumb IP joint.",
+    origin: "Anterior surface of radius, interosseous membrane",
+    insertion: "Base of distal phalanx of thumb",
+    action: "Flexion of thumb IP joint, assists thumb MCP flexion",
+    innervation: "Anterior interosseous nerve (C7, C8)",
+    bloodSupply: "Anterior interosseous artery",
+    confidence: 0.85,
+  },
+  {
+    slug: "extensor-pollicis-longus",
+    name: "Extensor Pollicis Longus",
+    description: "Deep posterior forearm muscle. Extends the thumb IP and MCP joints.",
+    origin: "Middle third of posterior ulna, interosseous membrane",
+    insertion: "Base of distal phalanx of thumb",
+    action: "Extension of thumb IP and MCP joints, assists wrist extension and thumb adduction",
+    innervation: "Posterior interosseous nerve (C7, C8)",
+    bloodSupply: "Posterior interosseous artery",
+    confidence: 0.85,
+  },
+  {
+    slug: "dorsal-interossei",
+    name: "Dorsal Interossei (Hand)",
+    description: "Four bipennate muscles between the metacarpals. Abduct the fingers at the MCP joints.",
+    origin: "Adjacent sides of two metacarpals each",
+    insertion: "Lateral sides of proximal phalanges and extensor expansions of fingers 2-4",
+    action: "Finger abduction (MCP), assist MCP flexion and IP extension",
+    innervation: "Ulnar nerve, deep branch (C8, T1)",
+    bloodSupply: "Dorsal and palmar metacarpal arteries",
+    confidence: 0.8,
+    notes: "Mnemonic: DAB (Dorsal ABduct). Four muscles total.",
+  },
+  {
+    slug: "palmar-interossei",
+    name: "Palmar Interossei",
+    description: "Three unipennate muscles on the palmar side of the metacarpals. Adduct the fingers at the MCP joints.",
+    origin: "Palmar surfaces of 2nd, 4th, and 5th metacarpals",
+    insertion: "Extensor expansions and proximal phalanges of fingers 2, 4, 5",
+    action: "Finger adduction (MCP), assist MCP flexion and IP extension",
+    innervation: "Ulnar nerve, deep branch (C8, T1)",
+    bloodSupply: "Palmar metacarpal arteries",
+    confidence: 0.8,
+    notes: "Mnemonic: PAD (Palmar ADduct). Three muscles total.",
+  },
+  {
+    slug: "lumbricals",
+    name: "Lumbricals (Hand)",
+    description: "Four small muscles originating from the FDP tendons. Unique action: flex MCP while extending IP joints.",
+    origin: "Tendons of flexor digitorum profundus",
+    insertion: "Lateral sides of extensor expansions of fingers 2-5",
+    action: "MCP flexion with simultaneous IP extension (lumbrical position)",
+    innervation: "Lateral two: median nerve (C8, T1); Medial two: ulnar nerve (C8, T1)",
+    bloodSupply: "Superficial palmar arch, common palmar digital arteries",
+    confidence: 0.8,
+    notes: "The lumbrical grip (MCP flexion + IP extension) is critical for fine manipulation.",
+  },
+  {
+    slug: "flexor-digitorum-profundus",
+    name: "Flexor Digitorum Profundus",
+    description: "Deep forearm flexor. Only muscle that flexes the DIP joints. Also flexes PIP, MCP, and wrist.",
+    origin: "Proximal three-quarters of anterior and medial ulna, interosseous membrane",
+    insertion: "Bases of distal phalanges of fingers 2-5",
+    action: "Flexion of DIP joints (primary), assists PIP and MCP flexion and wrist flexion",
+    innervation: "Lateral half: anterior interosseous nerve (C7, C8); Medial half: ulnar nerve (C8, T1)",
+    bloodSupply: "Anterior interosseous artery, ulnar artery",
+    confidence: 0.85,
+  },
   // ── Hip ─────────────────────────────────────────────────────────────────
   {
     slug: "gluteus-maximus",
@@ -524,12 +626,44 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "radial-deviation", muscleSlug: "extensor-carpi-radialis-longus", role: "primary" },
   // Ulnar Deviation
   { movementSlug: "ulnar-deviation", muscleSlug: "flexor-carpi-ulnaris", role: "primary" },
-  // Finger Flexion
+  // Finger Flexion (MCP)
   { movementSlug: "finger-flexion", muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
-  // Finger Extension
+  { movementSlug: "finger-flexion", muscleSlug: "lumbricals", role: "synergist", notes: "MCP flexion with IP extension" },
+  // Finger Extension (MCP)
   { movementSlug: "finger-extension", muscleSlug: "extensor-digitorum", role: "primary" },
+  // Finger Abduction (MCP)
+  { movementSlug: "finger-abduction", muscleSlug: "dorsal-interossei", role: "primary" },
+  // Finger Adduction (MCP)
+  { movementSlug: "finger-adduction", muscleSlug: "palmar-interossei", role: "primary" },
+  // PIP Flexion
+  { movementSlug: "pip-flexion", muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
+  { movementSlug: "pip-flexion", muscleSlug: "flexor-digitorum-profundus", role: "secondary", notes: "Also flexes PIP after FDS" },
+  // PIP Extension
+  { movementSlug: "pip-extension", muscleSlug: "extensor-digitorum", role: "primary", notes: "Via extensor expansion" },
+  { movementSlug: "pip-extension", muscleSlug: "lumbricals", role: "synergist", notes: "IP extension via extensor expansion" },
+  { movementSlug: "pip-extension", muscleSlug: "dorsal-interossei", role: "synergist", notes: "IP extension via extensor expansion" },
+  // DIP Flexion
+  { movementSlug: "dip-flexion", muscleSlug: "flexor-digitorum-profundus", role: "primary", notes: "Only muscle that flexes DIP" },
+  // DIP Extension
+  { movementSlug: "dip-extension", muscleSlug: "extensor-digitorum", role: "primary", notes: "Via extensor expansion and oblique retinacular ligament" },
+  { movementSlug: "dip-extension", muscleSlug: "lumbricals", role: "synergist" },
   // Thumb Opposition
   { movementSlug: "thumb-opposition", muscleSlug: "opponens-pollicis", role: "primary" },
+  { movementSlug: "thumb-opposition", muscleSlug: "abductor-pollicis-brevis", role: "synergist", notes: "Assists early opposition" },
+  { movementSlug: "thumb-opposition", muscleSlug: "flexor-pollicis-brevis", role: "synergist", notes: "MCP flexion component" },
+  // Thumb Abduction (CMC)
+  { movementSlug: "thumb-abduction", muscleSlug: "abductor-pollicis-brevis", role: "primary" },
+  // Thumb Adduction (CMC)
+  { movementSlug: "thumb-adduction", muscleSlug: "adductor-pollicis", role: "primary" },
+  // Thumb MCP Flexion
+  { movementSlug: "thumb-mcp-flexion", muscleSlug: "flexor-pollicis-brevis", role: "primary" },
+  { movementSlug: "thumb-mcp-flexion", muscleSlug: "adductor-pollicis", role: "synergist" },
+  // Thumb MCP Extension
+  { movementSlug: "thumb-mcp-extension", muscleSlug: "extensor-pollicis-longus", role: "primary" },
+  // Thumb IP Flexion
+  { movementSlug: "thumb-ip-flexion", muscleSlug: "flexor-pollicis-longus", role: "primary", notes: "Only flexor of thumb IP" },
+  // Thumb IP Extension
+  { movementSlug: "thumb-ip-extension", muscleSlug: "extensor-pollicis-longus", role: "primary" },
   // Hip Flexion
   { movementSlug: "hip-flexion", muscleSlug: "iliopsoas", role: "primary" },
   { movementSlug: "hip-flexion", muscleSlug: "rectus-femoris", role: "secondary" },
@@ -576,7 +710,7 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "shoulder-abduction", muscleSlug: "infraspinatus", role: "stabilizer", notes: "Stabilizes humeral head inferiorly" },
   { movementSlug: "forearm-pronation", muscleSlug: "brachialis", role: "stabilizer", notes: "Stabilizes elbow during pronation" },
   { movementSlug: "elbow-flexion", muscleSlug: "supinator", role: "stabilizer", notes: "Maintains supination during flexion" },
-  { movementSlug: "finger-flexion", muscleSlug: "opponens-pollicis", role: "synergist", notes: "Positions thumb for grip" },
+  { movementSlug: "thumb-opposition", muscleSlug: "adductor-pollicis", role: "synergist", notes: "Assists late opposition and power pinch" },
   { movementSlug: "hip-external-rotation", muscleSlug: "iliopsoas", role: "synergist", notes: "Assists when hip is flexed" },
   { movementSlug: "hip-abduction", muscleSlug: "piriformis", role: "secondary", notes: "Abducts when hip is flexed" },
   { movementSlug: "hip-flexion", muscleSlug: "quadriceps", role: "synergist", notes: "Via rectus femoris" },

@@ -15,7 +15,7 @@ const validationSelect = {
 
 export async function getRegions() {
   return prisma.region.findMany({
-    orderBy: { name: "asc" },
+    orderBy: { sortOrder: "asc" },
     include: {
       _count: { select: { joints: true } },
     },
@@ -83,7 +83,7 @@ export async function getMovements() {
 
 export async function getMovementsGroupedByRegion() {
   return prisma.region.findMany({
-    orderBy: { name: "asc" },
+    orderBy: { sortOrder: "asc" },
     include: {
       joints: {
         orderBy: { name: "asc" },

@@ -532,6 +532,121 @@ const muscles: MuscleDef[] = [
     bloodSupply: "Peroneal artery",
     confidence: 0.85,
   },
+  // ── Cervical Spine ─────────────────────────────────────────────────────
+  {
+    slug: "sternocleidomastoid",
+    name: "Sternocleidomastoid",
+    description: "Large superficial cervical muscle. Bilateral action flexes the neck; unilateral action rotates and laterally flexes.",
+    origin: "Sternal head: manubrium; Clavicular head: medial third of clavicle",
+    insertion: "Mastoid process, superior nuchal line",
+    action: "Bilateral: cervical flexion; Unilateral: ipsilateral lateral flexion, contralateral rotation",
+    innervation: "Spinal accessory nerve (CN XI), C2-C3",
+    bloodSupply: "Occipital artery, superior thyroid artery",
+    confidence: 0.85,
+  },
+  {
+    slug: "upper-trapezius",
+    name: "Upper Trapezius",
+    description: "Upper fibers of the trapezius. Elevates the scapula and extends/laterally flexes the cervical spine.",
+    origin: "External occipital protuberance, superior nuchal line, nuchal ligament, spinous processes C1-C7",
+    insertion: "Lateral third of clavicle, acromion",
+    action: "Scapular elevation, cervical extension, ipsilateral lateral flexion, contralateral rotation",
+    innervation: "Spinal accessory nerve (CN XI), C3-C4",
+    bloodSupply: "Transverse cervical artery",
+    confidence: 0.85,
+  },
+  {
+    slug: "deep-cervical-flexors",
+    name: "Deep Cervical Flexors",
+    description: "Longus colli and longus capitis. Deep stabilizers of the cervical spine. Critical for postural control.",
+    origin: "Anterior bodies and transverse processes of cervical and upper thoracic vertebrae",
+    insertion: "Basilar part of occipital bone (capitis), anterior tubercle of atlas, cervical vertebral bodies (colli)",
+    action: "Cervical flexion, stabilization of cervical lordosis, chin tuck",
+    innervation: "Anterior rami of cervical spinal nerves (C2-C6)",
+    bloodSupply: "Vertebral artery, ascending cervical artery",
+    confidence: 0.8,
+    notes: "Weakness associated with forward head posture and neck pain.",
+  },
+  {
+    slug: "suboccipitals",
+    name: "Suboccipital Muscles",
+    description: "Four small muscles (rectus capitis posterior major/minor, obliquus capitis superior/inferior) at the base of the skull. Fine control of head movement.",
+    origin: "Posterior arch of atlas (C1), spinous process of axis (C2)",
+    insertion: "Inferior nuchal line of occiput, transverse process of atlas",
+    action: "Upper cervical extension, rotation, proprioceptive feedback for head position",
+    innervation: "Suboccipital nerve (posterior ramus of C1)",
+    bloodSupply: "Vertebral artery, occipital artery",
+    confidence: 0.8,
+    notes: "Rich in proprioceptors — important for balance and head-eye coordination.",
+  },
+  {
+    slug: "scalenes",
+    name: "Scalene Muscles",
+    description: "Three muscles (anterior, middle, posterior) of the lateral neck. Flex and laterally flex the cervical spine; accessory muscles of respiration.",
+    origin: "Transverse processes of cervical vertebrae (C2-C7)",
+    insertion: "First and second ribs",
+    action: "Ipsilateral lateral flexion, assists cervical flexion, elevates ribs during inspiration",
+    innervation: "Anterior rami of cervical spinal nerves (C3-C8)",
+    bloodSupply: "Ascending cervical artery",
+    confidence: 0.8,
+  },
+  // ── Thoracic / Lumbar Spine ───────────────────────────────────────────────
+  {
+    slug: "multifidus",
+    name: "Multifidus",
+    description: "Deep paraspinal muscle spanning 2-4 vertebral segments. Key segmental stabilizer of the lumbar spine.",
+    origin: "Sacrum, mamillary processes of lumbar vertebrae, transverse processes of thoracic vertebrae",
+    insertion: "Spinous processes of vertebrae 2-4 segments above",
+    action: "Segmental spinal extension and stabilization, contralateral rotation",
+    innervation: "Medial branch of posterior rami of spinal nerves",
+    bloodSupply: "Lumbar arteries, posterior intercostal arteries",
+    confidence: 0.85,
+    notes: "Atrophy strongly associated with chronic low back pain.",
+  },
+  {
+    slug: "quadratus-lumborum",
+    name: "Quadratus Lumborum",
+    description: "Deep posterior abdominal wall muscle. Primary lateral flexor of the lumbar spine and hip hiker.",
+    origin: "Iliac crest, iliolumbar ligament",
+    insertion: "12th rib, transverse processes of L1-L4",
+    action: "Lateral flexion of lumbar spine, hip hiking, stabilizes 12th rib during inspiration",
+    innervation: "Subcostal nerve (T12), anterior rami L1-L4",
+    bloodSupply: "Lumbar arteries, subcostal artery",
+    confidence: 0.85,
+  },
+  {
+    slug: "rectus-abdominis",
+    name: "Rectus Abdominis",
+    description: "Superficial anterior abdominal muscle. Primary trunk flexor.",
+    origin: "Pubic symphysis, pubic crest",
+    insertion: "Xiphoid process, costal cartilages 5-7",
+    action: "Trunk flexion, posterior pelvic tilt, compression of abdominal contents",
+    innervation: "Intercostal nerves (T7-T12)",
+    bloodSupply: "Superior and inferior epigastric arteries",
+    confidence: 0.85,
+  },
+  {
+    slug: "internal-oblique",
+    name: "Internal Oblique",
+    description: "Middle layer abdominal muscle. Fibers run superomedially. Ipsilateral rotation and lateral flexion.",
+    origin: "Thoracolumbar fascia, iliac crest, inguinal ligament",
+    insertion: "Linea alba, costal cartilages 10-12",
+    action: "Ipsilateral trunk rotation, lateral flexion, trunk flexion, core stabilization",
+    innervation: "Intercostal nerves (T7-T12), iliohypogastric and ilioinguinal (L1)",
+    bloodSupply: "Posterior intercostal and lumbar arteries",
+    confidence: 0.85,
+  },
+  {
+    slug: "external-oblique",
+    name: "External Oblique",
+    description: "Superficial lateral abdominal muscle. Fibers run inferomedially. Contralateral rotation and lateral flexion.",
+    origin: "External surfaces of ribs 5-12",
+    insertion: "Linea alba, pubic tubercle, iliac crest",
+    action: "Contralateral trunk rotation, lateral flexion, trunk flexion, core stabilization",
+    innervation: "Intercostal nerves (T7-T12)",
+    bloodSupply: "Posterior intercostal and subcostal arteries",
+    confidence: 0.85,
+  },
   // ── Core / Trunk (used as stabilizers) ──────────────────────────────────
   {
     slug: "erector-spinae",
@@ -571,6 +686,64 @@ const muscles: MuscleDef[] = [
 // ─── Movement–Muscle Relationships (Weighted) ───────────────────────────────
 
 const movementMuscleLinks: MovementMuscleDef[] = [
+  // ── Cervical Spine ────────────────────────────────────────────────────────
+  // Upper Cervical Flexion (AO joint)
+  { movementSlug: "cervical-flexion-upper", muscleSlug: "deep-cervical-flexors", role: "primary", notes: "Chin tuck motion" },
+  // Upper Cervical Extension (AO joint)
+  { movementSlug: "cervical-extension-upper", muscleSlug: "suboccipitals", role: "primary" },
+  // Upper Cervical Rotation (AA joint)
+  { movementSlug: "cervical-rotation-upper", muscleSlug: "suboccipitals", role: "primary", notes: "Obliquus capitis inferior is the primary rotator" },
+  { movementSlug: "cervical-rotation-upper", muscleSlug: "sternocleidomastoid", role: "secondary", notes: "Contralateral rotation" },
+  // Cervical Flexion (C2-C7)
+  { movementSlug: "cervical-flexion", muscleSlug: "sternocleidomastoid", role: "primary", notes: "Bilateral action" },
+  { movementSlug: "cervical-flexion", muscleSlug: "deep-cervical-flexors", role: "primary" },
+  { movementSlug: "cervical-flexion", muscleSlug: "scalenes", role: "secondary" },
+  // Cervical Extension (C2-C7)
+  { movementSlug: "cervical-extension", muscleSlug: "upper-trapezius", role: "primary" },
+  { movementSlug: "cervical-extension", muscleSlug: "erector-spinae", role: "primary", notes: "Cervical portion" },
+  { movementSlug: "cervical-extension", muscleSlug: "suboccipitals", role: "synergist" },
+  // Cervical Lateral Flexion
+  { movementSlug: "cervical-lateral-flexion", muscleSlug: "scalenes", role: "primary" },
+  { movementSlug: "cervical-lateral-flexion", muscleSlug: "sternocleidomastoid", role: "primary", notes: "Unilateral action" },
+  { movementSlug: "cervical-lateral-flexion", muscleSlug: "upper-trapezius", role: "secondary" },
+  // Cervical Rotation (C2-C7)
+  { movementSlug: "cervical-rotation", muscleSlug: "sternocleidomastoid", role: "primary", notes: "Contralateral rotation" },
+  { movementSlug: "cervical-rotation", muscleSlug: "scalenes", role: "secondary" },
+  { movementSlug: "cervical-rotation", muscleSlug: "multifidus", role: "synergist", notes: "Contralateral rotation" },
+  // ── Thoracic Spine ────────────────────────────────────────────────────────
+  // Thoracic Rotation
+  { movementSlug: "thoracic-rotation", muscleSlug: "internal-oblique", role: "primary", notes: "Ipsilateral rotation" },
+  { movementSlug: "thoracic-rotation", muscleSlug: "external-oblique", role: "primary", notes: "Contralateral rotation" },
+  { movementSlug: "thoracic-rotation", muscleSlug: "multifidus", role: "synergist" },
+  // Thoracic Extension
+  { movementSlug: "thoracic-extension", muscleSlug: "erector-spinae", role: "primary", notes: "Thoracic portion" },
+  { movementSlug: "thoracic-extension", muscleSlug: "multifidus", role: "secondary" },
+  // Thoracic Flexion
+  { movementSlug: "thoracic-flexion", muscleSlug: "rectus-abdominis", role: "primary" },
+  { movementSlug: "thoracic-flexion", muscleSlug: "external-oblique", role: "secondary" },
+  // Thoracic Lateral Flexion
+  { movementSlug: "thoracic-lateral-flexion", muscleSlug: "erector-spinae", role: "primary", notes: "Ipsilateral" },
+  { movementSlug: "thoracic-lateral-flexion", muscleSlug: "external-oblique", role: "secondary" },
+  { movementSlug: "thoracic-lateral-flexion", muscleSlug: "internal-oblique", role: "secondary" },
+  // ── Lumbar Spine ──────────────────────────────────────────────────────────
+  // Lumbar Flexion
+  { movementSlug: "lumbar-flexion", muscleSlug: "rectus-abdominis", role: "primary" },
+  { movementSlug: "lumbar-flexion", muscleSlug: "internal-oblique", role: "secondary" },
+  { movementSlug: "lumbar-flexion", muscleSlug: "external-oblique", role: "secondary" },
+  // Lumbar Extension
+  { movementSlug: "lumbar-extension", muscleSlug: "erector-spinae", role: "primary" },
+  { movementSlug: "lumbar-extension", muscleSlug: "multifidus", role: "primary", notes: "Segmental stabilization during extension" },
+  { movementSlug: "lumbar-extension", muscleSlug: "quadratus-lumborum", role: "synergist" },
+  // Lumbar Lateral Flexion
+  { movementSlug: "lumbar-lateral-flexion", muscleSlug: "quadratus-lumborum", role: "primary" },
+  { movementSlug: "lumbar-lateral-flexion", muscleSlug: "erector-spinae", role: "secondary", notes: "Ipsilateral" },
+  { movementSlug: "lumbar-lateral-flexion", muscleSlug: "internal-oblique", role: "secondary" },
+  { movementSlug: "lumbar-lateral-flexion", muscleSlug: "external-oblique", role: "secondary" },
+  // Lumbar Rotation
+  { movementSlug: "lumbar-rotation", muscleSlug: "internal-oblique", role: "primary", notes: "Ipsilateral rotation" },
+  { movementSlug: "lumbar-rotation", muscleSlug: "external-oblique", role: "primary", notes: "Contralateral rotation" },
+  { movementSlug: "lumbar-rotation", muscleSlug: "multifidus", role: "synergist" },
+  // ── Shoulder ──────────────────────────────────────────────────────────────
   // Shoulder Flexion
   { movementSlug: "shoulder-flexion", muscleSlug: "anterior-deltoid", role: "primary" },
   { movementSlug: "shoulder-flexion", muscleSlug: "pectoralis-major", role: "primary", notes: "Clavicular head" },

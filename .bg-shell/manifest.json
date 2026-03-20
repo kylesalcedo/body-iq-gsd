@@ -1,16 +1,16 @@
 [
   {
-    "id": "89c70657",
-    "label": "next-dev",
-    "command": "cd \"D:/body-iq-gsd\" && pnpm dev",
+    "id": "c29453bb",
+    "label": "body-iq-dev",
+    "command": "cd D:/body-iq-gsd && pnpm dev --port 3003",
     "cwd": "D:\\body-iq-gsd",
-    "ownerSessionFile": "C:\\Users\\KP\\.gsd\\sessions\\--D--body-iq-gsd--\\2026-03-19T21-35-47-947Z_9d010f15-da9a-41ed-9d73-5b0cf6f0af0e.jsonl",
+    "ownerSessionFile": "C:\\Users\\KP\\.gsd\\sessions\\--D--body-iq-gsd--\\2026-03-20T18-08-30-657Z_52153ace-bc05-4268-85cd-a33032ea1581.jsonl",
     "persistAcrossSessions": false,
-    "startedAt": 1773958525771,
+    "startedAt": 1774034122550,
     "processType": "server",
     "group": null,
     "readyPattern": null,
-    "readyPort": 3000,
-    "pid": 29820
+    "readyPort": 3003,
+    "pid": 64836
   }
 ]

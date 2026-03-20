@@ -10,6 +10,98 @@ interface MovementDef {
 }
 
 const movements: MovementDef[] = [
+  // ── Atlantooccipital ──────────────────────────────────────────────────────
+  {
+    slug: "cervical-flexion-upper",
+    name: "Upper Cervical Flexion",
+    description: "Nodding motion — chin tuck. Flexion at the atlantooccipital joint.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "atlantooccipital",
+  },
+  {
+    slug: "cervical-extension-upper",
+    name: "Upper Cervical Extension",
+    description: "Looking up at the atlanto-occipital joint. Chin poke motion.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "atlantooccipital",
+  },
+  // ── Atlantoaxial ──────────────────────────────────────────────────────────
+  {
+    slug: "cervical-rotation-upper",
+    name: "Upper Cervical Rotation",
+    description: "Head turning at C1-C2. Approximately 50% of total cervical rotation occurs here.",
+    plane: "transverse",
+    axis: "vertical",
+    jointSlug: "atlantoaxial",
+  },
+  // ── Cervical Intervertebral ───────────────────────────────────────────────
+  {
+    slug: "cervical-flexion",
+    name: "Cervical Flexion",
+    description: "Bending the neck forward, bringing the chin toward the chest. Combined motion of C2-C7.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "cervical-intervertebral",
+  },
+  {
+    slug: "cervical-extension",
+    name: "Cervical Extension",
+    description: "Bending the neck backward, looking upward. Combined motion of C2-C7.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "cervical-intervertebral",
+  },
+  {
+    slug: "cervical-lateral-flexion",
+    name: "Cervical Lateral Flexion",
+    description: "Tilting the head/neck to the side, ear toward shoulder.",
+    plane: "frontal",
+    axis: "anterior-posterior",
+    jointSlug: "cervical-intervertebral",
+  },
+  {
+    slug: "cervical-rotation",
+    name: "Cervical Rotation",
+    description: "Turning the head to look over the shoulder. Combined rotation of C2-C7.",
+    plane: "transverse",
+    axis: "vertical",
+    jointSlug: "cervical-intervertebral",
+  },
+  // ── Thoracic Intervertebral ───────────────────────────────────────────────
+  {
+    slug: "thoracic-rotation",
+    name: "Thoracic Rotation",
+    description: "Rotation of the trunk through the thoracic spine. Most rotational motion of the spine occurs here.",
+    plane: "transverse",
+    axis: "vertical",
+    jointSlug: "thoracic-intervertebral",
+  },
+  {
+    slug: "thoracic-extension",
+    name: "Thoracic Extension",
+    description: "Extension of the thoracic spine. Often limited by kyphosis and rib cage. Critical for overhead reaching.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "thoracic-intervertebral",
+  },
+  {
+    slug: "thoracic-flexion",
+    name: "Thoracic Flexion",
+    description: "Flexion (rounding) of the thoracic spine. Kyphotic motion.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "thoracic-intervertebral",
+  },
+  {
+    slug: "thoracic-lateral-flexion",
+    name: "Thoracic Lateral Flexion",
+    description: "Side bending of the thoracic spine. Coupled with rotation.",
+    plane: "frontal",
+    axis: "anterior-posterior",
+    jointSlug: "thoracic-intervertebral",
+  },
   // ── Glenohumeral ──────────────────────────────────────────────────────────
   {
     slug: "shoulder-flexion",
@@ -268,6 +360,39 @@ const movements: MovementDef[] = [
     plane: "sagittal",
     axis: "medial-lateral",
     jointSlug: "thumb-ip",
+  },
+  // ── Lumbar Intervertebral ──────────────────────────────────────────────────
+  {
+    slug: "lumbar-flexion",
+    name: "Lumbar Flexion",
+    description: "Forward bending of the lumbar spine. Primary trunk flexion movement.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "lumbar-intervertebral",
+  },
+  {
+    slug: "lumbar-extension",
+    name: "Lumbar Extension",
+    description: "Backward bending of the lumbar spine. Arching the low back.",
+    plane: "sagittal",
+    axis: "medial-lateral",
+    jointSlug: "lumbar-intervertebral",
+  },
+  {
+    slug: "lumbar-lateral-flexion",
+    name: "Lumbar Lateral Flexion",
+    description: "Side bending of the lumbar spine.",
+    plane: "frontal",
+    axis: "anterior-posterior",
+    jointSlug: "lumbar-intervertebral",
+  },
+  {
+    slug: "lumbar-rotation",
+    name: "Lumbar Rotation",
+    description: "Rotation of the lumbar spine. Very limited (~5° per segment) due to facet orientation.",
+    plane: "transverse",
+    axis: "vertical",
+    jointSlug: "lumbar-intervertebral",
   },
   // ── Coxofemoral (Hip) ─────────────────────────────────────────────────────
   {

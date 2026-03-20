@@ -9,6 +9,43 @@ interface JointDef {
 }
 
 const joints: JointDef[] = [
+  // Cervical Spine
+  {
+    slug: "atlantooccipital",
+    name: "Atlantooccipital Joint",
+    description: "Condyloid joint between the atlas (C1) and the occipital condyles of the skull. Primary joint for head flexion/extension (nodding).",
+    jointType: "condyloid",
+    regionSlug: "cervical-spine",
+  },
+  {
+    slug: "atlantoaxial",
+    name: "Atlantoaxial Joint",
+    description: "Pivot joint between the atlas (C1) and axis (C2). Primary joint for cervical rotation (head turning).",
+    jointType: "pivot",
+    regionSlug: "cervical-spine",
+  },
+  {
+    slug: "cervical-intervertebral",
+    name: "Cervical Intervertebral Joints (C2-C7)",
+    description: "Facet joints and intervertebral discs of the lower cervical spine. Allow flexion, extension, lateral flexion, and rotation.",
+    jointType: "gliding",
+    regionSlug: "cervical-spine",
+  },
+  // Thoracic Spine
+  {
+    slug: "thoracic-intervertebral",
+    name: "Thoracic Intervertebral Joints",
+    description: "Facet joints and intervertebral discs of the thoracic spine (T1-T12). Primarily rotational with limited sagittal motion due to rib cage.",
+    jointType: "gliding",
+    regionSlug: "thoracic-spine",
+  },
+  {
+    slug: "costovertebral",
+    name: "Costovertebral Joints",
+    description: "Joints between the ribs and thoracic vertebrae. Important for breathing mechanics and thoracic mobility.",
+    jointType: "gliding",
+    regionSlug: "thoracic-spine",
+  },
   // Shoulder
   {
     slug: "glenohumeral",
@@ -96,6 +133,21 @@ const joints: JointDef[] = [
     description: "Hinge joint between the proximal and distal phalanges of the thumb. Allows flexion and extension only.",
     jointType: "hinge",
     regionSlug: "hand",
+  },
+  // Lumbar Spine
+  {
+    slug: "lumbar-intervertebral",
+    name: "Lumbar Intervertebral Joints",
+    description: "Facet joints and intervertebral discs of the lumbar spine (L1-L5). Allow significant flexion/extension and lateral flexion, limited rotation.",
+    jointType: "gliding",
+    regionSlug: "lumbar-spine",
+  },
+  {
+    slug: "lumbosacral",
+    name: "Lumbosacral Joint (L5-S1)",
+    description: "Junction between the lumbar spine and sacrum. High load-bearing joint, common site of disc pathology.",
+    jointType: "gliding",
+    regionSlug: "lumbar-spine",
   },
   // Hip
   {

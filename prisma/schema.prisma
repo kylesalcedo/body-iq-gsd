@@ -32,6 +32,7 @@ model Region {
   slug        String       @unique
   name        String
   description String?
+  sortOrder   Int          @default(0)
   // Validation
   status      EntityStatus @default(draft)
   confidence  Float        @default(0.5)

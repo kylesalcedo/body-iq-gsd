@@ -56,22 +56,27 @@ Open [http://localhost:3000](http://localhost:3000) to view the explorer.
 
 | Entity | Count |
 |--------|-------|
-| Regions | 7 |
-| Joints | 13 |
-| Movements | 31 |
-| Muscles | 39 |
-| Movement–Muscle Links | 65 |
-| Functional Tasks | 8 |
-| Exercises | 12 |
-| Exercise–Muscle Links | 40 |
-| Cues | 33 |
-| Regressions | 16 |
-| Progressions | 20 |
-| Research Sources | 5 |
+| Regions | 10 |
+| Joints | 24 |
+| Movements | 60 |
+| Muscles | 60 |
+| Movement–Muscle Links | 162 |
+| Functional Tasks | 11 |
+| Exercises | 45 |
+| Exercise–Muscle Links | 157 |
+| Cues | 135 |
+| Regressions | 67 |
+| Progressions | 82 |
+| Research Sources | 36 |
+| Source–Entity Links | 364 |
 
 ### Regions Covered
 
-Shoulder, Elbow, Wrist, Hand, Hip, Knee, Ankle
+Cervical Spine, Thoracic Spine, Shoulder, Elbow, Wrist, Hand, Lumbar Spine, Hip, Knee, Ankle
+
+### Evidence-Based Exercise Coverage
+
+Each region includes research-backed "top 3" exercises selected from systematic reviews, meta-analyses, and clinical practice guidelines (31 peer-reviewed sources, 2008–2025). Exercises include EMG-derived muscle activation data, dosing recommendations, and evidence notes with citations.
 
 ### Muscle Role Weighting
 
@@ -137,13 +142,13 @@ Entity statuses: `draft` → `needs_review` → `reviewed` → `verified` (or `d
 │   ├── schema.prisma          # Database schema (15 models)
 │   └── seed/                  # Seed data scripts
 │       ├── seed.ts            # Orchestrator
-│       ├── regions.ts         # 7 anatomical regions
-│       ├── joints.ts          # 13 joints
-│       ├── movements.ts       # 31 movements
-│       ├── muscles.ts         # 39 muscles + 65 weighted links
-│       ├── functional-tasks.ts # 8 functional tasks
-│       ├── exercises.ts       # 12 exercises with full details
-│       └── sources.ts         # 5 research sources
+│       ├── regions.ts         # 10 anatomical regions
+│       ├── joints.ts          # 24 joints
+│       ├── movements.ts       # 60 movements
+│       ├── muscles.ts         # 60 muscles + 162 weighted links
+│       ├── functional-tasks.ts # 11 functional tasks
+│       ├── exercises.ts       # 45 exercises with full details
+│       └── sources.ts         # 36 research sources + targeted evidence links
 ├── scripts/
 │   └── data-quality.ts        # Data quality checker
 ├── src/

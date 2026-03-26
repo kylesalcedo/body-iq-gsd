@@ -168,6 +168,22 @@ const movements: MovementDef[] = [
     axis: null,
     jointSlug: "scapulothoracic",
   },
+  {
+    slug: "scapular-upward-rotation",
+    name: "Scapular Upward Rotation",
+    description: "Rotation of the scapula so the glenoid faces upward. Essential for overhead arm elevation.",
+    plane: "frontal",
+    axis: null,
+    jointSlug: "scapulothoracic",
+  },
+  {
+    slug: "scapular-depression",
+    name: "Scapular Depression",
+    description: "Downward movement of the scapula away from the ears.",
+    plane: "frontal",
+    axis: null,
+    jointSlug: "scapulothoracic",
+  },
   // ── Humeroulnar ───────────────────────────────────────────────────────────
   {
     slug: "elbow-flexion",

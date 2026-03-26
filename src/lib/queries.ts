@@ -202,6 +202,80 @@ export async function getExercises() {
   });
 }
 
+export async function getExercisesGroupedByRegion() {
+  // Get all regions with their joints → movements → exercises
+  const regions = await prisma.region.findMany({
+    orderBy: { sortOrder: "asc" },
+    select: {
+      slug: true,
+      name: true,
+      joints: {
+        select: {
+          id: true,
+          movements: {
+            select: {
+              id: true,
+              exercises: {
+                select: { exerciseId: true },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  // Collect unique exercise IDs per region
+  const regionExerciseIds = new Map<string, Set<string>>();
+  for (const region of regions) {
+    const ids = new Set<string>();
+    for (const joint of region.joints) {
+      for (const movement of joint.movements) {
+        for (const link of movement.exercises) {
+          ids.add(link.exerciseId);
+        }
+      }
+    }
+    regionExerciseIds.set(region.slug, ids);
+  }
+
+  // Load all exercises with counts in one query
+  const allExercises = await prisma.exercise.findMany({
+    orderBy: { name: "asc" },
+    include: {
+      _count: { select: { muscles: true, movements: true, cues: true, regressions: true, progressions: true, sources: true } },
+    },
+  });
+
+  const exerciseById = new Map(allExercises.map((e) => [e.id, e]));
+
+  // Build grouped result
+  const grouped = regions.map((region) => {
+    const exerciseIds = regionExerciseIds.get(region.slug) ?? new Set();
+    const exercises = [...exerciseIds]
+      .map((id) => exerciseById.get(id))
+      .filter(Boolean)
+      .sort((a, b) => a!.name.localeCompare(b!.name));
+    return {
+      slug: region.slug,
+      name: region.name,
+      exercises: exercises as NonNullable<(typeof exercises)[number]>[],
+    };
+  });
+
+  // Collect all assigned exercise IDs to find unassigned ones
+  const allAssigned = new Set<string>();
+  for (const ids of regionExerciseIds.values()) {
+    for (const id of ids) allAssigned.add(id);
+  }
+  const unassigned = allExercises.filter((e) => !allAssigned.has(e.id));
+  if (unassigned.length > 0) {
+    grouped.push({ slug: "unassigned", name: "Unassigned", exercises: unassigned });
+  }
+
+  return grouped;
+}
+
 export async function getExercise(slug: string) {
   return prisma.exercise.findUnique({
     where: { slug },

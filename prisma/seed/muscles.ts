@@ -580,6 +580,30 @@ const muscles: MuscleDef[] = [
     notes: "Rich in proprioceptors — important for balance and head-eye coordination.",
   },
   {
+    slug: "trapezius-lower",
+    name: "Lower Trapezius",
+    description: "Lower fibers of the trapezius. Depresses and upwardly rotates the scapula. Critical for overhead shoulder mechanics.",
+    origin: "Spinous processes T6-T12",
+    insertion: "Medial end of spine of scapula",
+    action: "Scapular depression, upward rotation, retraction (assists)",
+    innervation: "Spinal accessory nerve (CN XI), C3-C4",
+    bloodSupply: "Transverse cervical artery (deep branch / dorsal scapular artery)",
+    confidence: 0.85,
+    notes: "Often weak relative to upper trapezius. Key target in scapular dyskinesis rehab.",
+  },
+  {
+    slug: "diaphragm",
+    name: "Diaphragm",
+    description: "Primary muscle of respiration. Dome-shaped muscle separating thoracic and abdominal cavities. Also contributes to core stability via intra-abdominal pressure.",
+    origin: "Xiphoid process, costal cartilages of ribs 7-12, lumbar vertebrae (crura: L1-L3)",
+    insertion: "Central tendon of diaphragm",
+    action: "Inspiration (descends to increase thoracic volume), contributes to intra-abdominal pressure for core stability",
+    innervation: "Phrenic nerve (C3, C4, C5)",
+    bloodSupply: "Superior and inferior phrenic arteries, musculophrenic artery, pericardiophrenic artery",
+    confidence: 0.9,
+    notes: "Diaphragmatic breathing exercises restore proper motor patterns and enhance core stabilization.",
+  },
+  {
     slug: "scalenes",
     name: "Scalene Muscles",
     description: "Three muscles (anterior, middle, posterior) of the lateral neck. Flex and laterally flex the cervical spine; accessory muscles of respiration.",
@@ -776,6 +800,13 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   // Scapular Retraction
   { movementSlug: "scapular-retraction", muscleSlug: "trapezius-middle", role: "primary" },
   { movementSlug: "scapular-retraction", muscleSlug: "rhomboid-major", role: "primary" },
+  // Scapular Upward Rotation
+  { movementSlug: "scapular-upward-rotation", muscleSlug: "trapezius-upper", role: "primary", notes: "Upper fibers pull acromion superiorly" },
+  { movementSlug: "scapular-upward-rotation", muscleSlug: "trapezius-lower", role: "primary", notes: "Lower fibers pull root of spine inferiorly" },
+  { movementSlug: "scapular-upward-rotation", muscleSlug: "serratus-anterior", role: "primary", notes: "Rotates inferior angle laterally" },
+  // Scapular Depression
+  { movementSlug: "scapular-depression", muscleSlug: "trapezius-lower", role: "primary" },
+  { movementSlug: "scapular-depression", muscleSlug: "latissimus-dorsi", role: "secondary", notes: "Via humeral attachment" },
   // Elbow Flexion
   { movementSlug: "elbow-flexion", muscleSlug: "brachialis", role: "primary" },
   { movementSlug: "elbow-flexion", muscleSlug: "biceps-brachii", role: "primary", notes: "Most effective in supination" },

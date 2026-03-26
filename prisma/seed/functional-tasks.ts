@@ -102,6 +102,39 @@ const tasks: TaskDef[] = [
       { slug: "ankle-dorsiflexion", relevance: "essential" },
     ],
   },
+  {
+    slug: "breathing",
+    name: "Breathing",
+    description: "Normal and deep respiratory function. Requires diaphragmatic excursion, rib cage expansion, and thoracic mobility.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "thoracic-extension", relevance: "supportive" },
+      { slug: "thoracic-lateral-flexion", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "single-leg-balance",
+    name: "Single-Leg Balance",
+    description: "Maintaining balance on one leg. Requires hip abductor strength, ankle stability, and proprioceptive control.",
+    category: "mobility",
+    movementSlugs: [
+      { slug: "hip-abduction", relevance: "essential" },
+      { slug: "ankle-dorsiflexion", relevance: "supportive" },
+      { slug: "foot-inversion", relevance: "supportive" },
+      { slug: "foot-eversion", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "posture-maintenance",
+    name: "Posture Maintenance",
+    description: "Maintaining upright spinal alignment during prolonged sitting or standing. Requires endurance of postural muscles across the cervical, thoracic, and lumbar spine.",
+    category: "occupational",
+    movementSlugs: [
+      { slug: "cervical-flexion-upper", relevance: "essential" },
+      { slug: "thoracic-extension", relevance: "essential" },
+      { slug: "scapular-retraction", relevance: "supportive" },
+    ],
+  },
 ];
 
 export async function seedFunctionalTasks() {

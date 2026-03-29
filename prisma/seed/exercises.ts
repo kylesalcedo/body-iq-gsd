@@ -41,7 +41,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "transversus-abdominis", role: "stabilizer" },
       { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "Pelvic stabilizer during hip extension" },
     ],
-    functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand", "walking"],
+    functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand", "walking", "carrying-lifting", "floor-transfers", "bed-mobility"],
     cues: [
       { text: "Squeeze your glutes to lift your hips, don't push through your back", cueType: "verbal" },
       { text: "Keep your knees hip-width apart throughout the movement", cueType: "verbal" },
@@ -113,7 +113,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "soleus", role: "stabilizer" },
       { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "30-45% MVIC pelvic stability [Muyor 2020]" },
     ],
-    functionalTaskSlugs: ["squat-to-stand", "stair-climbing", "pushing-up-from-chair"],
+    functionalTaskSlugs: ["squat-to-stand", "stair-climbing", "pushing-up-from-chair", "carrying-lifting", "dressing-lower-body", "floor-transfers"],
     cues: [
       { text: "Maintain a slight forward trunk tilt to reduce ACL stress", cueType: "verbal" },
       { text: "Keep your chest up and weight through your heels", cueType: "verbal" },
@@ -150,7 +150,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "transversus-abdominis", role: "stabilizer" },
       { muscleSlug: "tibialis-anterior", role: "stabilizer", notes: "Preparatory postural muscle — active during forward lean phase [Goulart 1999]" },
     ],
-    functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand"],
+    functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand", "dressing-lower-body", "bathing-hygiene", "floor-transfers", "bed-mobility"],
     cues: [
       { text: "Lean forward — nose over toes — before you stand", cueType: "verbal" },
       { text: "Push through your heels to stand up", cueType: "verbal" },
@@ -183,7 +183,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "tibialis-posterior", role: "synergist" },
       { muscleSlug: "peroneus-longus", role: "synergist", notes: "Dynamic lateral ankle stabilizer during heel raise" },
     ],
-    functionalTaskSlugs: ["walking", "stair-climbing"],
+    functionalTaskSlugs: ["walking", "stair-climbing", "running-jogging"],
     cues: [
       { text: "Rise straight up — avoid leaning forward", cueType: "verbal" },
       { text: "Go as high as you can, then lower slowly", cueType: "verbal" },
@@ -214,7 +214,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "gastrocnemius", role: "primary", notes: "Stretched with knee straight" },
       { muscleSlug: "soleus", role: "primary", notes: "Stretched with knee bent" },
     ],
-    functionalTaskSlugs: ["walking"],
+    functionalTaskSlugs: ["walking", "running-jogging"],
     cues: [
       { text: "Keep your back heel on the ground", cueType: "verbal" },
       { text: "For gastrocnemius: keep back knee straight. For soleus: bend back knee slightly", cueType: "verbal" },
@@ -296,7 +296,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "trapezius-middle", role: "primary" },
       { muscleSlug: "rhomboid-major", role: "primary" },
     ],
-    functionalTaskSlugs: ["reaching-overhead", "typing"],
+    functionalTaskSlugs: ["reaching-overhead", "typing", "dressing-upper-body"],
     cues: [
       { text: "Pull your shoulder blades together as if pinching a pencil between them", cueType: "verbal" },
       { text: "Keep your shoulders down — don't shrug", cueType: "verbal" },
@@ -327,7 +327,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "teres-minor", role: "primary" },
       { muscleSlug: "posterior-deltoid", role: "secondary" },
     ],
-    functionalTaskSlugs: ["reaching-overhead"],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body", "bathing-hygiene"],
     cues: [
       { text: "Keep your elbow pinned to your side — a towel roll helps", cueType: "verbal" },
       { text: "Rotate outward slowly, then return even slower", cueType: "verbal" },
@@ -427,7 +427,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "infraspinatus", role: "stabilizer", notes: "GH joint stabilizer during overhead press" },
       { muscleSlug: "pectoralis-major", role: "secondary", notes: "30-50% MVIC, higher in front press [Coratella 2022]" },
     ],
-    functionalTaskSlugs: ["reaching-overhead"],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body", "overhead-work"],
     cues: [
       { text: "Press straight up — don't let the weights drift forward", cueType: "verbal" },
       { text: "Keep your core braced and back against the chair", cueType: "verbal" },
@@ -461,6 +461,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "anterior-deltoid", role: "stabilizer", notes: "Minimal IR contribution" },
       { muscleSlug: "teres-major", role: "secondary", notes: "Active contributor to internal rotation" },
     ],
+    functionalTaskSlugs: ["dressing-upper-body", "bathing-hygiene"],
     cues: [
       { text: "Keep your elbow pinned to your side throughout", cueType: "verbal" },
       { text: "Rotate inward slowly, then return even slower", cueType: "verbal" },
@@ -639,7 +640,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "opponens-pollicis", role: "synergist", notes: "Thumb positioning" },
       { muscleSlug: "lumbricals", role: "synergist", notes: "MCP flexion and finger positioning during grip" },
     ],
-    functionalTaskSlugs: ["gripping-cup", "opening-jar"],
+    functionalTaskSlugs: ["gripping-cup", "opening-jar", "carrying-lifting", "dressing-upper-body", "bathing-hygiene"],
     cues: [
       { text: "Squeeze firmly and hold for 3-5 seconds", cueType: "verbal" },
       { text: "Spread your fingers fully between squeezes", cueType: "verbal" },
@@ -668,7 +669,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "flexor-pollicis-brevis", role: "primary", notes: "Flexion component of opposition" },
       { muscleSlug: "abductor-pollicis-brevis", role: "primary", notes: "Abduction component of opposition" },
     ],
-    functionalTaskSlugs: ["gripping-cup", "typing"],
+    functionalTaskSlugs: ["gripping-cup", "typing", "dressing-upper-body", "dressing-lower-body"],
     cues: [
       { text: "Touch your thumb firmly to each fingertip, making an O shape", cueType: "verbal" },
       { text: "Go slowly and make each touch precise", cueType: "verbal" },
@@ -696,7 +697,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "adductor-group", role: "primary", notes: "14-48% MVIC sidelying; Copenhagen variation achieves 108% [Serner 2014]" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core activation for sidelying position stability" },
     ],
-    functionalTaskSlugs: ["walking"],
+    functionalTaskSlugs: ["walking", "dressing-lower-body"],
     cues: [
       { text: "Keep your bottom leg straight as you lift", cueType: "verbal" },
       { text: "Lift only until you feel the inner thigh working — don't roll your pelvis", cueType: "verbal" },
@@ -785,7 +786,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "deep-cervical-flexors", role: "primary", notes: "Longus colli and longus capitis — the target muscles" },
       { muscleSlug: "sternocleidomastoid", role: "stabilizer", notes: "Should be minimally active — overuse indicates compensatory pattern" },
     ],
-    functionalTaskSlugs: ["posture-maintenance"],
+    functionalTaskSlugs: ["posture-maintenance", "overhead-work"],
     cues: [
       { text: "Gently nod your chin as if making a small double chin — don't lift your head", cueType: "verbal" },
       { text: "Think of lengthening the back of your neck against the surface", cueType: "verbal" },
@@ -820,7 +821,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "posterior-deltoid", role: "secondary" },
       { muscleSlug: "latissimus-dorsi", role: "synergist" },
     ],
-    functionalTaskSlugs: ["posture-maintenance", "reaching-overhead"],
+    functionalTaskSlugs: ["posture-maintenance", "reaching-overhead", "overhead-work"],
     cues: [
       { text: "Squeeze your shoulder blades together and slightly down — don't shrug", cueType: "verbal" },
       { text: "Lead with the elbows, pulling them straight back", cueType: "verbal" },
@@ -992,7 +993,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "internal-oblique", role: "synergist", notes: "Deepest oblique fibers co-activate with TrA" },
       { muscleSlug: "diaphragm", role: "stabilizer", notes: "Forms the top of the 'pressure canister' for intra-abdominal pressure" },
     ],
-    functionalTaskSlugs: ["posture-maintenance", "walking"],
+    functionalTaskSlugs: ["posture-maintenance", "walking", "carrying-lifting", "bed-mobility"],
     cues: [
       { text: "Gently draw your belly button toward your spine — like zipping up a tight pair of pants", cueType: "verbal" },
       { text: "Maintain normal breathing while holding the contraction — don't hold your breath", cueType: "verbal" },
@@ -1030,7 +1031,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core bracing prevents lumbar extension collapse" },
       { muscleSlug: "external-oblique", role: "stabilizer", notes: "Contralateral anti-rotation demand" },
     ],
-    functionalTaskSlugs: ["posture-maintenance", "walking"],
+    functionalTaskSlugs: ["posture-maintenance", "walking", "carrying-lifting"],
     cues: [
       { text: "Start on hands and knees — wrists under shoulders, knees under hips", cueType: "verbal" },
       { text: "Reach your opposite arm and leg long, like you're being pulled from both ends", cueType: "verbal" },
@@ -1068,7 +1069,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "iliopsoas", role: "stabilizer", notes: "Hip flexion control in dead bug — moderate demand beyond pure stabilization [Juker 1998]" },
       { muscleSlug: "multifidus", role: "stabilizer", notes: "Segmental spinal stability during dead bug" },
     ],
-    functionalTaskSlugs: ["posture-maintenance"],
+    functionalTaskSlugs: ["posture-maintenance", "bed-mobility"],
     cues: [
       { text: "Curl-up: slide your hands under your low back, curl up just enough to lift your shoulder blades", cueType: "verbal" },
       { text: "Dead bug: start with arms pointing to ceiling, legs at 90/90. Lower opposite arm and leg slowly", cueType: "verbal" },
@@ -1105,7 +1106,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "posterior-deltoid", role: "secondary", notes: "Horizontal abduction" },
       { muscleSlug: "rhomboid-major", role: "synergist" },
     ],
-    functionalTaskSlugs: ["reaching-overhead", "posture-maintenance"],
+    functionalTaskSlugs: ["reaching-overhead", "posture-maintenance", "overhead-work"],
     cues: [
       { text: "Lie face down with arms hanging off the edge or at your sides", cueType: "verbal" },
       { text: "For Y: lift arms overhead at 45° with thumbs up. For T: lift arms straight out to the side with thumbs up", cueType: "verbal" },
@@ -1141,7 +1142,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "triceps-brachii", role: "secondary", notes: "Elbow extension in push-up" },
       { muscleSlug: "anterior-deltoid", role: "synergist" },
     ],
-    functionalTaskSlugs: ["reaching-overhead", "pushing-up-from-chair"],
+    functionalTaskSlugs: ["reaching-overhead", "pushing-up-from-chair", "overhead-work"],
     cues: [
       { text: "Do a normal push-up, then at the top push further — round your upper back to protract your shoulder blades", cueType: "verbal" },
       { text: "The 'plus' is the most important part — push the floor away from you at the top", cueType: "verbal" },
@@ -1175,7 +1176,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "posterior-deltoid", role: "synergist", notes: "Minimal contribution at 0° abduction" },
       { muscleSlug: "supraspinatus", role: "stabilizer", notes: "Humeral head depressor role" },
     ],
-    functionalTaskSlugs: ["reaching-overhead"],
+    functionalTaskSlugs: ["reaching-overhead", "overhead-work"],
     cues: [
       { text: "Keep your elbow pinned to your side — a rolled towel between elbow and body helps", cueType: "verbal" },
       { text: "Rotate your forearm outward slowly against the band, then return even slower", cueType: "verbal" },
@@ -1209,7 +1210,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "gluteus-maximus", role: "secondary", notes: "Upper fibers assist abduction; key hip extensor" },
       { muscleSlug: "piriformis", role: "synergist", notes: "Assists external rotation in clamshell" },
     ],
-    functionalTaskSlugs: ["walking", "stair-climbing", "single-leg-balance"],
+    functionalTaskSlugs: ["walking", "stair-climbing", "single-leg-balance", "floor-transfers", "running-jogging"],
     cues: [
       { text: "For clamshells: keep feet together, open knees like a book. Don't let your pelvis roll back", cueType: "verbal" },
       { text: "For side-lying abduction: keep your body in a straight line, lift the top leg toward the ceiling", cueType: "verbal" },
@@ -1242,7 +1243,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "rectus-femoris", role: "primary", notes: "Stretched during hip flexor stretch (two-joint)" },
       { muscleSlug: "hamstrings", role: "primary", notes: "Stretched during hamstring stretch" },
     ],
-    functionalTaskSlugs: ["walking", "stair-climbing"],
+    functionalTaskSlugs: ["walking", "stair-climbing", "dressing-lower-body"],
     cues: [
       { text: "Hip flexor: half-kneeling, tuck your tailbone under (posterior pelvic tilt) before leaning forward", cueType: "verbal" },
       { text: "You should feel the stretch in the front of the hip on the kneeling side", cueType: "verbal" },
@@ -1277,7 +1278,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "iliopsoas", role: "secondary", notes: "Assists anterior tilt" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core control during both directions" },
     ],
-    functionalTaskSlugs: ["posture-maintenance", "walking"],
+    functionalTaskSlugs: ["posture-maintenance", "walking", "bed-mobility"],
     cues: [
       { text: "Lie on back with knees bent. Flatten your low back into the floor — that's a posterior tilt", cueType: "verbal" },
       { text: "Now arch your low back away from the floor — that's an anterior tilt", cueType: "verbal" },
@@ -1310,7 +1311,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "rectus-femoris", role: "primary", notes: "Active in SLR (two-joint)" },
       { muscleSlug: "iliopsoas", role: "secondary", notes: "Hip flexion component of SLR" },
     ],
-    functionalTaskSlugs: ["walking", "stair-climbing", "squat-to-stand"],
+    functionalTaskSlugs: ["walking", "stair-climbing", "squat-to-stand", "floor-transfers"],
     cues: [
       { text: "SLR: tighten your thigh to lock the knee before lifting — the knee should stay straight throughout", cueType: "verbal" },
       { text: "TKE: stand with the band behind your knee, push it straight — really lock out the last few degrees", cueType: "verbal" },
@@ -1344,7 +1345,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "gastrocnemius", role: "stabilizer", notes: "Ankle strategy for balance" },
       { muscleSlug: "soleus", role: "stabilizer", notes: "Postural ankle stabilization" },
     ],
-    functionalTaskSlugs: ["stair-climbing", "walking", "single-leg-balance"],
+    functionalTaskSlugs: ["stair-climbing", "walking", "single-leg-balance", "running-jogging"],
     cues: [
       { text: "Step-down: stand on a step, slowly lower the other foot to the ground — take 3-5 seconds", cueType: "verbal" },
       { text: "Keep your knee tracking over your 2nd toe — don't let it cave inward", cueType: "verbal" },
@@ -1377,7 +1378,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "gastrocnemius", role: "primary", notes: "Plantarflexion and weak knee flexion" },
       { muscleSlug: "soleus", role: "primary", notes: "Plantarflexion for push-off in gait" },
     ],
-    functionalTaskSlugs: ["walking", "stair-climbing"],
+    functionalTaskSlugs: ["walking", "stair-climbing", "running-jogging"],
     cues: [
       { text: "Hamstring curl: lie face down, bend your knee against resistance, then lower slowly", cueType: "verbal" },
       { text: "Heel raise: rise straight up on the balls of your feet, then lower over 3-4 seconds", cueType: "verbal" },
@@ -1476,7 +1477,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "soleus", role: "secondary", notes: "Tonic postural stabilizer" },
       { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "Pelvic stability during single-leg stance" },
     ],
-    functionalTaskSlugs: ["single-leg-balance", "walking"],
+    functionalTaskSlugs: ["single-leg-balance", "walking", "bathing-hygiene", "running-jogging"],
     cues: [
       { text: "Stand on one foot, keep a slight bend in the knee — don't lock it out", cueType: "verbal" },
       { text: "For star excursion: reach the free leg as far as possible in each direction while staying balanced", cueType: "verbal" },

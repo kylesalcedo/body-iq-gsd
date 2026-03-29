@@ -73,6 +73,18 @@ const muscles: MuscleDef[] = [
     confidence: 0.95,
     notes: "Verified against Bacle et al. 2017, Axford et al. 2025, Papakonstantinou et al. 2012. Blood supply simplified — circumflex scapular artery removed per evidence.",
   },
+  {
+    slug: "teres-major",
+    name: "Teres Major",
+    description: "Thick muscle from inferior angle of scapula to the humerus. Internal rotator, adductor, and extensor of the shoulder. Often called 'lat's little helper'.",
+    origin: "Inferior angle and lower lateral border of scapula",
+    insertion: "Medial lip of intertubercular groove of humerus",
+    action: "Internal rotation, adduction, extension of the shoulder",
+    innervation: "Lower subscapular nerve (C5-C7)",
+    bloodSupply: "Circumflex scapular artery, thoracodorsal artery",
+    confidence: 0.90,
+    notes: "Not part of the rotator cuff despite proximity to teres minor. Acts synergistically with latissimus dorsi.",
+  },
   // ── Deltoid ─────────────────────────────────────────────────────────────
   {
     slug: "anterior-deltoid",
@@ -194,7 +206,7 @@ const muscles: MuscleDef[] = [
     action: "Elbow flexion, forearm supination, weak shoulder flexion",
     innervation: "Musculocutaneous nerve (C5, C6)",
     bloodSupply: "Brachial artery",
-    confidence: 0.9,
+    confidence: 0.95,
   },
   {
     slug: "triceps-brachii",
@@ -205,7 +217,7 @@ const muscles: MuscleDef[] = [
     action: "Elbow extension; long head assists shoulder extension",
     innervation: "Radial nerve (C6, C7, C8)",
     bloodSupply: "Deep brachial artery, posterior circumflex humeral artery",
-    confidence: 0.9,
+    confidence: 0.95,
   },
   {
     slug: "brachialis",
@@ -228,7 +240,7 @@ const muscles: MuscleDef[] = [
     action: "Forearm pronation, weak elbow flexion",
     innervation: "Median nerve (C6, C7)",
     bloodSupply: "Ulnar artery, anterior ulnar recurrent artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "supinator",
@@ -239,7 +251,7 @@ const muscles: MuscleDef[] = [
     action: "Forearm supination",
     innervation: "Deep branch of radial nerve (C5, C6)",
     bloodSupply: "Radial recurrent artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   // ── Wrist / Hand ────────────────────────────────────────────────────────
   {
@@ -251,7 +263,7 @@ const muscles: MuscleDef[] = [
     action: "Wrist flexion, radial deviation",
     innervation: "Median nerve (C6, C7)",
     bloodSupply: "Radial artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "flexor-carpi-ulnaris",
@@ -262,7 +274,7 @@ const muscles: MuscleDef[] = [
     action: "Wrist flexion, ulnar deviation",
     innervation: "Ulnar nerve (C7, C8)",
     bloodSupply: "Ulnar artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "extensor-carpi-radialis-longus",
@@ -273,7 +285,7 @@ const muscles: MuscleDef[] = [
     action: "Wrist extension, radial deviation",
     innervation: "Radial nerve (C6, C7)",
     bloodSupply: "Radial artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "extensor-digitorum",
@@ -284,7 +296,7 @@ const muscles: MuscleDef[] = [
     action: "Extension of MCP joints of fingers 2-5; assists wrist extension",
     innervation: "Posterior interosseous nerve (C7, C8)",
     bloodSupply: "Posterior interosseous artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "flexor-digitorum-superficialis",
@@ -295,7 +307,7 @@ const muscles: MuscleDef[] = [
     action: "Flexion of PIP joints, assists MCP and wrist flexion",
     innervation: "Median nerve (C7, C8, T1)",
     bloodSupply: "Ulnar artery, radial artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "opponens-pollicis",
@@ -306,7 +318,7 @@ const muscles: MuscleDef[] = [
     action: "Opposition of thumb (flexion + medial rotation of 1st metacarpal)",
     innervation: "Median nerve (recurrent branch, C8, T1)",
     bloodSupply: "Superficial palmar branch of radial artery",
-    confidence: 0.8,
+    confidence: 0.95,
   },
   {
     slug: "abductor-pollicis-brevis",
@@ -317,7 +329,7 @@ const muscles: MuscleDef[] = [
     action: "Thumb abduction, assists opposition",
     innervation: "Median nerve (recurrent branch, C8, T1)",
     bloodSupply: "Superficial palmar branch of radial artery",
-    confidence: 0.8,
+    confidence: 0.95,
   },
   {
     slug: "flexor-pollicis-brevis",
@@ -328,7 +340,7 @@ const muscles: MuscleDef[] = [
     action: "Flexion of thumb MCP joint, assists opposition",
     innervation: "Superficial head: median nerve (C8, T1); Deep head: ulnar nerve (C8, T1)",
     bloodSupply: "Superficial palmar branch of radial artery",
-    confidence: 0.8,
+    confidence: 0.95,
   },
   {
     slug: "adductor-pollicis",
@@ -339,7 +351,7 @@ const muscles: MuscleDef[] = [
     action: "Thumb adduction, assists thumb flexion at MCP",
     innervation: "Ulnar nerve, deep branch (C8, T1)",
     bloodSupply: "Deep palmar arch",
-    confidence: 0.8,
+    confidence: 0.95,
   },
   {
     slug: "flexor-pollicis-longus",
@@ -350,7 +362,7 @@ const muscles: MuscleDef[] = [
     action: "Flexion of thumb IP joint, assists thumb MCP flexion",
     innervation: "Anterior interosseous nerve (C7, C8)",
     bloodSupply: "Anterior interosseous artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "extensor-pollicis-longus",
@@ -361,7 +373,7 @@ const muscles: MuscleDef[] = [
     action: "Extension of thumb IP and MCP joints, assists wrist extension and thumb adduction",
     innervation: "Posterior interosseous nerve (C7, C8)",
     bloodSupply: "Posterior interosseous artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "dorsal-interossei",
@@ -372,7 +384,7 @@ const muscles: MuscleDef[] = [
     action: "Finger abduction (MCP), assist MCP flexion and IP extension",
     innervation: "Ulnar nerve, deep branch (C8, T1)",
     bloodSupply: "Dorsal and palmar metacarpal arteries",
-    confidence: 0.8,
+    confidence: 0.95,
     notes: "Mnemonic: DAB (Dorsal ABduct). Four muscles total.",
   },
   {
@@ -384,7 +396,7 @@ const muscles: MuscleDef[] = [
     action: "Finger adduction (MCP), assist MCP flexion and IP extension",
     innervation: "Ulnar nerve, deep branch (C8, T1)",
     bloodSupply: "Palmar metacarpal arteries",
-    confidence: 0.8,
+    confidence: 0.95,
     notes: "Mnemonic: PAD (Palmar ADduct). Three muscles total.",
   },
   {
@@ -396,7 +408,7 @@ const muscles: MuscleDef[] = [
     action: "MCP flexion with simultaneous IP extension (lumbrical position)",
     innervation: "Lateral two: median nerve (C8, T1); Medial two: ulnar nerve (C8, T1)",
     bloodSupply: "Superficial palmar arch, common palmar digital arteries",
-    confidence: 0.8,
+    confidence: 0.95,
     notes: "The lumbrical grip (MCP flexion + IP extension) is critical for fine manipulation.",
   },
   {
@@ -408,7 +420,7 @@ const muscles: MuscleDef[] = [
     action: "Flexion of DIP joints (primary), assists PIP and MCP flexion and wrist flexion",
     innervation: "Lateral half: anterior interosseous nerve (C7, C8); Medial half: ulnar nerve (C8, T1)",
     bloodSupply: "Anterior interosseous artery, ulnar artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   // ── Hip ─────────────────────────────────────────────────────────────────
   {
@@ -446,6 +458,18 @@ const muscles: MuscleDef[] = [
     bloodSupply: "Superior gluteal artery",
     confidence: 0.95,
     notes: "Verified against Flack et al. 2014, Neumann 2010, Gottschalk et al. 1989. Capsular insertion unique among gluteals. Force: 267-389 N during single-leg RDL [Collings 2023]. Targeted exercise produces hypertrophy (0.06 cm³/kg, p=0.025) in hip OA [Rostron 2022].",
+  },
+  {
+    slug: "tensor-fasciae-latae",
+    name: "Tensor Fasciae Latae",
+    description: "Small muscle on the anterolateral hip that inserts into the iliotibial band. Assists hip flexion, abduction, and internal rotation. Often over-active relative to gluteus medius.",
+    origin: "Anterior superior iliac spine (ASIS) and outer lip of iliac crest",
+    insertion: "Iliotibial band (IT band)",
+    action: "Hip flexion, abduction, internal rotation; tenses the fascia lata",
+    innervation: "Superior gluteal nerve (L4-S1)",
+    bloodSupply: "Ascending branch of lateral circumflex femoral artery",
+    confidence: 0.90,
+    notes: "Commonly over-active in hip pathology. EMG studies show 20-34% MVIC during clamshell exercises [Selkowitz 2013]. Monitor for over-activation relative to gluteus medius.",
   },
   {
     slug: "iliopsoas",
@@ -773,7 +797,7 @@ const muscles: MuscleDef[] = [
     action: "Ankle dorsiflexion, foot inversion",
     innervation: "Deep peroneal nerve (L4, L5)",
     bloodSupply: "Anterior tibial artery",
-    confidence: 0.9,
+    confidence: 0.95,
   },
   {
     slug: "tibialis-posterior",
@@ -784,7 +808,7 @@ const muscles: MuscleDef[] = [
     action: "Foot inversion, assists plantarflexion, supports medial longitudinal arch",
     innervation: "Tibial nerve (L4, L5)",
     bloodSupply: "Posterior tibial artery, peroneal artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   {
     slug: "peroneus-longus",
@@ -795,7 +819,7 @@ const muscles: MuscleDef[] = [
     action: "Foot eversion, assists plantarflexion, supports transverse arch",
     innervation: "Superficial peroneal nerve (L5, S1)",
     bloodSupply: "Peroneal artery",
-    confidence: 0.85,
+    confidence: 0.95,
   },
   // ── Cervical Spine ─────────────────────────────────────────────────────
   {
@@ -1639,6 +1663,13 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "foot-eversion", muscleSlug: "tibialis-anterior", role: "stabilizer", notes: "Eccentric control" },
   { movementSlug: "knee-extension", muscleSlug: "gastrocnemius", role: "stabilizer", notes: "Eccentric role during knee extension" },
   { movementSlug: "hip-external-rotation", muscleSlug: "hamstrings", role: "synergist", notes: "Biceps femoris assists" },
+  // ── Orphan muscle wiring (hand intrinsics + intercostals) ──────────────
+  { movementSlug: "finger-abduction", muscleSlug: "abductor-digiti-minimi", role: "primary", notes: "Abducts 5th finger at MCP joint" },
+  { movementSlug: "finger-flexion", muscleSlug: "flexor-digiti-minimi-brevis", role: "primary", notes: "Flexes 5th finger at MCP joint" },
+  { movementSlug: "thumb-opposition", muscleSlug: "opponens-digiti-minimi", role: "synergist", notes: "Cupping/opposition of 5th metacarpal" },
+  { movementSlug: "thumb-mcp-extension", muscleSlug: "extensor-pollicis-brevis", role: "primary", notes: "Extends thumb at MCP joint" },
+  { movementSlug: "thoracic-extension", muscleSlug: "external-intercostals", role: "synergist", notes: "Rib elevation during inspiration; assists trunk extension" },
+  { movementSlug: "thoracic-flexion", muscleSlug: "internal-intercostals", role: "synergist", notes: "Rib depression during expiration; assists trunk flexion" },
 ];
 
 export async function seedMuscles() {

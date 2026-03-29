@@ -24,9 +24,10 @@ const exercises: ExerciseDef[] = [
     movementSlugs: ["hip-extension"],
     muscleRoles: [
       { muscleSlug: "gluteus-maximus", role: "primary" },
-      { muscleSlug: "hamstrings", role: "secondary" },
+      { muscleSlug: "hamstrings", role: "secondary", notes: "15-25% MVIC — co-contraction pattern" },
       { muscleSlug: "erector-spinae", role: "stabilizer" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+      { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "Pelvic stabilizer during hip extension" },
     ],
     functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand", "walking"],
     cues: [
@@ -47,12 +48,14 @@ const exercises: ExerciseDef[] = [
     slug: "clamshell",
     name: "Clamshell",
     description: "Sidelying hip external rotation exercise. Patient lies on side with hips and knees bent, feet together, and opens top knee like a clamshell.",
-    confidence: 0.85,
+    confidence: 0.90,
     movementSlugs: ["hip-external-rotation", "hip-abduction"],
     muscleRoles: [
       { muscleSlug: "gluteus-medius", role: "primary", notes: "Posterior fibers" },
-      { muscleSlug: "piriformis", role: "secondary" },
+      { muscleSlug: "piriformis", role: "synergist", notes: "14.5% T2 change (fMRI) [Kim 2025]" },
       { muscleSlug: "gluteus-maximus", role: "synergist" },
+      { muscleSlug: "tensor-fasciae-latae", role: "secondary", notes: "20-34% MVIC — monitor for over-activation [Selkowitz 2013]" },
+      { muscleSlug: "gluteus-minimus", role: "synergist", notes: "4.5-7.2% T2 change [Kim 2025]" },
     ],
     functionalTaskSlugs: ["walking", "stair-climbing"],
     cues: [
@@ -78,12 +81,13 @@ const exercises: ExerciseDef[] = [
     muscleRoles: [
       { muscleSlug: "quadriceps", role: "primary" },
       { muscleSlug: "gluteus-maximus", role: "primary" },
-      { muscleSlug: "hamstrings", role: "secondary" },
+      { muscleSlug: "hamstrings", role: "stabilizer", notes: "15-25% MVIC — co-contraction pattern for knee stability [Barrett 2023]" },
       { muscleSlug: "adductor-group", role: "secondary" },
       { muscleSlug: "erector-spinae", role: "stabilizer" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer" },
       { muscleSlug: "gastrocnemius", role: "stabilizer" },
       { muscleSlug: "soleus", role: "stabilizer" },
+      { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "30-45% MVIC pelvic stability [Muyor 2020]" },
     ],
     functionalTaskSlugs: ["squat-to-stand", "stair-climbing", "pushing-up-from-chair"],
     cues: [
@@ -115,6 +119,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "hamstrings", role: "secondary" },
       { muscleSlug: "erector-spinae", role: "stabilizer" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+      { muscleSlug: "tibialis-anterior", role: "stabilizer", notes: "Preparatory postural muscle — active during forward lean phase [Goulart 1999]" },
     ],
     functionalTaskSlugs: ["pushing-up-from-chair", "squat-to-stand"],
     cues: [
@@ -141,6 +146,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "gastrocnemius", role: "primary" },
       { muscleSlug: "soleus", role: "primary" },
       { muscleSlug: "tibialis-posterior", role: "synergist" },
+      { muscleSlug: "peroneus-longus", role: "synergist", notes: "Dynamic lateral ankle stabilizer during heel raise" },
     ],
     functionalTaskSlugs: ["walking", "stair-climbing"],
     cues: [
@@ -161,7 +167,7 @@ const exercises: ExerciseDef[] = [
     slug: "calf-stretch",
     name: "Calf Stretch (Wall Stretch)",
     description: "Standing stretch for the gastrocnemius and soleus. Patient places hands on wall with one foot forward and one back, leaning into the wall.",
-    confidence: 0.85,
+    confidence: 0.90,
     movementSlugs: ["ankle-dorsiflexion"],
     muscleRoles: [
       { muscleSlug: "gastrocnemius", role: "primary", notes: "Stretched with knee straight" },
@@ -183,7 +189,7 @@ const exercises: ExerciseDef[] = [
     slug: "wrist-flexor-stretch",
     name: "Wrist Flexor Stretch",
     description: "Stretch for the forearm flexor group. Extend the elbow and use the other hand to gently extend the wrist and fingers.",
-    confidence: 0.8,
+    confidence: 0.85,
     movementSlugs: ["wrist-extension"],
     muscleRoles: [
       { muscleSlug: "flexor-carpi-radialis", role: "primary", notes: "Being stretched" },
@@ -206,7 +212,7 @@ const exercises: ExerciseDef[] = [
     slug: "wrist-extensor-stretch",
     name: "Wrist Extensor Stretch",
     description: "Stretch for the forearm extensor group. Extend the elbow and use the other hand to gently flex the wrist.",
-    confidence: 0.8,
+    confidence: 0.85,
     movementSlugs: ["wrist-flexion"],
     muscleRoles: [
       { muscleSlug: "extensor-carpi-radialis-longus", role: "primary", notes: "Being stretched" },
@@ -228,7 +234,7 @@ const exercises: ExerciseDef[] = [
     slug: "scapular-retraction-exercise",
     name: "Scapular Retraction Exercise",
     description: "Squeeze shoulder blades together in a seated or standing position. Foundational exercise for scapular stability and posture.",
-    confidence: 0.85,
+    confidence: 0.90,
     movementSlugs: ["scapular-retraction"],
     muscleRoles: [
       { muscleSlug: "trapezius-middle", role: "primary" },
@@ -284,7 +290,8 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "iliopsoas", role: "primary" },
       { muscleSlug: "rectus-femoris", role: "primary" },
       { muscleSlug: "quadriceps", role: "stabilizer", notes: "Keeps knee extended" },
-      { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Significantly active in mid-to-late concentric phase [Okubo 2021]" },
+      { muscleSlug: "tensor-fasciae-latae", role: "synergist", notes: "Active contributor during hip flexion [Hu 2011]" },
     ],
     functionalTaskSlugs: ["walking"],
     cues: [
@@ -328,15 +335,17 @@ const exercises: ExerciseDef[] = [
     slug: "overhead-press",
     name: "Overhead Press (Seated)",
     description: "Seated shoulder press with dumbbells or resistance band. Combines shoulder flexion and abduction to lift weight overhead. Foundational upper extremity strengthening exercise.",
-    confidence: 0.85,
+    confidence: 0.90,
     movementSlugs: ["shoulder-flexion", "shoulder-abduction", "elbow-extension"],
     muscleRoles: [
       { muscleSlug: "anterior-deltoid", role: "primary" },
       { muscleSlug: "middle-deltoid", role: "primary" },
-      { muscleSlug: "supraspinatus", role: "synergist", notes: "Initiates abduction" },
+      { muscleSlug: "supraspinatus", role: "stabilizer", notes: "GH joint centering during pressing [Cools 2020]" },
       { muscleSlug: "triceps-brachii", role: "secondary" },
       { muscleSlug: "trapezius-upper", role: "stabilizer", notes: "Scapular upward rotation" },
       { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "Scapular stability" },
+      { muscleSlug: "infraspinatus", role: "stabilizer", notes: "GH joint stabilizer during overhead press" },
+      { muscleSlug: "pectoralis-major", role: "secondary", notes: "30-50% MVIC, higher in front press [Coratella 2022]" },
     ],
     functionalTaskSlugs: ["reaching-overhead"],
     cues: [
@@ -363,7 +372,8 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "subscapularis", role: "primary" },
       { muscleSlug: "pectoralis-major", role: "secondary", notes: "Sternal head assists" },
       { muscleSlug: "latissimus-dorsi", role: "secondary" },
-      { muscleSlug: "anterior-deltoid", role: "synergist" },
+      { muscleSlug: "anterior-deltoid", role: "stabilizer", notes: "Minimal IR contribution" },
+      { muscleSlug: "teres-major", role: "secondary", notes: "Active contributor to internal rotation" },
     ],
     cues: [
       { text: "Keep your elbow pinned to your side throughout", cueType: "verbal" },
@@ -386,7 +396,8 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "pectoralis-major", role: "primary" },
       { muscleSlug: "anterior-deltoid", role: "secondary" },
       { muscleSlug: "triceps-brachii", role: "secondary" },
-      { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "Scapular protraction at end range" },
+      { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "27.55% RVC with plus component — essential at end-range protraction [Park 2014]" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core stabilizer — minimal activation (10-20% MVIC) in wall variation [Marcolin 2015]" },
     ],
     cues: [
       { text: "Keep your body in a straight line — don't sag at the hips", cueType: "verbal" },
@@ -410,7 +421,8 @@ const exercises: ExerciseDef[] = [
     muscleRoles: [
       { muscleSlug: "biceps-brachii", role: "primary" },
       { muscleSlug: "brachialis", role: "primary" },
-      { muscleSlug: "supinator", role: "synergist", notes: "Maintains supination" },
+      { muscleSlug: "supinator", role: "synergist", notes: "Maintains supination — not an elbow flexor" },
+      { muscleSlug: "brachioradialis", role: "secondary", notes: "Significant contributor — becomes co-primary with neutral grip [Marcolin 2018]" },
     ],
     functionalTaskSlugs: ["gripping-cup"],
     cues: [
@@ -430,10 +442,11 @@ const exercises: ExerciseDef[] = [
     slug: "tricep-extension",
     name: "Tricep Extension (Overhead)",
     description: "Overhead elbow extension with dumbbell or band. Fully lengthens the long head of the triceps across both joints. Complements pushing exercises.",
-    confidence: 0.85,
+    confidence: 0.90,
     movementSlugs: ["elbow-extension", "shoulder-extension"],
     muscleRoles: [
-      { muscleSlug: "triceps-brachii", role: "primary" },
+      { muscleSlug: "triceps-brachii", role: "primary", notes: "Long head preferentially recruited in overhead position — 28.5% greater hypertrophy vs neutral [Maeo 2023]" },
+      { muscleSlug: "anconeus", role: "synergist", notes: "Assists elbow extension" },
     ],
     functionalTaskSlugs: ["pushing-up-from-chair"],
     cues: [
@@ -451,7 +464,7 @@ const exercises: ExerciseDef[] = [
     slug: "forearm-pronation-supination",
     name: "Forearm Pronation/Supination with Hammer",
     description: "Seated with elbow on thigh, rotate forearm using a weighted hammer or dowel. The offset weight creates torque for resisted pronation and supination.",
-    confidence: 0.8,
+    confidence: 0.85,
     movementSlugs: ["forearm-pronation", "forearm-supination"],
     muscleRoles: [
       { muscleSlug: "pronator-teres", role: "primary", notes: "During pronation" },
@@ -474,12 +487,13 @@ const exercises: ExerciseDef[] = [
     slug: "wrist-radial-ulnar-deviation",
     name: "Wrist Deviation Exercise (Radial/Ulnar)",
     description: "Seated with forearm on thigh, wrist hanging off edge. Move wrist side to side with light weight. Targets wrist deviators used in gripping and tool use.",
-    confidence: 0.75,
+    confidence: 0.80,
     movementSlugs: ["radial-deviation", "ulnar-deviation"],
     muscleRoles: [
       { muscleSlug: "flexor-carpi-radialis", role: "primary", notes: "Radial deviation" },
       { muscleSlug: "extensor-carpi-radialis-longus", role: "primary", notes: "Radial deviation" },
       { muscleSlug: "flexor-carpi-ulnaris", role: "primary", notes: "Ulnar deviation" },
+      { muscleSlug: "extensor-carpi-ulnaris", role: "primary", notes: "Co-primary for ulnar deviation with FCU" },
     ],
     functionalTaskSlugs: ["opening-jar", "typing"],
     cues: [
@@ -501,8 +515,10 @@ const exercises: ExerciseDef[] = [
     movementSlugs: ["finger-flexion", "finger-extension"],
     muscleRoles: [
       { muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
-      { muscleSlug: "extensor-digitorum", role: "secondary", notes: "Active release phase" },
+      { muscleSlug: "flexor-digitorum-profundus", role: "primary", notes: "Deep finger flexor — high activation during grip" },
+      { muscleSlug: "extensor-digitorum", role: "stabilizer", notes: "Maintains wrist extension during grip — stabilizer not secondary mover" },
       { muscleSlug: "opponens-pollicis", role: "synergist", notes: "Thumb positioning" },
+      { muscleSlug: "lumbricals", role: "synergist", notes: "MCP flexion and finger positioning during grip" },
     ],
     functionalTaskSlugs: ["gripping-cup", "opening-jar"],
     cues: [
@@ -521,10 +537,12 @@ const exercises: ExerciseDef[] = [
     slug: "thumb-opposition-exercise",
     name: "Thumb Opposition Exercise",
     description: "Touch the thumb to each fingertip in sequence, then reverse. Trains opposition coordination used in fine motor tasks.",
-    confidence: 0.8,
+    confidence: 0.85,
     movementSlugs: ["thumb-opposition"],
     muscleRoles: [
       { muscleSlug: "opponens-pollicis", role: "primary" },
+      { muscleSlug: "flexor-pollicis-brevis", role: "primary", notes: "Flexion component of opposition" },
+      { muscleSlug: "abductor-pollicis-brevis", role: "primary", notes: "Abduction component of opposition" },
     ],
     functionalTaskSlugs: ["gripping-cup", "typing"],
     cues: [
@@ -542,10 +560,11 @@ const exercises: ExerciseDef[] = [
     slug: "hip-adduction-sidelying",
     name: "Sidelying Hip Adduction",
     description: "Lie on side with top leg forward on a support. Lift the bottom leg toward ceiling. Targets adductor group for medial thigh strengthening.",
-    confidence: 0.8,
+    confidence: 0.85,
     movementSlugs: ["hip-adduction"],
     muscleRoles: [
-      { muscleSlug: "adductor-group", role: "primary" },
+      { muscleSlug: "adductor-group", role: "primary", notes: "14-48% MVIC sidelying; Copenhagen variation achieves 108% [Serner 2014]" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core activation for sidelying position stability" },
     ],
     functionalTaskSlugs: ["walking"],
     cues: [
@@ -563,11 +582,13 @@ const exercises: ExerciseDef[] = [
     slug: "seated-hip-internal-rotation",
     name: "Seated Hip Internal Rotation",
     description: "Sit on edge of chair with feet on floor. Rotate the shin outward (foot moves out) to internally rotate the hip. Often limited in hip pathology.",
-    confidence: 0.75,
+    confidence: 0.80,
     notes: "Hip internal rotation is commonly limited. Assessment of ROM should precede strengthening.",
     movementSlugs: ["hip-internal-rotation"],
     muscleRoles: [
-      { muscleSlug: "gluteus-medius", role: "primary", notes: "Anterior fibers" },
+      { muscleSlug: "gluteus-medius", role: "primary", notes: "Anterior fibers — context-dependent primary at flexed positions [Martins 2022]" },
+      { muscleSlug: "gluteus-minimus", role: "primary", notes: "Primary internal rotator [Ganderton 2017]" },
+      { muscleSlug: "tensor-fasciae-latae", role: "secondary", notes: "Active primarily at 90° hip flexion [Martins 2022]" },
     ],
     functionalTaskSlugs: ["walking"],
     cues: [
@@ -667,7 +688,7 @@ const exercises: ExerciseDef[] = [
     slug: "cervicothoracic-self-mobilization",
     name: "Cervicothoracic Self-Mobilization",
     description: "Combined cervical and thoracic spine mobility exercises using foam roller or towel roll. Patient performs supine thoracic extension over a roll positioned at the cervicothoracic junction, combined with active cervical range of motion. Demonstrates superior outcomes for pain reduction and ROM compared to cervical exercises alone.",
-    confidence: 0.8,
+    confidence: 0.85,
     notes: "Evidence: combined cervical and thoracic mobility exercises show superior outcomes vs cervical exercises alone [Sun 2024, Cho 2017]. Addresses the kinetic chain relationship between thoracic stiffness and neck dysfunction.",
     movementSlugs: ["thoracic-extension", "cervical-extension", "cervical-rotation"],
     muscleRoles: [
@@ -724,7 +745,7 @@ const exercises: ExerciseDef[] = [
     slug: "schroth-three-dimensional-exercises",
     name: "Schroth-Based Three-Dimensional Exercises",
     description: "Functional exercises addressing postural kyphosis through three-dimensional corrective movements. Combines elongation, deflection, derotation, and facilitated breathing. Demonstrates large effect sizes for improving thoracic kyphosis (mean reduction of 14.76°), lumbar lordosis, balance, and quality of life.",
-    confidence: 0.8,
+    confidence: 0.85,
     notes: "Evidence: large effect sizes for kyphosis reduction (14.76°), lumbar lordosis improvement, balance, and QOL [Özdemir Görgü 2023]. Requires trained instruction initially.",
     movementSlugs: ["thoracic-extension", "thoracic-lateral-flexion", "thoracic-rotation"],
     muscleRoles: [
@@ -760,6 +781,7 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "transversus-abdominis", role: "synergist", notes: "Expiratory control and intra-abdominal pressure" },
       { muscleSlug: "internal-oblique", role: "synergist", notes: "Assists forced expiration" },
       { muscleSlug: "erector-spinae", role: "stabilizer", notes: "Postural maintenance during breathing" },
+      { muscleSlug: "external-oblique", role: "synergist", notes: "Contributes during forced expiration phases" },
     ],
     functionalTaskSlugs: ["breathing", "posture-maintenance"],
     cues: [
@@ -817,10 +839,11 @@ const exercises: ExerciseDef[] = [
     movementSlugs: ["lumbar-extension", "hip-extension", "shoulder-flexion"],
     muscleRoles: [
       { muscleSlug: "erector-spinae", role: "primary", notes: "29% nEMG — lumbar stabilization during limb extension" },
-      { muscleSlug: "multifidus", role: "primary", notes: "Segmental stabilization and anti-rotation" },
+      { muscleSlug: "multifidus", role: "stabilizer", notes: "Segmental stabilizer rather than primary extensor — L/G ratio 1.21 [Khosrokiani 2021]" },
       { muscleSlug: "gluteus-maximus", role: "secondary", notes: "Extends the hip during leg reach" },
       { muscleSlug: "anterior-deltoid", role: "secondary", notes: "Extends arm overhead" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core bracing prevents lumbar extension collapse" },
+      { muscleSlug: "external-oblique", role: "stabilizer", notes: "Contralateral anti-rotation demand" },
     ],
     functionalTaskSlugs: ["posture-maintenance", "walking"],
     cues: [
@@ -851,7 +874,8 @@ const exercises: ExerciseDef[] = [
       { muscleSlug: "external-oblique", role: "primary", notes: "Significant activation, especially in dead bug" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Maintains lumbar stability" },
       { muscleSlug: "internal-oblique", role: "synergist" },
-      { muscleSlug: "iliopsoas", role: "stabilizer", notes: "Hip flexion hold in dead bug position" },
+      { muscleSlug: "iliopsoas", role: "stabilizer", notes: "Hip flexion control in dead bug — moderate demand beyond pure stabilization [Juker 1998]" },
+      { muscleSlug: "multifidus", role: "stabilizer", notes: "Segmental spinal stability during dead bug" },
     ],
     functionalTaskSlugs: ["posture-maintenance"],
     cues: [
@@ -990,7 +1014,7 @@ const exercises: ExerciseDef[] = [
     slug: "hip-flexor-hamstring-stretch",
     name: "Hip Flexor and Hamstring Stretching",
     description: "Flexibility exercises addressing hip ROM impairments. Half-kneeling hip flexor stretch (iliopsoas, rectus femoris) and supine hamstring stretch. Improves function in hip OA and addresses limited hip mobility that affects lumbar spine mechanics.",
-    confidence: 0.8,
+    confidence: 0.85,
     notes: "Evidence: flexibility exercises improve function in hip OA [Cibulka 2017]. Limited hip mobility affects lumbar spine mechanics and functional movement [Moreside 2012].",
     movementSlugs: ["hip-extension", "hip-flexion", "knee-flexion"],
     muscleRoles: [
@@ -1024,7 +1048,7 @@ const exercises: ExerciseDef[] = [
     muscleRoles: [
       { muscleSlug: "rectus-abdominis", role: "primary", notes: "Posterior pelvic tilt" },
       { muscleSlug: "gluteus-maximus", role: "primary", notes: "Assists posterior tilt" },
-      { muscleSlug: "erector-spinae", role: "primary", notes: "Anterior pelvic tilt" },
+      { muscleSlug: "erector-spinae", role: "secondary", notes: "Primary during anterior tilt only" },
       { muscleSlug: "iliopsoas", role: "secondary", notes: "Assists anterior tilt" },
       { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core control during both directions" },
     ],
@@ -1104,7 +1128,7 @@ const exercises: ExerciseDef[] = [
     slug: "posterior-chain-strengthening",
     name: "Hamstring and Calf Strengthening",
     description: "Posterior chain strengthening to balance knee joint forces and improve functional capacity. Includes prone hamstring curls, seated heel raises, and nordic hamstring eccentric exercises. Supports weight-bearing activities and stair negotiation.",
-    confidence: 0.8,
+    confidence: 0.85,
     notes: "Evidence: posterior chain strengthening balances knee joint forces and improves functional capacity [VA 2020, Zeng 2022]. Supports weight-bearing activities and stair negotiation.",
     movementSlugs: ["knee-flexion", "ankle-plantarflexion"],
     muscleRoles: [

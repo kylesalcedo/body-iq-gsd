@@ -135,6 +135,124 @@ const tasks: TaskDef[] = [
       { slug: "scapular-retraction", relevance: "supportive" },
     ],
   },
+  // ── Research-derived tasks (functional-task-biomechanics-response.md) ────
+  {
+    slug: "carrying-lifting",
+    name: "Carrying and Lifting Objects",
+    description:
+      "Bilateral or one-sided carrying of objects (groceries, laundry) and lifting from floor to waist. Requires grip strength, trunk stabilization, and coordinated hip-knee-ankle loading. Every 5-kg decrease in handgrip strength increases ADL limitation odds by 9-20%.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "hip-extension", relevance: "essential" },
+      { slug: "knee-extension", relevance: "essential" },
+      { slug: "ankle-plantarflexion", relevance: "supportive" },
+      { slug: "finger-flexion", relevance: "essential" },
+      { slug: "lumbar-extension", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "dressing-upper-body",
+    name: "Dressing — Upper Body",
+    description:
+      "Putting on/removing shirts, buttoning, zipping. Requires 121° shoulder flexion, 128° abduction for overhead donning, and 85° glenohumeral IR for hand-behind-back tasks. Fine motor dexterity needed for buttons and zippers.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "shoulder-flexion", relevance: "essential" },
+      { slug: "shoulder-abduction", relevance: "essential" },
+      { slug: "shoulder-internal-rotation", relevance: "essential" },
+      { slug: "shoulder-external-rotation", relevance: "supportive" },
+      { slug: "finger-flexion", relevance: "essential" },
+      { slug: "finger-extension", relevance: "essential" },
+    ],
+  },
+  {
+    slug: "dressing-lower-body",
+    name: "Dressing — Lower Body",
+    description:
+      "Putting on pants, socks, shoes, tying laces. Requires 126° hip flexion for shoe tying, 110° minimum for post-THA independence. Standing sock donning requires significant trunk flexion and single-leg balance.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "hip-flexion", relevance: "essential" },
+      { slug: "knee-flexion", relevance: "essential" },
+      { slug: "ankle-dorsiflexion", relevance: "supportive" },
+      { slug: "finger-flexion", relevance: "supportive" },
+      { slug: "lumbar-flexion", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "bathing-hygiene",
+    name: "Bathing and Personal Hygiene",
+    description:
+      "Showering, washing hair, reaching behind back, toilet transfers. Requires 121° shoulder flexion for hair washing, 85° GH IR for back washing. Toilet transfers require lower seat height than standard chair, demanding minimum relative muscle power of 1.0-1.1 W/kg.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "shoulder-flexion", relevance: "essential" },
+      { slug: "shoulder-internal-rotation", relevance: "essential" },
+      { slug: "hip-extension", relevance: "essential" },
+      { slug: "knee-extension", relevance: "essential" },
+      { slug: "ankle-dorsiflexion", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "floor-transfers",
+    name: "Floor Transfers (Sit-to-Floor-to-Stand)",
+    description:
+      "Getting down to and up from the floor. The Sitting-Rising Test predicts all-cause mortality (HR 3.84 for lowest scores). Requires deep hip/knee flexion, upper extremity push, and multiple movement strategies (sit-up 60%, side-sit 20%, roll-over 20%).",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "hip-flexion", relevance: "essential" },
+      { slug: "hip-extension", relevance: "essential" },
+      { slug: "knee-flexion", relevance: "essential" },
+      { slug: "knee-extension", relevance: "essential" },
+      { slug: "ankle-dorsiflexion", relevance: "supportive" },
+      { slug: "lumbar-flexion", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "running-jogging",
+    name: "Running and Jogging",
+    description:
+      "Stance phase decreases to 31% during running (vs 62% walking). Ankle plantar flexors generate >60% of total energy at all speeds. Hip extensors become dominant energy generators at speeds >5 m/s. Peak plantar flexor moment accounts for 96% of step length variance.",
+    category: "sport",
+    movementSlugs: [
+      { slug: "hip-flexion", relevance: "essential" },
+      { slug: "hip-extension", relevance: "essential" },
+      { slug: "knee-flexion", relevance: "essential" },
+      { slug: "knee-extension", relevance: "essential" },
+      { slug: "ankle-dorsiflexion", relevance: "essential" },
+      { slug: "ankle-plantarflexion", relevance: "essential" },
+      { slug: "hip-abduction", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "bed-mobility",
+    name: "Getting In and Out of Bed",
+    description:
+      "Rolling from supine to sidelying, transitioning to sitting, and standing from bed height. Bed rise difficulty characterized by increased upper extremity use, discontinuity of trunk/leg motion, and multiple adjustments. Early indicator of functional decline.",
+    category: "ADL",
+    movementSlugs: [
+      { slug: "hip-flexion", relevance: "essential" },
+      { slug: "hip-extension", relevance: "essential" },
+      { slug: "knee-extension", relevance: "essential" },
+      { slug: "thoracic-rotation", relevance: "essential" },
+      { slug: "lumbar-flexion", relevance: "supportive" },
+      { slug: "shoulder-extension", relevance: "supportive" },
+    ],
+  },
+  {
+    slug: "overhead-work",
+    name: "Sustained Overhead Work",
+    description:
+      "Painting ceilings, shelving items, hanging curtains. At 80° arm elevation, deltoid force is ~22% maximum and endurance time is ~5 minutes. For postures maintained >1 hour, elevation angle should be <15°. Moderate evidence for shoulder impingement with elbows above shoulder level.",
+    category: "occupational",
+    movementSlugs: [
+      { slug: "shoulder-flexion", relevance: "essential" },
+      { slug: "shoulder-abduction", relevance: "essential" },
+      { slug: "scapular-upward-rotation", relevance: "essential" },
+      { slug: "cervical-extension", relevance: "supportive" },
+      { slug: "thoracic-extension", relevance: "supportive" },
+    ],
+  },
 ];
 
 export async function seedFunctionalTasks() {

@@ -3,77 +3,250 @@ import { getExercise } from "@/lib/queries";
 import { StatusBadge, ConfidenceBadge, RoleBadge } from "@/components/badges";
 import { EntityLink, PageHeader, Card, SectionTitle, EmptyState } from "@/components/ui-helpers";
 
+function DifficultyBadge({ difficulty }: { difficulty: string | null }) {
+  if (!difficulty) return null;
+  const colors: Record<string, string> = {
+    beginner: "bg-green-100 text-green-800",
+    intermediate: "bg-yellow-100 text-yellow-800",
+    advanced: "bg-red-100 text-red-800",
+  };
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colors[difficulty] || "bg-gray-100 text-gray-800"}`}>
+      {difficulty}
+    </span>
+  );
+}
+
+function EvidenceBadge({ level }: { level: string | null }) {
+  if (!level) return null;
+  const colors: Record<string, string> = {
+    strong: "bg-emerald-100 text-emerald-800",
+    moderate: "bg-blue-100 text-blue-800",
+    limited: "bg-amber-100 text-amber-800",
+    "expert-opinion": "bg-gray-100 text-gray-700",
+  };
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${colors[level] || "bg-gray-100 text-gray-800"}`}>
+      ⬤ {level} evidence
+    </span>
+  );
+}
+
 export default async function ExerciseDetailPage({ params }: { params: { slug: string } }) {
   const exercise = await getExercise(params.slug);
   if (!exercise) notFound();
+
+  // Separate muscles by role for better display
+  const primaryMuscles = exercise.muscles.filter(m => m.role === "primary");
+  const secondaryMuscles = exercise.muscles.filter(m => m.role === "secondary");
+  const stabilizerMuscles = exercise.muscles.filter(m => m.role === "stabilizer");
+  const otherMuscles = exercise.muscles.filter(m => !["primary", "secondary", "stabilizer"].includes(m.role));
 
   return (
     <div className="max-w-4xl">
       <PageHeader
         title={exercise.name}
         badges={
-          <>
+          <div className="flex flex-wrap gap-2">
             <StatusBadge status={exercise.status} />
             <ConfidenceBadge confidence={exercise.confidence} />
-          </>
+            <DifficultyBadge difficulty={(exercise as any).difficulty} />
+            <EvidenceBadge level={(exercise as any).evidenceLevel} />
+          </div>
         }
       />
 
+      {/* Description & How To */}
       <Card className="mb-6">
-        <p className="text-sm text-gray-700">{exercise.description}</p>
-        {exercise.notes && (
-          <p className="mt-2 text-sm text-amber-700 bg-amber-50 rounded p-2">
-            <strong>Note:</strong> {exercise.notes}
-          </p>
+        <SectionTitle>How to Perform</SectionTitle>
+        <p className="text-sm text-gray-700 leading-relaxed">{exercise.description}</p>
+        
+        {/* Equipment */}
+        {(exercise as any).equipment?.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            <span className="text-xs text-gray-500 mr-1">Equipment:</span>
+            {(exercise as any).equipment.map((e: string) => (
+              <span key={e} className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-700">
+                {e.replace(/-/g, " ")}
+              </span>
+            ))}
+          </div>
         )}
-      </Card>
 
-      {/* Muscle Roles */}
-      <Card className="mb-6">
-        <SectionTitle>Muscle Roles ({exercise.muscles.length})</SectionTitle>
-        {exercise.muscles.length === 0 ? (
-          <EmptyState message="No muscles linked." />
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-200">
-                  <th className="text-left py-2 pr-4 font-medium text-gray-700">Muscle</th>
-                  <th className="text-left py-2 pr-4 font-medium text-gray-700">Role</th>
-                  <th className="text-left py-2 font-medium text-gray-700">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {exercise.muscles.map((em) => (
-                  <tr key={em.id} className="border-b border-gray-100">
-                    <td className="py-2 pr-4">
-                      <EntityLink href={`/muscles/${em.muscle.slug}`}>
-                        {em.muscle.name}
-                      </EntityLink>
-                    </td>
-                    <td className="py-2 pr-4">
-                      <RoleBadge role={em.role} />
-                    </td>
-                    <td className="py-2 text-gray-500">{em.notes || "—"}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {/* Body Position */}
+        {(exercise as any).bodyPosition && (
+          <div className="mt-2">
+            <span className="text-xs text-gray-500">Starting position: </span>
+            <span className="text-xs text-gray-700 font-medium">{(exercise as any).bodyPosition}</span>
           </div>
         )}
       </Card>
+
+      {/* Coaching Cues - prominent for open-source users */}
+      {exercise.cues.length > 0 && (
+        <Card className="mb-6 border-l-4 border-l-blue-400">
+          <SectionTitle>Coaching Cues</SectionTitle>
+          <ol className="space-y-3">
+            {exercise.cues.map((c, i) => (
+              <li key={c.id} className="flex gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="text-sm text-gray-800">{c.text}</p>
+                  {c.cueType && (
+                    <span className="text-xs text-gray-400 mt-0.5">({c.cueType})</span>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Card>
+      )}
+
+      {/* Dosing - when available */}
+      {((exercise as any).dosing || (exercise as any).emgNotes) && (
+        <Card className="mb-6 bg-emerald-50 border-emerald-200">
+          <SectionTitle>Evidence-Based Dosing & EMG Data</SectionTitle>
+          {(exercise as any).dosing && (
+            <div className="mb-3">
+              <span className="text-xs font-medium text-emerald-700 uppercase tracking-wide">Recommended Dosing</span>
+              <p className="text-sm text-gray-700 mt-1">{(exercise as any).dosing}</p>
+            </div>
+          )}
+          {(exercise as any).emgNotes && (
+            <div>
+              <span className="text-xs font-medium text-emerald-700 uppercase tracking-wide">EMG Activation Data</span>
+              <p className="text-sm text-gray-700 mt-1">{(exercise as any).emgNotes}</p>
+            </div>
+          )}
+        </Card>
+      )}
+
+      {/* Muscle Roles - grouped by role */}
+      <Card className="mb-6">
+        <SectionTitle>Muscles Involved ({exercise.muscles.length})</SectionTitle>
+        {exercise.muscles.length === 0 ? (
+          <EmptyState message="No muscles linked." />
+        ) : (
+          <div className="space-y-4">
+            {primaryMuscles.length > 0 && (
+              <div>
+                <h4 className="text-xs font-semibold text-red-600 uppercase tracking-wide mb-2">Primary Movers</h4>
+                <div className="space-y-1">
+                  {primaryMuscles.map((em) => (
+                    <div key={em.id} className="flex items-start gap-2 rounded-md bg-red-50 px-3 py-2">
+                      <EntityLink href={`/muscles/${em.muscle.slug}`} className="font-medium text-sm">
+                        {em.muscle.name}
+                      </EntityLink>
+                      {em.notes && <span className="text-xs text-gray-500 mt-0.5">— {em.notes}</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {secondaryMuscles.length > 0 && (
+              <div>
+                <h4 className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Secondary Movers</h4>
+                <div className="space-y-1">
+                  {secondaryMuscles.map((em) => (
+                    <div key={em.id} className="flex items-start gap-2 rounded-md bg-orange-50 px-3 py-2">
+                      <EntityLink href={`/muscles/${em.muscle.slug}`} className="font-medium text-sm">
+                        {em.muscle.name}
+                      </EntityLink>
+                      {em.notes && <span className="text-xs text-gray-500 mt-0.5">— {em.notes}</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {stabilizerMuscles.length > 0 && (
+              <div>
+                <h4 className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-2">Stabilizers</h4>
+                <div className="space-y-1">
+                  {stabilizerMuscles.map((em) => (
+                    <div key={em.id} className="flex items-start gap-2 rounded-md bg-blue-50 px-3 py-2">
+                      <EntityLink href={`/muscles/${em.muscle.slug}`} className="font-medium text-sm">
+                        {em.muscle.name}
+                      </EntityLink>
+                      {em.notes && <span className="text-xs text-gray-500 mt-0.5">— {em.notes}</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {otherMuscles.length > 0 && (
+              <div>
+                <h4 className="text-xs font-semibold text-purple-600 uppercase tracking-wide mb-2">Synergists & Assistors</h4>
+                <div className="space-y-1">
+                  {otherMuscles.map((em) => (
+                    <div key={em.id} className="flex items-start gap-2 rounded-md bg-purple-50 px-3 py-2">
+                      <EntityLink href={`/muscles/${em.muscle.slug}`} className="font-medium text-sm">
+                        {em.muscle.name}
+                      </EntityLink>
+                      <RoleBadge role={em.role} />
+                      {em.notes && <span className="text-xs text-gray-500 mt-0.5">— {em.notes}</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </Card>
+
+      {/* Regressions & Progressions side by side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {exercise.regressions.length > 0 && (
+          <Card className="border-t-4 border-t-green-400">
+            <SectionTitle>Easier Variations ↓</SectionTitle>
+            <div className="space-y-3">
+              {exercise.regressions.map((r, i) => (
+                <div key={r.id} className="flex gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 text-green-700 text-xs font-bold flex items-center justify-center mt-0.5">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">{r.name}</p>
+                    <p className="text-sm text-gray-500">{r.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        )}
+
+        {exercise.progressions.length > 0 && (
+          <Card className="border-t-4 border-t-amber-400">
+            <SectionTitle>Harder Variations ↑</SectionTitle>
+            <div className="space-y-3">
+              {exercise.progressions.map((p, i) => (
+                <div key={p.id} className="flex gap-3">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center mt-0.5">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">{p.name}</p>
+                    <p className="text-sm text-gray-500">{p.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        )}
+      </div>
 
       {/* Target Movements */}
       {exercise.movements.length > 0 && (
         <Card className="mb-6">
           <SectionTitle>Target Movements ({exercise.movements.length})</SectionTitle>
-          <div className="space-y-2">
+          <div className="flex flex-wrap gap-2">
             {exercise.movements.map((em) => (
-              <div key={em.id} className="rounded-md border border-gray-100 bg-gray-50 p-3">
-                <EntityLink href={`/movements/${em.movement.slug}`}>
+              <div key={em.id} className="rounded-md border border-gray-200 bg-gray-50 px-3 py-1.5">
+                <EntityLink href={`/movements/${em.movement.slug}`} className="text-sm">
                   {em.movement.name}
                 </EntityLink>
-                <span className="text-xs text-gray-400 ml-2">
+                <span className="text-xs text-gray-400 ml-1.5">
                   {em.movement.joint.name}
                 </span>
               </div>
@@ -82,64 +255,17 @@ export default async function ExerciseDetailPage({ params }: { params: { slug: s
         </Card>
       )}
 
-      {/* Cues */}
-      {exercise.cues.length > 0 && (
-        <Card className="mb-6">
-          <SectionTitle>Cues ({exercise.cues.length})</SectionTitle>
-          <ol className="space-y-2 list-decimal list-inside">
-            {exercise.cues.map((c) => (
-              <li key={c.id} className="text-sm text-gray-700">
-                {c.text}
-                {c.cueType && (
-                  <span className="ml-2 text-xs text-gray-400">({c.cueType})</span>
-                )}
-              </li>
-            ))}
-          </ol>
-        </Card>
-      )}
-
-      {/* Regressions & Progressions side by side */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        {exercise.regressions.length > 0 && (
-          <Card>
-            <SectionTitle>Regressions ↓</SectionTitle>
-            <div className="space-y-3">
-              {exercise.regressions.map((r) => (
-                <div key={r.id}>
-                  <p className="text-sm font-medium text-gray-900">{r.name}</p>
-                  <p className="text-sm text-gray-500">{r.description}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-        )}
-
-        {exercise.progressions.length > 0 && (
-          <Card>
-            <SectionTitle>Progressions ↑</SectionTitle>
-            <div className="space-y-3">
-              {exercise.progressions.map((p) => (
-                <div key={p.id}>
-                  <p className="text-sm font-medium text-gray-900">{p.name}</p>
-                  <p className="text-sm text-gray-500">{p.description}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
-        )}
-      </div>
-
-      {/* Functional Tasks */}
+      {/* Functional Relevance */}
       {exercise.functionalTasks.length > 0 && (
         <Card className="mb-6">
-          <SectionTitle>Functional Relevance</SectionTitle>
+          <SectionTitle>Why This Exercise Matters</SectionTitle>
+          <p className="text-xs text-gray-500 mb-3">This exercise supports the following daily activities and functional tasks:</p>
           <div className="flex flex-wrap gap-2">
             {exercise.functionalTasks.map((eft) => (
               <EntityLink
                 key={eft.id}
                 href={`/tasks/${eft.functionalTask.slug}`}
-                className="rounded-md border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm"
+                className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-sm text-indigo-700 hover:bg-indigo-100 transition-colors"
               >
                 {eft.functionalTask.name}
               </EntityLink>
@@ -148,15 +274,27 @@ export default async function ExerciseDetailPage({ params }: { params: { slug: s
         </Card>
       )}
 
+      {/* Evidence Notes */}
+      {exercise.notes && (
+        <Card className="mb-6 bg-amber-50 border-amber-200">
+          <SectionTitle>Research Notes</SectionTitle>
+          <p className="text-sm text-amber-800 leading-relaxed">{exercise.notes}</p>
+        </Card>
+      )}
+
       {/* Sources */}
       {exercise.sources.length > 0 && (
         <Card>
-          <SectionTitle>Sources</SectionTitle>
+          <SectionTitle>Evidence Sources ({exercise.sources.length})</SectionTitle>
           <ul className="space-y-2">
             {exercise.sources.map((s) => (
-              <li key={s.id} className="text-sm">
-                <EntityLink href={`/sources/${s.source.slug}`}>{s.source.title}</EntityLink>
-                {s.notes && <span className="text-gray-500"> — {s.notes}</span>}
+              <li key={s.id} className="flex items-start gap-2 text-sm">
+                <span className="text-gray-400 mt-0.5">📄</span>
+                <div>
+                  <EntityLink href={`/sources/${s.source.slug}`}>{s.source.title}</EntityLink>
+                  {s.source.authors && <span className="text-gray-400 text-xs ml-1">— {s.source.authors}</span>}
+                  {s.notes && <p className="text-gray-500 text-xs mt-0.5">{s.notes}</p>}
+                </div>
               </li>
             ))}
           </ul>

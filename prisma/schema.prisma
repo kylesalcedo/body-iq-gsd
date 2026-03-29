@@ -188,6 +188,18 @@ model Exercise {
   slug        String       @unique
   name        String
   description String
+  // Dosing & Evidence
+  dosing      String?      // e.g. "3x10-15 reps, 2-3x/week" — from RCTs
+  emgNotes    String?      // EMG activation summary with citations
+  evidenceLevel String?    // e.g. "strong", "moderate", "limited", "expert-opinion"
+  // Media (future video support)
+  imageUrl    String?      // exercise illustration/photo URL
+  videoUrl    String?      // exercise demonstration video URL
+  videoType   String?      // e.g. "youtube", "vimeo", "hosted", "generated"
+  // Difficulty & Equipment
+  difficulty  String?      // e.g. "beginner", "intermediate", "advanced"
+  equipment   String[]     @default([])  // e.g. ["resistance-band", "foam-roller"]
+  bodyPosition String?     // e.g. "supine", "prone", "seated", "standing", "sidelying", "quadruped"
   // Validation
   status      EntityStatus @default(draft)
   confidence  Float        @default(0.5)

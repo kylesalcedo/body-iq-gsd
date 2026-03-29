@@ -1,163 +1,95 @@
-# OpenEvidence Prompt — Exercise-Muscle Role Audit
+# OpenEvidence Prompt — EMG Verification of Rehabilitation Exercise Muscle Roles
 
-We have a rehabilitation exercise database with AI-assigned muscle role classifications (primary, secondary, stabilizer, synergist). We need EMG evidence to verify or correct these assignments. For each exercise below, please provide:
+I'm reviewing the muscle activation patterns for common rehabilitation exercises to ensure my clinical reasoning about primary movers, secondary movers, stabilizers, and synergists is accurate. For each exercise below, please provide:
 
-- **Actual muscle activation levels** (% MVIC from EMG studies where available)
-- **Correct role classification** based on activation data: primary (>40% MVIC or main mover), secondary (20-40% MVIC or significant contributor), stabilizer (active but supporting joint stability), synergist (assists primary mover)
-- **Any muscles that are missing or incorrectly assigned**
-- **Cite specific EMG studies** for each exercise
+- **EMG activation levels** (% MVIC) for the involved muscles where studies exist
+- **Which muscles are primary movers** (>40% MVIC or main force producers), **secondary movers** (20-40% MVIC or significant contributors), **stabilizers** (active for joint stability), and **synergists** (assist the primary mover)
+- **Any commonly overlooked muscles** that research shows are significantly active
+- **Cite specific EMG studies** (author, year, journal)
 
 ---
 
 ## Group 1: Lower Extremity
 
 ### Bridge
-Current assignments: gluteus maximus (primary), hamstrings (secondary), erector spinae (stabilizer), transversus abdominis (stabilizer)
-- What does EMG show for glute max vs hamstring activation? Some literature suggests hamstrings can dominate depending on foot position.
-- Is there a gluteus medius stabilizer role that's missing?
+What does EMG show for gluteus maximus vs hamstring activation during a standard supine bridge? Does foot position change the dominant mover? Is gluteus medius active as a stabilizer? What are the roles of erector spinae and transversus abdominis?
 
 ### Clamshell
-Current assignments: gluteus medius (primary), piriformis (secondary), gluteus maximus (synergist)
-- What is the actual glute med vs TFL activation ratio? TFL is not listed — should it be?
-- Does gluteus minimus contribute? At what level?
-- Does piriformis truly activate as secondary, or is activation minimal in this position?
+What is the actual gluteus medius vs TFL activation ratio during the clamshell? Does gluteus minimus contribute significantly? What level of piriformis activation occurs? Does hip flexion angle (30° vs 45° vs 60°) change the activation pattern?
 
-### Squat
-Current assignments: quadriceps (primary), gluteus maximus (primary), hamstrings (secondary), adductor group (secondary), erector spinae (stabilizer), transversus abdominis (stabilizer), gastrocnemius (stabilizer), soleus (stabilizer)
-- Is the hamstring role truly "secondary" or more stabilizer given co-contraction patterns?
-- What about hip adductor activation — what % MVIC?
-- Does depth change the primary/secondary assignments?
+### Squat (Bodyweight)
+For quadriceps, gluteus maximus, hamstrings, adductors, erector spinae, TrA, gastrocnemius, and soleus — what are the EMG activation levels? Are hamstrings better classified as secondary movers or stabilizers given co-contraction patterns? Does depth change the classification of primary vs secondary movers?
 
 ### Sit-to-Stand
-Current assignments: quadriceps (primary), gluteus maximus (primary), hamstrings (secondary), erector spinae (stabilizer), transversus abdominis (stabilizer)
-- What does EMG show for the sit-to-stand transition specifically (vs squat)?
-- Is tibialis anterior missing as a stabilizer for ankle dorsiflexion during forward lean?
+How does sit-to-stand EMG differ from a squat? What are the quadriceps, gluteus maximus, and hamstring activation levels during the transition? Is tibialis anterior significantly active during the forward-lean phase?
 
-### Heel Raise (Calf Raise)
-Current assignments: gastrocnemius (primary), soleus (primary), tibialis posterior (synergist)
-- What is the gastroc vs soleus activation ratio during standing heel raises?
-- Does peroneus longus contribute significantly? Should it be listed?
-- Does knee position (bent vs straight) change primary assignments?
+### Heel Raise (Standing Calf Raise)
+What is the gastrocnemius vs soleus activation ratio during standing heel raises? Does peroneus longus contribute significantly? How does knee position (straight vs bent) change the activation balance between gastrocnemius and soleus?
 
 ### Straight Leg Raise
-Current assignments: iliopsoas (primary), rectus femoris (primary), quadriceps (stabilizer), transversus abdominis (stabilizer)
-- Is listing both iliopsoas and rectus femoris as co-primary accurate?
-- What does EMG show for TrA activation during SLR — is "stabilizer" correct or is it more active than that?
-- Should tensor fasciae latae be listed?
+What does EMG show for iliopsoas vs rectus femoris activation? Are both truly co-primary, or does one dominate? What is the TrA activation level — is it meaningfully active for core stabilization? Should tensor fasciae latae be considered a contributor?
 
-### Hip Adduction (Sidelying)
-Current assignment: adductor group (primary) — only one muscle listed
-- Which specific adductors are most active (longus, brevis, magnus, gracilis)?
-- Is there a stabilizer role for core muscles during sidelying position?
-- What % MVIC does this exercise actually achieve for adductors?
+### Sidelying Hip Adduction
+Which specific adductors are most active — longus, brevis, magnus, or gracilis? What % MVIC does this exercise achieve? Is there significant core muscle activation during the sidelying position?
 
 ### Seated Hip Internal Rotation
-Current assignment: gluteus medius (primary) — only one muscle listed, confidence 0.75
-- Is gluteus medius actually the primary hip IR? Literature suggests gluteus medius anterior fibers, TFL, and adductors contribute.
-- What about gluteus minimus as a primary internal rotator?
-- Should adductor group or TFL be listed?
+Which muscles are actually the primary hip internal rotators? Is it gluteus medius (anterior fibers), gluteus minimus, TFL, or adductors? What does EMG show during seated hip IR exercises?
 
 ---
 
 ## Group 2: Upper Extremity & Shoulder
 
 ### Overhead Press (Seated)
-Current assignments: anterior deltoid (primary), middle deltoid (primary), supraspinatus (synergist), triceps brachii (secondary), upper trapezius (stabilizer), serratus anterior (stabilizer)
-- Is supraspinatus role truly "synergist" or more "stabilizer" during pressing?
-- What does EMG show for upper vs lower trap activation ratios?
-- Should infraspinatus be listed as a stabilizer for GH joint centering?
+What are the EMG activation levels for anterior deltoid, middle deltoid, supraspinatus, triceps, upper trapezius, and serratus anterior during a seated overhead press? What role does supraspinatus play — synergist or stabilizer? Should infraspinatus be considered a glenohumeral stabilizer during pressing?
 
-### Resisted Internal Rotation
-Current assignments: subscapularis (primary), pectoralis major (secondary), latissimus dorsi (secondary), anterior deltoid (synergist)
-- Is anterior deltoid really a synergist for IR, or is its role negligible?
-- What EMG activation does subscapularis show vs pec major during resisted IR?
-- Should teres major be included?
+### Resisted Internal Rotation (Band or Cable)
+What is the EMG activation of subscapularis vs pectoralis major during resisted internal rotation? Does anterior deltoid contribute meaningfully? Should teres major be considered a contributor?
 
 ### Wall Push-Up
-Current assignments: pectoralis major (primary), anterior deltoid (secondary), triceps brachii (secondary), serratus anterior (stabilizer)
-- At the wall push-up load level, does serratus anterior actually activate enough to be meaningful?
-- Is the protraction component at end-range significant enough for serratus activation?
-- Should core stabilizers (TrA, obliques) be listed?
+At the reduced load of a wall push-up, does serratus anterior activate meaningfully? Is the protraction component at end-range sufficient for serratus activation? Are core stabilizers (TrA, obliques) significantly active?
 
-### Bicep Curl
-Current assignments: biceps brachii (primary), brachialis (primary), supinator (synergist)
-- Is brachialis truly co-primary with biceps, or does it depend on grip position?
-- What about brachioradialis — should it be listed? At what role?
-- Is supinator actually active during a standard curl, or only during supinated grip?
+### Bicep Curl (Standard)
+Is brachialis co-primary with biceps brachii, or does it depend on grip position (supinated vs neutral vs pronated)? What role does brachioradialis play? Is supinator active during a standard supinated curl?
 
 ### Tricep Extension (Overhead)
-Current assignment: triceps brachii (primary) — only one muscle listed
-- Is the long head preferentially recruited in the overhead position vs lateral/medial?
-- Should anconeus be listed as a synergist?
-- Any stabilizer roles for shoulder muscles (posterior deltoid, rotator cuff) during overhead position?
+Is the long head of triceps preferentially recruited in the overhead position vs other positions? Should anconeus be considered a synergist? What shoulder stabilizer muscles are active to maintain the overhead position?
 
-### Scapular Retraction Exercise
-Current assignments: middle trapezius (primary), rhomboid major (primary)
-- What does EMG show for rhomboid vs middle trap activation during retraction?
-- Should lower trapezius be listed? At what role?
-- Is levator scapulae active during retraction exercises?
+### Scapular Retraction Exercise (Seated Row / Squeeze)
+What does EMG show for middle trapezius vs rhomboid activation during scapular retraction? Does lower trapezius contribute significantly? Is levator scapulae active during retraction movements?
 
-### Resisted External Rotation
-Current assignments: infraspinatus (primary), teres minor (primary), posterior deltoid (secondary)
-- Does side-lying vs standing with band change the primary assignments?
-- What is the actual infraspinatus vs teres minor activation ratio?
-- Should supraspinatus be listed as a stabilizer?
+### Resisted External Rotation (Side-Lying or Band)
+What is the infraspinatus vs teres minor activation ratio? Does position (side-lying vs standing with band) change the primary activation pattern? What stabilizer role does supraspinatus play?
 
 ---
 
 ## Group 3: Wrist, Hand & Forearm
 
-### Forearm Pronation/Supination (Hammer)
-Current assignments: pronator teres (primary), supinator (primary), biceps brachii (secondary)
-- For pronation: is pronator teres truly primary, or does pronator quadratus contribute more?
-- For supination: what is the biceps vs supinator activation balance?
-- Should brachioradialis be listed for the neutral position?
+### Forearm Pronation/Supination Exercise
+For pronation: what is the relative contribution of pronator teres vs pronator quadratus? For supination: what is the biceps vs supinator activation balance? Does brachioradialis contribute in the neutral zone?
 
-### Wrist Deviation (Radial/Ulnar) — confidence 0.75
-Current assignments: FCR (primary), ECRL (primary), FCU (primary)
-- For radial deviation: FCR + ECRL as co-primaries — is this accurate?
-- For ulnar deviation: FCU alone, or should ECU be listed as co-primary?
-- What stabilizer roles exist during deviation movements?
+### Wrist Radial and Ulnar Deviation Exercise
+For radial deviation: are FCR and ECRL co-primary movers? For ulnar deviation: is FCU the sole primary, or does ECU contribute equally? What stabilizer muscles are active during deviation movements?
 
-### Grip Strengthening (Squeeze Ball)
-Current assignments: FDS (primary), extensor digitorum (secondary), opponens pollicis (synergist)
-- Is FDP missing as a primary? It's the deep finger flexor.
-- What about FPL for thumb contribution?
-- Is extensor digitorum truly "secondary" during grip, or is it a stabilizer for wrist extension during gripping?
-- What about intrinsic hand muscle contribution (lumbricals, interossei)?
+### Grip Strengthening (Squeeze Ball / Dynamometer)
+What is the EMG activation of FDS, FDP, FPL, extensor digitorum, and intrinsic hand muscles (lumbricals, interossei) during grip exercises? Is extensor digitorum better classified as a stabilizer (wrist extension during grip) rather than a secondary mover?
 
-### Thumb Opposition Exercise — confidence 0.80
-Current assignment: opponens pollicis (primary) — only one muscle listed
-- What other thenar muscles contribute: FPB, APB?
-- Should opponens digiti minimi be listed for the receiving digit?
-- What does EMG show for intrinsic vs extrinsic muscle activation during opposition?
+### Thumb Opposition Exercise
+Beyond opponens pollicis, what other thenar muscles (FPB, APB) are active during opposition? Does opponens digiti minimi contribute on the receiving side? What does EMG show for intrinsic vs extrinsic muscle activation during opposition?
 
 ---
 
 ## Group 4: Spine & Core
 
-### Bird Dog
-Current assignments: erector spinae (primary), multifidus (primary), gluteus maximus (secondary), anterior deltoid (secondary), transversus abdominis (stabilizer)
-- EMG studies show varying activation levels — what are the actual % MVIC values?
-- Is multifidus truly co-primary with erector spinae, or more of a segmental stabilizer?
-- Should contralateral obliques be listed for anti-rotation?
+### Bird Dog Exercise
+What are the actual % MVIC values for erector spinae, multifidus, gluteus maximus, and contralateral deltoid? Is multifidus a segmental stabilizer rather than a primary extensor in this exercise? Should contralateral obliques be considered for anti-rotation demand?
 
 ### Modified Curl-Up / Dead Bug
-Current assignments: rectus abdominis (primary), external oblique (primary), TrA (stabilizer), internal oblique (synergist), iliopsoas (stabilizer)
-- For dead bug specifically: is the hip flexor demand higher than "stabilizer"?
-- What does EMG show for IO vs EO — is the role distinction (synergist vs primary) justified?
-- Should multifidus be listed as a stabilizer?
+For the dead bug specifically: how significant is the hip flexor demand beyond stabilization? What does EMG show for internal oblique vs external oblique activation levels? Should multifidus be considered a co-stabilizer?
 
-### Pelvic Tilt/Realignment
-Current assignments: rectus abdominis (primary), gluteus maximus (primary), erector spinae (primary), iliopsoas (secondary), TrA (stabilizer)
-- Three muscles listed as co-primary seems too many — what does EMG show?
-- For posterior pelvic tilt: is RA or glute max the dominant mover?
-- For anterior pelvic tilt: is erector spinae primary or are hip flexors?
+### Pelvic Tilt Exercises
+For posterior pelvic tilt: is rectus abdominis or gluteus maximus the dominant mover based on EMG? For anterior pelvic tilt: are erector spinae or hip flexors the primary movers? Can all three muscle groups truly be co-primary?
 
-### Diaphragmatic Breathing
-Current assignments: diaphragm (primary), TrA (synergist), internal oblique (synergist), erector spinae (stabilizer)
-- What does EMG/ultrasound show for TrA activation during diaphragmatic breathing vs normal breathing?
-- Should pelvic floor muscles be mentioned as synergists?
-- Is external oblique involved during forced expiration phases?
+### Diaphragmatic Breathing Exercises
+What does EMG or ultrasound show for TrA activation during focused diaphragmatic breathing compared to normal breathing? Are pelvic floor muscles active as synergists? Does external oblique contribute during forced expiration phases?
 
 Please cite specific studies with author, year, and journal for each exercise where EMG data is available.

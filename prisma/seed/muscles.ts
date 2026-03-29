@@ -1319,9 +1319,9 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   // Upper Cervical Flexion — Craniocervical Flexion (Cagnie et al. 2008, 2010)
   { movementSlug: "cervical-flexion-upper", muscleSlug: "deep-cervical-flexors", role: "primary", notes: "Longus capitis: 11.1% CSA increase at C0-C1; longus colli: 17.4% at C2-C3" },
   { movementSlug: "cervical-flexion-upper", muscleSlug: "sternocleidomastoid", role: "synergist", notes: "Assists upper cervical flexion when DCFs active" },
-  // Upper Cervical Extension (AO joint) (Karahan et al. 2025, Selbie et al. 1993)
+  // Upper Cervical Extension (AO joint) (Karahan et al. 2025, Selbie et al. 1993, Elliott et al. 2010)
   { movementSlug: "cervical-extension-upper", muscleSlug: "suboccipitals", role: "primary", notes: "Rectus capitis posterior major/minor, obliquus capitis superior" },
-  { movementSlug: "cervical-extension-upper", muscleSlug: "semispinalis-capitis", role: "secondary", notes: "Upper fibers" },
+  { movementSlug: "cervical-extension-upper", muscleSlug: "semispinalis-capitis", role: "primary", notes: "Preferentially activated during upper cervical extension; T2 shifts at C2-3 (p=0.03) [Elliott 2010]" },
   // Upper Cervical Rotation — C1-C2 (Tang et al. 2021, Karahan et al. 2025)
   { movementSlug: "cervical-rotation-upper", muscleSlug: "suboccipitals", role: "primary", notes: "Obliquus capitis inferior accounts for ~70% of C1-C2 rotation; rectus capitis posterior major assists" },
   { movementSlug: "cervical-rotation-upper", muscleSlug: "sternocleidomastoid", role: "secondary", notes: "Contralateral rotation" },
@@ -1482,7 +1482,7 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "scapular-elevation", muscleSlug: "levator-scapulae", role: "primary", notes: "Co-primary scapular elevator" },
   { movementSlug: "scapular-elevation", muscleSlug: "rhomboid-major", role: "secondary" },
   // Scapular Downward Rotation (Berckmans et al. 2021)
-  { movementSlug: "scapular-downward-rotation", muscleSlug: "rhomboid-major", role: "primary" },
+  { movementSlug: "scapular-downward-rotation", muscleSlug: "rhomboid-major", role: "primary", notes: "25-45% MVIC during scapular exercises [Berckmans 2021]" },
   { movementSlug: "scapular-downward-rotation", muscleSlug: "levator-scapulae", role: "primary", notes: "Assists downward rotation" },
   // Elbow Flexion (Buchanan et al. 1989, Hale et al. 2011, von Werder & Disselhorst-Klug 2016)
   { movementSlug: "elbow-flexion", muscleSlug: "brachialis", role: "primary", notes: "Pure flexor, active regardless of forearm position" },
@@ -1527,8 +1527,10 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "finger-extension", muscleSlug: "dorsal-interossei", role: "synergist", notes: "Assist IP extension via lateral bands" },
   // Finger Abduction (MCP)
   { movementSlug: "finger-abduction", muscleSlug: "dorsal-interossei", role: "primary" },
-  // Finger Adduction (MCP)
-  { movementSlug: "finger-adduction", muscleSlug: "palmar-interossei", role: "primary" },
+  // Finger Adduction (MCP) (Eladoumikdachi et al. 2002)
+  { movementSlug: "finger-adduction", muscleSlug: "palmar-interossei", role: "primary", notes: "Three PIs adduct index, ring, little fingers toward middle finger [Eladoumikdachi 2002]" },
+  { movementSlug: "finger-adduction", muscleSlug: "flexor-digitorum-profundus", role: "stabilizer", notes: "MCP stability during adduction" },
+  { movementSlug: "finger-adduction", muscleSlug: "extensor-digitorum", role: "stabilizer", notes: "Maintains finger extension during adduction" },
   // PIP Flexion
   { movementSlug: "pip-flexion", muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
   { movementSlug: "pip-flexion", muscleSlug: "flexor-digitorum-profundus", role: "secondary", notes: "Also flexes PIP after FDS" },
@@ -1536,12 +1538,13 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   { movementSlug: "pip-extension", muscleSlug: "extensor-digitorum", role: "primary", notes: "Via extensor expansion" },
   { movementSlug: "pip-extension", muscleSlug: "lumbricals", role: "synergist", notes: "IP extension via extensor expansion" },
   { movementSlug: "pip-extension", muscleSlug: "dorsal-interossei", role: "synergist", notes: "IP extension via extensor expansion" },
-  // DIP Flexion
-  { movementSlug: "dip-flexion", muscleSlug: "flexor-digitorum-profundus", role: "primary", notes: "Only muscle that flexes DIP" },
+  // DIP Flexion (Fox et al. 2019)
+  { movementSlug: "dip-flexion", muscleSlug: "flexor-digitorum-profundus", role: "primary", notes: "Sole muscle crossing DIP joint — only primary mover [Fox 2019]" },
   { movementSlug: "dip-flexion", muscleSlug: "flexor-pollicis-longus", role: "primary", notes: "DIP flexion of thumb — FPL is the only flexor" },
-  // DIP Extension
-  { movementSlug: "dip-extension", muscleSlug: "extensor-digitorum", role: "primary", notes: "Via extensor expansion and oblique retinacular ligament" },
-  { movementSlug: "dip-extension", muscleSlug: "lumbricals", role: "synergist" },
+  // DIP Extension (Murai et al. 2012)
+  { movementSlug: "dip-extension", muscleSlug: "lumbricals", role: "primary", notes: "Via lateral bands to terminal tendon [Murai 2012]" },
+  { movementSlug: "dip-extension", muscleSlug: "dorsal-interossei", role: "primary", notes: "Via lateral bands to terminal tendon [Murai 2012]" },
+  { movementSlug: "dip-extension", muscleSlug: "extensor-digitorum", role: "secondary", notes: "Cannot fully extend DIP alone — requires intrinsic contribution [Murai 2012]" },
   // Thumb Opposition
   { movementSlug: "thumb-opposition", muscleSlug: "opponens-pollicis", role: "primary" },
   { movementSlug: "thumb-opposition", muscleSlug: "abductor-pollicis-brevis", role: "synergist", notes: "Assists early opposition" },
@@ -1549,8 +1552,8 @@ const movementMuscleLinks: MovementMuscleDef[] = [
   // Thumb Abduction (CMC)
   { movementSlug: "thumb-abduction", muscleSlug: "abductor-pollicis-brevis", role: "primary" },
   { movementSlug: "thumb-abduction", muscleSlug: "abductor-pollicis-longus", role: "primary", notes: "Radial abduction" },
-  // Thumb Adduction (CMC)
-  { movementSlug: "thumb-adduction", muscleSlug: "adductor-pollicis", role: "primary" },
+  // Thumb Adduction (CMC) (Stamenkovic et al. 2014)
+  { movementSlug: "thumb-adduction", muscleSlug: "adductor-pollicis", role: "primary", notes: "Both oblique and transverse heads; oblique has greater PCSA for force generation [Stamenkovic 2014]" },
   // Thumb MCP Flexion
   { movementSlug: "thumb-mcp-flexion", muscleSlug: "flexor-pollicis-brevis", role: "primary" },
   { movementSlug: "thumb-mcp-flexion", muscleSlug: "flexor-pollicis-longus", role: "secondary", notes: "Also crosses MCP" },

@@ -72,7 +72,8 @@ const exercises: ExerciseDef[] = [
     slug: "squat",
     name: "Squat",
     description: "Compound lower extremity exercise. Standing hip and knee flexion-extension against gravity. Fundamental movement pattern for functional strength.",
-    confidence: 0.9,
+    confidence: 0.95,
+    notes: "EMG: quadriceps 67-79% MVIC [Andersen 2006]. VL and VM highest activity among evaluated muscles [Muyor 2020]. Monopodal squat significantly higher EMG than lunge/step-up (d>0.6) [Muyor 2020]. Squat with hip adduction increases VMO/VL ratio [Thongduang 2022]. Biomechanics: 0-50° flexion minimal joint forces (early rehab); parallel squat (0-100°) for healthy knees; forward trunk tilt reduces ACL loading [Escamilla 2001, 2012]. Dosing: moderate intensity, 3x/week, 20-60 min [Whitfield 2024].",
     movementSlugs: ["hip-flexion", "hip-extension", "knee-flexion", "knee-extension", "ankle-dorsiflexion"],
     muscleRoles: [
       { muscleSlug: "quadriceps", role: "primary" },
@@ -86,17 +87,20 @@ const exercises: ExerciseDef[] = [
     ],
     functionalTaskSlugs: ["squat-to-stand", "stair-climbing", "pushing-up-from-chair"],
     cues: [
-      { text: "Sit back like you're reaching for a chair behind you", cueType: "verbal" },
+      { text: "Maintain a slight forward trunk tilt to reduce ACL stress", cueType: "verbal" },
       { text: "Keep your chest up and weight through your heels", cueType: "verbal" },
       { text: "Push your knees out over your toes — don't let them cave inward", cueType: "verbal" },
+      { text: "For early rehab, restrict to 0-50° knee flexion; healthy knees can go to parallel", cueType: "verbal" },
+      { text: "Squeeze a ball between your knees to preferentially activate VMO", cueType: "verbal" },
     ],
     regressions: [
+      { name: "Wall Squat (Partial Range)", description: "Squat against a wall to 0-50° knee flexion. Minimal joint forces, appropriate for early rehabilitation." },
       { name: "Chair Squat", description: "Squat down to a chair and use it as a depth target. Reduces fear of falling and limits range." },
-      { name: "Counter-Supported Squat", description: "Hold onto a counter or sturdy surface for balance while squatting." },
     ],
     progressions: [
-      { name: "Goblet Squat", description: "Hold a weight at chest level to add resistance and encourage upright posture." },
-      { name: "Jump Squat", description: "Add an explosive jump at the top of the squat. For advanced patients with no joint restrictions." },
+      { name: "Bodyweight Parallel Squat", description: "Full squat to thighs parallel. 0-100° knee flexion." },
+      { name: "Single-Leg Squat", description: "Significantly higher EMG activity than bilateral squat in all muscles (d > 0.6). Advanced balance and strength challenge." },
+      { name: "Jump Squat", description: "Add an explosive jump at the top. Peak Fz/BW significantly higher. For advanced patients with no joint restrictions." },
     ],
   },
   {
@@ -273,7 +277,8 @@ const exercises: ExerciseDef[] = [
     slug: "straight-leg-raise",
     name: "Straight Leg Raise",
     description: "Supine hip flexion with knee extended. Patient lifts leg while keeping the knee straight. Common early quad and hip flexor exercise.",
-    confidence: 0.85,
+    confidence: 0.95,
+    notes: "EMG: highest rectus femoris activity among CKC/OKC exercises [Thongduang 2022]. OKC generates higher ACL forces than CKC [Escamilla 2012]. Dosing: moderate intensity, 3x/week [Whitfield 2024]. ACL-safe since no knee flexion/extension moment.",
     movementSlugs: ["hip-flexion", "knee-extension"],
     muscleRoles: [
       { muscleSlug: "iliopsoas", role: "primary" },
@@ -299,7 +304,8 @@ const exercises: ExerciseDef[] = [
     slug: "terminal-knee-extension",
     name: "Terminal Knee Extension (TKE)",
     description: "Standing with resistance band behind knee. Extend the last 30° of knee extension against band resistance. Targets VMO and full knee extension.",
-    confidence: 0.85,
+    confidence: 0.95,
+    notes: "EMG: VM and VL significantly more active during last 15° of extension [Gryzlo 1994]. Short-arc extension specifically targets vasti. OKC knee extension: highest neuromuscular activation (67-79% MVIC) [Andersen 2006]. For ACL protection: perform in 50-100° range or use short-arc only [Escamilla 2012].",
     movementSlugs: ["knee-extension"],
     muscleRoles: [
       { muscleSlug: "quadriceps", role: "primary", notes: "Especially vastus medialis oblique (VMO)" },
@@ -776,8 +782,8 @@ const exercises: ExerciseDef[] = [
     slug: "core-stabilization-adim",
     name: "Core Stabilization with Abdominal Drawing-In Maneuver (ADIM)",
     description: "Core stabilization exercise targeting deep trunk muscles (transversus abdominis, multifidus). Patient draws the navel toward the spine without moving the pelvis, then maintains the contraction during limb movements. Reduces lumbar segmental translation and pain more effectively than general strengthening. Fundamental for lumbar instability and chronic low back pain.",
-    confidence: 0.9,
-    notes: "Evidence: core stabilization with ADIM reduces lumbar segmental translation and pain more effectively than general strengthening [Puntumetakul 2021, Guo 2025]. Fundamental for lumbar instability [Puntumetakul 2021, Calatayud 2019].",
+    confidence: 0.95,
+    notes: "ADIM produces significantly reduced sagittal translation at L4-L5 and L5-S1 at 10 weeks [Puntumetakul 2021]. Greater improvement in abdominal muscle activity ratio at 10 weeks and 12 months [Puntumetakul 2021]. Superior improvements in proprioception, balance, and muscle thickness of TrA and LM vs general strengthening [Hlaing 2021]. Dosing: 30 min, 3x/week, 4 weeks minimum; initially 8-10 reps every 2 hours [Hegmann 2020]. Note: abdominal bracing generates IAP 116.4 mmHg vs hollowing 9.9 mmHg [Tayashiki 2016] — both approaches have clinical utility.",
     movementSlugs: ["lumbar-extension", "lumbar-flexion"],
     muscleRoles: [
       { muscleSlug: "transversus-abdominis", role: "primary", notes: "Primary target — drawing-in activates TrA preferentially" },
@@ -806,8 +812,8 @@ const exercises: ExerciseDef[] = [
     slug: "bird-dog",
     name: "Bird Dog Exercise",
     description: "Quadruped exercise: simultaneously extend opposite arm and leg while maintaining a neutral spine. Activates lumbar erector spinae (29% nEMG) and multifidus while promoting anti-rotation core stability. Well-tolerated, functional, and progresses from basic to advanced levels.",
-    confidence: 0.9,
-    notes: "Evidence: activates lumbar erector spinae (29% nEMG) and multifidus with anti-rotation demand [Calatayud 2019, Kim 2016]. Well-tolerated in patients with LBP [Calatayud 2019].",
+    confidence: 0.95,
+    notes: "EMG: lumbar erector spinae 29% nEMG (27-46%) [Calatayud 2019]. Produces higher amplitudes across all muscle groups compared to hip abduction exercises (14±3% to 53±4%) [Mueller 2018]. 5 intensity levels available; muscle activity increases significantly with each level (p<0.05) [Kim 2016]. Well-tolerated in chronic LBP patients [Calatayud 2019].",
     movementSlugs: ["lumbar-extension", "hip-extension", "shoulder-flexion"],
     muscleRoles: [
       { muscleSlug: "erector-spinae", role: "primary", notes: "29% nEMG — lumbar stabilization during limb extension" },
@@ -836,9 +842,9 @@ const exercises: ExerciseDef[] = [
   {
     slug: "modified-curl-up-dead-bug",
     name: "Modified Curl-Up / Dead Bug",
-    description: "Two complementary anterior core exercises. Modified curl-up: supine with one knee bent, hands under lumbar spine, lift head and shoulders minimally. Dead bug: supine with arms and legs at 90°, lower opposite arm and leg while maintaining lumbar contact. Effectively activate rectus abdominis (48-50% nEMG) and external obliques while minimizing lumbar compression. Safe and well-tolerated in patients with low back pain.",
-    confidence: 0.85,
-    notes: "Evidence: 48-50% nEMG rectus abdominis, effective external oblique activation, minimal lumbar compression [Calatayud 2019]. Safe and well-tolerated in LBP patients [Calatayud 2019, Kim 2016].",
+    description: "Two complementary anterior core exercises. Modified curl-up: supine with one knee bent, hands under lumbar spine, lift head and shoulders minimally. Dead bug: supine with arms and legs at 90°, lower opposite arm and leg while maintaining lumbar contact. Effectively activate rectus abdominis (50% nEMG) and external obliques while minimizing lumbar compression. Safe and well-tolerated in patients with low back pain.",
+    confidence: 0.95,
+    notes: "Modified curl-up: rectus abdominis 50% nEMG (28-65%) [Calatayud 2019]. Dead bug: peak RA and EO amplitudes increase significantly with intensity (p=0.008 and p<0.001) [Kim 2016]. 5 graded intensity levels available [Kim 2016]. Plank with brace: EO 77% nEMG [Calatayud 2019]. Plank with hollowing significantly increases all oblique activation (IO: ES=2.0-2.3, EO: ES=1.0-1.4, lumbar ES: ES=0.6) [García-Jaén 2020]. Well-tolerated in chronic LBP; lateral plank mostly non-tolerated [Calatayud 2019].",
     movementSlugs: ["lumbar-flexion"],
     muscleRoles: [
       { muscleSlug: "rectus-abdominis", role: "primary", notes: "48-50% nEMG during curl-up" },
@@ -868,8 +874,8 @@ const exercises: ExerciseDef[] = [
     slug: "prone-horizontal-abduction-er",
     name: "Prone Horizontal Abduction with External Rotation (Prone Y/T)",
     description: "Lying face down, lift arms in a Y or T position with thumbs pointing up (external rotation). Demonstrates optimal scapular neuromuscular control with excellent UT/MT ratio (0.43) and UT/LT ratio (0.30). Activates middle and lower trapezius at >50% MVIC while keeping upper trapezius <20%.",
-    confidence: 0.85,
-    notes: "Evidence: optimal UT/MT (0.43) and UT/LT (0.30) ratios [Mendez-Rebolledo 2024]. Activates MT/LT >50% MVIC with UT <20% [Mendez-Rebolledo 2024, Andersen 2012].",
+    confidence: 0.95,
+    notes: "EMG data at 100° abduction: supraspinatus 82% MVIC, middle deltoid 87% MVIC, posterior deltoid 88% MVIC, MT >50% MVIC, LT >50% MVIC [Reinold 2004, Mendez-Rebolledo 2024]. Optimal UT/MT (0.43) and UT/LT (0.30) ratios. Early scapular stabilizer activation (-474.7 to 89.9 ms relative to UT) [Mendez-Rebolledo 2024]. Dosing: 3×8-15 reps, 3 days/week [Mulroy 2020].",
     movementSlugs: ["scapular-retraction", "shoulder-external-rotation", "scapular-upward-rotation"],
     muscleRoles: [
       { muscleSlug: "trapezius-middle", role: "primary", notes: ">50% MVIC activation" },
@@ -898,8 +904,8 @@ const exercises: ExerciseDef[] = [
     slug: "push-up-plus",
     name: "Push-Up Plus",
     description: "Standard push-up with an additional scapular protraction at the top (the 'plus'). Activates serratus anterior at high amplitude and lower trapezius over upper trapezius. Ideal for scapular stabilization. Addresses scapular winging and promotes upward rotation essential for overhead activities.",
-    confidence: 0.85,
-    notes: "Evidence: high serratus anterior activation, LT over UT ratio favorable [Andersen 2012, Kibler 2008]. Addresses scapular winging and promotes upward rotation [Kibler 2008].",
+    confidence: 0.95,
+    notes: "EMG: high serratus anterior activation, favorable LT/UT ratio [Andersen 2012, Kibler 2008]. Addresses scapular winging and promotes upward rotation [Kibler 2008]. Dosing: 3×8 at 8-RM, 3 days/week [Mulroy 2020]. Closed-chain exercises like planks appropriate after 12+ weeks post-surgery [Kennedy 2020].",
     movementSlugs: ["scapular-protraction", "elbow-extension", "shoulder-flexion", "scapular-upward-rotation"],
     muscleRoles: [
       { muscleSlug: "serratus-anterior", role: "primary", notes: "High amplitude activation — the 'plus' targets SA specifically" },
@@ -927,8 +933,8 @@ const exercises: ExerciseDef[] = [
     slug: "external-rotation-0-abduction",
     name: "External Rotation at 0° Abduction (Side-Lying or Band)",
     description: "Rotator cuff strengthening targeting infraspinatus through external rotation with the arm at the side. Side-lying or standing with resistance band. Prevents superior humeral head migration and reduces impingement risk. Foundational for shoulder stability, progressible with resistance bands.",
-    confidence: 0.9,
-    notes: "Evidence: rotator cuff strengthening, particularly infraspinatus via ER, prevents superior humeral head migration and reduces impingement [Mulroy 2020, Escamilla 2009]. Foundational for shoulder stability [Mulroy 2020].",
+    confidence: 0.95,
+    notes: "EMG data: infraspinatus 62% MVIC, teres minor 67% MVIC, supraspinatus 24-37% MVIC [Reinold 2004]. Dosing: 3×8 at 8-RM, 3 days/week [Mulroy 2020]. Motor control exercises superior to nonspecific (SMD: -0.29 short, -0.33 medium term) [Lafrance 2024]. Perform in scapular plane to minimize superior humeral head migration [Mulroy 2020]. Control eccentric phase 2 seconds [Rodrigues da Silva Barros 2023].",
     movementSlugs: ["shoulder-external-rotation"],
     muscleRoles: [
       { muscleSlug: "infraspinatus", role: "primary", notes: "Primary external rotator at 0° abduction" },

@@ -26,3 +26,6 @@ vendor/
 coverage/
 .cache/
 tmp/
+
+# Runtime state
+.bg-shell/

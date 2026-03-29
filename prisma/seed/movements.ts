@@ -184,6 +184,39 @@ const movements: MovementDef[] = [
     axis: null,
     jointSlug: "scapulothoracic",
   },
+  {
+    slug: "scapular-elevation",
+    name: "Scapular Elevation",
+    description: "Upward movement of the scapula toward the ears (shoulder shrug).",
+    plane: "frontal",
+    axis: null,
+    jointSlug: "scapulothoracic",
+  },
+  {
+    slug: "scapular-downward-rotation",
+    name: "Scapular Downward Rotation",
+    description: "Rotation of the scapula so the glenoid faces downward. Return from upward rotation.",
+    plane: "frontal",
+    axis: null,
+    jointSlug: "scapulothoracic",
+  },
+  // ── Glenohumeral — Horizontal Plane ───────────────────────────────────────
+  {
+    slug: "shoulder-horizontal-adduction",
+    name: "Shoulder Horizontal Adduction",
+    description: "Movement of the arm across the body in the transverse plane from an abducted position.",
+    plane: "transverse",
+    axis: "longitudinal",
+    jointSlug: "glenohumeral",
+  },
+  {
+    slug: "shoulder-horizontal-abduction",
+    name: "Shoulder Horizontal Abduction",
+    description: "Movement of the arm away from the body in the transverse plane from a flexed or horizontally adducted position.",
+    plane: "transverse",
+    axis: "longitudinal",
+    jointSlug: "glenohumeral",
+  },
   // ── Humeroulnar ───────────────────────────────────────────────────────────
   {
     slug: "elbow-flexion",
@@ -474,6 +507,22 @@ const movements: MovementDef[] = [
     description: "Straightening the knee, increasing the angle between the leg and thigh.",
     plane: "sagittal",
     axis: "medial-lateral",
+    jointSlug: "tibiofemoral",
+  },
+  {
+    slug: "knee-internal-rotation",
+    name: "Knee Internal Rotation",
+    description: "Internal rotation of the tibia on the femur. Occurs primarily with the knee flexed. Popliteus initiates 'unlocking' of the knee from full extension.",
+    plane: "transverse",
+    axis: "longitudinal",
+    jointSlug: "tibiofemoral",
+  },
+  {
+    slug: "knee-external-rotation",
+    name: "Knee External Rotation",
+    description: "External rotation of the tibia on the femur. Occurs primarily with the knee flexed. Biceps femoris is the primary external rotator.",
+    plane: "transverse",
+    axis: "longitudinal",
     jointSlug: "tibiofemoral",
   },
   // ── Talocrural (Ankle) ────────────────────────────────────────────────────

@@ -2265,6 +2265,1733 @@ const exercises: ExerciseDef[] = [
       },
     ],
   },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BATCH 1: Missing Essentials
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  {
+    slug: "isometric-neck-strengthening",
+    name: "Isometric Neck Strengthening (4 Directions)",
+    description:
+      "Manual resistance or hand-resisted cervical flexion, extension, lateral flexion, and rotation without movement. Thera-Band resistance produces 3.8-15.7% MVIC flexion and 20.2-34.8% MVIC extension. Programs >20 reps/session and >8 weeks duration show significant pain and disability improvements.",
+    confidence: 0.9,
+    dosing: "3×10 reps each direction with 5-10 second holds, >20 reps/session, >8 weeks duration [Yang 2022]",
+    emgNotes:
+      "Thera-Band: flexion 3.8-15.7% MVIC, extension 20.2-34.8% MVIC. Cybex: flexion 20.9-83.5%, extension 40.6-95.8% [Burnett 2008]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["cervical-flexion", "cervical-extension", "cervical-lateral-flexion", "cervical-rotation"],
+    muscleRoles: [
+      { muscleSlug: "deep-cervical-flexors", role: "primary", notes: "Flexion direction" },
+      {
+        muscleSlug: "sternocleidomastoid",
+        role: "secondary",
+        notes: "Superficial flexor — activity decreases with training [Dirito 2024]",
+      },
+      { muscleSlug: "erector-spinae", role: "primary", notes: "Extension direction — thoracic portion" },
+      { muscleSlug: "trapezius-upper", role: "stabilizer", notes: "Scapular stability during resistance" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance"],
+    cues: [
+      { text: "Push your hand against your forehead — resist without moving your head", cueType: "verbal" },
+      { text: "Hold each direction for 5-10 seconds, breathing normally", cueType: "verbal" },
+      { text: "Keep your shoulders relaxed — don't shrug", cueType: "verbal" },
+      { text: "4 directions: forward, backward, each side", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Submaximal Resistance",
+        description: "Use only 25-50% effort against your hand. Build tolerance before increasing force.",
+      },
+      {
+        name: "Supine Isometrics",
+        description: "Perform lying down to reduce postural demands.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Thera-Band Resistance",
+        description: "Use resistance band for consistent progressive loading across all directions.",
+      },
+      {
+        name: "Cybex/Machine Resistance",
+        description: "Machine-based resistance for higher activation (up to 95.8% MVIC) [Burnett 2008].",
+      },
+    ],
+  },
+  {
+    slug: "upper-trapezius-stretch",
+    name: "Upper Trapezius Stretch",
+    description:
+      "Seated or standing, laterally flex the cervical spine away from the target side while gently depressing the ipsilateral shoulder. Stretching 2x daily, 5 days/week for 4 weeks significantly reduces pain (VAS -1.4) and improves function in office workers.",
+    confidence: 0.85,
+    dosing: "30-60 seconds per side, 2x daily, 5 days/week for 4+ weeks [Tunwattanapong 2016]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["cervical-lateral-flexion"],
+    muscleRoles: [
+      { muscleSlug: "trapezius-upper", role: "primary", notes: "Target muscle being stretched" },
+      { muscleSlug: "levator-scapulae", role: "secondary", notes: "Partially stretched in this position" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance"],
+    cues: [
+      { text: "Tilt your ear toward the opposite shoulder — don't rotate", cueType: "verbal" },
+      { text: "Gently press the same-side shoulder down with your hand", cueType: "verbal" },
+      { text: "Hold for 30-60 seconds, breathing normally", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Gentle Active Side Bend",
+        description: "Perform the lateral flexion without hand assistance. Focus on range first.",
+      },
+    ],
+    progressions: [
+      {
+        name: "PNF Contract-Relax",
+        description: "Gently push head into hand for 5 seconds, then relax deeper into the stretch.",
+      },
+    ],
+  },
+  {
+    slug: "levator-scapulae-stretch",
+    name: "Levator Scapulae Stretch",
+    description:
+      "Similar to upper trap stretch but with cervical rotation toward the target side to bias levator scapulae over upper trapezius. Flexion + contralateral bending + ipsilateral rotation produces highest shear moduli indicating maximum elongation.",
+    confidence: 0.85,
+    dosing: "30-60 seconds per side, 2x daily, 5 days/week [Tunwattanapong 2016]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["cervical-lateral-flexion", "cervical-rotation"],
+    muscleRoles: [
+      {
+        muscleSlug: "levator-scapulae",
+        role: "primary",
+        notes: "Target muscle — rotation differentiates from upper trap stretch [Yanase 2021]",
+      },
+      { muscleSlug: "trapezius-upper", role: "secondary", notes: "Partially stretched" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance"],
+    cues: [
+      { text: "Turn your chin toward your armpit on the opposite side", cueType: "verbal" },
+      { text: "Then tilt your ear down toward that armpit", cueType: "verbal" },
+      { text: "Use your hand on top of your head for gentle overpressure", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Active ROM Only",
+        description: "Perform the rotation and lateral flexion actively without hand assistance.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Seated with Arm Behind Back",
+        description: "Hold the chair seat with the stretch-side hand to anchor the scapula down.",
+      },
+    ],
+  },
+  {
+    slug: "tyler-twist-eccentric-wrist",
+    name: "Tyler Twist — Eccentric Wrist Extension (FlexBar)",
+    description:
+      "Using a Thera-Band FlexBar, perform eccentric wrist extension for lateral epicondylalgia. The landmark Tyler et al. (2010) RCT showed DASH improved 76% vs 13% (p=0.01), VAS improved 81% vs 22% (p=0.002), and strength improved 79% vs 15% (p=0.011) over 7-8 weeks.",
+    confidence: 0.95,
+    dosing: "3×15 reps daily, 7-8 weeks. Progress FlexBar resistance (green → blue → black) [Tyler 2010]",
+    emgNotes: "Large effect sizes: pain reduction ES 1.12, function improvement ES 1.22 [Chen 2020]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: ["flexbar"],
+    bodyPosition: "standing",
+    movementSlugs: ["wrist-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "extensor-carpi-radialis-longus",
+        role: "primary",
+        notes: "Eccentric loading — primary target for lateral epicondylalgia",
+      },
+      { muscleSlug: "extensor-digitorum", role: "secondary", notes: "Common extensor origin involvement" },
+    ],
+    functionalTaskSlugs: ["gripping-cup", "opening-jar", "typing"],
+    cues: [
+      { text: "Grip the FlexBar with the affected hand on bottom, unaffected on top", cueType: "verbal" },
+      { text: "Twist with the top hand, then slowly untwist with the bottom hand", cueType: "verbal" },
+      { text: "The slow untwisting is the therapeutic part — 3 seconds to release", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Isometric Wrist Extension",
+        description: "Hold wrist in extension against light resistance. Build tolerance before eccentric work.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Heavier FlexBar",
+        description: "Progress from green (light) to blue (medium) to black (heavy) as pain-free.",
+      },
+    ],
+  },
+  {
+    slug: "wrist-curls-flexion-extension",
+    name: "Wrist Curls (Flexion/Extension)",
+    description:
+      "Seated forearm-on-thigh wrist curls in both flexion and extension directions with light dumbbells. Wrist extensors function as primary stabilizers during dynamic movements with co-contraction ratios of 2.28 during flexion.",
+    confidence: 0.8,
+    dosing: "3×10-15 reps each direction, 3x/week",
+    emgNotes:
+      "Wrist extensors co-contraction ratio 2.28 during flexion vs 0.32 during extension — extensors highly active as stabilizers [Forman 2020]",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: ["dumbbell"],
+    bodyPosition: "seated",
+    movementSlugs: ["wrist-flexion", "wrist-extension"],
+    muscleRoles: [
+      { muscleSlug: "flexor-carpi-radialis", role: "primary", notes: "Wrist flexion direction" },
+      { muscleSlug: "flexor-carpi-ulnaris", role: "primary", notes: "Wrist flexion direction" },
+      { muscleSlug: "extensor-carpi-radialis-longus", role: "primary", notes: "Wrist extension direction" },
+      {
+        muscleSlug: "extensor-digitorum",
+        role: "stabilizer",
+        notes: "Co-contraction ratio 2.28 during flexion [Forman 2020]",
+      },
+    ],
+    functionalTaskSlugs: ["gripping-cup", "typing"],
+    cues: [
+      { text: "Rest forearm on thigh, wrist hanging off the knee", cueType: "verbal" },
+      { text: "Flexion: curl wrist up with palm facing ceiling", cueType: "verbal" },
+      { text: "Extension: curl wrist up with palm facing floor", cueType: "verbal" },
+      { text: "Slow and controlled — 2 seconds up, 3 seconds down", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "No Weight",
+        description: "Perform without resistance, focusing on full ROM.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Increased Weight",
+        description: "Progress dumbbell weight by 0.5-1 lb increments.",
+      },
+    ],
+  },
+  {
+    slug: "finger-extension-band",
+    name: "Finger Extension with Rubber Band",
+    description:
+      "Place a rubber band around all five fingertips and spread the fingers apart against resistance. Targets finger and thumb extensors for grip balance and hand rehabilitation.",
+    confidence: 0.75,
+    dosing: "3×15-20 reps, 2-3x daily",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: ["rubber-band"],
+    bodyPosition: "seated",
+    movementSlugs: ["finger-extension", "finger-abduction"],
+    muscleRoles: [
+      { muscleSlug: "extensor-digitorum", role: "primary", notes: "Finger MCP extension against band resistance" },
+      { muscleSlug: "dorsal-interossei", role: "secondary", notes: "Finger abduction component" },
+    ],
+    functionalTaskSlugs: ["gripping-cup", "typing"],
+    cues: [
+      { text: "Place the band around all fingertips near the nails", cueType: "verbal" },
+      { text: "Spread all fingers wide against the resistance", cueType: "verbal" },
+      { text: "Hold the open position for 2-3 seconds, then slowly release", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Thinner Band",
+        description: "Use a lighter rubber band for less resistance.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Double Band",
+        description: "Add a second rubber band for increased resistance.",
+      },
+    ],
+  },
+  {
+    slug: "tendon-gliding-exercises",
+    name: "Tendon Gliding Exercises (Finger)",
+    description:
+      "Systematic progression through hand positions to maximize differential tendon excursion: straight → hook fist → full fist → tabletop → straight fist. Active four-finger mobilization produces 23.4 mm median FDP excursion vs 10.0 mm for modified Kleinert. Very low-certainty evidence for all flexor tendon rehab protocols.",
+    confidence: 0.8,
+    dosing: "40-80 cycles per session, 4-6 sessions daily in early post-repair protocol [Tang 2021]",
+    emgNotes:
+      "FDP excursion: 23.4 mm active 4-finger mobilization vs 10.0 mm modified Kleinert [Korstanje 2012]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["finger-flexion", "finger-extension"],
+    muscleRoles: [
+      { muscleSlug: "flexor-digitorum-superficialis", role: "primary", notes: "PIP flexion during fist positions" },
+      {
+        muscleSlug: "flexor-digitorum-profundus",
+        role: "primary",
+        notes: "DIP flexion — maximum excursion during full fist",
+      },
+      { muscleSlug: "extensor-digitorum", role: "primary", notes: "Active extension between positions" },
+      {
+        muscleSlug: "lumbricals",
+        role: "synergist",
+        notes: "MCP flexion with IP extension during tabletop position",
+      },
+    ],
+    functionalTaskSlugs: ["gripping-cup"],
+    cues: [
+      { text: "Move through each position slowly and deliberately", cueType: "verbal" },
+      {
+        text: "Straight → Hook fist (curl fingers at PIP/DIP only) → Full fist → Tabletop (bend at MCP only) → Straight fist",
+        cueType: "verbal",
+      },
+      { text: "Hold each position for 3-5 seconds", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Passive Gliding",
+        description: "Use the other hand to assist the motion through each position.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Resisted Gliding",
+        description: "Squeeze therapy putty in the fist positions for added resistance.",
+      },
+    ],
+  },
+  {
+    slug: "side-plank",
+    name: "Side Plank (Lateral Bridge)",
+    description:
+      "Sidelying forearm plank for lateral core stability. Produces high quadratus lumborum activation (121.62% MVIC) and gluteus medius activation (66.67% MVIC). Rotational side-bridge variant: RA 43.9%, EO 62.8%, glute med >69% MVIC. May not be well-tolerated in acute LBP patients.",
+    confidence: 0.9,
+    dosing: "3×15-30 second holds per side, progress to 45-60 seconds; 2-3x/week",
+    emgNotes:
+      "QL 121.62% MVIC, glute med 66.67% MVIC [Nam 2025]. Rotational variant: EO 62.8%, RA 43.9%, glute med >69% [Youdas 2014]",
+    evidenceLevel: "strong",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "sidelying",
+    movementSlugs: ["thoracic-lateral-flexion", "hip-abduction"],
+    muscleRoles: [
+      { muscleSlug: "quadratus-lumborum", role: "primary", notes: "121.62% MVIC — highest activation [Nam 2025]" },
+      {
+        muscleSlug: "external-oblique",
+        role: "primary",
+        notes: "62.8% MVIC in rotational variant [Youdas 2014]",
+      },
+      {
+        muscleSlug: "gluteus-medius",
+        role: "secondary",
+        notes: "66.67-69% MVIC — pelvic stability [Nam 2025, Youdas 2014]",
+      },
+      { muscleSlug: "internal-oblique", role: "secondary", notes: "Anti-lateral-flexion demand" },
+      { muscleSlug: "erector-spinae", role: "stabilizer", notes: "Trunk stabilization" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "carrying-lifting"],
+    cues: [
+      { text: "Stack your feet or stagger them, forearm directly under shoulder", cueType: "verbal" },
+      { text: "Lift hips to create a straight line from head to feet", cueType: "verbal" },
+      { text: "Don't let your hips sag or pike", cueType: "verbal" },
+      { text: "Breathe normally throughout the hold", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Knee Side Plank",
+        description: "Perform from knees instead of feet. Reduces lever arm and difficulty.",
+      },
+      {
+        name: "Side-Lying Hip Abduction",
+        description:
+          "If plank is not tolerated, perform sidelying hip abduction for glute med activation.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Side Plank with Hip Abduction",
+        description: "Lift the top leg during the hold. Increases gluteus medius demand.",
+      },
+      {
+        name: "Side Plank with Rotation",
+        description:
+          "Rotate torso toward floor and back. EO 62.8%, RA 43.9% MVIC [Youdas 2014].",
+      },
+    ],
+  },
+  {
+    slug: "mcgill-curl-up",
+    name: "McGill Curl-Up",
+    description:
+      "Modified curl-up with hands under lumbar spine to maintain lordosis, one knee bent, one straight. Minimal spinal flexion range. Produces RA 50% MVIC while minimizing spinal compression. Partial curl-ups generate the highest muscle challenge-to-spine cost index, optimizing abdominal activation while minimizing spinal loading.",
+    confidence: 0.95,
+    dosing: "3×8-10 reps; focus on quality over quantity — minimal spinal flexion",
+    emgNotes:
+      "RA 48-50% nEMG [Calatayud 2019]. Highest muscle challenge-to-spine cost ratio among abdominal exercises [Axler 1997]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "supine",
+    movementSlugs: ["lumbar-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "rectus-abdominis",
+        role: "primary",
+        notes: "48-50% MVIC — optimal activation with minimal compression [Calatayud 2019]",
+      },
+      { muscleSlug: "external-oblique", role: "secondary", notes: "Supporting trunk flexion" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Deep core stability" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "bed-mobility"],
+    cues: [
+      { text: "Slide your hands under your lower back to maintain its natural curve", cueType: "verbal" },
+      { text: "Bend one knee, keep the other straight", cueType: "verbal" },
+      { text: "Lift ONLY your head and shoulders — just barely off the floor", cueType: "verbal" },
+      { text: "Hold for 8-10 seconds, breathing normally", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Head Lift Only",
+        description: "Lift only the head, not shoulders. Minimal demand.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Longer Holds",
+        description: "Increase hold time to 15-20 seconds per rep.",
+      },
+    ],
+  },
+  {
+    slug: "pallof-press",
+    name: "Pallof Press (Anti-Rotation)",
+    description:
+      "Standing perpendicular to a cable or band anchor, pressing arms straight forward against rotational pull. Anti-rotation core exercise targeting obliques and deep core stabilizers. Motor control exercises including anti-rotation show low to moderate evidence for chronic LBP pain reduction.",
+    confidence: 0.8,
+    dosing: "3×10-12 reps per side with 3-5 second holds at full extension",
+    emgNotes:
+      "Limited specific EMG data. General anti-rotation exercises activate obliques and core stabilizers. Motor control exercise SMD -0.33 for pain [Gross 2015]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: ["resistance-band"],
+    bodyPosition: "standing",
+    movementSlugs: ["thoracic-rotation", "lumbar-flexion"],
+    muscleRoles: [
+      { muscleSlug: "internal-oblique", role: "primary", notes: "Anti-rotation demand — resists rotational pull" },
+      { muscleSlug: "external-oblique", role: "primary", notes: "Anti-rotation and trunk stability" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Deep core stability during press" },
+      {
+        muscleSlug: "erector-spinae",
+        role: "stabilizer",
+        notes: "Maintains neutral spine against rotation",
+      },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "carrying-lifting"],
+    cues: [
+      { text: "Stand sideways to the band anchor at chest height", cueType: "verbal" },
+      { text: "Press both hands straight forward — the band tries to rotate you", cueType: "verbal" },
+      { text: "Hold the extended position for 3-5 seconds, resist the pull", cueType: "verbal" },
+      { text: "Keep your hips square — don't let them rotate", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Half-Kneeling Pallof Press",
+        description:
+          "Kneel on the inside knee for a more stable base. Reduces balance demand.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Pallof Press with Step",
+        description: "Take a lateral step while pressing. Adds dynamic stability challenge.",
+      },
+      {
+        name: "Overhead Pallof Press",
+        description:
+          "Press arms overhead instead of forward. Increases lever arm and anti-rotation demand.",
+      },
+    ],
+  },
+  {
+    slug: "hip-hinge-deadlift",
+    name: "Hip Hinge / Deadlift Pattern",
+    description:
+      "Standing hip hinge with bodyweight or light load emphasizing posterior chain loading while maintaining neutral spine. RDL produces the greatest peak hamstring force (1.6 BW BFlh, 1.9 BW SM) and greatest peak hamstring stretch among common exercises, exceeding sprinting demands. Eccentric training including RDL reduces hamstring injury by 56.8-70%.",
+    confidence: 0.9,
+    dosing: "3×8-12 reps; 60-80% 1RM for strengthening; bodyweight for learning pattern",
+    emgNotes:
+      "Step-RDL at 80% 1RM: glute max ES=1.70, semitendinosus ES=0.82, erector spinae longissimus ES=2.12 vs standard RDL [Coratella 2022]. Single-leg RDL: glute max 105-169% MVIC, BF 70-122% MVIC [Mo 2023]",
+    evidenceLevel: "strong",
+    difficulty: "intermediate",
+    equipment: ["barbell", "dumbbells"],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-extension", "knee-extension", "lumbar-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "primary",
+        notes: "Hip extension — single-leg: 105-169% MVIC [Mo 2023]",
+      },
+      {
+        muscleSlug: "hamstrings",
+        role: "primary",
+        notes: "Peak force 1.6-1.9 BW, exceeds sprinting demands [Breed 2026]",
+      },
+      {
+        muscleSlug: "erector-spinae",
+        role: "secondary",
+        notes: "Trunk extension — ES=2.12 in step-RDL [Coratella 2022]",
+      },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core bracing for spinal protection" },
+    ],
+    functionalTaskSlugs: ["carrying-lifting", "floor-transfers"],
+    cues: [
+      { text: "Push your hips back like you're closing a car door with your butt", cueType: "verbal" },
+      { text: "Keep the bar or weights close to your legs throughout", cueType: "verbal" },
+      { text: "Slight bend in knees — this is NOT a squat", cueType: "verbal" },
+      { text: "Maintain a flat back — neutral spine the entire time", cueType: "verbal" },
+      { text: "Drive hips forward to stand tall", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Bodyweight Hip Hinge",
+        description:
+          "Practice the pattern with hands on a dowel along your spine (head, upper back, sacrum contact).",
+      },
+      {
+        name: "Dumbbell RDL",
+        description: "Use dumbbells instead of barbell for easier learning curve.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Single-Leg RDL",
+        description:
+          "Contralateral loading increases glute med, inferior and superior glute max significantly [Mo 2023].",
+      },
+      {
+        name: "Step-RDL (Elevated Platform)",
+        description:
+          "Greater ROM increases all posterior chain activation: glute max ES=1.70 [Coratella 2022].",
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BATCH 2: Intermediate Progressions
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  {
+    slug: "split-squat-bulgarian",
+    name: "Split Squat / Bulgarian Split Squat",
+    description:
+      "Staggered stance squat with rear foot on ground or elevated on bench. RFESS produces BF 76.1% MVIC (vs 62.3% standard), glute med 54.9% MVIC, and H/Q ratio of 0.83 (vs 0.69 standard). ACL-reconstructed limbs show 7.3% lower vGRF, 12.8% reduced knee contribution, and 9.8% increased hip contribution.",
+    confidence: 0.9,
+    dosing: "3×8-12 reps per leg at 60-80% 1RM, 2-3x/week [Mausehund 2019]",
+    emgNotes:
+      "RFESS: BF 76.1% MVIC, glute med 54.9% MVIC, H/Q ratio 0.83 [Mausehund 2019]. Muscle forces scale more with load in split squat vs bilateral squat [Kipp 2022]",
+    evidenceLevel: "strong",
+    difficulty: "intermediate",
+    equipment: ["bench", "dumbbells"],
+    bodyPosition: "standing",
+    movementSlugs: ["knee-extension", "knee-flexion", "hip-extension"],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Front leg — comparable to bilateral squat" },
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "primary",
+        notes: "Similar peak values to bilateral squat [Mausehund 2019]",
+      },
+      {
+        muscleSlug: "hamstrings",
+        role: "secondary",
+        notes: "76.1% MVIC RFESS — higher coactivation [Mausehund 2019]",
+      },
+      {
+        muscleSlug: "gluteus-medius",
+        role: "stabilizer",
+        notes: "54.9% MVIC — pelvic stability in unilateral stance",
+      },
+    ],
+    functionalTaskSlugs: ["stair-climbing", "floor-transfers", "running-jogging"],
+    cues: [
+      { text: "Front foot flat, back foot on bench (Bulgarian) or ground (split squat)", cueType: "verbal" },
+      { text: "Lower straight down until front thigh is parallel", cueType: "verbal" },
+      { text: "Keep your torso upright — don't lean forward", cueType: "verbal" },
+      { text: "Push through the front heel to return to start", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Standard Split Squat",
+        description: "Rear foot on ground. Lower H/Q ratio (0.69) but easier to balance.",
+      },
+      {
+        name: "Bodyweight Only",
+        description: "Master the pattern before adding external load.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Deficit Bulgarian Split Squat",
+        description: "Front foot on a small plate for increased ROM.",
+      },
+      {
+        name: "Loaded RFESS",
+        description:
+          "Add barbell or heavy dumbbells. Forces scale more than bilateral squat [Kipp 2022].",
+      },
+    ],
+  },
+  {
+    slug: "copenhagen-adduction",
+    name: "Copenhagen Adduction Exercise",
+    description:
+      "Side-lying with top leg on a bench, performing hip adduction by lifting body with the bottom leg. Produces 108% MVIC adductor longus — the highest among all adduction exercises. The Adductor Strengthening Programme reduced groin problems by 41% (OR 0.59, p=0.008) in 652 football players. 8 weeks training increases muscle thickness 17-18%.",
+    confidence: 0.95,
+    dosing:
+      "Preseason: 3x/week for 6-8 weeks. In-season: 1x/week for 28 weeks. Three progression levels. High volume (2x/week) produces 24% greater strength than 1x/week [Harøy 2019, Quintana-Cepedal 2024]",
+    emgNotes:
+      "Adductor longus 108% MVIC (highest of all adduction exercises). Ankle support: 1.54 Nm/kg hip adductor moment vs 0.93 knee support [Serner 2014, Dæhlin 2025]",
+    evidenceLevel: "strong",
+    difficulty: "advanced",
+    equipment: ["bench"],
+    bodyPosition: "sidelying",
+    movementSlugs: ["hip-adduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "adductor-group",
+        role: "primary",
+        notes: "Adductor longus 108% MVIC — highest among all adduction exercises [Serner 2014]",
+      },
+      { muscleSlug: "gluteus-medius", role: "stabilizer", notes: "Top leg pelvic stability" },
+      { muscleSlug: "external-oblique", role: "stabilizer", notes: "Lateral trunk stability during adduction" },
+    ],
+    functionalTaskSlugs: ["walking", "running-jogging"],
+    cues: [
+      { text: "Top leg rests on the bench, bottom leg hangs", cueType: "verbal" },
+      { text: "Lift your body by adducting the bottom leg up to the bench", cueType: "verbal" },
+      { text: "Keep your body straight — don't let hips sag", cueType: "verbal" },
+      { text: "Lower slowly — the eccentric is important", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Knee Support",
+        description:
+          "Support top leg at knee instead of ankle. 66% reduction in adductor moment [Dæhlin 2025].",
+      },
+      {
+        name: "Isometric Hold",
+        description: "Both legs on bench, hold side plank position. Isometric adductor load.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Ankle Support",
+        description: "Full-length lever arm — maximal difficulty (1.54 Nm/kg) [Dæhlin 2025].",
+      },
+      {
+        name: "Tempo Copenhagen",
+        description: "Slow 3-5 second eccentric for increased time under tension.",
+      },
+    ],
+  },
+  {
+    slug: "nordic-hamstring-exercise",
+    name: "Nordic Hamstring Exercise",
+    description:
+      "Kneeling with ankles anchored, eccentrically lowering body forward using hamstring control. Produces highest hamstring activation among eccentric exercises (BF 64.5% MVIC). Eccentric training reduces hamstring injury by 56.8-70%. Increases BF long head fascicle length (MD 0.90 cm), a key adaptation for injury prevention. Semitendinosus preferentially recruited over biceps femoris.",
+    confidence: 0.95,
+    dosing:
+      "Progressive: start 1×5, build to 3×12 over 10 weeks. 1-2 sessions/week. Part of FIFA 11+ programs [Rudisill 2023, Ripley 2023]",
+    emgNotes:
+      "BF 64.5% MVIC, ST > BF > SM activation. Distal BF long head shows higher activation than proximal [Li 2023]. Fascicle length increase MD 0.90 cm [Rudisill 2023]",
+    evidenceLevel: "strong",
+    difficulty: "advanced",
+    equipment: [],
+    bodyPosition: "kneeling",
+    notes:
+      "Strongest evidence base among all hamstring prevention exercises. Compliance is critical — low adherence reduces effectiveness.",
+    movementSlugs: ["knee-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "hamstrings",
+        role: "primary",
+        notes: "BF 64.5% MVIC — highest eccentric activation. ST preferentially recruited [Guruhan 2021]",
+      },
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "stabilizer",
+        notes: "Hip extension control — avoid hip flexion",
+      },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer", notes: "Core bracing during eccentric lowering" },
+    ],
+    functionalTaskSlugs: ["running-jogging", "stair-climbing"],
+    cues: [
+      { text: "Kneel with ankles anchored by a partner or pad", cueType: "verbal" },
+      { text: "Keep your hips extended — don't bend at the waist", cueType: "verbal" },
+      { text: "Lower your body forward as slowly as possible", cueType: "verbal" },
+      {
+        text: "Use your hands to catch yourself at the bottom, then push back to start",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Band-Assisted Nordic",
+        description:
+          "Elastic band around chest attached overhead. Reduces effective body weight.",
+      },
+      {
+        name: "Reduced ROM",
+        description: "Lower only partway — stop at the angle you can still control.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Range Nordic",
+        description: "Lower all the way to the floor with eccentric control.",
+      },
+      {
+        name: "Weighted Nordic",
+        description: "Hold a weight plate at chest. Increases eccentric demand.",
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BATCH 3: Advanced / Sport-Return
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  {
+    slug: "box-jump",
+    name: "Box Jump (Bilateral)",
+    description:
+      "Jumping from floor onto a box/platform. Peak GRF 3.34 BW takeoff to 4.22 BW landing. Sequential proximal-to-distal muscle activation during propulsion: VL, glute max, soleus, gastrocnemius. Requires bilateral squat strength 1.25-1.5x BW and adequate ankle dorsiflexion (>36-38°) before progressing.",
+    confidence: 0.85,
+    dosing:
+      "3×5-8 reps, 2-3x/week for 8 weeks. Box height 20-40 cm rehab, 40-60 cm performance [Peng 2019]",
+    emgNotes:
+      "Sequential VL → glute max → soleus → gastroc activation. Trunk extensors and flexors show reciprocal activation for impact absorption [Iida 2012]",
+    evidenceLevel: "moderate",
+    difficulty: "advanced",
+    equipment: ["plyo-box"],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-extension", "knee-extension", "ankle-plantarflexion"],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Propulsion and landing deceleration" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Hip extension during takeoff" },
+      { muscleSlug: "gastrocnemius", role: "secondary", notes: "Ankle plantarflexion propulsion" },
+      { muscleSlug: "soleus", role: "secondary", notes: "Ankle plantarflexion and landing absorption" },
+      { muscleSlug: "rectus-abdominis", role: "stabilizer", notes: "Trunk control during landing [Iida 2012]" },
+    ],
+    functionalTaskSlugs: ["running-jogging", "stair-climbing"],
+    cues: [
+      { text: "Start in quarter-squat, swing arms, and explode upward", cueType: "verbal" },
+      { text: "Land softly on the box with hips and knees bent", cueType: "verbal" },
+      { text: "Stick the landing — no bouncing or stumbling", cueType: "verbal" },
+      { text: "Step down — don't jump down (to reduce landing forces)", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Low Box Step-Up",
+        description: "Step onto a lower box (15-20 cm) without jumping. Build confidence.",
+      },
+      {
+        name: "Squat Jump",
+        description:
+          "Bodyweight squat jump without a box. Practice takeoff and landing mechanics.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Higher Box",
+        description:
+          "Increase box height in 5 cm increments as landing mechanics stay clean.",
+      },
+      {
+        name: "Single-Leg Box Jump",
+        description: "Advanced: single-leg takeoff to box. Requires >90% LSI.",
+      },
+    ],
+  },
+  {
+    slug: "depth-jump",
+    name: "Depth Jump (Drop Jump)",
+    description:
+      "Step off a box, land, and immediately jump vertically. Peak impact forces 4.93-5.39 BW. Optimal drop height is 75-100% of squat jump height for bounce drop jumps. Training at optimal height produces 10-20% vertical jump improvement and 20-34% reactive strength index gains. Requires squat strength 1.5x BW.",
+    confidence: 0.85,
+    dosing:
+      "1-2 sessions/week, 3×5 reps, 8 weeks. Drop height 75-100% of squat jump height [Yue 2025, Sotiropoulos 2023]",
+    emgNotes:
+      "GRF 4.93-5.39 BW. VL-BF, VM-BF, and RF-BF coactivation increases with height (ES 0.45-0.90) [Di Giminiani 2020]",
+    evidenceLevel: "moderate",
+    difficulty: "advanced",
+    equipment: ["plyo-box"],
+    bodyPosition: "standing",
+    notes:
+      "Late-stage exercise (>6 months post-ACLR). Contraindicated: active knee effusion, quad LSI <80%, poor landing mechanics.",
+    movementSlugs: ["hip-extension", "knee-extension", "ankle-plantarflexion"],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Eccentric absorption and concentric propulsion" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Hip extension power" },
+      { muscleSlug: "gastrocnemius", role: "secondary", notes: "SSC ankle power" },
+      {
+        muscleSlug: "hamstrings",
+        role: "stabilizer",
+        notes: "Co-contraction increases with drop height [Di Giminiani 2020]",
+      },
+    ],
+    functionalTaskSlugs: ["running-jogging"],
+    cues: [
+      { text: "Step off the box — don't jump off", cueType: "verbal" },
+      {
+        text: "Land and immediately explode upward — minimize ground contact time (<250ms)",
+        cueType: "verbal",
+      },
+      { text: "Land softly with knees over toes — avoid knee valgus", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Box Jump",
+        description: "Jump up onto a box rather than dropping off. Lower landing forces.",
+      },
+      {
+        name: "Low Drop Height",
+        description: "Start at 20 cm drop height. Progress only when landing is controlled.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Increased Drop Height",
+        description: "Progress to 100-125% of CMJ height [Yue 2025].",
+      },
+      {
+        name: "Directional Depth Jump",
+        description: "Drop jump followed by lateral or forward bound.",
+      },
+    ],
+  },
+  {
+    slug: "lateral-bounds",
+    name: "Lateral Bounds (Single-Leg)",
+    description:
+      "Single-leg lateral hops for frontal plane power and dynamic stability. Peak forces 3.31 BW with 0.45s ground contact time. Gluteus medius, soleus, vasti, and gluteus maximus produce greatest forces during single-leg landing. Critical for ACL prevention — excessive knee valgus during lateral movements associated with injury risk.",
+    confidence: 0.85,
+    dosing:
+      "2-3×6-10 reps per leg, 2x/week. Progress distance, height, and direction changes [Wong 2012]",
+    emgNotes:
+      "Peak forces 3.31 BW, RFD 0.94 BW/s [Wong 2012]. Glute med critical for frontal plane control [Maniar 2022]",
+    evidenceLevel: "moderate",
+    difficulty: "advanced",
+    equipment: [],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-abduction", "hip-adduction", "knee-extension", "ankle-plantarflexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "gluteus-medius",
+        role: "primary",
+        notes: "Frontal plane control — resists knee valgus [Maniar 2022]",
+      },
+      { muscleSlug: "quadriceps", role: "primary", notes: "Landing deceleration" },
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "secondary",
+        notes: "Hip extension and landing absorption",
+      },
+      { muscleSlug: "soleus", role: "secondary", notes: "Ankle stability and force absorption [Maniar 2022]" },
+    ],
+    functionalTaskSlugs: ["running-jogging", "single-leg-balance"],
+    cues: [
+      { text: "Push off laterally from one leg, land on the opposite", cueType: "verbal" },
+      { text: "Stick each landing — knee over toe, no valgus collapse", cueType: "verbal" },
+      { text: "Use your arms for momentum and balance", cueType: "verbal" },
+      { text: "Start with shorter distances, progress wider", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Lateral Step-Over",
+        description: "Step laterally over a low cone. No jumping component.",
+      },
+      {
+        name: "Lateral Shuffle",
+        description: "Controlled sideways shuffling before progressing to bounds.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Lateral Bound to Stick",
+        description: "Bound and hold single-leg balance for 3 seconds.",
+      },
+      {
+        name: "Lateral Bound with Directional Change",
+        description: "Bound laterally then immediately change direction.",
+      },
+    ],
+  },
+  {
+    slug: "power-clean",
+    name: "Power Clean (Hang Variation)",
+    description:
+      "Explosive triple extension (ankle, knee, hip) pulling a barbell from hang position. Produces greatest rate of force development (17,254 N/s) compared to CMJ (3,836 N/s) and jump squat (3,517 N/s). Higher EMG in BF, gastroc, VL, and glute max. Requires technical proficiency in hang pulls and front squats.",
+    confidence: 0.85,
+    dosing:
+      "3-5×2-5 reps at 70-90% 1RM, 2-3x/week. Heavier loads (≥70% 1RM) optimize peak power [Soriano 2015]",
+    emgNotes:
+      "RFD 17,254 N/s (vs CMJ 3,836 N/s). Peak power 3,566W, peak force 2,814N at 60% 1RM [Comfort 2011, MacKenzie 2014]",
+    evidenceLevel: "moderate",
+    difficulty: "advanced",
+    equipment: ["barbell"],
+    bodyPosition: "standing",
+    notes:
+      "Primarily athletic performance, not rehabilitation. Requires squat 1.5x BW, deadlift 2x BW, and front squat proficiency as prerequisites.",
+    movementSlugs: ["hip-extension", "knee-extension", "ankle-plantarflexion", "shoulder-flexion"],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Triple extension — knee extension" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Explosive hip extension" },
+      { muscleSlug: "hamstrings", role: "secondary", notes: "Hip extension assistance" },
+      { muscleSlug: "trapezius-upper", role: "secondary", notes: "Bar acceleration and shrug" },
+      { muscleSlug: "erector-spinae", role: "stabilizer", notes: "Trunk rigidity during pull" },
+      {
+        muscleSlug: "gastrocnemius",
+        role: "synergist",
+        notes: "Ankle plantarflexion — triple extension",
+      },
+    ],
+    functionalTaskSlugs: ["carrying-lifting", "running-jogging"],
+    cues: [
+      { text: "Start at hang position — bar at mid-thigh, slight knee bend", cueType: "verbal" },
+      { text: "Explode: extend ankles, knees, and hips simultaneously", cueType: "verbal" },
+      { text: "Shrug and pull — high elbows, keep bar close", cueType: "verbal" },
+      { text: "Catch in front rack position with elbows high", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Hang High Pull",
+        description: "Pull to chest level without catching. Builds explosive pattern.",
+      },
+      {
+        name: "Kettlebell Clean",
+        description: "Single-arm clean with KB. Simpler catch mechanics.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Power Clean from Floor",
+        description: "Full pull from the floor. Requires more technical proficiency.",
+      },
+      {
+        name: "Hang Clean to Front Squat",
+        description: "Catch in a deep front squat position. Full Olympic lift pattern.",
+      },
+    ],
+  },
+  {
+    slug: "overhead-squat",
+    name: "Overhead Squat (Assessment & Training)",
+    description:
+      "Full squat with arms extended overhead holding a barbell or dowel. Requires ankle dorsiflexion ≥36-38°, hip flexion >110°, thoracic extension, and shoulder flexion >170°. Greater rectus abdominis and external oblique activity (2-7% higher) than back squat. Primarily used as a movement screening tool with limited predictive validity for injury when used in isolation.",
+    confidence: 0.8,
+    dosing:
+      "2-3×8-12 reps with light load (PVC pipe to 20% 1RM). Primarily assessment — not heavy training [Aspe 2014]",
+    emgNotes:
+      "RA and EO 2-7% higher than back squat during eccentric phase. Lower erector spinae and lower-body activity during concentric [Aspe 2014]",
+    evidenceLevel: "moderate",
+    difficulty: "advanced",
+    equipment: ["barbell"],
+    bodyPosition: "standing",
+    notes:
+      "Common compensations indicate mobility restrictions: forward trunk lean (thoracic), heel rise (ankle DF <36°), arm drift forward (shoulder mobility) [Rabin 2017]",
+    movementSlugs: [
+      "hip-flexion",
+      "hip-extension",
+      "knee-flexion",
+      "knee-extension",
+      "ankle-dorsiflexion",
+      "shoulder-flexion",
+    ],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Squat component" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Hip extension from depth" },
+      { muscleSlug: "rectus-abdominis", role: "secondary", notes: "2-7% higher than back squat [Aspe 2014]" },
+      {
+        muscleSlug: "external-oblique",
+        role: "secondary",
+        notes: "Trunk anti-extension demand [Aspe 2014]",
+      },
+      { muscleSlug: "supraspinatus", role: "stabilizer", notes: "Overhead position stability" },
+      {
+        muscleSlug: "serratus-anterior",
+        role: "stabilizer",
+        notes: "Scapular upward rotation for overhead hold",
+      },
+    ],
+    functionalTaskSlugs: ["overhead-work", "squat-to-stand"],
+    cues: [
+      { text: "Hold the bar overhead with wide grip — arms locked, biceps by ears", cueType: "verbal" },
+      {
+        text: "Squat down keeping arms directly overhead — don't let them drift forward",
+        cueType: "verbal",
+      },
+      { text: "Heels flat, knees tracking over toes", cueType: "verbal" },
+      {
+        text: "If you can't keep arms overhead, work on thoracic and shoulder mobility first",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Dowel Overhead Squat",
+        description: "Use a PVC pipe or dowel. Zero load — focus on position.",
+      },
+      {
+        name: "Wall-Assisted Overhead Squat",
+        description:
+          "Face a wall with toes 6 inches away. The wall prevents forward lean.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Barbell Overhead Squat",
+        description:
+          "Add progressive barbell loading once full depth with correct form.",
+      },
+      {
+        name: "Snatch Grip Overhead Squat",
+        description: "Wide snatch grip — transfers to Olympic lifting.",
+      },
+    ],
+  },
+  {
+    slug: "landmine-press",
+    name: "Landmine Press",
+    description:
+      "Pressing a barbell anchored at one end in an arced bar path. Theoretically reduces subacromial stress by avoiding the impingement zone (60-120° elevation). May be appropriate for athletes with impingement who cannot tolerate vertical pressing. Standing position increases core and lower body stability demands.",
+    confidence: 0.75,
+    dosing: "3-4×8-12 reps at 60-80% estimated 1RM, 2-3x/week",
+    evidenceLevel: "limited",
+    difficulty: "intermediate",
+    equipment: ["barbell", "landmine-attachment"],
+    bodyPosition: "standing",
+    notes:
+      "Direct comparative studies to overhead press are lacking. Theoretically more shoulder-friendly due to arced bar path [Coratella 2022].",
+    movementSlugs: ["shoulder-flexion", "elbow-extension", "scapular-upward-rotation"],
+    muscleRoles: [
+      { muscleSlug: "anterior-deltoid", role: "primary", notes: "Pressing through arc" },
+      { muscleSlug: "serratus-anterior", role: "secondary", notes: "Scapular upward rotation during press" },
+      { muscleSlug: "triceps-brachii", role: "secondary", notes: "Elbow extension component" },
+      { muscleSlug: "trapezius-upper", role: "stabilizer", notes: "Scapular stability" },
+      {
+        muscleSlug: "transversus-abdominis",
+        role: "stabilizer",
+        notes: "Anti-extension core demand in standing",
+      },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "overhead-work"],
+    cues: [
+      {
+        text: "Stand at the end of the barbell, hold with one or both hands at shoulder",
+        cueType: "verbal",
+      },
+      { text: "Press forward and up in an arc — don't try to go straight vertical", cueType: "verbal" },
+      { text: "Keep your core braced — don't arch your back", cueType: "verbal" },
+      { text: "Control the return — 2-3 seconds down", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Half-Kneeling Landmine Press",
+        description:
+          "Kneel on inside knee for more stability. Reduces balance demand.",
+      },
+      {
+        name: "Two-Hand Landmine Press",
+        description: "Use both hands for easier control and lower unilateral demand.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Single-Arm Landmine Press",
+        description: "One arm for increased unilateral shoulder and core demand.",
+      },
+      {
+        name: "Landmine Press with Rotation",
+        description: "Add a rotational pivot during the press for rotational power.",
+      },
+    ],
+  },
+  {
+    slug: "a-skip-b-skip",
+    name: "A-Skip / B-Skip Running Drills",
+    description:
+      "High-knee running drills for running mechanics and sprint performance. A-skip emphasizes hip flexion power with rapid ground contact. B-skip adds active hamstring 'paw-back' extension. Typically introduced in mid-stage running rehabilitation after pain-free jogging.",
+    confidence: 0.75,
+    dosing: "2-3×20-30 meters, 2-3x/week as warm-up or technical drill",
+    evidenceLevel: "limited",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-flexion", "hip-extension", "knee-flexion", "ankle-plantarflexion"],
+    muscleRoles: [
+      { muscleSlug: "iliopsoas", role: "primary", notes: "Hip flexion power — knee drive" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "B-skip: active hip extension 'paw-back'" },
+      {
+        muscleSlug: "hamstrings",
+        role: "secondary",
+        notes: "B-skip: knee extension to hip extension transition",
+      },
+      { muscleSlug: "gastrocnemius", role: "secondary", notes: "Ground contact plantarflexion" },
+      { muscleSlug: "soleus", role: "stabilizer", notes: "Ankle stability during rapid ground contact" },
+    ],
+    functionalTaskSlugs: ["running-jogging"],
+    cues: [
+      { text: "A-skip: drive knee up to hip height with each skip", cueType: "verbal" },
+      {
+        text: "B-skip: drive knee up, then actively extend the leg forward and pull it back to the ground",
+        cueType: "verbal",
+      },
+      { text: "Toe up, knee up, heel under hip — quick off the ground", cueType: "verbal" },
+      { text: "Tall posture — don't lean back", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Marching",
+        description: "Walk through the A-skip pattern. Knee drive without the hop.",
+      },
+      {
+        name: "A-Skip in Place",
+        description: "Perform stationary before moving forward.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Fast A-Skip",
+        description: "Increase speed while maintaining form.",
+      },
+      {
+        name: "B-Skip for Distance",
+        description: "Focus on active hamstring engagement and stride length.",
+      },
+    ],
+  },
+  {
+    slug: "single-leg-hop-tests",
+    name: "Single-Leg Hop Tests (Return-to-Sport Battery)",
+    description:
+      "Standardized hop test battery: single hop for distance, triple hop, crossover hop, and 6-meter timed hop. ≥90% LSI on single-forward hop associated with reduced knee OA odds (OR 0.46) and higher RTS odds (OR 2.15). However, symmetry in distance may mask knee function asymmetries — triple hop at 97% LSI showed only 51-66% knee work symmetry.",
+    confidence: 0.9,
+    dosing:
+      "Assessment: 3 trials per leg, best trial recorded. Training: 3×5 reps per leg, 2x/week. Return at ≥90% LSI [West 2023]",
+    emgNotes:
+      "During single-leg landing: vasti, soleus, glute max, and glute med produce greatest forces [Maniar 2022]. Crossover hop and 6m timed hop strongest predictors of 1-year function [Logerstedt 2012]",
+    evidenceLevel: "strong",
+    difficulty: "advanced",
+    equipment: [],
+    bodyPosition: "standing",
+    notes:
+      "LSI alone may be insufficient — 79-84% of athletes meet 90% LSI but only 12-30% meet age-relevant targets [Schmitt 2022]. Distance masks knee function asymmetry [Kotsifaki 2022].",
+    movementSlugs: ["hip-extension", "knee-extension", "ankle-plantarflexion"],
+    muscleRoles: [
+      { muscleSlug: "quadriceps", role: "primary", notes: "Propulsion and landing deceleration" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Hip extension power" },
+      {
+        muscleSlug: "gluteus-medius",
+        role: "secondary",
+        notes: "Frontal plane control during single-leg landing",
+      },
+      { muscleSlug: "gastrocnemius", role: "secondary", notes: "Ankle power and landing absorption" },
+      { muscleSlug: "soleus", role: "stabilizer", notes: "Postural ankle stability [Maniar 2022]" },
+    ],
+    functionalTaskSlugs: ["running-jogging", "single-leg-balance"],
+    cues: [
+      {
+        text: "Single hop: stand on one leg, jump as far as possible, stick the landing",
+        cueType: "verbal",
+      },
+      {
+        text: "Triple hop: three consecutive hops on same leg for maximum total distance",
+        cueType: "verbal",
+      },
+      { text: "Crossover hop: hop 3 times while crossing over a line", cueType: "verbal" },
+      { text: "6m timed hop: hop as fast as possible over 6 meters", cueType: "verbal" },
+      { text: "Hold each landing for 2 seconds before it counts", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Double-Leg Hop",
+        description: "Practice bilateral hopping before single-leg.",
+      },
+      {
+        name: "Short-Distance Single Hop",
+        description: "Hop for 50% max distance to build confidence and control.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Repeated Hop Tests",
+        description:
+          "Perform tests with 30-second rest between trials to add fatigue component.",
+      },
+      {
+        name: "Sport-Specific Hop Combinations",
+        description: "Combine hops with cutting or direction changes.",
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // BATCH 4: Mobility & Flexibility
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  {
+    slug: "ninety-ninety-hip-stretch",
+    name: "90/90 Hip Stretch (Shinbox)",
+    description:
+      "Seated with both hips at 90° flexion and 90° rotation — front leg in external rotation, back leg in internal rotation. Targets hip capsule, gluteals, and deep rotators. Myofascial stretching improved hip rotation by up to 56% over 6 weeks. No evidence of fascicle lengthening from stretching — improvements come from decreased stiffness (g=0.37) and increased stretch tolerance (g=0.74).",
+    confidence: 0.8,
+    dosing: "2-4 reps of 30-60 seconds per side, 5-7 days/week, ≥5 minutes total weekly [Thomas 2018]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["hip-external-rotation", "hip-internal-rotation"],
+    muscleRoles: [
+      { muscleSlug: "piriformis", role: "primary", notes: "Stretched in ER position" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Posterior hip stretch" },
+      { muscleSlug: "gluteus-medius", role: "secondary", notes: "IR position — anterior fibers stretched" },
+      { muscleSlug: "gluteus-minimus", role: "secondary", notes: "Contributes to rotation limitation" },
+    ],
+    functionalTaskSlugs: ["floor-transfers", "dressing-lower-body"],
+    cues: [
+      { text: "Sit with front shin parallel to your chest, back shin parallel to your side", cueType: "verbal" },
+      {
+        text: "Both knees at 90° — front hip in external rotation, back in internal",
+        cueType: "verbal",
+      },
+      { text: "Sit tall and lean gently into the front hip", cueType: "verbal" },
+      {
+        text: "Rotate sides by sweeping both legs to the opposite 90/90 position",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Figure-4 Stretch",
+        description:
+          "Supine with ankle crossed over opposite knee. Simpler hip ER stretch.",
+      },
+    ],
+    progressions: [
+      {
+        name: "90/90 with Forward Lean",
+        description: "Lean torso forward over the front shin for deeper hip ER stretch.",
+      },
+    ],
+  },
+  {
+    slug: "pigeon-stretch",
+    name: "Pigeon Stretch (Modified)",
+    description:
+      "Modified pigeon pose: front leg bent across the body, back leg extended behind. Targets piriformis, obturator internus, gluteus maximus, and posterior hip capsule. Optimized positioning (120° hip flexion, 50° ER, 30° adduction) increases piriformis length by 15.1-15.3% vs conventional stretches.",
+    confidence: 0.8,
+    dosing: "3×30 seconds per side, daily for 4-6 weeks [Gulledge 2014]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "prone",
+    movementSlugs: ["hip-external-rotation", "hip-flexion"],
+    muscleRoles: [
+      { muscleSlug: "piriformis", role: "primary", notes: "12-15% elongation in stretch position [Gulledge 2014]" },
+      { muscleSlug: "gluteus-maximus", role: "primary", notes: "Posterior hip capsule stretch" },
+      { muscleSlug: "obturator-internus", role: "secondary", notes: "Deep external rotator stretched" },
+    ],
+    functionalTaskSlugs: ["floor-transfers", "dressing-lower-body"],
+    cues: [
+      {
+        text: "Bring your front shin across your body — the more parallel to your chest, the deeper the stretch",
+        cueType: "verbal",
+      },
+      { text: "Keep your back leg extended straight behind you", cueType: "verbal" },
+      { text: "Square your hips toward the floor", cueType: "verbal" },
+      {
+        text: "If you feel it in the front of your hip, use the supine figure-4 instead",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Supine Figure-4 Stretch",
+        description:
+          "Lie on back with ankle on opposite knee. Pull bottom knee to chest. Less impingement risk.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Pigeon with Forward Fold",
+        description: "Lean torso forward over the front shin for deeper posterior hip stretch.",
+      },
+    ],
+  },
+  {
+    slug: "couch-stretch",
+    name: "Couch Stretch (Rectus Femoris / Hip Flexor)",
+    description:
+      "Half-kneeling with rear foot elevated against a wall or couch. Combines hip extension with knee flexion to maximally stretch the biarticular rectus femoris. Posterior pelvic tilt stretching reduces reactive hip flexor force by 4.85 N·m vs standard stretching. Stretching up to 120 seconds has no negative performance effect.",
+    confidence: 0.85,
+    dosing: "30-120 seconds per side, 1-3 sets, 3-5 days/week [Konrad 2021]",
+    emgNotes:
+      "Posterior pelvic tilt stretching: 4.85 N·m greater reactive hip flexor force reduction vs standard [González-de-la-Flor 2024]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "half-kneeling",
+    movementSlugs: ["hip-extension", "knee-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "rectus-femoris",
+        role: "primary",
+        notes: "Biarticular — maximally stretched with hip extension + knee flexion",
+      },
+      { muscleSlug: "iliopsoas", role: "primary", notes: "Hip flexor stretch in extension" },
+      { muscleSlug: "quadriceps", role: "secondary", notes: "Knee flexion component stretches vasti" },
+    ],
+    functionalTaskSlugs: ["walking", "running-jogging", "stair-climbing"],
+    cues: [
+      { text: "Kneel with your back foot up against the wall or couch", cueType: "verbal" },
+      { text: "Tuck your tailbone under FIRST — posterior pelvic tilt", cueType: "verbal" },
+      {
+        text: "Then gently lean back or shift forward — the stretch is in the front of the hip and thigh",
+        cueType: "verbal",
+      },
+      { text: "Don't arch your lower back — that cheats the stretch", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Standard Half-Kneeling Hip Flexor Stretch",
+        description: "Without rear foot elevation. Less rectus femoris bias.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Elevated Couch Stretch with Reach",
+        description:
+          "Raise the same-side arm overhead while in stretch. Adds lateral chain and psoas emphasis.",
+      },
+    ],
+  },
+  {
+    slug: "banded-ankle-df-mobilization",
+    name: "Banded Ankle Dorsiflexion Mobilization",
+    description:
+      "Standing lunge with resistance band around distal tibia pulling posteriorly. Knee drives forward over toes. Facilitates posterior talar glide. Joint mobilizations produce ES 0.34-0.41 for DF ROM in chronic ankle instability. Combined Mulligan and Maitland mobilizations show Cohen's d=1.45 for functional performance.",
+    confidence: 0.85,
+    dosing:
+      "3-4×6-10 reps per ankle, daily. 6 sessions of manual therapy needed for significant strength/balance/function improvements [Martin 2021]",
+    emgNotes:
+      "Mechanism: posterior talar glide increases joint space and reduces mechanical restriction. Short-term ROM improvements documented [Vallandingham 2019]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: ["resistance-band"],
+    bodyPosition: "standing",
+    movementSlugs: ["ankle-dorsiflexion"],
+    muscleRoles: [
+      { muscleSlug: "tibialis-anterior", role: "primary", notes: "Active DF during mobilization" },
+      { muscleSlug: "gastrocnemius", role: "primary", notes: "Target tissue being mobilized/stretched" },
+      { muscleSlug: "soleus", role: "primary", notes: "Stretched during weight-bearing DF" },
+    ],
+    functionalTaskSlugs: ["walking", "stair-climbing", "running-jogging"],
+    cues: [
+      {
+        text: "Loop a heavy band around your ankle, anchored behind you at floor level",
+        cueType: "verbal",
+      },
+      { text: "Step forward into a lunge, driving your knee over your toes", cueType: "verbal" },
+      {
+        text: "The band pulls your tibia forward — resist slightly as you mobilize",
+        cueType: "verbal",
+      },
+      { text: "Keep your heel flat on the ground throughout", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Wall Ankle Mobilization",
+        description:
+          "Without band: lunge toward a wall, driving knee forward. Measure distance from toes to wall.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Elevated Surface DF Mobilization",
+        description: "Front foot on a small step for greater DF range.",
+      },
+    ],
+  },
+  {
+    slug: "thoracic-foam-rolling",
+    name: "Thoracic Spine Foam Rolling",
+    description:
+      "Supine on foam roller at mid-thoracic level, arms crossed or overhead, extending segmentally over roller. Large positive ROM effects (SMD 0.74). Foam rolling >4 weeks is more effective than ≤4 weeks. Mechanical massage significantly improves thoracic extension and reduces kyphosis angle.",
+    confidence: 0.85,
+    dosing:
+      "1-3 sets of 30-120 seconds total, 2-4 second rep frequency. >4 weeks training for ROM gains [Konrad 2022]",
+    emgNotes:
+      "ROM effects SMD 0.74 (95% CI 0.42-1.01) vs no exercise [Wilke 2020]. No structural changes — mechanism is increased stretch tolerance and decreased stiffness [Konrad 2022]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: ["foam-roller"],
+    bodyPosition: "supine",
+    movementSlugs: ["thoracic-extension"],
+    muscleRoles: [
+      { muscleSlug: "erector-spinae", role: "primary", notes: "Thoracic extensors — target tissue being mobilized" },
+      { muscleSlug: "multifidus", role: "secondary", notes: "Segmental mobility improvement" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "reaching-overhead"],
+    cues: [
+      { text: "Place the roller at mid-back level, cross arms over chest", cueType: "verbal" },
+      { text: "Gently extend backward over the roller", cueType: "verbal" },
+      { text: "Move the roller one segment at a time — don't just roll up and down", cueType: "verbal" },
+      { text: "Spend 30-60 seconds at each stiff segment", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Towel Roll Extension",
+        description: "Use a rolled towel for less aggressive mobilization.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Arms Overhead",
+        description:
+          "Extend over roller with arms reaching overhead. Increases thoracic extension demand.",
+      },
+    ],
+  },
+  {
+    slug: "open-book-stretch",
+    name: "Open Book Stretch (Thoracic Rotation)",
+    description:
+      "Sidelying with hips and knees at 90°, rotating top arm and thorax open toward ceiling. Thoracic rotation ROM averages 10-12° per segment (T1-T10) and 7-8° in lower thoracic. Emphasizes thoracic rotation while stabilizing pelvis.",
+    confidence: 0.8,
+    dosing: "2-4 reps of 30-60 seconds per side, 5-7 days/week [Thomas 2018]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "sidelying",
+    movementSlugs: ["thoracic-rotation"],
+    muscleRoles: [
+      { muscleSlug: "internal-oblique", role: "primary", notes: "Ipsilateral rotation" },
+      {
+        muscleSlug: "external-oblique",
+        role: "primary",
+        notes: "Contralateral rotation being stretched",
+      },
+      { muscleSlug: "erector-spinae", role: "stabilizer", notes: "Trunk stabilization during rotation" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "bed-mobility"],
+    cues: [
+      { text: "Lie on your side with knees stacked at 90°", cueType: "verbal" },
+      { text: "Reach your top arm open toward the ceiling and behind you", cueType: "verbal" },
+      {
+        text: "Follow your hand with your eyes — let the rotation come from mid-back",
+        cueType: "verbal",
+      },
+      { text: "Keep your knees together and hips stacked — don't let them roll", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Supine Trunk Rotation",
+        description:
+          "Lie on back, knees bent, drop both knees side to side. Gravity-assisted.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Open Book with Reach-Through",
+        description: "Thread the top arm under your body before opening. Adds flexion-rotation.",
+      },
+    ],
+  },
+  {
+    slug: "sleeper-stretch",
+    name: "Sleeper Stretch (Posterior Shoulder)",
+    description:
+      "Sidelying on target shoulder at 90° forward flexion, passively rotating forearm toward floor. Reduces GIRD by 14.69° and pain by 2.17 points over 4 weeks. Decreases posterior capsule shear modulus at both middle and inferior regions. Risk of suprascapular nerve compression with excessive force.",
+    confidence: 0.9,
+    dosing: "3-5 reps of 30 seconds, daily for 4-6 weeks [Maenhout 2012, Iida 2025]",
+    emgNotes:
+      "IR improvement: 13.5° ± 0.8° over 6 weeks [Maenhout 2012]. Meta-analysis: IR ROM MD 7° (95% CI 1-13°) [Iida 2025]. Decreases infraspinatus stiffness [Yamauchi 2016]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "sidelying",
+    movementSlugs: ["shoulder-internal-rotation"],
+    muscleRoles: [
+      { muscleSlug: "infraspinatus", role: "primary", notes: "Posterior rotator cuff being stretched" },
+      { muscleSlug: "teres-minor", role: "primary", notes: "Posterior shoulder stretch" },
+      { muscleSlug: "posterior-deltoid", role: "secondary", notes: "Partially stretched" },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body"],
+    cues: [
+      { text: "Lie on the shoulder you want to stretch", cueType: "verbal" },
+      { text: "Shoulder and elbow both at 90°", cueType: "verbal" },
+      { text: "Use your other hand to gently push your forearm toward the floor", cueType: "verbal" },
+      { text: "Stop at mild stretch — never force through sharp pain", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Supine Cross-Body Stretch",
+        description: "Lie on back, pull arm across body. Less shoulder compression.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Sleeper Stretch with Stabilization",
+        description:
+          "Partner stabilizes the scapula for more targeted posterior capsule stretch.",
+      },
+    ],
+  },
+  {
+    slug: "cross-body-shoulder-stretch",
+    name: "Cross-Body Shoulder Stretch (Horizontal Adduction)",
+    description:
+      "Standing or seated, pulling arm across body. Reduces GIRD by 14.77° and pain by 1.54 points — equivalent to sleeper stretch. Modified version increased IR ROM by 89.52% in tennis players. Reduces inferior posterior capsule shear modulus only (vs sleeper which affects both middle and inferior).",
+    confidence: 0.9,
+    dosing: "3-5 reps of 30 seconds per side, daily for 4 weeks [de Araújo 2026]",
+    emgNotes:
+      "GIRD reduction 14.77° (95% CI -19.70 to -9.84). Modified version: 89.52% IR ROM increase in tennis players [D 2023]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "standing",
+    movementSlugs: ["shoulder-adduction"],
+    muscleRoles: [
+      { muscleSlug: "posterior-deltoid", role: "primary", notes: "Primary tissue being stretched" },
+      { muscleSlug: "infraspinatus", role: "primary", notes: "Posterior rotator cuff stretch" },
+      { muscleSlug: "teres-minor", role: "secondary", notes: "Posterior shoulder stretch" },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body"],
+    cues: [
+      { text: "Pull your arm across your body at chest height with the other hand", cueType: "verbal" },
+      { text: "Keep the arm straight, shoulder relaxed — don't shrug", cueType: "verbal" },
+      { text: "Feel the stretch in the back of the shoulder", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Wall-Assisted Cross-Body",
+        description:
+          "Stand sideways to a wall, let the wall assist horizontal adduction.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Cross-Body with Dorsal Glide",
+        description:
+          "Combine with a posterior glide mobilization for additional 6° IR and 10° HA improvement [Kang 2020].",
+      },
+    ],
+  },
+  {
+    slug: "doorway-pec-stretch",
+    name: "Doorway Pectoralis Stretch",
+    description:
+      "Standing in doorway with forearm on frame, leaning forward. Arm height changes which portion is stretched: 45° ABD targets clavicular, 90° targets sternal, 135° targets abdominal portion. 8 weeks of pectoralis stretching (15 min/day, 4 days/week) produces ROM, strength, and muscle thickness gains comparable to resistance training.",
+    confidence: 0.85,
+    dosing:
+      "2-4 reps of 30-60 seconds at each arm position (45°, 90°, 135°), 4+ days/week [Wohlann 2024]",
+    emgNotes:
+      "Sternocostal region shows greater slack stiffness than abdominal [Wolfram 2023]. 8 weeks stretching: comparable to resistance training for ROM/strength/thickness [Wohlann 2024]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "standing",
+    movementSlugs: ["shoulder-external-rotation", "shoulder-abduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "pectoralis-major",
+        role: "primary",
+        notes: "Target muscle — clavicular, sternal, and abdominal portions",
+      },
+      {
+        muscleSlug: "anterior-deltoid",
+        role: "secondary",
+        notes: "Anterior shoulder stretch at higher arm positions",
+      },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "dressing-upper-body"],
+    cues: [
+      { text: "Place forearm on door frame at the height matching your target", cueType: "verbal" },
+      { text: "45° for upper chest, 90° for middle, 135° for lower", cueType: "verbal" },
+      { text: "Step through the doorway and lean forward gently", cueType: "verbal" },
+      { text: "Keep your core braced — don't arch your back", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Wall Corner Stretch",
+        description:
+          "Stand in a corner with both arms on walls at 90°. Bilateral stretch with more support.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Single-Arm with Rotation",
+        description:
+          "Add trunk rotation away from the stretching arm for increased pectoralis lengthening.",
+      },
+    ],
+  },
+  {
+    slug: "median-nerve-glide",
+    name: "Median Nerve Glide",
+    description:
+      "Sequential movements to mobilize the median nerve: shoulder ABD → elbow extension → wrist/finger extension → cervical lateral flexion. Neurodynamic mobilization: 100% subjective improvement vs 0% controls (RR 15.00). Significantly reduces CTS symptom severity (MD -1.20) and functional severity (MD -1.06). Most effective combined with splinting.",
+    confidence: 0.85,
+    dosing:
+      "5-10 reps of sequence, 3-5x daily for 6-12 weeks. Combine with nighttime neutral wrist splinting [Zaheer 2023, Ijaz 2022]",
+    emgNotes:
+      "CTS symptom severity MD -1.20 (95% CI -1.72 to -0.67), functional severity MD -1.06 (95% CI -1.53 to -0.60) [Zaheer 2023]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["wrist-extension", "finger-extension", "shoulder-abduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "flexor-digitorum-superficialis",
+        role: "stabilizer",
+        notes: "Nerve gliding through carpal tunnel region",
+      },
+      {
+        muscleSlug: "extensor-digitorum",
+        role: "primary",
+        notes: "Active wrist and finger extension during tensioning",
+      },
+      { muscleSlug: "anterior-deltoid", role: "stabilizer", notes: "Shoulder positioning during sequence" },
+    ],
+    functionalTaskSlugs: ["typing", "gripping-cup"],
+    cues: [
+      { text: "Start with a fist at your shoulder", cueType: "verbal" },
+      { text: "Slowly extend your elbow, then wrist, then fingers in sequence", cueType: "verbal" },
+      { text: "Tilt your head away from the stretching arm at the end", cueType: "verbal" },
+      { text: "You should feel a gentle nerve stretch — stop if tingling worsens", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Single-Joint Glide",
+        description:
+          "Move only wrist or only elbow — not the full sequence. Less neural tension.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Sequence with Hold",
+        description:
+          "Hold end-range position for 5-10 seconds for increased neural tensioning.",
+      },
+    ],
+  },
+  {
+    slug: "ulnar-nerve-glide",
+    name: "Ulnar Nerve Glide",
+    description:
+      "Sequential movements to mobilize the ulnar nerve: shoulder ABD → elbow flexion → wrist extension → cervical lateral flexion. Very low-certainty evidence for mild-moderate ulnar neuropathy at elbow. Nerve gliding may not add benefit beyond patient education for cubital tunnel. 89.5% improved at 6 months with conservative management.",
+    confidence: 0.75,
+    dosing: "5-10 reps of sequence, 2-3x daily for 6-8 weeks. Combine with elbow positioning education [Svernlöv 2009]",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    notes:
+      "Very low-certainty evidence. Patient education about avoiding provocative positions may be equally effective [Svernlöv 2009, Caliandro 2025].",
+    movementSlugs: ["wrist-extension", "elbow-flexion", "shoulder-abduction"],
+    muscleRoles: [
+      { muscleSlug: "extensor-digitorum", role: "primary", notes: "Active wrist extension during tensioning" },
+      {
+        muscleSlug: "flexor-carpi-ulnaris",
+        role: "stabilizer",
+        notes: "Ulnar nerve passes through FCU — involved in gliding",
+      },
+    ],
+    functionalTaskSlugs: ["typing"],
+    cues: [
+      { text: "Start with arm relaxed at side", cueType: "verbal" },
+      { text: "Bend your elbow, extend your wrist, then spread your fingers", cueType: "verbal" },
+      { text: "Abduct your shoulder while maintaining the positions", cueType: "verbal" },
+      {
+        text: "Gentle stretch only — avoid reproducing tingling in ring and pinky fingers",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Elbow Positioning Only",
+        description:
+          "Focus on avoiding sustained elbow flexion >90°. Education-based approach.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Neural Tension Sequence",
+        description:
+          "Add cervical lateral flexion away and shoulder depression for maximum nerve excursion.",
+      },
+    ],
+  },
+  {
+    slug: "radial-nerve-glide",
+    name: "Radial Nerve Glide",
+    description:
+      "Sequential movements to mobilize the radial nerve: shoulder depression → elbow extension → forearm pronation → wrist flexion. Significantly decreased pain at rest (ES 0.84), at night (ES 0.91), and during activity (ES 1.06) in lateral epicondylitis patients after 6 weeks. Addresses neural component of lateral elbow pain.",
+    confidence: 0.8,
+    dosing:
+      "5-10 reps of sequence, 2x/week for 6 weeks. Combine with conservative lateral elbow rehab [Yilmaz 2022]",
+    emgNotes:
+      "Pain reduction: rest ES=0.84, night ES=0.91, activity ES=1.06 in lateral epicondylitis [Yilmaz 2022]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    movementSlugs: ["wrist-flexion", "forearm-pronation"],
+    muscleRoles: [
+      {
+        muscleSlug: "extensor-carpi-radialis-longus",
+        role: "stabilizer",
+        notes: "Radial nerve passes near ECRL — involved in tension",
+      },
+      {
+        muscleSlug: "supinator",
+        role: "stabilizer",
+        notes: "Radial nerve passes through supinator — key tension point",
+      },
+    ],
+    functionalTaskSlugs: ["typing", "gripping-cup"],
+    cues: [
+      {
+        text: "Depress your shoulder, straighten your elbow, turn palm down, then flex your wrist",
+        cueType: "verbal",
+      },
+      { text: "Move slowly through the sequence — 3-5 seconds per step", cueType: "verbal" },
+      { text: "You should feel a gentle stretch along the back of your forearm", cueType: "verbal" },
+      { text: "Stop if you feel sharp pain or shooting sensations", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Wrist Flexion Only",
+        description:
+          "Single-joint approach: just wrist flexion with pronation. Less neural tension.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Sequence with Lateral Flexion",
+        description:
+          "Add cervical lateral flexion away for maximum radial nerve excursion.",
+      },
+    ],
+  },
 ];
 
 export async function seedExercises() {

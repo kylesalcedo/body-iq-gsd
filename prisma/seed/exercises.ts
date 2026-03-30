@@ -1494,6 +1494,777 @@ const exercises: ExerciseDef[] = [
       { name: "Star Excursion with Squat", description: "Add a single-leg squat depth during each reach direction. Combines strength with balance." },
     ],
   },
+  // ── Batch 5: Condition-Specific Exercises ─────────────────────────────────
+  // Shoulder — Rotator Cuff / Impingement
+  {
+    slug: "full-can-exercise",
+    name: "Full Can Exercise (Scaption with Thumbs Up)",
+    description:
+      "Standing shoulder elevation in the scapular plane (30-45° anterior to coronal plane) with thumbs up. Targets supraspinatus with superior supraspinatus-to-deltoid ratio compared to empty can. Reduces subacromial impingement risk by promoting scapular upward rotation and posterior tilt. Holmgren et al. found 69% successful outcomes vs 24% controls, with only 20% proceeding to surgery vs 63%.",
+    confidence: 0.95,
+    dosing:
+      "3×15 reps, 1-2x daily for 12 weeks; or progressive resistance 5 days/week over 12-16 weeks [Holmgren 2012, GRASP 2021]",
+    emgNotes:
+      "Supraspinatus: similar to empty can; middle deltoid: 52±27% MVIC (vs 77±44% in empty can, p=0.001). Superior supraspinatus-to-deltoid ratio [Reinold 2008]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: ["dumbbell"],
+    bodyPosition: "standing",
+    movementSlugs: ["shoulder-abduction", "shoulder-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "supraspinatus",
+        role: "primary",
+        notes: "Target muscle — similar activation to empty can but better selectivity [Reinold 2008]",
+      },
+      {
+        muscleSlug: "middle-deltoid",
+        role: "secondary",
+        notes: "52±27% MVIC — significantly less than empty can [Reinold 2008]",
+      },
+      { muscleSlug: "trapezius-upper", role: "stabilizer", notes: "Scapular upward rotation" },
+      { muscleSlug: "serratus-anterior", role: "stabilizer", notes: "Scapular stability during elevation" },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body"],
+    cues: [
+      { text: "Elevate arm in scapular plane — about 30-45° forward from straight to the side", cueType: "verbal" },
+      { text: "Keep thumbs pointing up to the ceiling throughout", cueType: "verbal" },
+      { text: "Squeeze shoulder blade back and down as you lift", cueType: "verbal" },
+      { text: "Slow and controlled — 3 seconds up, 3 seconds down", cueType: "verbal" },
+      { text: "Stop at shoulder height or pain-free range", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Gravity-Eliminated Scaption",
+        description: "Sidelying with arm supported, lift into scapular plane. Removes gravity load.",
+      },
+      {
+        name: "Active-Assisted with Cane",
+        description: "Use a cane or dowel to assist the lifting motion with the other hand.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Weighted Scaption",
+        description: "Add progressive dumbbell weight (1-5 lbs). Maintain slow eccentric control.",
+      },
+      {
+        name: "Eccentric-Focused Scaption",
+        description: "Use both hands to lift, lower with affected arm only. 3-5 second lowering phase.",
+      },
+    ],
+  },
+  {
+    slug: "empty-can-exercise",
+    name: "Empty Can Exercise (Scaption with Thumbs Down)",
+    description:
+      "Shoulder elevation in the scapular plane with thumbs down (internal rotation). Classic supraspinatus test position but does NOT selectively isolate supraspinatus — 9 other shoulder muscles are equally activated. The internally rotated position narrows subacromial space. Full can has largely replaced this for rehabilitation, though it may be useful for middle deltoid recruitment.",
+    confidence: 0.85,
+    dosing:
+      "3×15 reps; use primarily as assessment, not primary rehabilitation exercise [Reinold 2008, Boettcher 2009]",
+    emgNotes:
+      "Middle deltoid 77±44% MVIC, posterior deltoid 54±24% MVIC. Smallest supraspinatus-to-deltoid ratio (0.8). Does not selectively activate supraspinatus [Boettcher 2009]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: ["dumbbell"],
+    bodyPosition: "standing",
+    notes:
+      "Full can exercise is preferred for rehabilitation due to better supraspinatus selectivity and lower impingement risk. Empty can increases scapular anterior tipping and internal rotation [Thigpen 2006].",
+    movementSlugs: ["shoulder-abduction", "shoulder-internal-rotation"],
+    muscleRoles: [
+      {
+        muscleSlug: "supraspinatus",
+        role: "primary",
+        notes: "Not selectively isolated — 9 other muscles equally active [Boettcher 2009]",
+      },
+      {
+        muscleSlug: "middle-deltoid",
+        role: "primary",
+        notes: "77±44% MVIC — higher than full can [Reinold 2008]",
+      },
+      {
+        muscleSlug: "posterior-deltoid",
+        role: "secondary",
+        notes: "54±24% MVIC [Reinold 2008]",
+      },
+    ],
+    functionalTaskSlugs: ["reaching-overhead"],
+    cues: [
+      { text: "Elevate arm in scapular plane with thumbs pointing down", cueType: "verbal" },
+      { text: "Stop at 90° — do not go overhead in this position", cueType: "verbal" },
+      {
+        text: "If you feel pinching in the front of the shoulder, switch to full can position",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Full Can Exercise",
+        description:
+          "Switch to thumbs-up position for safer supraspinatus activation with less impingement risk.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Not typically progressed",
+        description:
+          "Full can is preferred for strengthening progression.",
+      },
+    ],
+  },
+  {
+    slug: "prone-er-90-abduction",
+    name: "Prone External Rotation at 90° Abduction",
+    description:
+      "Lying prone with shoulder at 90° abduction off edge of table, externally rotating a light weight. Produces the greatest supraspinatus (82% MVIC), middle deltoid (87%), and posterior deltoid (88%) activation among ER exercises. Teres minor becomes more important as ER at 90° ABD (TM:infraspinatus ratio 1.21). Late-stage exercise requiring adequate scapular stability and pain-free 90° ABD.",
+    confidence: 0.9,
+    dosing:
+      "3×8-15 reps, 3 days/week; late-stage exercise — introduce after pain-free 90° ABD achieved [Reinold 2004]",
+    emgNotes:
+      "Supraspinatus 82% MVIC, middle deltoid 87%, posterior deltoid 88% [Reinold 2004]. Teres minor-to-infraspinatus ratio 1.21±0.23 at 90° ABD [Kurokawa 2014]",
+    evidenceLevel: "strong",
+    difficulty: "advanced",
+    equipment: ["dumbbell"],
+    bodyPosition: "prone",
+    movementSlugs: ["shoulder-external-rotation", "shoulder-abduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "infraspinatus",
+        role: "primary",
+        notes: "Primary ER — high activation at 90° ABD",
+      },
+      {
+        muscleSlug: "teres-minor",
+        role: "primary",
+        notes: "More important at 90° ABD; TM:infraspinatus ratio 1.21 [Kurokawa 2014]",
+      },
+      {
+        muscleSlug: "posterior-deltoid",
+        role: "secondary",
+        notes: "88% MVIC [Reinold 2004]",
+      },
+      {
+        muscleSlug: "supraspinatus",
+        role: "stabilizer",
+        notes: "82% MVIC — GH joint stabilization at 90° ABD [Reinold 2004]",
+      },
+      {
+        muscleSlug: "middle-deltoid",
+        role: "stabilizer",
+        notes: "87% MVIC — maintains abduction position [Reinold 2004]",
+      },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "overhead-work"],
+    cues: [
+      { text: "Lie face down with shoulder at 90° off the edge of the table", cueType: "verbal" },
+      {
+        text: "Start with forearm hanging straight down, rotate upward toward the ceiling",
+        cueType: "verbal",
+      },
+      { text: "Keep your elbow bent at 90° throughout", cueType: "verbal" },
+      { text: "Slow and controlled — don't use momentum", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Sidelying ER at 0° ABD",
+        description:
+          "External rotation with arm at side. Lower demand position — infraspinatus 62% MVIC, teres minor 67% [Reinold 2004].",
+      },
+      {
+        name: "Seated ER with Band",
+        description: "Seated with band resistance. Less activation than prone but more accessible.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Prone ER with Heavier Weight",
+        description: "Progress dumbbell weight as strength improves. Maintain slow eccentric.",
+      },
+      {
+        name: "90/90 Standing ER with Band",
+        description:
+          "Standing with shoulder at 90° ABD, ER against band resistance. Functional position for overhead athletes.",
+      },
+    ],
+  },
+  // Knee — Patellofemoral Pain
+  {
+    slug: "spanish-squat",
+    name: "Spanish Squat (Belt-Assisted)",
+    description:
+      "Squat performed with a belt or strap around the knees anchored to a fixed point, allowing posterior lean to reduce patellofemoral load. Limits knee flexion to 0-60° range where PF forces are lowest. VMO:VL ratios approach 1:1 in closed kinetic chain. APTA guidelines recommend high-volume protocols (3×30+ reps) as most effective for patellofemoral pain.",
+    confidence: 0.8,
+    dosing: "3×15-30 reps, 0-60° knee flexion, 3-5 days/week for 6-12 weeks [APTA 2020, Neal 2024]",
+    emgNotes:
+      "No specific Spanish squat EMG data. General CKC squats: VMO:VL approaching 1:1 [Chen 2018]. PF forces reduced 14.4% with decreased knee flexion [Kernozek 2020]",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: ["belt", "anchor-point"],
+    bodyPosition: "standing",
+    notes:
+      "Direct evidence for 'Spanish squat' specifically is lacking. Recommendations based on general PF loading and squat biomechanics literature [Song 2023].",
+    movementSlugs: ["knee-extension", "knee-flexion", "hip-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "quadriceps",
+        role: "primary",
+        notes: "VMO emphasis for patellar tracking — VMO:VL ~1:1 in CKC [Chen 2018]",
+      },
+      { muscleSlug: "gluteus-maximus", role: "secondary", notes: "Hip extension component" },
+      { muscleSlug: "hamstrings", role: "stabilizer", notes: "Knee co-contraction for joint stability" },
+    ],
+    functionalTaskSlugs: ["squat-to-stand", "stair-climbing"],
+    cues: [
+      {
+        text: "Loop the belt behind both knees, anchored to a fixed point at knee height",
+        cueType: "verbal",
+      },
+      { text: "Lean back into the belt to shift load posteriorly", cueType: "verbal" },
+      { text: "Keep knees tracking over toes — avoid inward collapse", cueType: "verbal" },
+      { text: "Only go to 60° knee bend — do not squat deep", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Wall Sit (Partial Range)",
+        description:
+          "Lean against a wall, slide down to 30-45° knee flexion. Hold 15-30 seconds. Isometric quad loading with minimal PF stress.",
+      },
+      {
+        name: "Quad Sets",
+        description:
+          "Seated or supine, tighten thigh to push knee down. Isometric foundation with zero PF joint motion.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Deeper Spanish Squat",
+        description: "Progress depth toward 60° as symptoms allow. Monitor for anterior knee pain.",
+      },
+      {
+        name: "Single-Leg Spanish Squat",
+        description: "Shift weight to one leg during the squat for unilateral quad loading.",
+      },
+    ],
+  },
+  {
+    slug: "leg-press-limited-rom",
+    name: "Leg Press (Limited ROM, 0-60°)",
+    description:
+      "Leg press machine restricted to 0-60° knee flexion to minimize patellofemoral stress. Maximum VMO:VL ratio occurs at 60° in CKC exercises. Appropriate for early-stage patellofemoral pain when full-depth squats are too provocative. Adding isometric hip adduction increases VMO activation without increasing VL.",
+    confidence: 0.85,
+    dosing:
+      "3×15-30 reps, 0-60° knee flexion, 3-5 days/week; progress depth as tolerated [APTA 2020, Neal 2024]",
+    emgNotes:
+      "CKC exercises: VMO:VL approaching 1:1 [Chen 2018]. Max VMO:VL at 60° knee flexion [Tang 2001]. Hip adduction during press: VMO:VL 1.14:1 [Irish 2010]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: ["leg-press-machine"],
+    bodyPosition: "seated",
+    movementSlugs: ["knee-extension", "hip-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "quadriceps",
+        role: "primary",
+        notes: "VMO emphasis — max VMO:VL ratio at 60° [Tang 2001]",
+      },
+      { muscleSlug: "gluteus-maximus", role: "secondary", notes: "Hip extension component" },
+      { muscleSlug: "hamstrings", role: "stabilizer", notes: "Co-contraction for knee stability" },
+    ],
+    functionalTaskSlugs: ["squat-to-stand", "stair-climbing"],
+    cues: [
+      { text: "Set the range-of-motion stop at 60° knee flexion", cueType: "verbal" },
+      { text: "Push through both feet evenly", cueType: "verbal" },
+      {
+        text: "Squeeze a ball between your knees to activate VMO preferentially",
+        cueType: "verbal",
+      },
+      { text: "Slow controlled motion — 2 seconds push, 3 seconds return", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Quad Sets / SLR",
+        description:
+          "Isometric quadriceps activation or straight leg raises if leg press is too provocative.",
+      },
+      {
+        name: "Partial ROM Leg Press",
+        description: "Restrict to 0-30° if 60° is painful. Very low PF forces in this range.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Deeper ROM Leg Press",
+        description:
+          "Progress to 0-90° as symptoms allow. Monitor for anterior knee pain at deeper angles.",
+      },
+      {
+        name: "Single-Leg Press",
+        description: "Unilateral leg press for increased demand. Maintain 0-60° range.",
+      },
+    ],
+  },
+  // Ankle — Achilles Tendinopathy
+  {
+    slug: "alfredson-eccentric-heel-drops",
+    name: "Alfredson Protocol — Eccentric Heel Drops",
+    description:
+      "Standing on a step edge, performing slow eccentric heel lowering on the affected leg. Both straight-knee (gastrocnemius bias) and bent-knee (soleus bias) versions. The gold standard for midportion Achilles tendinopathy. VISA-A improves from 49.2 to 83.6 at 5 years. 'Do-as-tolerated' protocol (avg 112 reps/day) produces similar outcomes to full 180 reps/day.",
+    confidence: 0.95,
+    dosing:
+      "3×15 reps both straight-knee and bent-knee, 2x daily (180 total reps/day), 7 days/week, 12 weeks. Progress load when pain-free. 'Do-as-tolerated' alternative: avg 112 reps/day [Alfredson, Stevens 2014]",
+    emgNotes:
+      "Improved neuromuscular performance (torque, work, endurance) is the only mechanism consistently associated with clinical improvement [Malliaras 2013]",
+    evidenceLevel: "strong",
+    difficulty: "intermediate",
+    equipment: ["step"],
+    bodyPosition: "standing",
+    movementSlugs: ["ankle-plantarflexion", "ankle-dorsiflexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "gastrocnemius",
+        role: "primary",
+        notes: "Eccentric loading straight-knee version — gastrocnemius bias",
+      },
+      {
+        muscleSlug: "soleus",
+        role: "primary",
+        notes: "Eccentric loading bent-knee version — soleus bias",
+      },
+      {
+        muscleSlug: "tibialis-posterior",
+        role: "stabilizer",
+        notes: "Ankle stabilization during eccentric lowering",
+      },
+    ],
+    functionalTaskSlugs: ["walking", "stair-climbing", "running-jogging"],
+    cues: [
+      {
+        text: "Rise up on both feet, then shift weight to the affected leg",
+        cueType: "verbal",
+      },
+      {
+        text: "Lower the heel slowly below the step edge over 3-5 seconds",
+        cueType: "verbal",
+      },
+      {
+        text: "Straight knee version: keep knee locked for gastrocnemius",
+        cueType: "verbal",
+      },
+      {
+        text: "Bent knee version: slightly bend the knee for soleus",
+        cueType: "verbal",
+      },
+      {
+        text: "Use the unaffected leg to rise back up — only the lowering is on one leg",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Bilateral Eccentric Heel Drops",
+        description: "Lower on both legs instead of single-leg. Reduces load by 50%.",
+      },
+      {
+        name: "Flat Ground Heel Raises",
+        description: "Standing heel raises on flat ground before progressing to step edge.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Weighted Eccentric Heel Drops",
+        description:
+          "Add a backpack with progressively increasing weight. Load increases when pain-free at bodyweight.",
+      },
+      {
+        name: "Heavy Slow Resistance Protocol",
+        description:
+          "Progress to HSR: seated + standing + leg press calf raises at 6RM progressing to 4×6 [Beyer 2015].",
+      },
+    ],
+  },
+  {
+    slug: "heavy-slow-resistance-achilles",
+    name: "Heavy Slow Resistance (HSR) for Achilles Tendinopathy",
+    description:
+      "Progressive heavy resistance training including seated calf raise (bent knee), standing barbell calf raise (straight knee), and leg press calf raise (straight knee). 6 seconds per rep. 12-week progression from 3×15 to 4×6 with increasing load. Equivalent clinical outcomes to Alfredson with superior compliance (92% vs 78%) and patient satisfaction (100% vs 0% at 12 weeks).",
+    confidence: 0.95,
+    dosing:
+      "12-week progression: Wk1 3×15, Wk2-3 3×12, Wk4-5 4×10, Wk6-8 4×8, Wk9-12 4×6. 6 seconds per rep. 3 exercises per session [Beyer 2015]",
+    emgNotes:
+      "Both HSR and eccentric reduce tendon thickness and neovascularization. HSR shows greater collagen turnover evidence and may be more likely to produce tendon adaptation [Malliaras 2013]",
+    evidenceLevel: "strong",
+    difficulty: "intermediate",
+    equipment: ["barbell", "calf-raise-machine", "leg-press-machine"],
+    bodyPosition: "standing",
+    movementSlugs: ["ankle-plantarflexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "gastrocnemius",
+        role: "primary",
+        notes: "Standing and leg press variations — straight knee",
+      },
+      {
+        muscleSlug: "soleus",
+        role: "primary",
+        notes: "Seated variation — bent knee isolates soleus",
+      },
+      {
+        muscleSlug: "tibialis-posterior",
+        role: "stabilizer",
+        notes: "Ankle stabilization during heavy loading",
+      },
+    ],
+    functionalTaskSlugs: ["walking", "stair-climbing", "running-jogging"],
+    cues: [
+      {
+        text: "Three exercises per session: seated calf raise, standing barbell raise, leg press calf raise",
+        cueType: "verbal",
+      },
+      {
+        text: "Every rep takes 6 seconds: 3 seconds up, 3 seconds down",
+        cueType: "verbal",
+      },
+      {
+        text: "Increase weight when you can complete all sets without pain",
+        cueType: "verbal",
+      },
+      {
+        text: "Full range of motion — drop heels below platform, rise to full plantarflexion",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Alfredson Eccentric Protocol",
+        description:
+          "If HSR equipment is unavailable, eccentric heel drops on a step achieve equivalent outcomes [Beyer 2015].",
+      },
+      {
+        name: "Bilateral Calf Raises",
+        description: "Start bilateral before progressing to single-leg or loaded variations.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Increased Load",
+        description:
+          "Continue progressing weight beyond the 12-week protocol. Follow standard progressive overload principles.",
+      },
+      {
+        name: "Plyometric Calf Work",
+        description:
+          "Add hopping and jumping progressions for return-to-sport after completing the 12-week protocol.",
+      },
+    ],
+  },
+  // Shoulder — Adhesive Capsulitis (Frozen Shoulder)
+  {
+    slug: "pendulum-exercise",
+    name: "Pendulum Exercise (Codman's)",
+    description:
+      "Leaning forward with the affected arm hanging, creating small circular or pendulum motions using body sway rather than active shoulder muscle contraction. Used in early-stage frozen shoulder (freezing phase) when active motion is too painful. Proposed mechanisms include joint distraction, synovial fluid circulation, and pain gate modulation.",
+    confidence: 0.7,
+    dosing:
+      "5-10 minutes, 2-3x daily; small circles in both directions, forward/back, and side-to-side. With or without 1-2 lb weight [expert consensus]",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "standing",
+    notes:
+      "Limited high-quality RCT evidence. Commonly prescribed based on clinical experience and biomechanical reasoning. Use in freezing phase of adhesive capsulitis.",
+    movementSlugs: ["shoulder-flexion", "shoulder-abduction", "shoulder-adduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "supraspinatus",
+        role: "stabilizer",
+        notes: "Should be minimally active — passive motion exercise",
+      },
+      {
+        muscleSlug: "anterior-deltoid",
+        role: "stabilizer",
+        notes: "Minimal activation — motion from body sway, not shoulder muscles",
+      },
+    ],
+    functionalTaskSlugs: ["dressing-upper-body", "bathing-hygiene"],
+    cues: [
+      {
+        text: "Lean forward, supporting yourself with your good arm on a table",
+        cueType: "verbal",
+      },
+      {
+        text: "Let the affected arm hang completely relaxed — like a dead weight",
+        cueType: "verbal",
+      },
+      {
+        text: "Sway your body to create the motion — don't use your shoulder muscles",
+        cueType: "verbal",
+      },
+      {
+        text: "Make small circles, then switch directions. Also swing forward/back and side-to-side",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Gravity-Assisted Pendulum",
+        description:
+          "Lean over further to increase the distraction effect. No weight in hand.",
+      },
+      {
+        name: "Supine Passive ROM",
+        description:
+          "Lie on back, use the other hand to gently move the affected arm. Fully passive.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Weighted Pendulum",
+        description:
+          "Add a 1-2 lb weight to increase distraction and momentum. Gradually increase arc of motion.",
+      },
+      {
+        name: "Active-Assisted Wall Walks",
+        description:
+          "Progress to wall finger-walking when active motion becomes tolerable.",
+      },
+    ],
+  },
+  {
+    slug: "wall-walks-shoulder",
+    name: "Wall Walks (Wall Finger Climbing)",
+    description:
+      "Facing or perpendicular to a wall, walking the fingers up the wall to progressively increase shoulder flexion or abduction ROM. Used in late freezing or early thawing phase of adhesive capsulitis when active ROM exercises become tolerable. Patients work into mild discomfort but not sharp pain.",
+    confidence: 0.7,
+    dosing:
+      "3×10 reps, 1-2x daily; progress height as tolerated. Mark highest point and track progress over weeks [clinical consensus]",
+    evidenceLevel: "limited",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "standing",
+    notes:
+      "Limited RCT evidence. Commonly prescribed for progressive active-assisted ROM in frozen shoulder and post-surgical stiffness.",
+    movementSlugs: ["shoulder-flexion", "shoulder-abduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "anterior-deltoid",
+        role: "primary",
+        notes: "Active shoulder flexion against gravity",
+      },
+      {
+        muscleSlug: "supraspinatus",
+        role: "synergist",
+        notes: "Assists initiation of abduction",
+      },
+      {
+        muscleSlug: "trapezius-upper",
+        role: "stabilizer",
+        notes: "Scapular upward rotation during elevation",
+      },
+      {
+        muscleSlug: "serratus-anterior",
+        role: "stabilizer",
+        notes: "Scapular stability during overhead reaching",
+      },
+    ],
+    functionalTaskSlugs: ["reaching-overhead", "dressing-upper-body", "overhead-work"],
+    cues: [
+      {
+        text: "Stand arm's length from the wall, facing it for flexion or sideways for abduction",
+        cueType: "verbal",
+      },
+      {
+        text: "Walk your fingers up the wall as high as you can comfortably go",
+        cueType: "verbal",
+      },
+      {
+        text: "Mark your highest point with tape — try to go a little higher each session",
+        cueType: "verbal",
+      },
+      {
+        text: "Mild stretching discomfort is OK — sharp pain means you've gone too far",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Supine Active-Assisted Flexion",
+        description:
+          "Lie on back, use a cane or the other hand to raise the arm overhead. Gravity-assisted.",
+      },
+      {
+        name: "Pendulum Exercises",
+        description:
+          "If wall walks are too painful, return to pendulums until motion improves.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Overhead Pulley",
+        description:
+          "Use an overhead pulley system for greater ROM and active-assisted motion.",
+      },
+      {
+        name: "Active Flexion / Abduction",
+        description:
+          "Once full ROM is achieved on the wall, progress to free active elevation without wall support.",
+      },
+    ],
+  },
+  // Hand/Wrist — Carpal Tunnel Syndrome
+  {
+    slug: "nerve-tendon-gliding-cts",
+    name: "Nerve and Tendon Gliding Exercises (Carpal Tunnel)",
+    description:
+      "Combined program of median nerve glides and tendon gliding for carpal tunnel syndrome. Nerve glides: sequential shoulder ABD → elbow extension → wrist/finger extension → cervical lateral flexion. Tendon glides: straight → hook fist → full fist → tabletop → straight fist. Proposed mechanisms include reducing intraneural pressure, improving nerve excursion, and preventing adhesion formation.",
+    confidence: 0.75,
+    dosing:
+      "5-10 reps of each position, 3-5x daily, 6-12 weeks; combine with nighttime neutral wrist splinting [Akalin 2002, Baysal 2006]",
+    emgNotes:
+      "Historical studies show modest improvements when combined with splinting. May help delay or reduce need for surgical intervention in mild-moderate CTS.",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "seated",
+    notes:
+      "Historical studies show modest improvements when combined with splinting. May help delay or reduce need for surgical intervention in mild-moderate CTS.",
+    movementSlugs: ["wrist-extension", "wrist-flexion", "finger-flexion", "finger-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "flexor-digitorum-superficialis",
+        role: "primary",
+        notes: "Tendon gliding through carpal tunnel",
+      },
+      {
+        muscleSlug: "flexor-digitorum-profundus",
+        role: "primary",
+        notes: "Differential tendon excursion during gliding positions",
+      },
+      {
+        muscleSlug: "extensor-digitorum",
+        role: "synergist",
+        notes: "Active finger extension during nerve tensioning positions",
+      },
+    ],
+    functionalTaskSlugs: ["typing", "gripping-cup"],
+    cues: [
+      {
+        text: "Nerve glide: start with fist at shoulder, slowly extend elbow → wrist → fingers in sequence",
+        cueType: "verbal",
+      },
+      {
+        text: "Tendon glide: move through each hand position slowly — straight, hook, fist, tabletop, straight fist",
+        cueType: "verbal",
+      },
+      {
+        text: "You should feel a gentle stretch, not pain or tingling",
+        cueType: "verbal",
+      },
+      {
+        text: "If symptoms worsen, reduce the range of the nerve glide",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Tendon Glides Only",
+        description:
+          "Perform only the tendon gliding sequence without the nerve component. Less neural tension.",
+      },
+      {
+        name: "Single-Joint Nerve Glide",
+        description:
+          "Move only one joint at a time (e.g., wrist extension only) instead of the full sequential mobilization.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Full Sequential Nerve Glide",
+        description:
+          "Complete the full shoulder-elbow-wrist-finger-cervical sequence for maximum neural excursion.",
+      },
+      {
+        name: "Nerve Glide with Sustained Hold",
+        description:
+          "Hold the end-range position for 5-10 seconds to increase neural tensioning effect.",
+      },
+    ],
+  },
+  {
+    slug: "wrist-splinting-exercise-cts",
+    name: "Wrist Neutral Splinting + Exercise Protocol (CTS)",
+    description:
+      "Combined conservative management protocol for carpal tunnel syndrome: nighttime neutral wrist splinting (0-20° extension) plus daytime nerve and tendon gliding exercises. First-line non-surgical treatment. Consider surgical referral if severe symptoms persist >6 months, thenar atrophy develops, persistent numbness occurs, or 3-6 months conservative management fails.",
+    confidence: 0.75,
+    dosing:
+      "Splint: worn nightly for 6-12 weeks, neutral position (0-20° extension). Exercises: nerve and tendon glides 3-5x daily during waking hours [clinical consensus]",
+    evidenceLevel: "moderate",
+    difficulty: "beginner",
+    equipment: ["wrist-splint"],
+    bodyPosition: "seated",
+    notes:
+      "First-line conservative management for mild-moderate CTS. Surgical referral criteria: severe symptoms >6 months, thenar atrophy, persistent numbness, failed 3-6 months conservative, severe electrodiagnostic findings.",
+    movementSlugs: ["wrist-extension", "wrist-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "flexor-digitorum-superficialis",
+        role: "primary",
+        notes: "Tendon excursion during gliding exercises",
+      },
+      {
+        muscleSlug: "flexor-digitorum-profundus",
+        role: "primary",
+        notes: "Tendon excursion during gliding exercises",
+      },
+      {
+        muscleSlug: "extensor-digitorum",
+        role: "synergist",
+        notes: "Active extension during nerve glide positions",
+      },
+    ],
+    functionalTaskSlugs: ["typing", "gripping-cup", "opening-jar"],
+    cues: [
+      {
+        text: "Wear the splint every night — consistency is key for symptom relief",
+        cueType: "verbal",
+      },
+      {
+        text: "The splint should keep your wrist straight or slightly extended — not bent",
+        cueType: "verbal",
+      },
+      {
+        text: "During the day, perform the gliding exercises every 2-3 hours",
+        cueType: "verbal",
+      },
+      {
+        text: "Track your symptoms weekly — improvement is gradual over 6-12 weeks",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Splinting Only",
+        description:
+          "If exercises worsen symptoms, start with splinting alone for 2-4 weeks before adding exercises.",
+      },
+      {
+        name: "Activity Modification",
+        description:
+          "Reduce provocative activities (sustained gripping, vibration tools) alongside splinting.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Add Strengthening",
+        description:
+          "Once symptoms improve, add grip strengthening and wrist curl exercises to prevent recurrence.",
+      },
+      {
+        name: "Ergonomic Modification",
+        description:
+          "Add workstation ergonomic changes (keyboard position, wrist rest, mouse position) for sustained improvement.",
+      },
+    ],
+  },
 ];
 
 export async function seedExercises() {

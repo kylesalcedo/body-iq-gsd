@@ -632,7 +632,7 @@ const exercises: ExerciseDef[] = [
     bodyPosition: "seated",
     evidenceLevel: "moderate",
     emgNotes: "Hand exercises reduce short-term pain (VAS -5.0) and improve grip strength (21 lbs) in hand OA [Thakker 2025]",
-    movementSlugs: ["finger-flexion", "finger-extension"],
+    movementSlugs: ["finger-flexion", "finger-extension", "dip-flexion", "pip-flexion"],
     muscleRoles: [
       { muscleSlug: "flexor-digitorum-superficialis", role: "primary" },
       { muscleSlug: "flexor-digitorum-profundus", role: "primary", notes: "Deep finger flexor — high activation during grip" },
@@ -663,7 +663,7 @@ const exercises: ExerciseDef[] = [
     equipment: [],
     bodyPosition: "seated",
     evidenceLevel: "moderate",
-    movementSlugs: ["thumb-opposition"],
+    movementSlugs: ["thumb-opposition", "thumb-mcp-flexion", "thumb-abduction"],
     muscleRoles: [
       { muscleSlug: "opponens-pollicis", role: "primary" },
       { muscleSlug: "flexor-pollicis-brevis", role: "primary", notes: "Flexion component of opposition" },
@@ -1098,7 +1098,7 @@ const exercises: ExerciseDef[] = [
     bodyPosition: "prone",
     evidenceLevel: "strong",
     emgNotes: "MT and LT >50% MVIC; optimal UT/MT ratio 0.43, UT/LT ratio 0.30 [Mendez-Rebolledo 2024]",
-    movementSlugs: ["scapular-retraction", "shoulder-external-rotation", "scapular-upward-rotation"],
+    movementSlugs: ["scapular-retraction", "shoulder-external-rotation", "scapular-upward-rotation", "shoulder-horizontal-abduction"],
     muscleRoles: [
       { muscleSlug: "trapezius-middle", role: "primary", notes: ">50% MVIC activation" },
       { muscleSlug: "trapezius-lower", role: "primary", notes: ">50% MVIC activation" },
@@ -1337,7 +1337,7 @@ const exercises: ExerciseDef[] = [
     equipment: ["step"],
     bodyPosition: "standing",
     evidenceLevel: "strong",
-    movementSlugs: ["knee-flexion", "knee-extension", "hip-abduction"],
+    movementSlugs: ["knee-flexion", "knee-extension", "hip-abduction", "knee-internal-rotation", "knee-external-rotation"],
     muscleRoles: [
       { muscleSlug: "quadriceps", role: "primary", notes: "Eccentric control during step-downs" },
       { muscleSlug: "gluteus-medius", role: "primary", notes: "Pelvic stability during single-leg stance" },
@@ -2127,7 +2127,7 @@ const exercises: ExerciseDef[] = [
     bodyPosition: "seated",
     notes:
       "Historical studies show modest improvements when combined with splinting. May help delay or reduce need for surgical intervention in mild-moderate CTS.",
-    movementSlugs: ["wrist-extension", "wrist-flexion", "finger-flexion", "finger-extension"],
+    movementSlugs: ["wrist-extension", "wrist-flexion", "finger-flexion", "finger-extension", "dip-flexion", "pip-flexion", "dip-extension", "pip-extension"],
     muscleRoles: [
       {
         muscleSlug: "flexor-digitorum-superficialis",
@@ -2528,7 +2528,7 @@ const exercises: ExerciseDef[] = [
     difficulty: "beginner",
     equipment: [],
     bodyPosition: "seated",
-    movementSlugs: ["finger-flexion", "finger-extension"],
+    movementSlugs: ["finger-flexion", "finger-extension", "dip-flexion", "pip-flexion", "dip-extension", "pip-extension"],
     muscleRoles: [
       { muscleSlug: "flexor-digitorum-superficialis", role: "primary", notes: "PIP flexion during fist positions" },
       {
@@ -2578,7 +2578,7 @@ const exercises: ExerciseDef[] = [
     difficulty: "intermediate",
     equipment: [],
     bodyPosition: "sidelying",
-    movementSlugs: ["thoracic-lateral-flexion", "hip-abduction"],
+    movementSlugs: ["thoracic-lateral-flexion", "hip-abduction", "lumbar-lateral-flexion"],
     muscleRoles: [
       { muscleSlug: "quadratus-lumborum", role: "primary", notes: "121.62% MVIC — highest activation [Nam 2025]" },
       {
@@ -2680,7 +2680,7 @@ const exercises: ExerciseDef[] = [
     difficulty: "intermediate",
     equipment: ["resistance-band"],
     bodyPosition: "standing",
-    movementSlugs: ["thoracic-rotation", "lumbar-flexion"],
+    movementSlugs: ["thoracic-rotation", "lumbar-flexion", "lumbar-rotation"],
     muscleRoles: [
       { muscleSlug: "internal-oblique", role: "primary", notes: "Anti-rotation demand — resists rotational pull" },
       { muscleSlug: "external-oblique", role: "primary", notes: "Anti-rotation and trunk stability" },
@@ -3767,7 +3767,7 @@ const exercises: ExerciseDef[] = [
     difficulty: "beginner",
     equipment: [],
     bodyPosition: "standing",
-    movementSlugs: ["shoulder-adduction"],
+    movementSlugs: ["shoulder-adduction", "shoulder-horizontal-adduction"],
     muscleRoles: [
       { muscleSlug: "posterior-deltoid", role: "primary", notes: "Primary tissue being stretched" },
       { muscleSlug: "infraspinatus", role: "primary", notes: "Posterior rotator cuff stretch" },
@@ -4231,7 +4231,7 @@ const exercises: ExerciseDef[] = [
     difficulty: "intermediate",
     equipment: [],
     bodyPosition: "sidelying",
-    movementSlugs: ["hip-abduction", "thoracic-lateral-flexion"],
+    movementSlugs: ["hip-abduction", "thoracic-lateral-flexion", "lumbar-lateral-flexion"],
     muscleRoles: [
       {
         muscleSlug: "gluteus-medius",

@@ -2899,35 +2899,35 @@ export async function seedSources() {
   if (neumannSource) {
     // Neumann covers all muscles, movements, and regions
     const allMuscles = await prisma.muscle.findMany();
-    for (const m of allMuscles) { await linkSource(neumannSource.id, "Muscle", m.id, "muscleId", "Anatomy reference"); count++; }
+    for (const m of allMuscles) { await linkSource(neumannSource.id, "Muscle", m.id, "muscleId", `Anatomy of ${m.name} — origin, insertion, action, innervation`); count++; }
     const allMovements = await prisma.movement.findMany();
-    for (const m of allMovements) { await linkSource(neumannSource.id, "Movement", m.id, "movementId", "Biomechanics reference"); count++; }
+    for (const m of allMovements) { await linkSource(neumannSource.id, "Movement", m.id, "movementId", `Biomechanics of ${m.name}`); count++; }
     const allRegions = await prisma.region.findMany();
-    for (const r of allRegions) { await linkSource(neumannSource.id, "Region", r.id, "regionId", "Regional anatomy reference"); count++; }
+    for (const r of allRegions) { await linkSource(neumannSource.id, "Region", r.id, "regionId", `Regional anatomy of ${r.name}`); count++; }
   }
 
   if (kendallSource) {
     // Kendall covers all muscles (testing reference)
     const allMuscles = await prisma.muscle.findMany();
-    for (const m of allMuscles) { await linkSource(kendallSource.id, "Muscle", m.id, "muscleId", "Muscle testing reference"); count++; }
+    for (const m of allMuscles) { await linkSource(kendallSource.id, "Muscle", m.id, "muscleId", `Manual muscle testing for ${m.name}`); count++; }
   }
 
   if (kisnerSource) {
     // Kisner covers all exercises
     const allExercises = await prisma.exercise.findMany();
-    for (const e of allExercises) { await linkSource(kisnerSource.id, "Exercise", e.id, "exerciseId", "Exercise technique reference"); count++; }
+    for (const e of allExercises) { await linkSource(kisnerSource.id, "Exercise", e.id, "exerciseId", `Therapeutic exercise foundations for ${e.name}`); count++; }
   }
 
   if (mageeSource) {
     // Magee covers all joints
     const allJoints = await prisma.joint.findMany();
-    for (const j of allJoints) { await linkSource(mageeSource.id, "Joint", j.id, "jointId", "Joint assessment reference"); count++; }
+    for (const j of allJoints) { await linkSource(mageeSource.id, "Joint", j.id, "jointId", `Orthopedic assessment of ${j.name}`); count++; }
   }
 
   if (acsmSource) {
     // ACSM covers all exercises (prescription guidelines)
     const allExercises = await prisma.exercise.findMany();
-    for (const e of allExercises) { await linkSource(acsmSource.id, "Exercise", e.id, "exerciseId", "Exercise prescription guidelines"); count++; }
+    for (const e of allExercises) { await linkSource(acsmSource.id, "Exercise", e.id, "exerciseId", `ACSM exercise prescription guidelines for ${e.name}`); count++; }
   }
 
   logCount("source–entity links", count);
@@ -3175,7 +3175,7 @@ export async function seedSources() {
         console.warn(`    ⚠ Source not found: ${sourceSlug}`);
         continue;
       }
-      await linkSource(source.id, "Exercise", exercise.id, "exerciseId", "Region-specific evidence");
+      await linkSource(source.id, "Exercise", exercise.id, "exerciseId", `${source.title} — evidence for ${exercise.name}`);
       targetedCount++;
     }
   }

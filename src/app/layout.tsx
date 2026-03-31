@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Body IQ — Movement Knowledge Engine",
   description: "Validation-first biomechanics and physical therapy knowledge system",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -1,103 +1,162 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-// GET /api/exercises — List all exercises with filters
-// Query params: ?region=shoulder&difficulty=beginner&equipment=resistance-band&q=bridge
+/**
+ * GET /api/exercises?region=shoulder&muscle=gluteus-maximus&task=walking&status=draft&confidence=0.8&role=primary
+ * 
+ * All params optional. Multiple values comma-separated.
+ * Returns exercises matching ALL provided filters (AND logic).
+ */
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
-  const q = params.get("q");
-  const difficulty = params.get("difficulty");
-  const bodyPosition = params.get("bodyPosition");
-  const evidenceLevel = params.get("evidenceLevel");
-  const limit = Math.min(parseInt(params.get("limit") || "50"), 100);
-  const offset = parseInt(params.get("offset") || "0");
 
+  const regionSlugs = params.get("region")?.split(",").filter(Boolean) || [];
+  const jointSlugs = params.get("joint")?.split(",").filter(Boolean) || [];
+  const movementSlugs = params.get("movement")?.split(",").filter(Boolean) || [];
+  const muscleSlugs = params.get("muscle")?.split(",").filter(Boolean) || [];
+  const taskSlugs = params.get("task")?.split(",").filter(Boolean) || [];
+  const roles = params.get("role")?.split(",").filter(Boolean) || [];
+  const statuses = params.get("status")?.split(",").filter(Boolean) || [];
+  const minConfidence = params.get("minConfidence") ? parseFloat(params.get("minConfidence")!) : undefined;
+  const maxConfidence = params.get("maxConfidence") ? parseFloat(params.get("maxConfidence")!) : undefined;
+  const query = params.get("q")?.trim() || "";
+
+  // Build where clause
   const where: any = {};
+  const AND: any[] = [];
 
-  if (q) {
-    where.OR = [
-      { name: { contains: q, mode: "insensitive" } },
-      { description: { contains: q, mode: "insensitive" } },
-      { slug: { contains: q, mode: "insensitive" } },
-    ];
+  // Text search
+  if (query.length >= 2) {
+    AND.push({
+      OR: [
+        { name: { contains: query, mode: "insensitive" } },
+        { description: { contains: query, mode: "insensitive" } },
+      ],
+    });
   }
 
-  if (difficulty) where.difficulty = difficulty;
-  if (bodyPosition) where.bodyPosition = bodyPosition;
-  if (evidenceLevel) where.evidenceLevel = evidenceLevel;
+  // Status filter
+  if (statuses.length > 0) {
+    AND.push({ status: { in: statuses } });
+  }
 
-  const [exercises, total] = await Promise.all([
-    prisma.exercise.findMany({
-      where,
-      take: limit,
-      skip: offset,
-      orderBy: { name: "asc" },
-      select: {
-        slug: true,
-        name: true,
-        description: true,
-        dosing: true,
-        emgNotes: true,
-        evidenceLevel: true,
-        difficulty: true,
-        equipment: true,
-        bodyPosition: true,
-        confidence: true,
-        status: true,
-        muscles: {
-          select: {
-            role: true,
-            notes: true,
-            muscle: { select: { slug: true, name: true } },
+  // Confidence filter
+  if (minConfidence !== undefined) {
+    AND.push({ confidence: { gte: minConfidence } });
+  }
+  if (maxConfidence !== undefined) {
+    AND.push({ confidence: { lte: maxConfidence } });
+  }
+
+  // Region filter: exercises whose movements belong to joints in these regions
+  if (regionSlugs.length > 0) {
+    AND.push({
+      movements: {
+        some: {
+          movement: {
+            joint: {
+              region: { slug: { in: regionSlugs } },
+            },
           },
-          orderBy: { role: "asc" },
         },
-        movements: {
-          select: {
-            movement: {
-              select: {
-                slug: true,
-                name: true,
-                joint: { select: { slug: true, name: true, region: { select: { slug: true, name: true } } } },
+      },
+    });
+  }
+
+  // Joint filter
+  if (jointSlugs.length > 0) {
+    AND.push({
+      movements: {
+        some: {
+          movement: {
+            joint: { slug: { in: jointSlugs } },
+          },
+        },
+      },
+    });
+  }
+
+  // Movement filter
+  if (movementSlugs.length > 0) {
+    AND.push({
+      movements: {
+        some: {
+          movement: { slug: { in: movementSlugs } },
+        },
+      },
+    });
+  }
+
+  // Muscle filter (optionally with role)
+  if (muscleSlugs.length > 0) {
+    const muscleFilter: any = {
+      muscle: { slug: { in: muscleSlugs } },
+    };
+    if (roles.length > 0) {
+      muscleFilter.role = { in: roles };
+    }
+    AND.push({
+      muscles: { some: muscleFilter },
+    });
+  } else if (roles.length > 0) {
+    // Role filter without specific muscle
+    AND.push({
+      muscles: { some: { role: { in: roles } } },
+    });
+  }
+
+  // Functional task filter
+  if (taskSlugs.length > 0) {
+    AND.push({
+      functionalTasks: {
+        some: {
+          functionalTask: { slug: { in: taskSlugs } },
+        },
+      },
+    });
+  }
+
+  if (AND.length > 0) {
+    where.AND = AND;
+  }
+
+  const exercises = await prisma.exercise.findMany({
+    where,
+    orderBy: { name: "asc" },
+    include: {
+      muscles: {
+        include: { muscle: { select: { slug: true, name: true } } },
+        orderBy: { role: "asc" },
+      },
+      movements: {
+        include: {
+          movement: {
+            select: {
+              slug: true,
+              name: true,
+              joint: {
+                select: {
+                  slug: true,
+                  name: true,
+                  region: { select: { slug: true, name: true } },
+                },
               },
             },
           },
         },
-        functionalTasks: {
-          select: {
-            functionalTask: { select: { slug: true, name: true, category: true } },
-          },
-        },
-        cues: {
-          select: { text: true, cueType: true },
-          orderBy: { order: "asc" },
-        },
-        regressions: {
-          select: { name: true, description: true },
-          orderBy: { order: "asc" },
-        },
-        progressions: {
-          select: { name: true, description: true },
-          orderBy: { order: "asc" },
-        },
-        sources: {
-          select: {
-            notes: true,
-            source: { select: { slug: true, title: true, authors: true, year: true, journal: true } },
-          },
-        },
       },
-    }),
-    prisma.exercise.count({ where }),
-  ]);
+      functionalTasks: {
+        include: { functionalTask: { select: { slug: true, name: true, category: true } } },
+      },
+      cues: { orderBy: { order: "asc" } },
+      regressions: { orderBy: { order: "asc" } },
+      progressions: { orderBy: { order: "asc" } },
+      sources: { include: { source: { select: { slug: true, title: true } } } },
+    },
+  });
 
   return NextResponse.json({
-    data: exercises,
-    meta: {
-      total,
-      limit,
-      offset,
-      hasMore: offset + limit < total,
-    },
+    count: exercises.length,
+    exercises,
   });
 }

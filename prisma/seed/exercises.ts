@@ -3992,6 +3992,477 @@ const exercises: ExerciseDef[] = [
       },
     ],
   },
+  // ── Batch 2 OpenEvidence: Additional Exercises ────────────────────────────
+  {
+    slug: "turkish-get-up",
+    name: "Turkish Get-Up",
+    description:
+      "Multi-phase exercise transitioning from supine to standing while holding a weight overhead. Phases: roll, bridge, sweep, lunge, stand. Closed-chain shoulder phases show greater infraspinatus, lower trapezius, erector spinae, and external oblique activation vs open-chain.",
+    confidence: 0.75,
+    dosing: "3-5 reps per side with moderate load (8-12 kg KB)",
+    evidenceLevel: "limited",
+    difficulty: "advanced",
+    equipment: ["kettlebell"],
+    bodyPosition: "supine",
+    notes:
+      "No published RCTs. Closed-chain phases produce greater shoulder stabilizer activation [Pozzi 2022].",
+    movementSlugs: [
+      "hip-extension",
+      "shoulder-flexion",
+      "thoracic-rotation",
+      "knee-extension",
+    ],
+    muscleRoles: [
+      {
+        muscleSlug: "infraspinatus",
+        role: "primary",
+        notes: "Overhead shoulder stabilization [Pozzi 2022]",
+      },
+      {
+        muscleSlug: "anterior-deltoid",
+        role: "primary",
+        notes: "Overhead maintenance",
+      },
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "secondary",
+        notes: "Bridge and lunge phases",
+      },
+      {
+        muscleSlug: "external-oblique",
+        role: "secondary",
+        notes: "Rotational transitions",
+      },
+      { muscleSlug: "erector-spinae", role: "stabilizer" },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+    ],
+    functionalTaskSlugs: ["floor-transfers", "overhead-work", "bed-mobility"],
+    cues: [
+      {
+        text: "Start supine, weight pressed to ceiling",
+        cueType: "verbal",
+      },
+      {
+        text: "Roll to elbow, then hand — eyes on the weight",
+        cueType: "verbal",
+      },
+      {
+        text: "Bridge hips, sweep back leg to half-kneeling",
+        cueType: "verbal",
+      },
+      {
+        text: "Stand from lunge, reverse every step to return",
+        cueType: "verbal",
+      },
+    ],
+    regressions: [
+      {
+        name: "Half Get-Up",
+        description: "Stop at seated position and reverse.",
+      },
+      {
+        name: "Arm Bar",
+        description: "Sidelying overhead hold with rotation.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Heavier Load",
+        description: "Progress KB weight once phases are fluid.",
+      },
+      {
+        name: "Bottoms-Up Get-Up",
+        description: "KB upside-down for grip and stability demand.",
+      },
+    ],
+  },
+  {
+    slug: "farmers-carry",
+    name: "Farmer's Carry (Loaded Carry)",
+    description:
+      "Walking while holding heavy weights at sides. QL shows substantial activation for lateral trunk stability. Torso cocontraction creates high spine stiffness. Progressive load-carriage training produces very large effects (ES 1.7 SD). Carrying activities inversely associated with low grip strength (AOR 0.63).",
+    confidence: 0.85,
+    dosing: "3-4×30-40 meter walks, 2-3x/week, ≥4 weeks [Knapik 2012]",
+    emgNotes:
+      "QL substantial activation. Glutes ~80% MVC, low back ~50% MVC [McGill 2009, 2012]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: ["dumbbells"],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-extension", "ankle-plantarflexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "quadratus-lumborum",
+        role: "primary",
+        notes: "Lateral trunk stability [McGill 2009]",
+      },
+      {
+        muscleSlug: "erector-spinae",
+        role: "primary",
+        notes: "Trunk rigidity through cocontraction",
+      },
+      {
+        muscleSlug: "gluteus-medius",
+        role: "secondary",
+        notes: "Pelvic stability during loaded gait",
+      },
+      {
+        muscleSlug: "trapezius-upper",
+        role: "secondary",
+        notes: "Shoulder depression resistance",
+      },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+    ],
+    functionalTaskSlugs: ["carrying-lifting", "walking"],
+    cues: [
+      { text: "Stand tall — don't lean", cueType: "verbal" },
+      { text: "Shoulders packed down and back", cueType: "verbal" },
+      { text: "Normal stride, controlled steps", cueType: "verbal" },
+      { text: "Squeeze handles hard", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Lighter Load",
+        description: "Reduce weight until posture maintained.",
+      },
+      {
+        name: "Bilateral Only",
+        description: "Equal weight both sides before suitcase carry.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Suitcase Carry",
+        description: "One-sided — greater lateral trunk demand.",
+      },
+      {
+        name: "Overhead Carry",
+        description:
+          "Highest spine loads due to cocontraction [McGill 2009].",
+      },
+    ],
+  },
+  {
+    slug: "front-plank",
+    name: "Front Plank and Variations",
+    description:
+      "Prone forearm plank. RA 46-48% MVIC, EO 77% MVIC with bracing. Scapular adduction + posterior pelvic tilt produces highest overall activation. Adding ankle dorsiflexion increases all abdominals >60% MVIC. Well-tolerated in chronic LBP. Longer holds don't predict lower LBP risk.",
+    confidence: 0.90,
+    dosing:
+      "Endurance: 3-4×30-60s. Strength: harder variations 3-4×15-30s. Rehab: 10-20s holds [Calatayud 2019]",
+    emgNotes:
+      "RA 46-48% MVIC. EO 77% with bracing [García-Jaén 2020]. Hollowing: IO ES=2.02-2.27 [García-Jaén 2020]. Scap adduction+PPT: highest overall [Cortell-Tormo 2017]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: [],
+    bodyPosition: "prone",
+    movementSlugs: ["lumbar-flexion", "lumbar-extension"],
+    muscleRoles: [
+      {
+        muscleSlug: "rectus-abdominis",
+        role: "primary",
+        notes: "46-48% MVIC [Calatayud 2019]",
+      },
+      {
+        muscleSlug: "external-oblique",
+        role: "primary",
+        notes: "77% MVIC with bracing [García-Jaén 2020]",
+      },
+      {
+        muscleSlug: "internal-oblique",
+        role: "secondary",
+        notes: "Increases with hollowing ES=2.02-2.27",
+      },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+      { muscleSlug: "erector-spinae", role: "stabilizer" },
+    ],
+    functionalTaskSlugs: ["posture-maintenance", "carrying-lifting"],
+    cues: [
+      {
+        text: "Forearms on floor, elbows under shoulders, straight line head to feet",
+        cueType: "verbal",
+      },
+      {
+        text: "Squeeze glutes, brace abs — don't sag",
+        cueType: "verbal",
+      },
+      {
+        text: "Tuck tailbone slightly for more activation",
+        cueType: "verbal",
+      },
+      { text: "Breathe normally", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Knee Plank",
+        description: "From knees — reduced lever arm.",
+      },
+      {
+        name: "Incline Plank",
+        description: "Hands on bench or wall.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Plank with Arm Reach",
+        description: "Alternate reaching forward.",
+      },
+      {
+        name: "Body Saw",
+        description: "Rock forward/backward on forearms.",
+      },
+      {
+        name: "Suspended Plank",
+        description:
+          "Feet in TRX — greatest RA/EO activation [Calatayud 2017].",
+      },
+    ],
+  },
+  {
+    slug: "side-plank-hip-abduction",
+    name: "Side Plank with Hip Abduction",
+    description:
+      "Side plank with top leg performing hip abduction. Standard side plank produces highest lumbar ES among plank variations. Adding abduction increases glute med demand (54.9-81.9% MVIC range). Distinct from Copenhagen plank (which is adduction). May not be tolerated in acute LBP.",
+    confidence: 0.80,
+    dosing: "3×8-12 reps per side, or isometric 3×15-30s holds",
+    emgNotes:
+      "Side plank: highest lumbar ES [Calatayud 2017]. Glute med 54.9-81.9% MVIC unilateral exercises [Mausehund 2019]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: [],
+    bodyPosition: "sidelying",
+    movementSlugs: ["hip-abduction", "thoracic-lateral-flexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "gluteus-medius",
+        role: "primary",
+        notes: "Hip abduction against gravity",
+      },
+      {
+        muscleSlug: "quadratus-lumborum",
+        role: "primary",
+        notes: "Lateral trunk stability",
+      },
+      { muscleSlug: "external-oblique", role: "secondary" },
+      { muscleSlug: "internal-oblique", role: "secondary" },
+      {
+        muscleSlug: "erector-spinae",
+        role: "stabilizer",
+        notes: "Highest among plank variations [Calatayud 2017]",
+      },
+    ],
+    functionalTaskSlugs: [
+      "posture-maintenance",
+      "walking",
+      "single-leg-balance",
+    ],
+    cues: [
+      {
+        text: "Forearm under shoulder, hips stacked",
+        cueType: "verbal",
+      },
+      {
+        text: "Lift top leg toward ceiling in plank",
+        cueType: "verbal",
+      },
+      {
+        text: "Don't let hips drop or rotate",
+        cueType: "verbal",
+      },
+      { text: "Lower leg with control", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Knee Side Plank",
+        description: "Bottom knee on ground, no abduction.",
+      },
+      {
+        name: "Sidelying Hip Abduction",
+        description: "Remove plank — isolate glute med.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Side Plank with Band",
+        description: "Band above knees for increased resistance.",
+      },
+      {
+        name: "Side Plank with Rotation",
+        description: "Add trunk rotation between abduction reps.",
+      },
+    ],
+  },
+  {
+    slug: "step-up-variations",
+    name: "Step-Up Variations (Forward, Lateral, Cross-Over)",
+    description:
+      "Stepping onto box from different directions. Lateral at 60% 5RM: VL 52.8%, VM 50.4%, glute med 42.8%. Standard: highest glute max/hamstrings. Crossover: highest glute med concentric. Step height matters: 8-inch VM 60% vs 4-inch 24% MVIC. In elderly, 30 cm step matches 60% 1RM resistance exercise.",
+    confidence: 0.90,
+    dosing:
+      "3×8-12 reps per leg; progress height 4→8→12+ inches [Muyor 2020, Simenz 2012]",
+    emgNotes:
+      "Lateral: VL 52.8%, VM 50.4%, glute med 42.8% [Muyor 2020]. 8-inch: VM 60% vs 4-inch 24% [Brask 1984]. Crossover: highest glute med [Simenz 2012]",
+    evidenceLevel: "strong",
+    difficulty: "beginner",
+    equipment: ["step", "dumbbells"],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-extension", "knee-extension", "hip-abduction"],
+    muscleRoles: [
+      {
+        muscleSlug: "quadriceps",
+        role: "primary",
+        notes: "VL 52.8%, VM 50.4% [Muyor 2020]",
+      },
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "secondary",
+        notes: "35.6% — highest standard direction [Simenz 2012]",
+      },
+      {
+        muscleSlug: "gluteus-medius",
+        role: "secondary",
+        notes: "42.8% — highest crossover direction [Simenz 2012]",
+      },
+      {
+        muscleSlug: "hamstrings",
+        role: "stabilizer",
+        notes: "BF 24.8% [Muyor 2020]",
+      },
+    ],
+    functionalTaskSlugs: [
+      "stair-climbing",
+      "floor-transfers",
+      "carrying-lifting",
+    ],
+    cues: [
+      {
+        text: "Drive through heel of stepping leg",
+        cueType: "verbal",
+      },
+      {
+        text: "Stand fully tall at top — full hip extension",
+        cueType: "verbal",
+      },
+      {
+        text: "Control descent — don't drop",
+        cueType: "verbal",
+      },
+      { text: "Knee tracks over 2nd toe", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Low Step (4 inches)",
+        description: "VM 24% MVIC — appropriate start [Brask 1984].",
+      },
+      {
+        name: "Hand Support",
+        description: "Fingertip touch on wall for balance.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Higher Step (8-12 inches)",
+        description: "VM 60% MVIC at 8 inches [Brask 1984].",
+      },
+      {
+        name: "Loaded Step-Up",
+        description:
+          "Add dumbbells. Forces scale more than bilateral squat [Kipp 2022].",
+      },
+      {
+        name: "Lateral/Crossover",
+        description: "Crossover for highest glute med [Simenz 2012].",
+      },
+    ],
+  },
+  {
+    slug: "kettlebell-swing",
+    name: "Kettlebell Swing (Two-Hand)",
+    description:
+      "Explosive hip hinge swing to chest height. Hip hinge produces greater hamstring activation than squat swing (MD 3.92, p=0.002). Low back ~50% MVC, glutes ~80% MVC, spine compression ~3,200 N at 16 kg. Unique posterior shear L4 on L5. 8-week RCT: neck/shoulder pain -2.1 points, lumbar extensor strength increased. Acute swings increase pressure pain thresholds.",
+    confidence: 0.85,
+    dosing:
+      "Cardio: 15:15 protocol 20 min 3x/week. Strength: 3-5×8-10 at 8-10RM. Pain: 8 rounds 20s swings/10s rest [Falatic 2015, Keilman 2017]",
+    emgNotes:
+      "Hip hinge: hamstrings MD 3.92 vs squat swing (p=0.002). Medial hamstrings > BF (MD 9.93, p=0.022) [Del Monte 2020]. Low back ~50% MVC, glutes ~80% MVC [McGill 2012]",
+    evidenceLevel: "moderate",
+    difficulty: "intermediate",
+    equipment: ["kettlebell"],
+    bodyPosition: "standing",
+    movementSlugs: ["hip-extension", "hip-flexion", "ankle-plantarflexion"],
+    muscleRoles: [
+      {
+        muscleSlug: "gluteus-maximus",
+        role: "primary",
+        notes: "~80% MVC explosive hip extension [McGill 2012]",
+      },
+      {
+        muscleSlug: "hamstrings",
+        role: "primary",
+        notes:
+          "Significantly higher with hip hinge technique [Del Monte 2020]",
+      },
+      {
+        muscleSlug: "erector-spinae",
+        role: "secondary",
+        notes: "~50% MVC trunk rigidity [McGill 2012]",
+      },
+      {
+        muscleSlug: "quadratus-lumborum",
+        role: "secondary",
+        notes: "Lateral stability",
+      },
+      { muscleSlug: "transversus-abdominis", role: "stabilizer" },
+    ],
+    functionalTaskSlugs: [
+      "carrying-lifting",
+      "floor-transfers",
+      "running-jogging",
+    ],
+    cues: [
+      {
+        text: "Hip HINGE, not squat — push hips back",
+        cueType: "verbal",
+      },
+      {
+        text: "Snap hips forward to drive bell — arms just along for the ride",
+        cueType: "verbal",
+      },
+      {
+        text: "Stand tall at top: squeeze glutes, vertical torso",
+        cueType: "verbal",
+      },
+      {
+        text: "Bell goes between legs, not below knees",
+        cueType: "verbal",
+      },
+      { text: "Exhale sharply at top", cueType: "verbal" },
+    ],
+    regressions: [
+      {
+        name: "Kettlebell Deadlift",
+        description:
+          "Remove ballistic component. Practice hip hinge with load.",
+      },
+      {
+        name: "Wall-Facing Swing",
+        description:
+          "12 inches from wall — forces hip hinge pattern.",
+      },
+    ],
+    progressions: [
+      {
+        name: "Single-Arm Swing",
+        description:
+          "Anti-rotation demand. RA ipsilateral 42-48% higher [Andersen 2016].",
+      },
+      {
+        name: "Kettlebell Snatch",
+        description:
+          "Single-arm overhead finish. Advanced full-body power.",
+      },
+    ],
+  },
 ];
 
 export async function seedExercises() {

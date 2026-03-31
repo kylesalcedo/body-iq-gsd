@@ -37,10 +37,10 @@ export default async function Home() {
             className="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
           >
             <span className="text-3xl">{s.icon}</span>
-            <div>
-              <p className="text-2xl font-bold text-gray-900">{s.count}</p>
-              <p className="text-sm text-gray-500">{s.label}</p>
-            </div>
+            <span className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900">{s.count}</span>
+              <span className="text-sm text-gray-500">{s.label}</span>
+            </span>
           </Link>
         ))}
       </div>

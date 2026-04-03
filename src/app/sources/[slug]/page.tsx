@@ -7,6 +7,9 @@ export default async function SourceDetailPage({ params }: { params: { slug: str
   const source = await getSource(params.slug);
   if (!source) notFound();
 
+  const hasFulltext = !!source.fulltextUrl;
+  const hasPdf = !!source.pdfUrl;
+
   return (
     <div className="max-w-4xl">
       <PageHeader
@@ -21,9 +24,50 @@ export default async function SourceDetailPage({ params }: { params: { slug: str
                 {source.sourceType}
               </span>
             )}
+            {hasFulltext && (
+              <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700">
+                📄 Free Fulltext
+              </span>
+            )}
           </>
         }
       />
+
+      {/* Access links — prominent */}
+      {(hasFulltext || hasPdf || source.doi) && (
+        <div className="mb-6 flex flex-wrap gap-3">
+          {hasPdf && (
+            <a
+              href={source.pdfUrl!}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition-colors"
+            >
+              📕 Download PDF
+            </a>
+          )}
+          {hasFulltext && (
+            <a
+              href={source.fulltextUrl!}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition-colors"
+            >
+              📄 Read Fulltext
+            </a>
+          )}
+          {source.doi && (
+            <a
+              href={`https://doi.org/${source.doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 transition-colors"
+            >
+              🔗 DOI: {source.doi}
+            </a>
+          )}
+        </div>
+      )}
 
       {source.description && (
         <Card className="mb-6">
@@ -31,25 +75,36 @@ export default async function SourceDetailPage({ params }: { params: { slug: str
         </Card>
       )}
 
-      {(source.doi || source.url) && (
+      {/* Identifiers */}
+      {(source.doi || source.pmid || source.pmcid) && (
         <Card className="mb-6">
-          <SectionTitle>Links</SectionTitle>
-          {source.doi && (
-            <p className="text-sm">
-              <strong className="text-gray-600">DOI:</strong>{" "}
-              <a href={`https://doi.org/${source.doi}`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
-                {source.doi}
-              </a>
-            </p>
-          )}
-          {source.url && (
-            <p className="text-sm mt-1">
-              <strong className="text-gray-600">URL:</strong>{" "}
-              <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
-                {source.url}
-              </a>
-            </p>
-          )}
+          <SectionTitle>Identifiers</SectionTitle>
+          <div className="grid gap-2 text-sm">
+            {source.doi && (
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-gray-500 w-16">DOI</span>
+                <a href={`https://doi.org/${source.doi}`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
+                  {source.doi}
+                </a>
+              </div>
+            )}
+            {source.pmid && (
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-gray-500 w-16">PMID</span>
+                <a href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
+                  {source.pmid}
+                </a>
+              </div>
+            )}
+            {source.pmcid && (
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-gray-500 w-16">PMC</span>
+                <a href={`https://www.ncbi.nlm.nih.gov/pmc/articles/${source.pmcid}/`} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">
+                  {source.pmcid}
+                </a>
+              </div>
+            )}
+          </div>
         </Card>
       )}
 

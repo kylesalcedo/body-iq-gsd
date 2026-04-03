@@ -14,6 +14,7 @@ const navItems = [
   { label: "Functional Tasks", href: "/tasks", icon: "🎯" },
   { label: "Exercises", href: "/exercises", icon: "🏋️" },
   { label: "Sources", href: "/sources", icon: "📚" },
+  { label: "API Reference", href: "/api-docs", icon: "⚡" },
   { label: "Validation Queue", href: "/validation", icon: "✅" },
 ];
 

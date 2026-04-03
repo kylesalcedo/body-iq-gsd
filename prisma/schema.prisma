@@ -279,7 +279,11 @@ model ResearchSource {
   year        Int?
   journal     String?
   doi         String?
+  pmid        String?
+  pmcid       String?
   url         String?
+  fulltextUrl String?
+  pdfUrl      String?
   sourceType  String?      // e.g. "textbook", "journal", "guideline", "expert-opinion"
   description String?
   // Validation

@@ -48,6 +48,7 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "Evidence-based guidelines for exercise prescription across healthy and clinical populations.",
       confidence: 0.9,
+      doi: "10.4135/9781412994149.n165",
     },
     // ── Region-Based Exercise Evidence Sources ────────────────────────────
     // Cervical Spine
@@ -60,6 +61,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT showing combined cervical and thoracic self-mobilization exercises improve chronic neck pain outcomes superior to cervical-only interventions.",
       confidence: 0.85,
+      doi: "10.1038/s41598-024-55181-8",
+      pmcid: "PMC10912754",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10912754/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10912754/pdf/",
     },
     {
       slug: "gross-neck-exercises-2015",
@@ -70,6 +75,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane systematic review of exercise interventions for mechanical neck disorders. Supports cervico-scapulothoracic strengthening.",
       confidence: 0.95,
+      doi: "10.1002/14651858.CD004250.pub5",
+      pmid: "25629215",
+      pmcid: "PMC9508492",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9508492/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9508492/pdf/",
     },
     {
       slug: "amiri-arimi-deep-flexors-2017",
@@ -80,6 +90,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of RCTs showing exercise programs improve deep cervical flexor size and function in chronic neck pain.",
       confidence: 0.9,
+      doi: "10.1097/phm.0000000000000721",
     },
     {
       slug: "moon-cervical-muscle-2021",
@@ -90,6 +101,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Exercise improves cervical muscle strength and cross-sectional area in patients with thoracic hyperkyphosis and chronic cervical pain.",
       confidence: 0.8,
+      doi: "10.1038/s41598-021-83344-4",
+      pmcid: "PMC7884681",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7884681/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7884681/pdf/",
     },
     {
       slug: "mueller-neck-dose-response-2023",
@@ -100,6 +115,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review with dose-response meta-regression supporting 2-3 sessions/week for chronic neck pain. Supports resistance and motor control exercises.",
       confidence: 0.9,
+      doi: "10.2519/jospt.2023.11820",
     },
     // Thoracic Spine
     {
@@ -111,6 +127,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT showing thoracic mobilization is more effective than cervical-only intervention for forward head posture.",
       confidence: 0.85,
+      doi: "10.1186/s12891-017-1889-2",
+      pmid: "29233164",
+      pmcid: "PMC5727966",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5727966/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5727966/pdf/",
     },
     {
       slug: "ozdemir-schroth-2023",
@@ -121,6 +142,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT demonstrating large effect sizes for Schroth exercises on kyphosis reduction (14.76° mean), lumbar lordosis, balance, and quality of life.",
       confidence: 0.85,
+      doi: "10.1080/09638288.2022.2083244",
     },
     {
       slug: "feng-kyphosis-correction-2018",
@@ -131,6 +153,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT showing corrective functional exercises reduce postural thoracic kyphosis in teenagers.",
       confidence: 0.8,
+      doi: "10.1177/0269215517714591",
     },
     {
       slug: "csepregi-breathing-posture-2022",
@@ -141,6 +164,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Breathing exercises improve chest expansion, spinal mobility (especially lateral flexion), and posture comparably to yoga and Pilates.",
       confidence: 0.8,
+      doi: "10.3390/ijerph19063728",
+      pmcid: "PMC8950379",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8950379/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8950379/pdf/",
     },
     {
       slug: "eftekhari-breathing-kyphosis-2024",
@@ -151,6 +178,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Telerehabilitation-based respiratory and corrective exercises improve thoracic kyphosis in elderly populations.",
       confidence: 0.8,
+      doi: "10.1186/s12877-024-04779-8",
+      pmcid: "PMC10918978",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10918978/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10918978/pdf/",
     },
     // Lumbar Spine and Core
     {
@@ -162,6 +193,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG study of core exercises in chronic LBP patients. Bird dog: 29% nEMG erector spinae. Curl-up: 48-50% nEMG rectus abdominis. All exercises well-tolerated.",
       confidence: 0.85,
+      doi: "10.3390/ijerph16193509",
+      pmid: "31547140",
+      pmcid: "PMC6801665",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6801665/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6801665/pdf/",
     },
     {
       slug: "puntumetakul-core-adim-2021",
@@ -172,6 +208,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT with 12-month follow-up showing ADIM-based core stabilization reduces lumbar segmental translation more than general strengthening.",
       confidence: 0.85,
+      doi: "10.3390/ijerph18157811",
+      pmcid: "PMC8345381",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8345381/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8345381/pdf/",
     },
     {
       slug: "guo-core-training-types-2025",
@@ -182,6 +222,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review and meta-analysis comparing core training types for chronic nonspecific low back pain. Motor control exercises effective.",
       confidence: 0.85,
+      doi: "10.3389/fphys.2025.1672010",
+      pmcid: "PMC12571568",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12571568/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12571568/pdf/",
     },
     {
       slug: "kim-lumbar-stabilization-emg-2016",
@@ -192,6 +236,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG analysis of trunk muscle activation during graded lumbar stabilization exercises including bird dog and dead bug progressions.",
       confidence: 0.8,
+      doi: "10.1016/j.pmrj.2016.05.017",
+      pmid: "27317910",
     },
     {
       slug: "fernandez-rodriguez-pilates-lbp-2022",
@@ -202,6 +248,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Network meta-analysis: Pilates has highest likelihood (93% for pain, 98% for disability) of reducing chronic low back pain.",
       confidence: 0.9,
+      doi: "10.2519/jospt.2022.10671",
+      pmid: "35722759",
     },
     // Shoulder Girdle
     {
@@ -213,6 +261,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG study showing prone horizontal abduction with ER achieves optimal UT/MT (0.43) and UT/LT (0.30) activation ratios.",
       confidence: 0.85,
+      doi: "10.1097/PHM.0000000000002394",
+      pmid: "38261765",
     },
     {
       slug: "andersen-scapular-intensity-2012",
@@ -223,6 +273,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Scapular muscle activation study at various intensities. Push-up plus activates serratus anterior highly with favorable LT/UT ratio.",
       confidence: 0.8,
+      doi: "10.1519/jsc.0b013e31823f8d24",
     },
     {
       slug: "kibler-scapular-rehab-2008",
@@ -233,6 +284,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG analysis of exercises for early-phase scapular rehabilitation. Push-up plus addresses winging and promotes upward rotation.",
       confidence: 0.85,
+      doi: "10.1177/0363546508316281",
+      fulltextUrl: "http://journal.ajsm.org/cgi/content/abstract/36/9/1789",
     },
     {
       slug: "mulroy-shoulder-sci-2020",
@@ -243,6 +296,11 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "Clinical guideline on shoulder pain management. ER strengthening prevents superior humeral head migration and reduces impingement.",
       confidence: 0.85,
+      doi: "10.46292/sci2603-186",
+      pmid: "33192046",
+      pmcid: "PMC7640906",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640906/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640906/pdf/",
     },
     {
       slug: "escamilla-shoulder-rehab-2009",
@@ -253,6 +311,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive review of shoulder muscle EMG during common rehabilitation exercises. Foundational reference for exercise selection.",
       confidence: 0.9,
+      doi: "10.2165/00007256-200939080-00004",
+      pmid: "19769415",
     },
     // ── Shoulder Anatomy & Biomechanics Evidence (OpenEvidence verified) ──
     {
@@ -264,6 +324,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "3D continuous moment arm maps for shoulder muscles. Reveals biphasic function of supraspinatus and plane-dependent roles of rotator cuff.",
       confidence: 0.9,
+      doi: "10.1016/j.jbiomech.2025.112561",
+      pmid: "39946823",
     },
     {
       slug: "bacle-infraspinatus-teres-2017",
@@ -274,6 +336,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Fresh cadaver dissection study detailing anatomy and relations of infraspinatus and teres minor. Confirms origins, insertions, and nerve supply.",
       confidence: 0.9,
+      doi: "10.1007/s00276-016-1707-9",
     },
     {
       slug: "sakoma-deltoid-segments-2011",
@@ -284,6 +347,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Identifies seven anatomical segments of the deltoid based on intramuscular tendon distribution. Key reference for deltoid functional anatomy.",
       confidence: 0.85,
+      doi: "10.1111/j.1469-7580.2010.01325.x",
+      pmid: "21118198",
+      pmcid: "PMC3042752",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3042752/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3042752/pdf/",
     },
     {
       slug: "hik-shoulder-moment-arms-2019",
@@ -294,6 +362,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of glenohumeral muscle moment arms. Clarifies primary/secondary roles for shoulder extension, adduction, and internal rotation.",
       confidence: 0.9,
+      doi: "10.1111/joa.12903",
+      pmid: "30411350",
+      pmcid: "PMC6284439",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6284439/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6284439/pdf/",
     },
     {
       slug: "pearl-shoulder-emg-1992",
@@ -304,6 +377,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Classic EMG analysis of shoulder muscles across planes and cones of motion. Defines primary/secondary roles for flexion, abduction, and rotation.",
       confidence: 0.85,
+      doi: "10.1097/00003086-199211000-00015",
+      pmid: "1395280",
     },
     {
       slug: "johnson-trapezius-anatomy-1994",
@@ -314,6 +389,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Detailed anatomy and biomechanical analysis of the three functional parts of the trapezius. Key reference for scapular movement roles.",
       confidence: 0.9,
+      doi: "10.1016/0268-0033(94)90057-4",
+      pmid: "23916077",
     },
     {
       slug: "williams-scapulothoracic-1999",
@@ -324,6 +401,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive anatomy of the scapulothoracic articulation including muscle attachments, innervation, and blood supply of all scapular muscles.",
       confidence: 0.9,
+      doi: "10.1097/00003086-199902000-00027",
+      pmid: "10078149",
     },
     {
       slug: "beheiry-pec-major-innervation-2012",
@@ -334,6 +413,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Anatomical study of pectoralis major innervation. Confirms clavicular head: lateral pectoral nerve (C5-C7); sternal head: medial and lateral pectoral nerves (C6-T1).",
       confidence: 0.85,
+      doi: "10.1097/SAP.0b013e318212f3d9",
+      pmid: "21587039",
     },
     {
       slug: "reinold-rotator-cuff-emg-2004",
@@ -344,6 +425,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG analysis: side-lying ER achieves infraspinatus 62% MVIC, teres minor 67% MVIC. Key dosing reference for rotator cuff exercises.",
       confidence: 0.9,
+      doi: "10.2519/jospt.2004.34.7.385",
     },
     {
       slug: "hawkes-glenohumeral-emg-2018",
@@ -354,6 +436,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG patterns during dynamic shoulder elevation. Confirms rotator cuff stabilizer roles during flexion and abduction.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0211800",
+      pmcid: "PMC6368381",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368381/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368381/pdf/",
     },
     {
       slug: "lafrance-rotator-cuff-fitt-2024",
@@ -364,6 +450,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Motor control exercises show moderate-certainty evidence for superior outcomes vs nonspecific exercises. Disability reduction SMD: -0.29 (short) and -0.33 (medium term).",
       confidence: 0.9,
+      doi: "10.2519/jospt.2024.12453",
     },
     {
       slug: "hopewell-grasp-2021",
@@ -374,6 +461,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Multicentre RCT: progressive resistance training focusing on ER, flexion, and abduction is core component of evidence-based shoulder rehabilitation.",
       confidence: 0.95,
+      doi: "10.7326/ACPJ202112210-137",
+      pmid: "34871052",
     },
     {
       slug: "berckmans-scapular-emg-2021",
@@ -384,6 +473,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Fine-wire EMG of scapular rehab exercises. Rhomboid major activation: lawnmower 59% MVIC, robbery 66% MVIC. Key reference for scapular exercise progression.",
       confidence: 0.9,
+      doi: "10.1177/03635465211025002",
     },
     // ── Knee Anatomy & Biomechanics Evidence (OpenEvidence verified) ──────
     {
@@ -395,6 +485,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive anatomy of quadriceps including rectus femoris dual head origin, vasti attachments, and extensor apparatus.",
       confidence: 0.9,
+      doi: "10.1007/s11999-009-1052-y",
+      pmid: "19690926",
+      pmcid: "PMC2772911",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2772911/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2772911/pdf/",
     },
     {
       slug: "grob-vm-vi-interaction-2018",
@@ -405,6 +500,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "VMO/VML subdivision, VM-VI interaction, and extensor apparatus. VMO fiber orientation 46-52° medially vs 15-18° for VML.",
       confidence: 0.9,
+      doi: "10.1007/s00167-016-4396-3",
+      pmid: "28124107",
     },
     {
       slug: "olewnik-quadriceps-heads-2021",
@@ -415,6 +512,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cadaveric study showing additional quadriceps heads present in 64.1% of limbs. Challenges traditional four-head model.",
       confidence: 0.85,
+      doi: "10.1080/1091367X.2021.2005602",
+      pmid: "36060895",
+      pmcid: "PMC9439261",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439261/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439261/pdf/",
     },
     {
       slug: "buford-knee-rotation-moment-arms-2001",
@@ -425,6 +527,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Rotational moment arms at 30° flexion: BF long head 18.5-31.5 mm, BF short head 14.7-27.9 mm, semimembranosus 10.1-11.6 mm, semitendinosus 6.8-9.0 mm.",
       confidence: 0.9,
+      doi: "10.1016/s0968-0160(01)00106-5",
+      pmid: "11706692",
     },
     {
       slug: "farfan-hamstring-innervation-2024",
@@ -435,6 +539,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hamstring innervation patterns: BF long head 1-2 tibial branches, BF short head single common fibular branch, semitendinosus always 2 branches.",
       confidence: 0.9,
+      doi: "10.1007/s00276-024-03371-4",
     },
     {
       slug: "nyland-popliteus-2005",
@@ -445,6 +550,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Popliteus anatomy, function (knee unlocking, IR, posterolateral stabilization), and rehabilitation considerations.",
       confidence: 0.9,
+      doi: "10.2519/jospt.2005.35.3.165",
+      pmid: "15839310",
     },
     {
       slug: "jeon-popliteus-nerve-artery-2022",
@@ -455,6 +562,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Popliteus innervation: 90% tibial nerve alone, 10% tibial+sciatic. Blood supply: inferior medial genicular artery (90%), posterior tibial artery (65%).",
       confidence: 0.85,
+      doi: "10.1155/2022/6980471",
+      pmid: "35047639",
+      pmcid: "PMC8763497",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8763497/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8763497/pdf/",
     },
     {
       slug: "flaxman-knee-muscle-roles-2017",
@@ -465,6 +577,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "VL and VM act as general joint stabilizers with activation independent of moment direction. TFL secondary role in knee extension.",
       confidence: 0.9,
+      doi: "10.1249/MSS.0000000000001125",
+      pmid: "27755353",
     },
     {
       slug: "flaxman-knee-synergies-2021",
@@ -475,6 +589,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Quadriceps co-activation particularly important for supporting knee against abduction and rotation loads. Medial hamstrings provide rotational stability.",
       confidence: 0.9,
+      doi: "10.1016/j.jelekin.2020.102506",
+      pmid: "33271472",
     },
     {
       slug: "escamilla-squat-biomechanics-2001",
@@ -485,6 +601,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Squat biomechanics: PF and TF forces increase with flexion. 0-50° minimal forces (early rehab). Parallel squat for healthy knees. Deep squats may increase meniscal/ligament injury potential.",
       confidence: 0.9,
+      doi: "10.1097/00005768-200101000-00020",
+      pmid: "11194098",
+      fulltextUrl: "https://journals.lww.com/acsm-msse/Fulltext/2001/01000/Knee_biomechanics_of_the_dynamic_squat_exercise.20.aspx",
     },
     {
       slug: "escamilla-cruciate-loading-2012",
@@ -495,6 +614,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "ACL loading: OKC higher than CKC. ACL loaded less at 50-100° knee angles. Forward trunk tilt reduces ACL loading. PCL loading hierarchy established.",
       confidence: 0.9,
+      doi: "10.1177/0954411912451839",
+      pmid: "23025167",
     },
     {
       slug: "muyor-squat-lunge-emg-2020",
@@ -505,6 +626,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Monopodal squat: significantly higher EMG activity than lateral step-up and forward lunge in all muscles (d > 0.6). VL and VM highest activity.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0230841",
+      pmid: "32236133",
+      pmcid: "PMC7112217",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7112217/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7112217/pdf/",
     },
     {
       slug: "andersen-therapeutic-vs-heavy-2006",
@@ -515,6 +641,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Quad activation 67-79% MVIC during squats. Heavy resistance (>60% MVIC) needed for hypertrophy. Conventional therapeutic exercises (<35% MVIC) insufficient.",
       confidence: 0.9,
+      doi: "10.1093/ptj/86.5.683",
+      fulltextUrl: "http://www.ptjournal.org/cgi/content/abstract/86/5/683",
     },
     {
       slug: "gryzlo-knee-rehab-emg-1994",
@@ -525,6 +653,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "VM and VL significantly more active during last 15° of extension. Hamstrings significantly less active than quadriceps during all squat phases.",
       confidence: 0.85,
+      doi: "10.2519/jospt.1994.20.1.36",
+      pmid: "8081408",
     },
     {
       slug: "lawford-cochrane-knee-oa-2024",
@@ -535,6 +665,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane review: exercise safe for knee OA with no increase in pain or disease progression. Benefits sustained 2-6 months after treatment ends.",
       confidence: 0.95,
+      doi: "10.1071/HC24182",
+      pmid: "39704766",
+      fulltextUrl: "https://doi.org/10.1071/hc24182",
     },
     {
       slug: "yan-knee-oa-exercise-modalities-2025",
@@ -545,6 +678,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Network meta-analysis: aerobic exercise highest probability of benefit for knee OA. 12-week programs show consistent mid-term benefits. Adverse events minor.",
       confidence: 0.95,
+      doi: "10.1136/bmj-2025-085242",
+      pmid: "41093618",
+      pmcid: "PMC12522397",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12522397/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12522397/pdf/",
     },
     {
       slug: "zebis-acl-exercise-emg-2019",
@@ -555,6 +693,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cook hip lift: highest hamstring activity (>60% MVIC ST and BF). Bodyweight exercises inadequately progress hamstring activity but successfully progress quads.",
       confidence: 0.85,
+      doi: "10.1097/phm.0000000000001232",
+      pmcid: "PMC6824507",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6824507/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6824507/pdf/",
     },
     {
       slug: "hegyi-hamstring-hd-emg-2019",
@@ -565,6 +707,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "HD-EMG hamstring exercises: leg curls 40-54% MVIC (eccentric), 69-85% (concentric). Hip extension only BF-dominant exercise. Proximal-distal patterns exercise-dependent.",
       confidence: 0.9,
+      doi: "10.1111/sms.13303",
+      pmid: "30230042",
     },
     // ── Lumbar Spine Anatomy & Biomechanics Evidence (OpenEvidence verified) ──
     {
@@ -576,6 +720,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Reappraises lumbar multifidus anatomy: two distinct bundles — one from mammillary process/lateral sacral crest, another pennate bundle from thoracolumbar fascia.",
       confidence: 0.9,
+      doi: "10.1002/ca.70091",
+      pmid: "41665122",
     },
     {
       slug: "bogduk-lumbar-innervation-1983",
@@ -586,6 +732,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Definitive mapping of lumbar spine innervation. Multifidus: medial branches; iliocostalis: lateral branches; longissimus: intermediate branches of dorsal rami.",
       confidence: 0.95,
+      doi: "10.1097/00007632-198304000-00009",
+      pmid: "6226119",
     },
     {
       slug: "bogduk-erector-spinae-model-1992",
@@ -596,6 +744,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Thoracic fibers of ES contribute 50% of total extensor moment at L4-L5; multifidus 20%. At upper lumbar levels, thoracic fibers contribute 70-86%.",
       confidence: 0.9,
+      doi: "10.1097/00007632-199208000-00007",
+      pmid: "1523493",
     },
     {
       slug: "phillips-ql-biomechanics-2008",
@@ -606,6 +756,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "QL contributes <10% of extensor and lateral bending moments compared to ES and multifidus. Modest direct action on lumbar spine.",
       confidence: 0.9,
+      doi: "10.1243/09544119jeim266",
     },
     {
       slug: "urquhart-abdominal-morphology-2005",
@@ -616,6 +767,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "TrA fascicle orientation: horizontal upper, increasing inferomedial lower. IO separable into two layers. TrA vertical TLF attachment averages 5.2 cm.",
       confidence: 0.9,
+      doi: "10.1016/j.clinbiomech.2004.11.007",
     },
     {
       slug: "hodges-iap-stiffness-2003",
@@ -626,6 +778,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "In vivo porcine study: TrA and diaphragm contraction increases intervertebral stiffness and reduces relative displacement. Mechanistic basis for IAP stabilization.",
       confidence: 0.9,
+      doi: "10.1097/01.brs.0000096676.14323.25",
     },
     {
       slug: "tayashiki-bracing-vs-hollowing-2016",
@@ -636,6 +789,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Bracing generates IAP 116.4±15.0 mmHg vs hollowing 9.9±4.5 mmHg. IO highest activity during IAP generation tasks.",
       confidence: 0.85,
+      doi: "10.1055/s-0035-1559771",
+      pmid: "26509386",
     },
     {
       slug: "bojairami-tlf-iap-stability-2022",
@@ -646,6 +801,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "TLF contributes 75% stability individually; synergistic activation of all tissues reaches 93%. IAP and muscle coordination provide mechanical contribution to stiffness control.",
       confidence: 0.85,
+      doi: "10.1097/BRS.0000000000004223",
+      pmid: "34545044",
+      fulltextUrl: "http://escholarship.mcgill.ca/downloads/np193g16p",
     },
     {
       slug: "cresswell-perturbation-iap-1994",
@@ -656,6 +814,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "TrA is the first muscle active during unexpected ventral loading. Foundational evidence for anticipatory postural adjustments.",
       confidence: 0.9,
+      doi: "10.1007/bf00228421",
     },
     {
       slug: "garcia-jaen-plank-hollowing-2020",
@@ -666,6 +825,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Plank with hollowing: total intensity significantly greater (p<0.001, ES=3.01). IO (ES=2.0-2.3), EO (ES=1.0-1.4), lumbar ES (ES=0.6) all increased.",
       confidence: 0.85,
+      doi: "10.3390/ijerph17207410",
+      pmid: "33053717",
+      pmcid: "PMC7600276",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7600276/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7600276/pdf/",
     },
     {
       slug: "mcgill-lumbar-kinetics-1991",
@@ -676,6 +840,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Large obliques dominate over small spinal rotators. Portions of ES have appreciable torque potential about all three orthopedic axes.",
       confidence: 0.9,
+      doi: "10.1097/00007632-199107000-00021",
+      pmid: "1925758",
     },
     {
       slug: "anders-trunk-force-directions-2018",
@@ -686,6 +852,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Force direction angles: RA ±14°, EO ±32°, IO ±47°, iliocostalis ~±90° from sagittal plane.",
       confidence: 0.85,
+      doi: "10.1016/j.humov.2018.06.012",
+      pmid: "29960185",
     },
     {
       slug: "mueller-stabilization-dose-response-2020",
@@ -696,6 +864,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "20-30 min training duration elicits largest effect (moderate quality). 3-5x/week largest effect (low quality). Effect sizes: d=1.80 pain, d=1.70 disability.",
       confidence: 0.9,
+      doi: "10.1038/s41598-020-73954-9",
+      pmid: "33037280",
+      pmcid: "PMC7547082",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7547082/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7547082/pdf/",
     },
     {
       slug: "sedlmayr-hip-flexor-revision-2022",
@@ -706,6 +879,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Psoas tendon inserts separately from iliacus into crest on lesser trochanter. Iliacus inserts fleshly. Challenges traditional 'iliopsoas' model.",
       confidence: 0.85,
+      doi: "10.1002/ar.24769",
+      pmid: "34569157",
     },
     {
       slug: "skyrme-psoas-rotation-1999",
@@ -716,6 +891,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "In anatomical position, psoas produces hip flexion without rotational component. With hip abducted, produces flexion, adduction, and lateral rotation.",
       confidence: 0.85,
+      doi: "10.1002/(SICI)1098-2353(1999)12:4<264::AID-CA4>3.0.CO;2-L",
+      pmid: "10398385",
     },
     // ── Hip Anatomy & Biomechanics Evidence (OpenEvidence verified) ───────
     {
@@ -727,6 +904,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Major re-evaluation: superior 3/4 inserts primarily into gluteal tuberosity via plate-like tendon, not primarily IT tract. Inferior portion terminates at lateral femoral intermuscular septum.",
       confidence: 0.9,
+      doi: "10.1038/s41598-025-05361-x",
+      pmid: "40593049",
+      pmcid: "PMC12214855",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12214855/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12214855/pdf/",
     },
     {
       slug: "neumann-hip-kinesiology-2010",
@@ -737,6 +919,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive hip muscle kinesiology. Definitive reference for muscle roles in flexion, extension, abduction, adduction, and rotation.",
       confidence: 0.95,
+      doi: "10.2519/jospt.2010.3025",
+      pmid: "20118525",
     },
     {
       slug: "flack-hip-abductor-anatomy-2014",
@@ -747,6 +931,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus medius and minimus: four anatomical compartments each with differential function. Three origin sites for glut med. Distinct innervation branches per region.",
       confidence: 0.9,
+      doi: "10.1002/ca.22248",
+      pmid: "23625344",
     },
     {
       slug: "yoo-short-lateral-rotators-2015",
@@ -757,6 +943,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive appraisal of piriformis, obturator internus/externus, gemelli, and quadratus femoris. Origins, insertions, innervation, and functional roles.",
       confidence: 0.9,
+      doi: "10.1002/ca.22568",
+      pmid: "26032283",
     },
     {
       slug: "takizawa-adductor-magnus-innervation-2014",
@@ -767,6 +955,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Adductor portion of adductor magnus receives dual innervation (obturator + sciatic) in >90% of cases. Challenges traditional single-nerve model.",
       confidence: 0.9,
+      doi: "10.1002/ca.22274",
+      pmid: "23813615",
     },
     {
       slug: "collings-gluteal-forces-2023",
@@ -777,6 +967,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteal force data: single-leg RDL — glut max 500-655 N, glut med 283-405 N, glut min 267-389 N. 12RM load increases peak forces by 28-150 N.",
       confidence: 0.9,
+      doi: "10.1249/MSS.0000000000003091",
+      pmid: "36918403",
     },
     {
       slug: "giphart-pectineus-piriformis-emg-2012",
@@ -787,6 +979,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Piriformis: highest activation during prone heel squeeze (24.3% MVC) and single-leg hip thrust (35.7% MVC). Pectineus functions as hip stabilizer during rotation.",
       confidence: 0.9,
+      doi: "10.1177/0363546512443812",
+      pmid: "22523373",
     },
     {
       slug: "kim-deep-gluteal-mri-2025",
@@ -797,6 +991,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "fMRI: ABD-ER most effective for all gluteals — TFL 17.8%, glut min 18.1%, piriformis 23.8%, gemelli 18.7-21.4%. Higher activation than clamshell or reverse clamshell.",
       confidence: 0.85,
+      doi: "10.1249/01.mss.0001159448.86162.5e",
     },
     {
       slug: "philippon-glut-med-rehab-2011",
@@ -807,6 +1002,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Phase-based gluteus medius rehab progression. Phase I: bridges/step-ups. Phase II: clamshells/wall-sliding. Phase III: single-leg exercises/prone heel squeeze.",
       confidence: 0.9,
+      doi: "10.1177/0363546511406848",
     },
     {
       slug: "brosseau-ottawa-panel-hip-oa-2016",
@@ -817,6 +1013,8 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "Grade A evidence: 8-24 weeks progressive strength training, 2-3 sessions/week. ≥15% improvement threshold for clinically meaningful outcomes.",
       confidence: 0.9,
+      doi: "10.1016/j.apmr.2016.09.135",
+      pmid: "27932265",
     },
     {
       slug: "rostron-gluteal-hypertrophy-2022",
@@ -827,6 +1025,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "12-week targeted resistance produces gluteus minimus hypertrophy (0.06 cm³/kg, p=0.025) in hip OA patients. First evidence of gluteal hypertrophy from targeted exercise in OA.",
       confidence: 0.85,
+      doi: "10.21203/rs.3.rs-1809492/v1",
+      fulltextUrl: "https://figshare.com/articles/journal_contribution/Effects_of_a_targeted_resistance_intervention_compared_to_a_sham_intervention_on_gluteal_muscle_hypertrophy_fatty_infiltration_and_strength_in_people_with_hip_osteoarthritis_analysis_of_secondary_outcomes_from_a_randomised_clinical_trial/21443844",
     },
     // ── Cervical Spine Anatomy & Biomechanics Evidence (OpenEvidence verified) ──
     {
@@ -838,6 +1038,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Longus colli has complex three-part fascicular anatomy (superior oblique, vertical, inferior oblique). Spans multiple segments.",
       confidence: 0.9,
+      doi: "10.1016/j.msksp.2017.10.005",
+      pmid: "29107220",
     },
     {
       slug: "cagnie-dcf-mri-2010",
@@ -848,6 +1050,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Longus capitis: 11.1% CSA increase at C0-C1 during CCF. Longus colli: 17.4% CSA increase at C2-C3. Differential activation patterns confirmed.",
       confidence: 0.9,
+      doi: "10.1016/j.jmpt.2010.03.010",
     },
     {
       slug: "falla-dcf-emg-2003",
@@ -858,6 +1061,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Linear relationship between pressure levels (22-30 mmHg) and deep cervical flexor EMG amplitude. Foundational CCF biofeedback reference.",
       confidence: 0.95,
+      doi: "10.1093/ptj/83.10.899",
+      fulltextUrl: "http://www.ptjournal.org/cgi/content/abstract/83/10/899",
     },
     {
       slug: "falla-dcf-pain-correlation-2012",
@@ -868,6 +1073,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "DCF training increases activation and correlates with pain reduction. 10 reps × 10 sec holds at progressive pressure targets. 6-week minimum program.",
       confidence: 0.9,
+      doi: "10.1097/ajp.0b013e31823e9378",
     },
     {
       slug: "karahan-suboccipital-morphometry-2025",
@@ -878,6 +1084,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cadaveric morphometry of all four suboccipital muscles. Confirms individual origins, insertions, and variations.",
       confidence: 0.85,
+      doi: "10.1016/j.msksp.2025.103414",
+      pmid: "40961650",
     },
     {
       slug: "nolan-cervical-extensors-1988",
@@ -888,6 +1096,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Semispinalis capitis and cervicis: primary cervical extensors with greatest force-generating capacity.",
       confidence: 0.9,
+      doi: "10.1097/00007632-198801000-00003",
+      pmid: "3381146",
     },
     {
       slug: "kwon-splenius-innervation-2020",
@@ -898,6 +1108,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Splenius capitis innervation: dorsal rami C3-C5. Splenius cervicis: dorsal rami C5-C7. Clinical implications for botulinum toxin injections.",
       confidence: 0.85,
+      doi: "10.1002/ca.23553",
+      pmid: "31894602",
     },
     {
       slug: "olinger-scalene-rotation-2010",
@@ -908,6 +1120,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Scalenes produce ipsilateral rotation in addition to flexion and lateral flexion. Individual muscle-specific origins confirmed.",
       confidence: 0.85,
+      doi: "10.1016/j.jmpt.2010.08.015",
+      pmid: "21036281",
     },
     {
       slug: "tang-cervical-kinematics-2021",
@@ -918,6 +1132,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "C1-C2 accounts for ~70% of total cervical rotation (obliquus capitis inferior). In vivo 3D kinematics with CBCT.",
       confidence: 0.9,
+      doi: "10.1097/BRS.0000000000004231",
+      pmid: "34593735",
     },
     {
       slug: "dezoete-neck-exercise-nma-2020",
@@ -928,6 +1144,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Network meta-analysis of 40 RCTs. Mindfulness-based exercises (yoga/Pilates/tai chi/qigong) show superior pain reduction (SMD -0.84).",
       confidence: 0.95,
+      doi: "10.1136/bmjopen-2019-034846",
+      pmcid: "PMC7239534",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239534/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239534/pdf/",
     },
     {
       slug: "price-neck-exercise-delphi-2021",
@@ -938,6 +1158,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "International Delphi study: intensity of effort, frequency, and repetitions most important dosing variables (88-96% agreement).",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0253523",
+      pmcid: "PMC8248695",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8248695/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8248695/pdf/",
     },
     {
       slug: "prodoehl-longus-colli-force-direction-2025",
@@ -948,6 +1172,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Ipsilateral oblique force direction in sitting enhances longus colli activation. Progression for CCF training beyond supine.",
       confidence: 0.85,
+      doi: "10.1016/j.msksp.2025.103269",
+      pmid: "39862671",
     },
     {
       slug: "sremakaew-sensorimotor-rehab-2023",
@@ -958,6 +1184,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Adding JPS/oculomotor + balance exercises to manual therapy: medium to large effect sizes for proprioception, balance, and long-term pain reduction.",
       confidence: 0.85,
+      doi: "10.1016/j.msksp.2022.102690",
     },
     // Hip and Pelvis
     {
@@ -968,6 +1195,8 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "VA clinical practice guideline for non-surgical management of hip and knee OA. Supports hip abductor/extensor and quadriceps strengthening.",
       confidence: 0.9,
+      doi: "10.1016/j.ijotn.2020.100840",
+      pmid: "33461941",
     },
     {
       slug: "cibulka-hip-oa-cpg-2017",
@@ -978,6 +1207,8 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "Clinical practice guideline for hip OA. Flexibility exercises and hip ROM improvement essential for function.",
       confidence: 0.9,
+      doi: "10.2519/jospt.2017.0301",
+      pmid: "28566053",
     },
     {
       slug: "moreside-hip-rom-2012",
@@ -988,6 +1219,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Three interventions for hip ROM improvement. Limited hip mobility affects lumbar spine mechanics.",
       confidence: 0.8,
+      doi: "10.1519/JSC.0b013e31824f2351",
+      pmid: "22344062",
+      fulltextUrl: "https://journals.lww.com/nsca-jscr/Fulltext/2012/05000/Hip_Joint_Range_of_Motion_Improvements_Using_Three.14.aspx",
     },
     {
       slug: "hayashi-pstr-hip-2022",
@@ -998,6 +1232,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "PSTR exercises including pelvic tilts significantly improve pain (NRS) and function (Harris Hip Score) even in severe hip OA.",
       confidence: 0.8,
+      doi: "10.1080/03007995.2022.2088716",
     },
     // Knee
     {
@@ -1009,6 +1244,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Comprehensive NEJM review of knee OA. Quadriceps strengthening fundamental for management.",
       confidence: 0.95,
+      doi: "10.1007/s40883-021-00226-x",
+      pmid: "35958164",
+      pmcid: "PMC9365234",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9365234/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9365234/pdf/",
     },
     {
       slug: "zeng-exercise-knee-oa-2022",
@@ -1019,6 +1259,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Review of benefits and mechanisms of exercise for knee OA. Supports combined quad and posterior chain strengthening.",
       confidence: 0.85,
+      doi: "10.3390/ijms232314953",
+      pmid: "36499280",
+      pmcid: "PMC9740663",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9740663/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9740663/pdf/",
     },
     {
       slug: "roos-neuromuscular-2025",
@@ -1029,6 +1274,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Practical guide for neuromuscular exercise in knee/hip OA. Addresses proprioceptive deficits and ADL function.",
       confidence: 0.85,
+      doi: "10.1097/WNR.0000000000002248",
+      pmid: "41817454",
     },
     // Ankle and Foot
     {
@@ -1040,6 +1287,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Clinical guidance on ankle sprain management including resisted exercises for restoring ROM and strength.",
       confidence: 0.85,
+      pmid: "41533404",
     },
     {
       slug: "aafp-ankle-recovery-2025",
@@ -1049,6 +1297,7 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "AAFP patient guideline for ankle sprain recovery. Supports resisted dorsiflexion/plantarflexion and eversion/inversion strengthening.",
       confidence: 0.8,
+      pmid: "41533405",
     },
     {
       slug: "zhang-ankle-instability-2025",
@@ -1059,6 +1308,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Meta-analysis showing long-term multifaceted exercise including proprioceptive training has superior efficacy for chronic ankle instability.",
       confidence: 0.85,
+      doi: "10.1038/s41598-025-95896-w",
+      pmid: "40188228",
+      pmcid: "PMC11972327",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11972327/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11972327/pdf/",
     },
     // Integration / Low Back Pain
     {
@@ -1070,6 +1324,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of exercise interventions for lower back pain. Supports pelvic tilts and multimodal approaches.",
       confidence: 0.85,
+      doi: "10.3389/fnhum.2025.1721182",
+      pmid: "41625548",
+      pmcid: "PMC12857311",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12857311/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12857311/pdf/",
     },
     // ── Ankle Evidence (OpenEvidence verified) ────────────────────────────
     {
@@ -1081,6 +1340,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG: seated toe raises 11% MVIC, prone pumps 38%, resistance band PF 45%, single-leg heel raise 112%, single-leg jump 129% MVIC.",
       confidence: 0.9,
+      doi: "10.1177/1941738111416911",
+      pmcid: "PMC3445221",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445221/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445221/pdf/",
     },
     {
       slug: "borreani-unstable-ankle-emg-2013",
@@ -1091,6 +1354,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Unipedal stance on soft surface with resistance: highest EMG for tibialis anterior, peroneus longus, and soleus. Peroneus longus 25% MVIC on wobble board.",
       confidence: 0.85,
+      doi: "10.1016/j.gaitpost.2013.08.006",
+      pmid: "23999147",
     },
     {
       slug: "wagemans-ankle-reinjury-2022",
@@ -1101,6 +1366,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Exercise therapy reduces re-injury prevalence at 12 months vs usual care. Bracing reduces recurrent sprain by 60% (OR: 0.60).",
       confidence: 0.9,
+      doi: "10.1371/journal.pone.0262023",
+      pmid: "35134061",
+      pmcid: "PMC8824326",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8824326/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8824326/pdf/",
     },
     // ── Elbow Evidence (OpenEvidence verified) ────────────────────────────
     {
@@ -1112,6 +1382,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Three flexors show situation-dependent activation. Brachialis and brachioradialis: consistent positive linear relationship. Biceps often most active when others are least active.",
       confidence: 0.9,
+      doi: "10.1152/jn.1989.62.6.1201",
+      pmid: "2600619",
+      fulltextUrl: "http://intl-jn.physiology.org/cgi/content/abstract/62/6/1201",
     },
     {
       slug: "marcolin-curl-variants-emg-2018",
@@ -1122,6 +1395,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EZ-bar curl: higher activation of both biceps and brachioradialis throughout ROM. Barbell: higher brachioradialis concentric. Dumbbell: lowest overall.",
       confidence: 0.85,
+      doi: "10.7717/peerj.5165",
+      pmid: "30013836",
+      pmcid: "PMC6047503",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6047503/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6047503/pdf/",
     },
     {
       slug: "karanasios-lateral-elbow-2021",
@@ -1132,6 +1410,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review: exercise better than passive interventions for lateral elbow tendinopathy. Effects are small but significant (VAS SMD -0.63, strength SMD 1.05).",
       confidence: 0.9,
+      doi: "10.1136/bjsports-2020-102525",
+      pmid: "33148599",
     },
     // ── Wrist Evidence (OpenEvidence verified) ────────────────────────────
     {
@@ -1143,6 +1423,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Wrist extensors show high co-contraction ratios (2.28 ± 2.04) during flexion. Vulnerability to overuse during dynamic tasks.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2020.109908",
+      pmid: "32636014",
     },
     {
       slug: "shimose-wrist-extension-grip-2011",
@@ -1153,6 +1435,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "30 reps at 70% MVC, 5 days/week for 8 weeks significantly increases grip strength by improving extensor activation balance.",
       confidence: 0.85,
+      doi: "10.1007/s00421-010-1675-4",
+      pmid: "20931218",
     },
     // ── Hand Evidence (OpenEvidence verified) ─────────────────────────────
     {
@@ -1164,6 +1448,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Large effect on grip strength (Hedges' g = 0.44, CI 0.23-0.64). Greater effects in older adults (g = 0.97). 2-3x/week optimal.",
       confidence: 0.9,
+      doi: "10.3390/jcm14196882",
+      pmcid: "PMC12524766",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12524766/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12524766/pdf/",
     },
     {
       slug: "brosseau-hand-oa-guidelines-2018",
@@ -1174,6 +1462,8 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "46 positive-grade recommendations for combined ROM + isotonic + isometric + functional exercise programs for hand OA.",
       confidence: 0.9,
+      doi: "10.1177/0269215518780973",
+      pmid: "29911409",
     },
     // ── Thoracic Spine Evidence (OpenEvidence verified) ───────────────────
     {
@@ -1185,6 +1475,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Longissimus/iliocostalis thoracis: 64.9 ± 27.1% MVC during prone extension. Dynamic-static performance increases lumbar but not thoracic activity.",
       confidence: 0.9,
+      doi: "10.1186/1471-2474-14-204",
+      pmid: "23834759",
+      pmcid: "PMC3716991",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3716991/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3716991/pdf/",
     },
     {
       slug: "lee-thoracic-multifidus-rotation-2005",
@@ -1195,6 +1490,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Longissimus increases with ipsilateral rotation at T5, decreases with contralateral. Multifidus controls coupling between rotation and lateral flexion T8-T11.",
       confidence: 0.9,
+      doi: "10.1097/01.brs.0000158956.77897.ec",
+      pmid: "15834328",
     },
     {
       slug: "cornwall-transversospinal-morphology-2011",
@@ -1205,6 +1502,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Multifidus/rotatores: 89% Type I fibers, multipennate. No discrete cleavage planes between them. Fine-tuning role for segmental stabilization.",
       confidence: 0.9,
+      doi: "10.1097/BRS.0b013e3181f79629",
+      pmid: "21242870",
     },
     {
       slug: "de-troyer-intercostal-action-2005",
@@ -1215,6 +1514,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "External intercostals: inspiratory advantage greatest in dorsal rostral interspaces. Internal intercostals: expiratory advantage greatest caudally. Parasternal portions inspiratory.",
       confidence: 0.95,
+      doi: "10.1152/physrev.00007.2004",
+      pmid: "15788709",
     },
     // ── EMG Verification of Exercise Muscle Roles (OpenEvidence 2026-03-29) ──
     // File 1: exercise-muscle-role-audit-response.md
@@ -1227,6 +1528,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus maximus activity remained consistent across knee angles during bridge; hamstring activity varied with knee position.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0000000000002747",
+      pmid: "30102684",
     },
     {
       slug: "khosrokiani-core-stabilization-2021",
@@ -1237,6 +1540,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Bird dog had lowest local-to-global muscle ratio (L/G = 1.21). Quantifies core muscle activation hierarchy during stabilization exercises.",
       confidence: 0.85,
+      doi: "10.1177/19417381211015225",
+      pmid: "34060953",
+      pmcid: "PMC9112702",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9112702/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9112702/pdf/",
     },
     {
       slug: "ekstrom-core-rehab-emg-2007",
@@ -1247,6 +1555,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Bird dog gluteus maximus >45% MVIC (strengthening potential); standard bridge <45% MVIC (endurance/stabilization). Key threshold reference.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2007.2471",
+      pmid: "18560185",
     },
     {
       slug: "luk-bridge-suspension-2021",
@@ -1257,6 +1567,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Core muscle activity comparison between floor and suspension bridge exercises. Multifidus co-stabilizer role confirmed during bridging.",
       confidence: 0.85,
+      doi: "10.3390/ijerph18115908",
+      pmcid: "PMC8199398",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8199398/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8199398/pdf/",
     },
     {
       slug: "el-melhat-bridge-hip-position-2022",
@@ -1267,6 +1581,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip position significantly alters trunk muscle EMG during bridging. Gluteus medius active as stabilizer with position-dependent activation.",
       confidence: 0.85,
+      doi: "10.1016/j.jmpt.2024.08.010",
     },
     {
       slug: "choi-bridge-abduction-2015",
@@ -1277,6 +1592,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Adding isometric hip abduction with Thera-Band significantly increased gluteus maximus activity during bridge while maintaining hamstring/erector spinae levels.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2014.09.005",
     },
     {
       slug: "willcox-clamshell-hip-angle-2013",
@@ -1287,6 +1603,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus medius activation greatest at 60° hip flexion during clamshell. Neutral pelvis produces significantly greater activation than reclined.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2013.4004",
     },
     {
       slug: "nam-sidelying-hip-exercises-2025",
@@ -1297,6 +1614,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Compares EMG of three sidelying hip exercises in females with hip abductor weakness. Gluteus maximus 25-34% MVIC during clamshell variations.",
       confidence: 0.85,
+      doi: "10.1016/j.jmpt.2025.09.016",
     },
     {
       slug: "mcbeth-hip-emg-runners-2012",
@@ -1307,6 +1625,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip muscle EMG during sidelying exercises in runners. Clamshell gluteus medius 32.6-54.4% MVIC depending on variation.",
       confidence: 0.85,
+      doi: "10.4085/1062-6050-47.1.15",
+      pmid: "22488226",
+      pmcid: "PMC3418110",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3418110/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3418110/pdf/",
     },
     {
       slug: "selkowitz-gluteal-tfl-2013",
@@ -1317,6 +1640,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Fine-wire EMG: clamshell produced highest gluteal-to-TFL activation index (115). Key reference for selective gluteal recruitment.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2013.4116",
+      pmid: "23160432",
     },
     {
       slug: "sidorkewicz-glutmed-tfl-2014",
@@ -1327,6 +1652,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Varying hip flexion angle did not significantly affect gluteus medius-to-TFL ratio. Hip orientation has limited effect on muscle selectivity.",
       confidence: 0.85,
+      doi: "10.1016/j.clinbiomech.2014.09.002",
     },
     {
       slug: "barrett-squat-depth-sex-2023",
@@ -1337,6 +1663,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Squat depth and sex differences in knee kinematics and muscle activation. Vastus lateralis/medialis 40-70% MVIC during bodyweight squat.",
       confidence: 0.85,
+      doi: "10.1115/1.4062330",
+      pmid: "37066975",
     },
     {
       slug: "gorsuch-squat-depth-emg-2013",
@@ -1347,6 +1675,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Rectus femoris and erector spinae significantly higher during parallel vs partial squats. Depth affects multiarticular muscle recruitment.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0b013e31828055d5",
+      pmid: "23254544",
+      fulltextUrl: "https://journals.lww.com/nsca-jscr/Fulltext/2013/09000/The_Effect_of_Squat_Depth_on_Multiarticular_Muscle.33.aspx",
     },
     {
       slug: "coratella-squat-variations-2021",
@@ -1357,6 +1688,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Rectus femoris 18-35% MVIC across squat variations. Gluteal and thigh activation patterns differ by squat type.",
       confidence: 0.85,
+      doi: "10.3390/ijerph18020772",
+      pmid: "33477561",
+      pmcid: "PMC7831128",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7831128/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7831128/pdf/",
     },
     {
       slug: "mccurdy-glutmax-hamstring-2018",
@@ -1367,6 +1703,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus maximus EMG significantly greater than hamstring EMG during bilateral squats (40.3% vs 24.4% MVIC).",
       confidence: 0.85,
+      doi: "10.1519/JSC.0000000000001893",
+      pmid: "29076958",
     },
     {
       slug: "caterisano-squat-depth-2002",
@@ -1377,6 +1715,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus maximus relative contribution increased with depth — partial (16.9%), parallel (28.0%), full (35.4% MVIC).",
       confidence: 0.85,
+      doi: "10.1519/1533-4287(2002)016<0428:teobsd>2.0.co;2",
+      pmid: "12173958",
     },
     {
       slug: "roldan-jimenez-sit-to-stand-emg-2015",
@@ -1387,6 +1727,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Quadriceps (vastus medialis) 30-50% MVIC during sit-to-stand. Biceps femoris 15-25% MVIC. Erector spinae 20-35% MVIC.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0141675",
+      pmid: "26506612",
+      pmcid: "PMC4624782",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624782/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624782/pdf/",
     },
     {
       slug: "goulart-sit-to-stand-pattern-1999",
@@ -1397,6 +1742,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Tibialis anterior, abdominals, and SCM activate first as preparatory postural muscles; quadriceps and hamstrings form executional pattern time-locked to seat-off.",
       confidence: 0.85,
+      doi: "10.1016/s1388-2457(99)00109-1",
+      pmid: "10479031",
     },
     {
       slug: "cuesta-vargas-sit-to-stand-water-2013",
@@ -1407,6 +1754,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Neuromuscular comparison of sit-to-stand in water vs dry land. Tibialis anterior significantly active during forward-lean phase.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2013.06.001",
+      pmid: "23834813",
     },
     {
       slug: "hebert-losier-heel-raise-2012",
@@ -1417,6 +1766,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Knee straight: gastrocnemius and soleus co-primary (~23% MVIC each). Knee bent: soleus dominant (27% vs 18%). 4-5% change may not be clinically significant.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0b013e31824435cf",
+      pmid: "22190157",
     },
     {
       slug: "hali-triceps-surae-motor-units-2019",
@@ -1427,6 +1778,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Medial and lateral gastrocnemius motor unit recruitment thresholds higher and firing rates lower when knee flexed; soleus unaffected by knee position.",
       confidence: 0.85,
+      doi: "10.1007/s00221-019-05570-7",
+      pmid: "31292695",
     },
     {
       slug: "okubo-psoas-slr-2021",
@@ -1437,6 +1790,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Fine-wire EMG: psoas major significantly higher than rectus femoris during late concentric, hold, and early eccentric SLR phases.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2021.102588",
     },
     {
       slug: "juan-hip-flexor-activation-2024",
@@ -1447,6 +1801,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: ">60% MVIC iliopsoas activity during ASLR at ~60° hip flexion. Key dosing reference for hip flexor rehabilitation exercises.",
       confidence: 0.85,
+      doi: "10.3390/jcm13216617",
+      pmid: "39518756",
+      pmcid: "PMC11546833",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11546833/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11546833/pdf/",
     },
     {
       slug: "thongduang-quad-emg-okc-ckc-2022",
@@ -1457,6 +1816,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Quadriceps EMG comparison between OKC and CKC exercises. Rectus femoris ~40-50% MVIC during straight leg raise.",
       confidence: 0.85,
+      doi: "10.3390/ijerph191912929",
+      pmid: "36232225",
+      pmcid: "PMC9566802",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9566802/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9566802/pdf/",
     },
     {
       slug: "beales-slr-motor-control-2009",
@@ -1467,6 +1831,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Greater ipsilateral obliquus internus and externus activation during ASLR. Respiratory fluctuation of IAP maintained during core activation.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2009.05.003",
+      pmid: "19541502",
     },
     {
       slug: "hu-psoas-hip-flexor-2011",
@@ -1477,6 +1843,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Psoas active both ipsilaterally and contralaterally during ASLR — functions primarily as lumbar spine stabilizer rather than pure hip flexor.",
       confidence: 0.85,
+      doi: "10.1007/s00586-010-1508-5",
+      pmcid: "PMC3082678",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082678/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082678/pdf/",
     },
     {
       slug: "serner-hip-adduction-emg-2014",
@@ -1487,6 +1857,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Sidelying hip adduction 14-48% nEMG; Copenhagen adduction 108% nEMG. Copenhagen produces highest adductor longus activation.",
       confidence: 0.85,
+      doi: "10.1136/bjsports-2012-091746",
+      pmid: "23511698",
     },
     {
       slug: "kato-adductor-hip-angle-2019",
@@ -1497,6 +1869,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Adductor longus more active at hip-extended positions; adductor magnus recruited regardless of hip position.",
       confidence: 0.85,
+      doi: "10.1007/s00421-019-04150-5",
+      pmid: "31030295",
     },
     {
       slug: "benn-adductor-magnus-emg-2018",
@@ -1507,6 +1881,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Fine-wire EMG: adductor magnus has functionally distinct proximal and distal portions with different activation patterns.",
       confidence: 0.85,
+      doi: "10.1002/ca.23068",
+      pmid: "29520841",
     },
     {
       slug: "ganderton-glutmed-glutmin-rehab-2017",
@@ -1517,6 +1893,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Gluteus medius anterior fibers active during internal rotation tasks. Key reference for hip abductor rehabilitation exercise selection.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2017.7229",
+      pmid: "29034801",
+      fulltextUrl: "https://www.jospt.org/doi/pdf/10.2519/jospt.2017.7229",
     },
     {
       slug: "hatefi-squat-hip-rotation-2020",
@@ -1527,6 +1906,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip rotation during squat alters muscle activation patterns. Gluteus medius anterior fibers active during IR-related tasks.",
       confidence: 0.85,
+      doi: "10.1055/a-1152-5028",
+      pmid: "32485776",
     },
     {
       slug: "martins-tfl-medial-rotation-2022",
@@ -1537,6 +1918,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "TFL myoelectric activity increased ~90% at 90° hip flexion with increasing medial rotation torque but showed no systematic increase at 0° or 45°.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2022.110944",
     },
     {
       slug: "coratella-overhead-press-2022",
@@ -1547,6 +1929,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Behind-neck press enhances medial and posterior deltoid vs front press. Barbell vs machine differences in selective muscle recruitment.",
       confidence: 0.85,
+      doi: "10.3389/fphys.2022.825880",
+      pmid: "35936912",
+      pmcid: "PMC9354811",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9354811/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9354811/pdf/",
     },
     {
       slug: "paoli-shoulder-rom-emg-2010",
@@ -1557,6 +1944,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Widest ROM (180° elbow extension) increased EMG of all muscles except middle trapezius and teres minor during overhead press.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0b013e3181d756ea",
+      pmid: "20508462",
+      fulltextUrl: "http://nsca.allenpress.com/nscaonline/?request=get-abstract&issn=1064-8011&volume=024&issue=06&page=1578",
     },
     {
       slug: "saeterbakken-shoulder-press-2013",
@@ -1567,6 +1957,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Standing dumbbell press ~8-15% higher anterior/medial deltoid vs seated. Standing requires greater stability, ~7-10% lower 1RM.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0b013e318276b873",
+      pmid: "23096062",
+      fulltextUrl: "https://journals.lww.com/nsca-jscr/Fulltext/2013/07000/Effects_of_Body_Position_and_Loading_Modality_on.10.aspx",
     },
     {
       slug: "blazkiewicz-overhead-equipment-2022",
@@ -1577,6 +1970,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Equipment weight and type significantly affect shoulder and back muscle activation patterns during overhead press.",
       confidence: 0.85,
+      doi: "10.3390/s22249762",
+      pmcid: "PMC9781216",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9781216/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9781216/pdf/",
     },
     {
       slug: "williams-unstable-overhead-2020",
@@ -1587,6 +1984,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Unstable conditions significantly increased serratus anterior, rhomboids, and latissimus dorsi activation during overhead press.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0000000000002660",
+      pmid: "29889776",
     },
     {
       slug: "cools-rotator-cuff-exercises-2020",
@@ -1597,6 +1996,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Middle trapezius activation ranged from <10% to >20% MVIC depending on exercise progression for degenerative rotator cuff tears.",
       confidence: 0.85,
+      doi: "10.1016/j.jse.2020.03.019",
+      pmid: "32951644",
     },
     {
       slug: "greis-subscapularis-liftoff-1996",
@@ -1607,6 +2008,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Subscapularis significantly more active (~70% MVC) during lift-off test; pectoralis major more active during resisted IR with arm in front.",
       confidence: 0.85,
+      doi: "10.1177/036354659602400505",
+      pmid: "8883677",
     },
     {
       slug: "ginn-subscapularis-ir-2017",
@@ -1617,6 +2020,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Belly press test was the only task where subscapularis was significantly higher than all other internal rotators.",
       confidence: 0.85,
+      doi: "10.1016/j.jsams.2016.10.018",
     },
     {
       slug: "suenaga-ir-arm-positions-2003",
@@ -1627,6 +2031,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Subscapularis highest (81.7% MMT) during resistive IR at zero-position; only 2-12% MMT with arm at side or 90° abduction.",
       confidence: 0.85,
+      doi: "10.1016/s1058-2746(03)00169-1",
+      pmid: "14564277",
     },
     {
       slug: "pennock-bear-hug-positions-2011",
@@ -1637,6 +2043,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Arm and shoulder position significantly influence subscapularis and pectoralis major activation during clinical shoulder tests.",
       confidence: 0.85,
+      doi: "10.1177/0363546510392710",
+      pmid: "21300808",
     },
     {
       slug: "gaudet-isokinetic-shoulder-2018",
@@ -1647,6 +2055,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Isokinetic ER: infraspinatus high peak activity (+36.5% MVA); supraspinatus moderate to high; middle and posterior deltoids higher peak activity.",
       confidence: 0.85,
+      doi: "10.1080/02640414.2017.1347697",
     },
     {
       slug: "park-pushup-plus-serratus-2014",
@@ -1657,6 +2066,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Wall push-up plus 27.55% RVC vs knee push-up plus 39.48% vs standard push-up plus 77.09% for serratus anterior activation.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0000000000000443",
+      pmid: "24618724",
+      fulltextUrl: "https://journals.lww.com/nsca-jscr/Fulltext/2014/09000/Comparison_of_Pectoralis_Major_and_Serratus.18.aspx",
     },
     {
       slug: "marcolin-pushup-variants-2015",
@@ -1667,6 +2079,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Wall push-ups show minimal core activation (10-20% MVIC). Pectoralis major 30-50% MVIC, triceps 30-40% MVIC across variants.",
       confidence: 0.85,
+      doi: "10.4085/1062-6050-50.9.09",
+      pmid: "26488636",
+      pmcid: "PMC4732391",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732391/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732391/pdf/",
     },
     {
       slug: "youdas-pushup-comparison-2010",
@@ -1677,6 +2094,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Triceps brachii ~30-40% MVIC during push-up variants. Muscle activation patterns compared across push-up devices.",
       confidence: 0.85,
+      doi: "10.1519/jsc.0b013e3181cc23b0",
+      fulltextUrl: "https://journals.lww.com/nsca-jscr/fulltext/2010/12000/comparison_of_muscle_activation_patterns_during.21.aspx",
     },
     {
       slug: "kang-pushup-plus-meta-2019",
@@ -1687,6 +2106,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Meta-analysis of push-up plus EMG: serratus anterior activation patterns across variations. Plus component essential for serratus recruitment.",
       confidence: 0.90,
+      doi: "10.4085/1062-6050-237-18",
+      pmid: "31584855",
+      pmcid: "PMC6863690",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6863690/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6863690/pdf/",
     },
     {
       slug: "herrington-press-up-progressions-2015",
@@ -1697,6 +2121,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Serratus anterior showed greatest activation across all press-up exercises; plus component essential for optimal recruitment.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2014.10.002",
+      fulltextUrl: "https://salford-repository.worktribe.com/preview/3629432/2024.04.29.24306539v1.full.pdf",
     },
     {
       slug: "ho-pushup-upper-extremity-2019",
@@ -1707,6 +2133,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Upper extremity muscle demand comparison across push-up variants. Quantifies triceps and pectoralis activation hierarchy.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2018.12.008",
+      pmid: "30660043",
     },
     {
       slug: "lang-shoulder-rotator-elevation-2021",
@@ -1717,6 +2145,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "External rotator muscle activity increased with higher elevation angles. Position does not dramatically change primary activation pattern.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2021.110503",
+      pmid: "34020122",
     },
     {
       slug: "juker-psoas-curl-up-1998",
@@ -1727,6 +2157,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Psoas activation <10% MVC during curl-ups; significantly lower than sit-ups (15-35% MVC). Key evidence for curl-up safety.",
       confidence: 0.85,
+      doi: "10.1097/00005768-199802000-00020",
+      pmid: "9502361",
+      fulltextUrl: "https://journals.lww.com/acsm-msse/Fulltext/1998/02000/Quantitative_intramuscular_myoelectric_activity_of.20.aspx",
     },
     // ── Functional Task Biomechanics (OpenEvidence 2026-03-29) ──
     // File 2: functional-task-biomechanics-response.md
@@ -1739,6 +2172,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Defines functional ROM requirements for upper extremity and trunk joints during activities of daily living.",
       confidence: 0.85,
+      doi: "10.1016/j.gaitpost.2019.02.024",
+      pmid: "30875600",
     },
     {
       slug: "gates-rom-upper-limb-adl-2015",
@@ -1749,6 +2184,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Upper extremity ROM for ADL: 0-121° elbow flexion, -40° to 38° wrist flexion-extension. Establishes functional threshold values.",
       confidence: 0.85,
+      doi: "10.2147/MDER.S83756",
+      pmid: "26185472",
+      pmcid: "PMC4501219",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4501219/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4501219/pdf/",
     },
     {
       slug: "skals-lifting-loading-2021",
@@ -1759,6 +2199,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Load mass has the most substantial effect on L5-S1 compression forces. Asymmetric lifting significantly increases mediolateral shear forces.",
       confidence: 0.85,
+      doi: "10.1016/j.apergo.2021.103491",
+      pmid: "34126573",
     },
     {
       slug: "forman-functional-capacity-2017",
@@ -1769,6 +2211,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "AHA scientific statement: handgrip dynamometry correlates with upper- and lower-body 1RM. Grip strength integral to functional capacity evaluation.",
       confidence: 0.90,
+      doi: "10.1161/CIR.0000000000000483",
+      pmid: "28336790",
+      pmcid: "PMC7252210",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7252210/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7252210/pdf/",
     },
     {
       slug: "mcgrath-grip-mortality-2018",
@@ -1779,6 +2226,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Every 5-kg decrease in handgrip strength associated with 20% increased ADL limitation odds for eating, 14% for walking and bathing.",
       confidence: 0.85,
+      doi: "10.1249/MSS.0000000000001683",
+      pmid: "29933349",
+      pmcid: "PMC9487904",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9487904/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9487904/pdf/",
     },
     {
       slug: "dodds-grip-normative-2014",
@@ -1789,6 +2241,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Peak grip strength: 51 kg males (ages 29-39), 31 kg females (ages 26-42). Weak grip prevalence reaches 23-27% by age 80.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0113637",
+      pmid: "25474696",
+      pmcid: "PMC4256164",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256164/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256164/pdf/",
     },
     {
       slug: "steiber-grip-normative-german-2016",
@@ -1799,6 +2256,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Normative handgrip strength values for the German population. Predicts disability, morbidity, and mortality in older adults.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0163917",
+      pmid: "27701433",
+      pmcid: "PMC5049850",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5049850/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5049850/pdf/",
     },
     {
       slug: "namdari-shoulder-rom-adl-2012",
@@ -1809,6 +2271,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Overhead shirt donning: 121° ± 6.7° shoulder flexion and 128° ± 7.9° abduction. Defines functional shoulder ROM thresholds.",
       confidence: 0.85,
+      doi: "10.1016/j.gaitpost.2012.11.005",
+      pmid: "23218727",
     },
     {
       slug: "rundquist-shoulder-kinematics-adl-2009",
@@ -1819,6 +2283,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hand-behind-back: 85° ± 24° glenohumeral IR. Washing contralateral axilla: 46° ± 12° humerothoracic elevation.",
       confidence: 0.85,
+      doi: "10.1097/PHM.0b013e3181ae0733",
+      pmid: "19620827",
     },
     {
       slug: "ogawa-hand-behind-back-2025",
@@ -1829,6 +2295,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hand-behind-back requires complex coordinated shoulder extension, abduction, and IR with scapular anterior tilt. Almost all participants exhibit elbow flexion.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2025.112733",
+      pmid: "40359619",
     },
     {
       slug: "johnson-shoulder-rom-outcomes-2023",
@@ -1839,6 +2307,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Patients reaching above belt line or thoracic spine have significantly improved functional outcomes. Hand-behind-back reach as clinical marker.",
       confidence: 0.85,
+      doi: "10.1016/j.jse.2023.02.133",
     },
     {
       slug: "magermans-upper-extremity-adl-2005",
@@ -1849,6 +2318,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Quantifies upper extremity motion requirements during ADL including dressing and personal hygiene tasks.",
       confidence: 0.85,
+      doi: "10.1016/j.clinbiomech.2005.02.006",
+      pmid: "15890439",
     },
     {
       slug: "fujita-dressing-stroke-2018",
@@ -1859,6 +2330,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Stroke dressing independence cut-off values: 4 pts hip flexion, 4 pts knee extension, 3 pts abdominal strength on MMT.",
       confidence: 0.85,
+      doi: "10.1080/10749357.2018.1426240",
+      pmid: "29334332",
     },
     {
       slug: "sah-hip-rom-real-life-2022",
@@ -1869,6 +2342,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Tying shoes: 126.1° maximum hip flexion. Sitting to standing: 103.0°. Getting on/off toilet: 112.6° hip flexion.",
       confidence: 0.85,
+      doi: "10.1016/j.arth.2022.03.052",
+      pmid: "35307530",
     },
     {
       slug: "tanaka-hip-rom-satisfaction-2022",
@@ -1879,6 +2354,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Post-THA optimal satisfaction cutoff: 110° hip flexion and 35-40° external rotation. Critical thresholds for lower body dressing.",
       confidence: 0.85,
+      doi: "10.1007/s11999-012-2533-y",
+      pmcid: "PMC3528933",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3528933/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3528933/pdf/",
     },
     {
       slug: "sadeh-sit-to-stand-biomechanics-2023",
@@ -1889,6 +2368,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Older adults demonstrate higher trunk flexion and greater postural sway during sit-to-stand. Age-related neuromuscular control differences quantified.",
       confidence: 0.85,
+      doi: "10.1016/j.clinbiomech.2023.106068",
+      pmid: "37639862",
     },
     {
       slug: "smith-assistive-devices-tha-2016",
@@ -1899,6 +2380,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane review of assistive devices and hip precautions after THA. 50% of patients stop using prescribed adaptive equipment by 6 weeks.",
       confidence: 0.95,
+      doi: "10.1002/14651858.CD010815.pub2",
+      pmid: "27374001",
+      pmcid: "PMC6458012",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6458012/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6458012/pdf/",
     },
     {
       slug: "mcnaught-hip-precaution-compliance-2022",
@@ -1909,6 +2395,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Patient compliance with hip precautions 12 weeks post-THA. Evidence for modified precaution protocols.",
       confidence: 0.85,
+      doi: "10.1007/s00402-021-03837-9",
     },
     {
       slug: "goeb-modified-precautions-tha-2021",
@@ -1919,6 +2406,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Modified precautions focusing on avoiding combined flexion + adduction + IR allow faster return to lower body dressing after THA.",
       confidence: 0.85,
+      doi: "10.1016/j.arth.2021.03.038",
+      pmid: "33840540",
     },
     {
       slug: "king-bathroom-transfers-2017",
@@ -1929,6 +2418,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Vertical grab bars and wall touch result in safest bathing transfers. Greater instability in older adults during standing shower transfers.",
       confidence: 0.85,
+      doi: "10.5014/ajot.2017.027136",
+      pmid: "29135427",
     },
     {
       slug: "alcazar-sit-to-stand-power-2021",
@@ -1939,6 +2430,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Minimum relative muscle power: 1.1 W·kg⁻¹ men, 1.0 W·kg⁻¹ women for five sit-to-stand reps. Functional threshold for chair transfers.",
       confidence: 0.85,
+      doi: "10.1249/MSS.0000000000002717",
+      pmid: "34107507",
     },
     {
       slug: "burton-floor-rise-biomechanics-2023",
@@ -1949,6 +2442,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Sit technique most common (60% of older adults) requiring highest hip and knee flexion for floor transfers.",
       confidence: 0.85,
+      doi: "10.3390/ijerph20043507",
+      pmid: "36834201",
+      pmcid: "PMC9958992",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9958992/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9958992/pdf/",
     },
     {
       slug: "schwickert-floor-rise-strategies-2016",
@@ -1959,6 +2457,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Leg extension power significantly correlated with floor rise performance (r=0.725). Median rise time: 5.7s older vs 3.7s younger adults.",
       confidence: 0.85,
+      doi: "10.1007/s40520-015-0397-1",
+      pmid: "26130427",
     },
     {
       slug: "araujo-sitting-rising-mortality-2025",
@@ -1969,6 +2469,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "SRT predicts natural mortality (HR 3.84) and CV mortality (HR 6.05). Significant predictor of all-cause and cardiovascular mortality.",
       confidence: 0.85,
+      doi: "10.1093/eurjpc/zwaf325",
+      pmid: "40569873",
     },
     {
       slug: "brito-sitting-rising-predictor-2014",
@@ -1979,6 +2481,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Each unit increase in SRT score confers 21% improvement in survival. Scored 0-10; points subtracted for each hand/knee support.",
       confidence: 0.85,
+      doi: "10.1177/2047487312471759",
     },
     {
       slug: "burton-floor-rise-interventions-2020",
@@ -1989,6 +2492,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Resistance training shows trend toward floor rise improvement (MD: -0.81[-1.72, 0.09]). Systematic review of floor rise interventions.",
       confidence: 0.90,
+      doi: "10.1007/s40520-019-01459-1",
+      pmid: "31939202",
     },
     {
       slug: "klima-floor-rise-community-2016",
@@ -1999,6 +2504,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "90.6% of community-dwelling older adults use initial roll with asymmetrical squat sequence. Timed supine-to-stand correlates with gait speed (r=-0.61).",
       confidence: 0.85,
+      doi: "10.1123/japa.2015-0081",
+      pmid: "26291641",
     },
     {
       slug: "mann-running-biomechanics-1980",
@@ -2009,6 +2516,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Stance phase: 62% walking, 31% running, 22% sprinting. Posterior calf musculature active through first 80% of running stance.",
       confidence: 0.85,
+      doi: "10.1177/036354658000800510",
+      pmid: "7416353",
+      fulltextUrl: "http://journal.ajsm.org/cgi/content/abstract/8/5/345",
     },
     {
       slug: "willer-running-muscle-groups-2024",
@@ -2019,6 +2529,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip extensor positive work rises superlinearly with speed; becomes biggest energy generator above 5 m/s. Ankle plantar flexors dominate at lower speeds.",
       confidence: 0.85,
+      doi: "10.1111/sms.14690",
+      pmid: "39049546",
     },
     {
       slug: "chen-running-stiffness-2025",
@@ -2029,6 +2541,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Soleus and gastrocnemius lateralis mid-stance activation shows large positive correlations with leg stiffness (r=0.506-0.552) during running.",
       confidence: 0.85,
+      doi: "10.1249/mss.0000000000003794",
     },
     {
       slug: "vernillo-graded-running-2020",
@@ -2039,6 +2552,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Vastus lateralis and tibialis anterior show detectable activity changes at steepest grades and fastest speeds during graded running.",
       confidence: 0.85,
+      doi: "10.1111/sms.13708",
+      pmid: "32396672",
     },
     {
       slug: "alexander-bed-rise-assessment-1992",
@@ -2049,6 +2564,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "BRD scale identifies five key difficulty items: UE pushes, discontinuity, multiple adjustments (shoulder/pelvic + leg), poor heel clearance.",
       confidence: 0.85,
+      doi: "10.1111/j.1532-5415.1992.tb01960.x",
+      pmid: "1607584",
     },
     {
       slug: "kafri-rolling-muscle-activation-2005",
@@ -2059,6 +2576,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Rolling: SCM more enhanced on mobile side; PM larger on stable side; external oblique and rectus femoris contribute. Hemiparetic patients show reduced activation.",
       confidence: 0.85,
+      doi: "10.3233/nre-2005-20208",
+      pmid: "15920304",
     },
     {
       slug: "smith-sit-to-stand-model-2020",
@@ -2069,6 +2588,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Musculoskeletal modeling of sit-to-stand: hip and knee extensors are primary during sitting-to-standing phase of bed mobility.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2019.109451",
+      pmid: "31685221",
+      fulltextUrl: "http://hdl.handle.net/10044/1/74324",
     },
     {
       slug: "vinstrup-patient-transfer-load-2024",
@@ -2079,6 +2601,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Healthcare workers experience nRMS 32.7 (95% CI: 28.9-36.6) during patient transfers — indicating substantial strength required for bed mobility assistance.",
       confidence: 0.85,
+      doi: "10.3389/fpubh.2024.1459595",
+      pmid: "39655249",
+      pmcid: "PMC11625819",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11625819/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11625819/pdf/",
     },
     {
       slug: "dul-shoulder-load-workplace-1988",
@@ -2089,6 +2616,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "At 80° arm elevation: deltoid force ~22% maximum, supraspinatus ~25% maximum, GH joint force ~43% body weight. Endurance time ~5 minutes.",
       confidence: 0.85,
+      doi: "10.1016/0268-0033(88)90057-5",
+      pmid: "23915888",
     },
     {
       slug: "watterworth-overhead-duty-cycle-2025",
@@ -2099,6 +2628,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "MADC for overhead work varies: at 5 N load 0-40%; at 20 N load never exceeds 14%. Ergonomic sweet spot slightly above and forward of shoulder.",
       confidence: 0.85,
+      doi: "10.1016/j.jelekin.2025.103049",
+      pmid: "40845798",
     },
     {
       slug: "cobian-cervical-lumbar-adl-2013",
@@ -2109,6 +2640,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Overhead reaching uses 20-40% of maximum cervical ROM and 40-60% of maximum lumbar ROM. Concurrent spine motion during ADL quantified.",
       confidence: 0.85,
+      doi: "10.1097/brs.0b013e3182a2119c",
     },
     {
       slug: "waersted-overhead-shoulder-disorders-2020",
@@ -2119,6 +2651,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Moderate evidence for severe arm elevation with elbows above shoulder (>90°) and shoulder disorders. Large effects (OR ≥2) at sustained >90° elevation.",
       confidence: 0.90,
+      doi: "10.1007/s00420-020-01551-4",
+      pmid: "32572582",
+      pmcid: "PMC7519900",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7519900/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7519900/pdf/",
     },
     {
       slug: "gill-shoulder-rom-population-2020",
@@ -2129,6 +2666,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Population-based shoulder ROM normative data. Reference values for functional shoulder mobility assessment.",
       confidence: 0.85,
+      doi: "10.1097/00130561-200015020-00005",
     },
     // ── Low-Confidence Exercise Evidence (OpenEvidence 2026-03-29) ──
     // File 3: low-confidence-exercise-evidence-response.md
@@ -2141,6 +2679,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "8-week Copenhagen adduction training increased adductor muscle thickness 17-18% with significant flexibility improvements (+7%).",
       confidence: 0.85,
+      doi: "10.3390/ijerph19116563",
+      pmid: "35682148",
+      pmcid: "PMC9180184",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9180184/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9180184/pdf/",
     },
     {
       slug: "daehlin-copenhagen-loading-2025",
@@ -2151,6 +2694,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Ankle support produces highest hip adductor moment (1.54 Nm/kg). Progressive loading via support location during Copenhagen exercise.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2025.113116",
+      pmid: "41370869",
     },
     {
       slug: "maloy-groin-injuries-2025",
@@ -2161,6 +2706,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Clinical review of groin pain evaluation and management. Active supervised PT including adduction strengthening shows higher return-to-play rates.",
       confidence: 0.85,
+      pmid: "40238976",
     },
     {
       slug: "almeida-groin-pain-cochrane-2013",
@@ -2171,6 +2717,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane review of conservative interventions for exercise-related groin pain. Active treatment recommended over passive modalities.",
       confidence: 0.95,
+      doi: "10.1002/14651858.cd016137",
+      pmcid: "PMC12461783",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12461783/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12461783/pdf/",
     },
     {
       slug: "munoz-nordic-vs-razor-2023",
@@ -2181,6 +2731,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Nordic hamstring exercise produces highest hamstring activation among eccentric exercises. Semitendinosus significantly higher than other exercises.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0293938",
+      pmcid: "PMC10723670",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10723670/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10723670/pdf/",
     },
     {
       slug: "sahinis-hamstring-activation-review-2025",
@@ -2191,6 +2745,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of semitendinosus vs biceps femoris activation differences across hamstring exercises. Exercise-specific activation patterns confirmed.",
       confidence: 0.90,
+      doi: "10.1080/02640414.2025.2486879",
     },
     {
       slug: "van-hooren-hamstring-forces-2022",
@@ -2201,6 +2756,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Peak forces highest in NHE though coinciding with relatively low muscle activation. Greater fascicle lengthening in NHE vs RDL and single-leg deadlift.",
       confidence: 0.85,
+      doi: "10.1111/sms.14158",
+      pmid: "35307884",
+      pmcid: "PMC9314024",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9314024/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9314024/pdf/",
     },
     {
       slug: "guruhan-eccentric-hamstring-2021",
@@ -2211,6 +2771,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Compares eccentric hamstring exercise activation patterns. Most effective for biceps femoris short head and semitendinosus strength.",
       confidence: 0.85,
+      doi: "10.1177/1941738120938649",
+      pmid: "32857686",
+      pmcid: "PMC8167351",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8167351/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8167351/pdf/",
     },
     {
       slug: "bourne-hamstring-exercise-selection-2017",
@@ -2221,6 +2786,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Exercise selection significantly impacts hamstring muscle activation patterns. Nordic hamstring may be superior for hamstring injury prevention.",
       confidence: 0.85,
+      doi: "10.1136/bjsports-2015-095739",
+      pmid: "27467123",
     },
     {
       slug: "sarabon-nordic-hamstring-variations-2019",
@@ -2231,6 +2798,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Varying lower leg support slope (0°, 20°, 40°) and hip flexion angles (0°, 25°, 50°) allows NHE progression while maintaining torque demands.",
       confidence: 0.85,
+      doi: "10.1371/journal.pone.0223437",
+      pmid: "31644582",
+      pmcid: "PMC6808554",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6808554/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6808554/pdf/",
     },
     {
       slug: "hoogvliet-epicondylitis-2013",
@@ -2241,6 +2813,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Moderate evidence for stretching + strengthening over ultrasound and friction massage for lateral epicondylalgia.",
       confidence: 0.85,
+      doi: "10.1136/bjsports-2012-091990",
+      pmid: "23709519",
     },
     {
       slug: "stasinopoulos-lateral-elbow-2005",
@@ -2251,6 +2825,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Eccentric wrist extensor exercises with elbow extended, forearm pronated. Static stretching 30-45 seconds, 3 reps before and after eccentric exercises.",
       confidence: 0.85,
+      doi: "10.1136/bjsm.2005.019836",
+      pmid: "16306504",
+      pmcid: "PMC1725102",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1725102/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1725102/pdf/",
     },
     {
       slug: "coombes-lateral-epicondylalgia-2013",
@@ -2261,6 +2840,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "8-12 week eccentric loading program shows moderate evidence for lateral epicondylalgia. Physiotherapy superior to injection long-term.",
       confidence: 0.90,
+      doi: "10.1016/j.sjpain.2013.05.001",
+      pmid: "29913915",
     },
     {
       slug: "mcqueen-lateral-elbow-strengthening-2020",
@@ -2271,6 +2852,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "No additional benefit from adding strengthening to education + stretching + activity modification at any timepoint up to 52 weeks.",
       confidence: 0.85,
+      doi: "10.1016/j.jht.2020.10.009",
+      pmid: "33250396",
     },
     {
       slug: "deveza-thumb-oa-conservative-2021",
@@ -2281,6 +2864,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Multimodal treatment (exercises + splint + topical NSAID) produces small-to-medium function improvements at 6-12 weeks for thumb CMC OA.",
       confidence: 0.85,
+      doi: "10.1016/j.joca.2021.07.010",
+      pmid: "34314816",
     },
     {
       slug: "thakker-thumb-cmc-nma-2025",
@@ -2291,6 +2876,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hand exercises reduce short-term pain (VAS -5.0 points) and produce clinically important grip strength improvement (21 pounds) vs control.",
       confidence: 0.90,
+      doi: "10.1097/CORR.0000000000003300",
+      pmid: "39560669",
+      pmcid: "PMC11936637",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11936637/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11936637/pdf/",
     },
     {
       slug: "algar-thumb-cmc-delphi-2022",
@@ -2301,6 +2891,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Delphi consensus on thumb CMC OA treatment. Home program 3x/week for 6-8 weeks, adjusted at week 2 based on response.",
       confidence: 0.85,
+      doi: "10.1016/j.jht.2023.08.008",
     },
     {
       slug: "jenkins-thoracic-kyphosis-2021",
@@ -2311,6 +2902,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Low-to-moderate quality evidence supports structured programs ≤3 months for reducing thoracic hyperkyphosis.",
       confidence: 0.90,
+      doi: "10.1016/j.spinee.2021.12.011",
+      pmid: "34963629",
     },
     {
       slug: "katzman-spine-strengthening-kyphosis-2017",
@@ -2321,6 +2914,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "6-month spine-strengthening program reduced Cobb angle by -3.0° (95% CI -5.2 to -0.8) in older adults with hyperkyphosis.",
       confidence: 0.85,
+      doi: "10.1007/s00198-017-4109-x",
+      pmcid: "PMC5873977",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873977/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873977/pdf/",
     },
     {
       slug: "garber-acsm-exercise-quantity-2011",
@@ -2331,6 +2928,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "ACSM position stand: 10-30 seconds stretching for general populations; older adults may benefit from 30-60 seconds. Foundational dosing reference.",
       confidence: 0.90,
+      doi: "10.1249/MSS.0b013e318213fefb",
+      pmid: "21694556",
     },
     {
       slug: "youdas-calf-stretch-rom-2003",
@@ -2341,6 +2940,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "6-week daily wall stretches (30s to 2 min) showed no effect on ankle dorsiflexion ROM. Challenges common stretching assumptions.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2003.33.7.408",
     },
     {
       slug: "plandowska-hamstring-stretch-lbp-2024",
@@ -2351,6 +2951,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "8-week active hamstring stretching + core stabilization significantly reduced LBP during prolonged sitting.",
       confidence: 0.85,
+      doi: "10.3390/jcm13175048",
+      pmid: "39274261",
+      pmcid: "PMC11396236",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11396236/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11396236/pdf/",
     },
     {
       slug: "iranmanesh-hip-flexor-stretch-lbp-2025",
@@ -2361,6 +2966,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Dynamic hip flexor stretching (5x/week, 8 weeks) in football players with LBP improved hip ROM (ES 3.01-3.06), reduced pain (ES 0.85).",
       confidence: 0.85,
+      doi: "10.1519/00126548-199906000-00021",
     },
     {
       slug: "preece-hip-flexor-pelvic-tilt-2021",
@@ -2371,6 +2977,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Single-session hip flexor stretching produced mean 1.2° reduction in anterior pelvic tilt but no change in lumbar lordosis.",
       confidence: 0.85,
+      doi: "10.1016/j.jmpt.2020.09.006",
+      pmid: "34090549",
     },
     {
       slug: "kelly-rotator-cuff-testing-1996",
@@ -2381,6 +2989,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Subscapularis 40-80% MVIC across positions; highest in lift-off test position (44% active). Manual muscle testing reference for rotator cuff.",
       confidence: 0.85,
+      doi: "10.1177/036354659602400504",
+      pmid: "8883676",
     },
     {
       slug: "decker-subscapularis-rehab-2003",
@@ -2391,6 +3001,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Push-up plus and diagonal exercises produce greater subscapularis activation than traditional IR exercises.",
       confidence: 0.85,
+      doi: "10.1177/03635465030310010601",
+      pmid: "12531769",
+      fulltextUrl: "http://journal.ajsm.org/cgi/content/abstract/31/1/126",
     },
     {
       slug: "maeo-triceps-overhead-hypertrophy-2023",
@@ -2401,6 +3014,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Overhead extension produces 1.5-fold greater long head hypertrophy (+28.5%) vs neutral position (+19.6%) over 12 weeks despite lower loads.",
       confidence: 0.85,
+      doi: "10.1080/17461391.2022.2100279",
+      pmid: "35819335",
+      fulltextUrl: "https://doi.org/10.1080/17461391.2022.2100279",
     },
     {
       slug: "alves-triceps-shoulder-position-2018",
@@ -2411,6 +3027,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Shoulder position significantly affects triceps head activation during dumbbell extensions. Long head preferentially recruited overhead.",
       confidence: 0.85,
+      doi: "10.23736/s0022-4707.17.06849-9",
     },
     {
       slug: "radford-calf-stretch-meta-2006",
@@ -2421,6 +3038,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Meta-analysis: calf stretching increases ankle dorsiflexion by 2-3° across all durations (≤15 min: 2.07°; 15-30 min: 3.03°; >30 min: 2.49°).",
       confidence: 0.90,
+      doi: "10.1136/bjsm.2006.029348",
+      pmcid: "PMC2465055",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2465055/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2465055/pdf/",
     },
     {
       slug: "smith-foam-rolling-dorsiflexion-2019",
@@ -2431,6 +3052,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "6 weeks of static stretching and foam rolling both produce ~18% dorsiflexion improvement; no synergistic combined effect.",
       confidence: 0.85,
+      doi: "10.1249/mss.0000000000001964",
     },
     {
       slug: "dinh-calf-stretch-wb-vs-nwb-2011",
@@ -2441,6 +3063,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Weight-bearing and non-weight-bearing calf stretches equally effective when performed 2x daily for 3 weeks (5 reps × 30 seconds).",
       confidence: 0.85,
+      doi: "10.1055/s-0030-1268505",
     },
     {
       slug: "bader-forearm-rotation-emg-2018",
@@ -2451,6 +3074,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG during maximal isometric forearm pronation and supination. General forearm muscle activation patterns quantified.",
       confidence: 0.85,
+      doi: "10.1016/j.jbiomech.2017.12.011",
+      pmid: "29305049",
     },
     {
       slug: "gordon-forearm-pronation-supination-2004",
@@ -2461,6 +3086,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG activity during maximum isometric pronation and supination. Reference for forearm rotator muscle activation.",
       confidence: 0.85,
+      doi: "10.1016/S0736-0266(03)00115-3",
+      pmid: "14656682",
     },
     // ── Hand Intrinsics & Movement Roles Evidence (OpenEvidence 2026-03-29) ──
     {
@@ -2472,6 +3099,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Revisits interossei anatomy. Palmar interossei: three unipennate muscles adducting fingers 2, 4, 5 toward middle finger. Dorsal interossei: four bipennate muscles abducting fingers.",
       confidence: 0.85,
+      doi: "10.1097/01.PRS.0000024442.72140.56",
+      pmid: "12360058",
     },
     {
       slug: "stamenkovic-adductor-pollicis-pcsa-2014",
@@ -2482,6 +3111,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Oblique head of adductor pollicis has greater PCSA than transverse head, contributing more to force generation during thumb adduction.",
       confidence: 0.85,
+      doi: "10.1002/mus.23933",
     },
     {
       slug: "cooney-thumb-emg-1985",
@@ -2492,6 +3122,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG analysis of thumb muscles during isometric pinch and grasp. Quantifies adductor pollicis, FPB, APB, and FPL activation patterns.",
       confidence: 0.85,
+      doi: "10.1016/s0363-5023(85)80106-4",
+      pmid: "3980932",
     },
     {
       slug: "fox-grip-emg-2019",
@@ -2502,6 +3134,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG analysis of grip mechanics. FDP is the sole muscle crossing the DIP joint, confirming its role as sole DIP flexor.",
       confidence: 0.85,
+      doi: "10.1109/TNSRE.2019.2959449",
+      pmid: "31841415",
     },
     {
       slug: "murai-dip-extension-2012",
@@ -2512,6 +3146,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Intrinsic muscles (lumbricals, interossei) via lateral bands are primary DIP extensors; extensor digitorum cannot fully extend DIP alone.",
       confidence: 0.85,
+      doi: "10.1002/jor.22021",
+      pmid: "22135009",
+      fulltextUrl: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jor.22021",
     },
     {
       slug: "crowley-lumbricals-2021",
@@ -2522,6 +3159,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Challenges traditional view of lumbricals as primary digital extensors. Reviews lumbrical force-generating capacity and functional role.",
       confidence: 0.90,
+      doi: "10.1016/j.jhsa.2020.10.022",
+      pmid: "33328128",
     },
     {
       slug: "johanson-thumb-pinch-2001",
@@ -2532,6 +3171,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Thumb muscle activation patterns during stable and unstable pinch tasks. Adductor pollicis and FPB show differential activation patterns.",
       confidence: 0.85,
+      doi: "10.1053/jhsu.2001.26188",
+      pmid: "11466647",
     },
     {
       slug: "huesler-muscle-synchronization-1998",
@@ -2542,6 +3183,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Motor unit synchronization in hand muscles is task-dependent. Demonstrates functional coupling of intrinsic and extrinsic hand muscles.",
       confidence: 0.85,
+      doi: "10.1097/00001756-199807130-00003",
+      pmid: "9694193",
     },
     {
       slug: "elliott-cervical-extensors-2010",
@@ -2552,6 +3195,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Craniocervical orientation significantly affects cervical extensor activation. Semispinalis capitis preferentially activated during upper cervical extension; T2 shifts at C2-3 (p=0.03).",
       confidence: 0.85,
+      doi: "10.1016/j.apmr.2010.05.014",
     },
     {
       slug: "dugailly-suboccipital-modeling-2011",
@@ -2562,6 +3206,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Musculoskeletal modeling of suboccipital spine muscles. Quantifies moment arms and force-generating capacity of suboccipital muscles.",
       confidence: 0.85,
+      doi: "10.1097/BRS.0b013e3181dc844a",
+      pmid: "21178840",
     },
     // ── Condition-Specific Exercise Evidence (Batch 5 — OpenEvidence 2026-03-29) ──
     // Rotator Cuff / Shoulder Impingement
@@ -2574,6 +3220,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG comparison of full can, empty can, and prone full can exercises. Full can shows superior supraspinatus-to-deltoid ratio with lower middle deltoid activation (52% vs 77% MVIC).",
       confidence: 0.90,
+      doi: "10.1016/s0162-0908(08)79368-1",
     },
     {
       slug: "kijkunasathian-supraspinatus-isolation-2023",
@@ -2584,6 +3231,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Investigates optimal shoulder positions for supraspinatus isolation. Scapular plane with external rotation (full can) produces best supraspinatus-to-deltoid ratio.",
       confidence: 0.85,
+      doi: "10.1186/s12891-023-06372-3",
+      pmid: "37013546",
+      pmcid: "PMC10069100",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10069100/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10069100/pdf/",
     },
     {
       slug: "holmgren-subacromial-exercise-2012",
@@ -2594,6 +3246,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT: eccentric rotator cuff exercises 3×15 reps, 1-2x daily, 12 weeks. Only 20% surgery vs 63% controls (OR 7.7). Constant-Murley improved 24 vs 9 points.",
       confidence: 0.95,
+      doi: "10.1136/bmj.e787",
+      pmid: "22349588",
+      pmcid: "PMC3282676",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282676/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282676/pdf/",
     },
     {
       slug: "dube-fitt-rotator-cuff-2024",
@@ -2604,6 +3261,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Scoping review of FITT parameters for rotator cuff shoulder pain. Typical programs: 2-7x/week, 1-3 sets of 4-30 reps, 4-16 weeks.",
       confidence: 0.90,
+      doi: "10.2519/jospt.2024.12452",
+      pmid: "38832666",
     },
     {
       slug: "thigpen-scapular-kinematics-2006",
@@ -2614,6 +3273,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Full can produces more scapular upward rotation and posterior tilt. Empty can produces more scapular anterior tipping and internal rotation, decreasing subacromial space.",
       confidence: 0.85,
+      doi: "10.4085/1062-6050-50.9.06",
+      pmcid: "PMC4732390",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732390/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732390/pdf/",
     },
     {
       slug: "boettcher-empty-full-can-2009",
@@ -2624,6 +3287,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Neither empty can nor full can tests selectively isolate supraspinatus — 9 other shoulder muscles are equally activated during both tests.",
       confidence: 0.85,
+      doi: "10.1016/j.jsams.2008.09.005",
+      pmid: "19054712",
     },
     {
       slug: "ha-infraspinatus-selective-2013",
@@ -2634,6 +3299,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Identifies positions for selective infraspinatus activation. Sidelying wiper achieves infraspinatus 55.98% MVIC while minimizing middle trapezius and posterior deltoid.",
       confidence: 0.85,
+      doi: "10.4085/1062-6050-48.2.18",
+      pmid: "23675794",
+      pmcid: "PMC3655748",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3655748/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3655748/pdf/",
     },
     {
       slug: "kurokawa-er-pet-imaging-2014",
@@ -2644,6 +3314,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "PET imaging: teres minor more important as external rotator at 90° abduction (TM:infraspinatus ratio 1.21±0.23) vs adduction.",
       confidence: 0.85,
+      doi: "10.1016/j.jse.2013.12.021",
     },
     {
       slug: "yu-prone-er-strategies-2021",
@@ -2654,6 +3325,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Prone ER produces greater muscle activity than seated ER for infraspinatus and posterior deltoid. Position-dependent rotator cuff activation.",
       confidence: 0.85,
+      doi: "10.1016/j.jse.2020.08.031",
+      pmid: "32920111",
     },
     {
       slug: "sung-shoulder-abduction-angle-2026",
@@ -2664,6 +3337,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "At 90° abduction, upper trapezius and serratus anterior significantly increase. Elastic band resistance modulates rotator cuff activation patterns.",
       confidence: 0.85,
+      doi: "10.1038/s41598-025-34767-w",
+      pmid: "41559205",
+      pmcid: "PMC12868783",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12868783/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12868783/pdf/",
     },
     // Patellofemoral Pain
     {
@@ -2675,6 +3353,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "PF forces lowest at lower knee flexion angles (0.6× BW during walking). Comprehensive mapping of PF loading across 35 exercises.",
       confidence: 0.90,
+      doi: "10.1177/03635465231175160",
+      pmcid: "PMC10315869",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10315869/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10315869/pdf/",
     },
     {
       slug: "kernozek-pf-visual-feedback-2020",
@@ -2685,6 +3367,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Reducing knee flexion during squats with visual feedback decreases PF forces by 14.4% (p<0.05). Practical strategy for PFP rehabilitation.",
       confidence: 0.85,
+      doi: "10.1016/j.clinbiomech.2020.105050",
     },
     {
       slug: "chen-pfp-emg-2018",
@@ -2695,6 +3378,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "VMO:VL ratios approaching 1:1 in CKC exercises in PFP patients. Greater VMO and VL activity during weight-bearing vs healthy controls.",
       confidence: 0.85,
+      doi: "10.1016/j.physio.2015.03.1305",
     },
     {
       slug: "irish-vmo-vl-ckc-okc-2010",
@@ -2705,6 +3389,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "CKC exercises produce VMO:VL ratios approaching 1:1, significantly better than OKC exercises. Key reference for PFP exercise selection.",
       confidence: 0.85,
+      doi: "10.3233/ies-1995-5201",
     },
     {
       slug: "tang-vmo-vl-2001",
@@ -2715,6 +3400,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "VMO:VL ratio at 60° knee flexion in CKC exercises — maximum ratio achieved. 60-90° creates greatest PF stress.",
       confidence: 0.85,
+      doi: "10.3233/ies-1995-5201",
     },
     {
       slug: "pereira-pfp-squats-review-2022",
@@ -2725,6 +3411,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review: 0-60° knee flexion range optimal for PFP. Evidence for squat modification strategies to reduce patellofemoral risk.",
       confidence: 0.90,
+      doi: "10.3390/ijerph19159241",
+      pmcid: "PMC9367913",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9367913/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9367913/pdf/",
     },
     {
       slug: "glaviano-pfp-wb-exercises-2022",
@@ -2735,6 +3425,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "PFP patients show greater VMO and VL activity during weight-bearing exercises compared to healthy controls (compensatory pattern).",
       confidence: 0.85,
+      doi: "10.5040/9781718225350.ch-005",
     },
     {
       slug: "miao-vmo-hip-adduction-2015",
@@ -2745,6 +3436,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip adduction during semisquats increases VMO:VL ratio to 1.14:1 — increases VMO without increasing VL activation in PFP patients.",
       confidence: 0.85,
+      doi: "10.1016/s1050-6411(01)00024-4",
     },
     {
       slug: "neal-pfp-best-practice-2024",
@@ -2755,6 +3447,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "APTA 2020 guidelines: hip and quad exercises as primary PFP treatment. High-volume protocols (3×30+ reps, 3x/week) most effective.",
       confidence: 0.90,
+      doi: "10.1680/cbpg.36505",
     },
     {
       slug: "van-der-heijden-pfp-cochrane-2015",
@@ -2765,6 +3458,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane review: exercise reduces activity-related PFP by MD -1.46 (95% CI -2.39 to -0.54). CKC and combined approaches most effective.",
       confidence: 0.95,
+      pmid: "26158920",
     },
     {
       slug: "duong-knee-pain-review-2023",
@@ -2775,6 +3469,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "JAMA review of knee pain evaluation and treatment. Supports exercise-based approaches for PFP and knee OA management.",
       confidence: 0.90,
+      doi: "10.1007/s00402-023-05163-8",
+      pmid: "38142260",
     },
     // Achilles Tendinopathy
     {
@@ -2786,6 +3482,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Compares standard Alfredson (180 reps/day) with lower volume eccentric protocol for Achilles tendinopathy. Both protocols effective.",
       confidence: 0.85,
+      doi: "10.2519/jospt.2014.4720",
     },
     {
       slug: "habets-eccentric-achilles-review-2015",
@@ -2796,6 +3493,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of eccentric exercise for Achilles tendinopathy. Alfredson protocol: 3×15 reps, 2x daily, 12 weeks. Strong evidence for efficacy.",
       confidence: 0.90,
+      doi: "10.1186/s13047-015-0114-5",
+      pmid: "26500703",
+      pmcid: "PMC4617485",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4617485/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4617485/pdf/",
     },
     {
       slug: "van-der-plas-alfredson-5year-2012",
@@ -2806,6 +3508,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "5-year follow-up: Alfredson heel-drop programme shows sustained benefits for midportion Achilles tendinopathy. Long-term outcomes favorable.",
       confidence: 0.90,
+      doi: "10.1136/bjsports-2011-090035",
+      pmid: "22075719",
+      pmcid: "PMC3277725",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3277725/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3277725/pdf/",
     },
     {
       slug: "malliaras-tendinopathy-loading-2013",
@@ -2816,6 +3523,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review comparing loading programmes for Achilles and patellar tendinopathy. Eccentric, HSR, and combined approaches all effective.",
       confidence: 0.90,
+      doi: "10.1007/s40279-013-0019-z",
+      pmid: "23494258",
     },
     {
       slug: "beyer-hsr-vs-eccentric-2015",
@@ -2826,6 +3535,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT: heavy slow resistance and eccentric training equally effective for Achilles tendinopathy. HSR had higher patient satisfaction at 12 weeks.",
       confidence: 0.90,
+      doi: "10.1007/s00167-009-1006-7",
     },
     {
       slug: "martin-achilles-cpg-2018",
@@ -2836,6 +3546,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Clinical practice guideline for Achilles tendinopathy management. Strong recommendation for eccentric and progressive loading exercise.",
       confidence: 0.90,
+      doi: "10.2519/jospt.2018.0302",
+      fulltextUrl: "https://www.jospt.org/doi/pdf/10.2519/jospt.2018.0302",
     },
     {
       slug: "wilson-achilles-exercise-review-2018",
@@ -2846,6 +3558,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of exercise, orthoses, and splinting for Achilles tendinopathy. Exercise is primary intervention with strong evidence base.",
       confidence: 0.90,
+      doi: "10.1136/bjsports-2017-098913",
+      pmid: "30170996",
     },
   ];
 
@@ -2859,6 +3573,11 @@ export async function seedSources() {
         sourceType: s.sourceType,
         description: s.description,
         confidence: s.confidence,
+        doi: (s as any).doi ?? undefined,
+        pmid: (s as any).pmid ?? undefined,
+        pmcid: (s as any).pmcid ?? undefined,
+        fulltextUrl: (s as any).fulltextUrl ?? undefined,
+        pdfUrl: (s as any).pdfUrl ?? undefined,
       },
       create: {
         slug: s.slug,
@@ -2869,6 +3588,11 @@ export async function seedSources() {
         description: s.description,
         status: "reviewed",
         confidence: s.confidence,
+        doi: (s as any).doi ?? undefined,
+        pmid: (s as any).pmid ?? undefined,
+        pmcid: (s as any).pmcid ?? undefined,
+        fulltextUrl: (s as any).fulltextUrl ?? undefined,
+        pdfUrl: (s as any).pdfUrl ?? undefined,
       },
     });
   }

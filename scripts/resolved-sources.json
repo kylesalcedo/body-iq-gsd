@@ -1,0 +1,2384 @@
+[
+  {
+    "slug": "acsm-guidelines-2021",
+    "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.4135/9781412994149.n165"
+  },
+  {
+    "slug": "sun-cervicothoracic-2024",
+    "title": "Effects of Exercise Combined With Cervicothoracic Spine Self-Mobilization on Chronic Non-Specific Neck Pain",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1038/s41598-024-55181-8",
+    "pmcid": "PMC10912754",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10912754/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10912754/pdf/"
+  },
+  {
+    "slug": "gross-neck-exercises-2015",
+    "title": "Exercises for Mechanical Neck Disorders",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "25629215",
+    "doi": "10.1002/14651858.CD004250.pub5",
+    "pmcid": "PMC9508492",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9508492/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9508492/pdf/"
+  },
+  {
+    "slug": "amiri-arimi-deep-flexors-2017",
+    "title": "The Effect of Different Exercise Programs on Size and Function of Deep Cervical Flexor Muscles in Patients With Chronic Nonspecific Neck Pain: A Systematic Review of Randomized Controlled Trials",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1097/phm.0000000000000721"
+  },
+  {
+    "slug": "moon-cervical-muscle-2021",
+    "title": "Effects of Exercise on Cervical Muscle Strength and Cross-Sectional Area in Patients With Thoracic Hyperkyphosis and Chronic Cervical Pain",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1038/s41598-021-83344-4",
+    "pmcid": "PMC7884681",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7884681/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7884681/pdf/"
+  },
+  {
+    "slug": "mueller-neck-dose-response-2023",
+    "title": "Resistance, Motor Control, and Mindfulness-Based Exercises Are Effective for Treating Chronic Nonspecific Neck Pain: A Systematic Review With Meta-Analysis and Dose-Response Meta-Regression",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2023.11820"
+  },
+  {
+    "slug": "cho-thoracic-vs-cervical-2017",
+    "title": "Upper Thoracic Spine Mobilization and Mobility Exercise Versus Upper Cervical Spine Mobilization and Stabilization Exercise in Individuals With Forward Head Posture: A Randomized Clinical Trial",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "29233164",
+    "doi": "10.1186/s12891-017-1889-2",
+    "pmcid": "PMC5727966",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5727966/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5727966/pdf/"
+  },
+  {
+    "slug": "ozdemir-schroth-2023",
+    "title": "A Randomized Controlled Study of the Effect of Functional Exercises on Postural Kyphosis: Schroth-Based Three-Dimensional Exercises Versus Postural Corrective Exercises",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1080/09638288.2022.2083244"
+  },
+  {
+    "slug": "feng-kyphosis-correction-2018",
+    "title": "The Effect of a Corrective Functional Exercise Program on Postural Thoracic Kyphosis in Teenagers: A Randomized Controlled Trial",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1177/0269215517714591"
+  },
+  {
+    "slug": "csepregi-breathing-posture-2022",
+    "title": "Effects of Classical Breathing Exercises on Posture, Spinal and Chest Mobility Among Female University Students Compared to Currently Popular Training Programs",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/ijerph19063728",
+    "pmcid": "PMC8950379",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8950379/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8950379/pdf/"
+  },
+  {
+    "slug": "eftekhari-breathing-kyphosis-2024",
+    "title": "Effects of Telerehabilitation-Based Respiratory and Corrective Exercises Among the Elderly With Thoracic Hyper-Kyphosis: A Clinical Trial",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1186/s12877-024-04779-8",
+    "pmcid": "PMC10918978",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10918978/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10918978/pdf/"
+  },
+  {
+    "slug": "calatayud-core-tolerability-2019",
+    "title": "Tolerability and Muscle Activity of Core Muscle Exercises in Chronic Low-Back Pain",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "31547140",
+    "doi": "10.3390/ijerph16193509",
+    "pmcid": "PMC6801665",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6801665/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6801665/pdf/"
+  },
+  {
+    "slug": "puntumetakul-core-adim-2021",
+    "title": "The Effects of Core Stabilization Exercise With the Abdominal Drawing-in Maneuver Technique Versus General Strengthening Exercise on Lumbar Segmental Motion in Patients With Clinical Lumbar Instability: A Randomized Controlled Trial With 12-Month Follow-Up",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/ijerph18157811",
+    "pmcid": "PMC8345381",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8345381/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8345381/pdf/"
+  },
+  {
+    "slug": "guo-core-training-types-2025",
+    "title": "Effects of Different Types of Core Training on Pain and Functional Status in Patients With Chronic Nonspecific Low Back Pain: A Systematic Review and Meta-Analysis",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3389/fphys.2025.1672010",
+    "pmcid": "PMC12571568",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12571568/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12571568/pdf/"
+  },
+  {
+    "slug": "kim-lumbar-stabilization-emg-2016",
+    "title": "Electromyographic Changes in Trunk Muscles During Graded Lumbar Stabilization Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "27317910",
+    "doi": "10.1016/j.pmrj.2016.05.017"
+  },
+  {
+    "slug": "fernandez-rodriguez-pilates-lbp-2022",
+    "title": "Best Exercise Options for Reducing Pain and Disability in Adults With Chronic Low Back Pain: Pilates, Strength, Core-Based, and Mind-Body. A Network Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "35722759",
+    "doi": "10.2519/jospt.2022.10671"
+  },
+  {
+    "slug": "mendez-rebolledo-scapular-emg-2024",
+    "title": "Comparative Electromyographic Study of Scapular Stabilizing Muscles During Five Main Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "38261765",
+    "doi": "10.1097/PHM.0000000000002394"
+  },
+  {
+    "slug": "andersen-scapular-intensity-2012",
+    "title": "Scapular Muscle Activity From Selected Strengthening Exercises Performed at Low and High Intensities",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1519/jsc.0b013e31823f8d24"
+  },
+  {
+    "slug": "kibler-scapular-rehab-2008",
+    "title": "Electromyographic Analysis of Specific Exercises for Scapular Control in Early Phases of Shoulder Rehabilitation",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1177/0363546508316281",
+    "fulltextUrl": "http://journal.ajsm.org/cgi/content/abstract/36/9/1789"
+  },
+  {
+    "slug": "mulroy-shoulder-sci-2020",
+    "title": "A Primary Care Provider's Guide to Shoulder Pain After Spinal Cord Injury",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "33192046",
+    "doi": "10.46292/sci2603-186",
+    "pmcid": "PMC7640906",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640906/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640906/pdf/"
+  },
+  {
+    "slug": "escamilla-shoulder-rehab-2009",
+    "title": "Shoulder Muscle Activity and Function in Common Shoulder Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "19769415",
+    "doi": "10.2165/00007256-200939080-00004"
+  },
+  {
+    "slug": "axford-shoulder-moment-arms-2025",
+    "title": "Three-Dimensional Continuous Muscle Moment Arm Maps for the Anatomical Shoulder",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "39946823",
+    "doi": "10.1016/j.jbiomech.2025.112561"
+  },
+  {
+    "slug": "bacle-infraspinatus-teres-2017",
+    "title": "Anatomy and Relations of the Infraspinatus and the Teres Minor Muscles: A Fresh Cadaver Dissection Study",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1007/s00276-016-1707-9"
+  },
+  {
+    "slug": "sakoma-deltoid-segments-2011",
+    "title": "Anatomical and Functional Segments of the Deltoid Muscle",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "21118198",
+    "doi": "10.1111/j.1469-7580.2010.01325.x",
+    "pmcid": "PMC3042752",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3042752/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3042752/pdf/"
+  },
+  {
+    "slug": "hik-shoulder-moment-arms-2019",
+    "title": "The Moment Arms of the Muscles Spanning the Glenohumeral Joint: A Systematic Review",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "30411350",
+    "doi": "10.1111/joa.12903",
+    "pmcid": "PMC6284439",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6284439/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6284439/pdf/"
+  },
+  {
+    "slug": "pearl-shoulder-emg-1992",
+    "title": "An Electromyographic Analysis of the Shoulder During Cones and Planes of Arm Motion",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "1395280",
+    "doi": "10.1097/00003086-199211000-00015"
+  },
+  {
+    "slug": "johnson-trapezius-anatomy-1994",
+    "title": "Anatomy and Actions of the Trapezius Muscle",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23916077",
+    "doi": "10.1016/0268-0033(94)90057-4"
+  },
+  {
+    "slug": "williams-scapulothoracic-1999",
+    "title": "Anatomy of the Scapulothoracic Articulation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "10078149",
+    "doi": "10.1097/00003086-199902000-00027"
+  },
+  {
+    "slug": "beheiry-pec-major-innervation-2012",
+    "title": "Innervation of the Pectoralis Major Muscle: Anatomical Study",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21587039",
+    "doi": "10.1097/SAP.0b013e318212f3d9"
+  },
+  {
+    "slug": "reinold-rotator-cuff-emg-2004",
+    "title": "Electromyographic Analysis of the Rotator Cuff and Deltoid Musculature During Common Shoulder External Rotation Exercises",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2004.34.7.385"
+  },
+  {
+    "slug": "hawkes-glenohumeral-emg-2018",
+    "title": "Patterns of Muscle Coordination During Dynamic Glenohumeral Joint Elevation: An EMG Study",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1371/journal.pone.0211800",
+    "pmcid": "PMC6368381",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368381/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6368381/pdf/"
+  },
+  {
+    "slug": "lafrance-rotator-cuff-fitt-2024",
+    "title": "The Efficacy of Exercise Therapy for Rotator Cuff-Related Shoulder Pain According to the FITT Principle: A Systematic Review With Meta-Analyses",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2024.12453"
+  },
+  {
+    "slug": "hopewell-grasp-2021",
+    "title": "Progressive Exercise Compared With Best Practice Advice, With or Without Corticosteroid Injection, for the Treatment of Patients With Rotator Cuff Disorders (GRASP)",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34871052",
+    "doi": "10.7326/ACPJ202112210-137"
+  },
+  {
+    "slug": "berckmans-scapular-emg-2021",
+    "title": "Rehabilitation Exercises for Dysfunction of the Scapula: Exploration of Muscle Activity Using Fine-Wire EMG",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1177/03635465211025002"
+  },
+  {
+    "slug": "waligora-quadriceps-anatomy-2009",
+    "title": "Clinical Anatomy of the Quadriceps Femoris and Extensor Apparatus of the Knee",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "19690926",
+    "doi": "10.1007/s11999-009-1052-y",
+    "pmcid": "PMC2772911",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2772911/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2772911/pdf/"
+  },
+  {
+    "slug": "grob-vm-vi-interaction-2018",
+    "title": "The Interaction Between the Vastus Medialis and Vastus Intermedius and Its Influence on the Extensor Apparatus of the Knee Joint",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "28124107",
+    "doi": "10.1007/s00167-016-4396-3"
+  },
+  {
+    "slug": "olewnik-quadriceps-heads-2021",
+    "title": "Quadriceps or Multiceps Femoris? — Cadaveric Study",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "36060895",
+    "doi": "10.1080/1091367X.2021.2005602",
+    "pmcid": "PMC9439261",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439261/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439261/pdf/"
+  },
+  {
+    "slug": "buford-knee-rotation-moment-arms-2001",
+    "title": "Internal/External Rotation Moment Arms of Muscles at the Knee",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "11706692",
+    "doi": "10.1016/s0968-0160(01)00106-5"
+  },
+  {
+    "slug": "farfan-hamstring-innervation-2024",
+    "title": "Innervation Patterns of Hamstring Muscles, Including Morphological Descriptions and Clinical Implication",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1007/s00276-024-03371-4"
+  },
+  {
+    "slug": "nyland-popliteus-2005",
+    "title": "Anatomy, Function, and Rehabilitation of the Popliteus Musculotendinous Complex",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "15839310",
+    "doi": "10.2519/jospt.2005.35.3.165"
+  },
+  {
+    "slug": "jeon-popliteus-nerve-artery-2022",
+    "title": "Nerve and Arterial Supply Pattern of the Popliteus Muscle and Clinical Implications",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35047639",
+    "doi": "10.1155/2022/6980471",
+    "pmcid": "PMC8763497",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8763497/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8763497/pdf/"
+  },
+  {
+    "slug": "flaxman-knee-muscle-roles-2017",
+    "title": "Predicting the Functional Roles of Knee Joint Muscles From Internal Joint Moments",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "27755353",
+    "doi": "10.1249/MSS.0000000000001125"
+  },
+  {
+    "slug": "flaxman-knee-synergies-2021",
+    "title": "Functional Muscle Synergies to Support the Knee Against Moment Specific Loads While Weight Bearing",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33271472",
+    "doi": "10.1016/j.jelekin.2020.102506"
+  },
+  {
+    "slug": "escamilla-squat-biomechanics-2001",
+    "title": "Knee Biomechanics of the Dynamic Squat Exercise",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "11194098",
+    "doi": "10.1097/00005768-200101000-00020",
+    "fulltextUrl": "https://journals.lww.com/acsm-msse/Fulltext/2001/01000/Knee_biomechanics_of_the_dynamic_squat_exercise.20.aspx"
+  },
+  {
+    "slug": "escamilla-cruciate-loading-2012",
+    "title": "Cruciate Ligament Loading During Common Knee Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23025167",
+    "doi": "10.1177/0954411912451839"
+  },
+  {
+    "slug": "muyor-squat-lunge-emg-2020",
+    "title": "EMG Activity During Monopodal Squat, Forward Lunge and Lateral Step-Up",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "32236133",
+    "doi": "10.1371/journal.pone.0230841",
+    "pmcid": "PMC7112217",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7112217/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7112217/pdf/"
+  },
+  {
+    "slug": "andersen-therapeutic-vs-heavy-2006",
+    "title": "Neuromuscular Activation in Conventional Therapeutic Exercises and Heavy Resistance Exercises: Implications for Rehabilitation",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1093/ptj/86.5.683",
+    "fulltextUrl": "http://www.ptjournal.org/cgi/content/abstract/86/5/683"
+  },
+  {
+    "slug": "gryzlo-knee-rehab-emg-1994",
+    "title": "Electromyographic Analysis of Knee Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "8081408",
+    "doi": "10.2519/jospt.1994.20.1.36"
+  },
+  {
+    "slug": "lawford-cochrane-knee-oa-2024",
+    "title": "Exercise for Osteoarthritis of the Knee",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "39704766",
+    "doi": "10.1071/HC24182",
+    "fulltextUrl": "https://doi.org/10.1071/hc24182"
+  },
+  {
+    "slug": "yan-knee-oa-exercise-modalities-2025",
+    "title": "Comparative Efficacy and Safety of Exercise Modalities in Knee Osteoarthritis: Systematic Review and Network Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "41093618",
+    "doi": "10.1136/bmj-2025-085242",
+    "pmcid": "PMC12522397",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12522397/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12522397/pdf/"
+  },
+  {
+    "slug": "zebis-acl-exercise-emg-2019",
+    "title": "EMG Evaluation of Bodyweight Exercise Progression in a Validated ACL Injury Rehabilitation Program",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1097/phm.0000000000001232",
+    "pmcid": "PMC6824507",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6824507/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6824507/pdf/"
+  },
+  {
+    "slug": "hegyi-hamstring-hd-emg-2019",
+    "title": "High-Density Electromyography Activity in Various Hamstring Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "30230042",
+    "doi": "10.1111/sms.13303"
+  },
+  {
+    "slug": "harano-multifidus-reappraisal-2026",
+    "title": "An Insertion-Based Anatomical Reappraisal of the Lumbar Multifidus",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "41665122",
+    "doi": "10.1002/ca.70091"
+  },
+  {
+    "slug": "bogduk-lumbar-innervation-1983",
+    "title": "The Innervation of the Lumbar Spine",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "6226119",
+    "doi": "10.1097/00007632-198304000-00009"
+  },
+  {
+    "slug": "bogduk-erector-spinae-model-1992",
+    "title": "A Universal Model of the Lumbar Back Muscles in the Upright Position",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "1523493",
+    "doi": "10.1097/00007632-199208000-00007"
+  },
+  {
+    "slug": "phillips-ql-biomechanics-2008",
+    "title": "Anatomy and Biomechanics of Quadratus Lumborum",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1243/09544119jeim266"
+  },
+  {
+    "slug": "urquhart-abdominal-morphology-2005",
+    "title": "Regional Morphology of the Transversus Abdominis and Obliquus Internus and Externus Abdominis Muscles",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.clinbiomech.2004.11.007"
+  },
+  {
+    "slug": "hodges-iap-stiffness-2003",
+    "title": "Intervertebral Stiffness of the Spine Is Increased by Evoked Contraction of Transversus Abdominis and the Diaphragm",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1097/01.brs.0000096676.14323.25"
+  },
+  {
+    "slug": "tayashiki-bracing-vs-hollowing-2016",
+    "title": "Intra-Abdominal Pressure and Trunk Muscular Activities During Abdominal Bracing and Hollowing",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "26509386",
+    "doi": "10.1055/s-0035-1559771"
+  },
+  {
+    "slug": "bojairami-tlf-iap-stability-2022",
+    "title": "Coordination Between Trunk Muscles, Thoracolumbar Fascia, and Intra-Abdominal Pressure Toward Static Spine Stability",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "34545044",
+    "doi": "10.1097/BRS.0000000000004223",
+    "fulltextUrl": "http://escholarship.mcgill.ca/downloads/np193g16p"
+  },
+  {
+    "slug": "cresswell-perturbation-iap-1994",
+    "title": "The Influence of Sudden Perturbations on Trunk Muscle Activity and Intra-Abdominal Pressure While Standing",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1007/bf00228421"
+  },
+  {
+    "slug": "garcia-jaen-plank-hollowing-2020",
+    "title": "Influence of Abdominal Hollowing Maneuver on the Core Musculature Activation During the Prone Plank Exercise",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "33053717",
+    "doi": "10.3390/ijerph17207410",
+    "pmcid": "PMC7600276",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7600276/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7600276/pdf/"
+  },
+  {
+    "slug": "mcgill-lumbar-kinetics-1991",
+    "title": "Kinetic Potential of the Lumbar Trunk Musculature About Three Orthogonal Orthopaedic Axes in Extreme Postures",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "1925758",
+    "doi": "10.1097/00007632-199107000-00021"
+  },
+  {
+    "slug": "anders-trunk-force-directions-2018",
+    "title": "Main Force Directions of Trunk Muscles: A Pilot Study in Healthy Male Subjects",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29960185",
+    "doi": "10.1016/j.humov.2018.06.012"
+  },
+  {
+    "slug": "mueller-stabilization-dose-response-2020",
+    "title": "Dose-Response-Relationship of Stabilisation Exercises in Patients With Chronic Non-Specific Low Back Pain",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "33037280",
+    "doi": "10.1038/s41598-020-73954-9",
+    "pmcid": "PMC7547082",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7547082/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7547082/pdf/"
+  },
+  {
+    "slug": "sedlmayr-hip-flexor-revision-2022",
+    "title": "Revision of Hip Flexor Anatomy and Function in Modern Humans, and Implications for the Evolution of Hominin Bipedalism",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34569157",
+    "doi": "10.1002/ar.24769"
+  },
+  {
+    "slug": "skyrme-psoas-rotation-1999",
+    "title": "Psoas Major and Its Controversial Rotational Action",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "10398385",
+    "doi": "10.1002/(SICI)1098-2353(1999)12:4<264::AID-CA4>3.0.CO;2-L"
+  },
+  {
+    "slug": "anetai-glut-max-structure-2025",
+    "title": "Structural Re-Evaluation of the Human Gluteus Maximus",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "40593049",
+    "doi": "10.1038/s41598-025-05361-x",
+    "pmcid": "PMC12214855",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12214855/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12214855/pdf/"
+  },
+  {
+    "slug": "neumann-hip-kinesiology-2010",
+    "title": "Kinesiology of the Hip: A Focus on Muscular Actions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "20118525",
+    "doi": "10.2519/jospt.2010.3025"
+  },
+  {
+    "slug": "flack-hip-abductor-anatomy-2014",
+    "title": "The Anatomy of the Hip Abductor Muscles",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23625344",
+    "doi": "10.1002/ca.22248"
+  },
+  {
+    "slug": "yoo-short-lateral-rotators-2015",
+    "title": "An Appraisal of the Short Lateral Rotators of the Hip Joint",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "26032283",
+    "doi": "10.1002/ca.22568"
+  },
+  {
+    "slug": "takizawa-adductor-magnus-innervation-2014",
+    "title": "The Adductor Part of the Adductor Magnus Is Innervated by Both Obturator and Sciatic Nerves",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23813615",
+    "doi": "10.1002/ca.22274"
+  },
+  {
+    "slug": "collings-gluteal-forces-2023",
+    "title": "Gluteal Muscle Forces During Hip-Focused Injury Prevention and Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "36918403",
+    "doi": "10.1249/MSS.0000000000003091"
+  },
+  {
+    "slug": "giphart-pectineus-piriformis-emg-2012",
+    "title": "Recruitment and Activity of the Pectineus and Piriformis Muscles During Hip Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "22523373",
+    "doi": "10.1177/0363546512443812"
+  },
+  {
+    "slug": "kim-deep-gluteal-mri-2025",
+    "title": "Superficial and Deep Gluteal Muscle Activation During Common Therapeutic Exercises: A Muscle Functional MRI Analysis",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1249/01.mss.0001159448.86162.5e"
+  },
+  {
+    "slug": "philippon-glut-med-rehab-2011",
+    "title": "Rehabilitation Exercise Progression for the Gluteus Medius Muscle With Consideration for Iliopsoas Tendinitis",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1177/0363546511406848"
+  },
+  {
+    "slug": "brosseau-ottawa-panel-hip-oa-2016",
+    "title": "Ottawa Panel Evidence-Based Clinical Practice Guidelines for Therapeutic Exercise in the Management of Hip Osteoarthritis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "27932265",
+    "doi": "10.1016/j.apmr.2016.09.135"
+  },
+  {
+    "slug": "rostron-gluteal-hypertrophy-2022",
+    "title": "Effects of a Targeted Resistance Intervention on Gluteal Muscle Hypertrophy in People With Hip Osteoarthritis",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.21203/rs.3.rs-1809492/v1",
+    "fulltextUrl": "https://figshare.com/articles/journal_contribution/Effects_of_a_targeted_resistance_intervention_compared_to_a_sham_intervention_on_gluteal_muscle_hypertrophy_fatty_infiltration_and_strength_in_people_with_hip_osteoarthritis_analysis_of_secondary_outcomes_from_a_randomised_clinical_trial/21443844"
+  },
+  {
+    "slug": "kennedy-dcf-fascicular-anatomy-2017",
+    "title": "Do Longus Capitis and Colli Really Stabilise the Cervical Spine? A Study of Their Fascicular Anatomy and Peak Force Capabilities",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29107220",
+    "doi": "10.1016/j.msksp.2017.10.005"
+  },
+  {
+    "slug": "cagnie-dcf-mri-2010",
+    "title": "A Magnetic Resonance Imaging Investigation Into the Function of the Deep Cervical Flexors During Craniocervical Flexion",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jmpt.2010.03.010"
+  },
+  {
+    "slug": "falla-dcf-emg-2003",
+    "title": "An Electromyographic Analysis of the Deep Cervical Flexor Muscles in Performance of Craniocervical Flexion",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1093/ptj/83.10.899",
+    "fulltextUrl": "http://www.ptjournal.org/cgi/content/abstract/83/10/899"
+  },
+  {
+    "slug": "falla-dcf-pain-correlation-2012",
+    "title": "The Change in Deep Cervical Flexor Activity After Training Is Associated With the Degree of Pain Reduction",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1097/ajp.0b013e31823e9378"
+  },
+  {
+    "slug": "karahan-suboccipital-morphometry-2025",
+    "title": "Morphometric Characteristics and Variations of the Suboccipital Muscles: A Cadaveric Study",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "40961650",
+    "doi": "10.1016/j.msksp.2025.103414"
+  },
+  {
+    "slug": "nolan-cervical-extensors-1988",
+    "title": "Biomechanical Evaluation of the Extensor Musculature of the Cervical Spine",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "3381146",
+    "doi": "10.1097/00007632-198801000-00003"
+  },
+  {
+    "slug": "kwon-splenius-innervation-2020",
+    "title": "Intramuscular Innervation Patterns of the Splenius Capitis and Splenius Cervicis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "31894602",
+    "doi": "10.1002/ca.23553"
+  },
+  {
+    "slug": "olinger-scalene-rotation-2010",
+    "title": "Functional Anatomy of Human Scalene Musculature: Rotation of the Cervical Spine",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21036281",
+    "doi": "10.1016/j.jmpt.2010.08.015"
+  },
+  {
+    "slug": "tang-cervical-kinematics-2021",
+    "title": "In Vivo 3-Dimensional Kinematics Study of the Healthy Cervical Spine",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34593735",
+    "doi": "10.1097/BRS.0000000000004231"
+  },
+  {
+    "slug": "dezoete-neck-exercise-nma-2020",
+    "title": "Comparative Effectiveness of Physical Exercise Interventions for Chronic Non-Specific Neck Pain: Network Meta-Analysis",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1136/bmjopen-2019-034846",
+    "pmcid": "PMC7239534",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239534/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7239534/pdf/"
+  },
+  {
+    "slug": "price-neck-exercise-delphi-2021",
+    "title": "Expert Consensus on Important Chronic Non-Specific Neck Pain Motor Control and Segmental Exercise and Dosage Variables",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1371/journal.pone.0253523",
+    "pmcid": "PMC8248695",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8248695/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8248695/pdf/"
+  },
+  {
+    "slug": "prodoehl-longus-colli-force-direction-2025",
+    "title": "Promoting Longus Colli Muscle Activation: Force Direction in Sitting Matters",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "39862671",
+    "doi": "10.1016/j.msksp.2025.103269"
+  },
+  {
+    "slug": "sremakaew-sensorimotor-rehab-2023",
+    "title": "Effectiveness of Adding Rehabilitation of Cervical Related Sensorimotor Control to Manual Therapy and Exercise for Neck Pain",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.msksp.2022.102690"
+  },
+  {
+    "slug": "va-hip-knee-oa-2020",
+    "title": "The Non-Surgical Management of Hip & Knee Osteoarthritis (OA) (2020)",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33461941",
+    "doi": "10.1016/j.ijotn.2020.100840"
+  },
+  {
+    "slug": "cibulka-hip-oa-cpg-2017",
+    "title": "Hip Pain and Mobility Deficits-Hip Osteoarthritis: Revision 2017",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "28566053",
+    "doi": "10.2519/jospt.2017.0301"
+  },
+  {
+    "slug": "moreside-hip-rom-2012",
+    "title": "Hip Joint Range of Motion Improvements Using Three Different Interventions",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "22344062",
+    "doi": "10.1519/JSC.0b013e31824f2351",
+    "fulltextUrl": "https://journals.lww.com/nsca-jscr/Fulltext/2012/05000/Hip_Joint_Range_of_Motion_Improvements_Using_Three.14.aspx"
+  },
+  {
+    "slug": "hayashi-pstr-hip-2022",
+    "title": "Effects of Pericapsular Soft Tissue and Realignment Exercises for Patients With Osteoarthritis of the Hip and Harris Hip Score Below 60 Points",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1080/03007995.2022.2088716"
+  },
+  {
+    "slug": "sharma-knee-oa-2021",
+    "title": "Osteoarthritis of the Knee",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35958164",
+    "doi": "10.1007/s40883-021-00226-x",
+    "pmcid": "PMC9365234",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9365234/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9365234/pdf/"
+  },
+  {
+    "slug": "zeng-exercise-knee-oa-2022",
+    "title": "Benefits and Mechanisms of Exercise Training for Knee Osteoarthritis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "36499280",
+    "doi": "10.3390/ijms232314953",
+    "pmcid": "PMC9740663",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9740663/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9740663/pdf/"
+  },
+  {
+    "slug": "roos-neuromuscular-2025",
+    "title": "An Exercise Therapists' Guide to Neuromuscular Exercise for People With Knee or Hip Osteoarthritis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "41817454",
+    "doi": "10.1097/WNR.0000000000002248"
+  },
+  {
+    "slug": "wu-ankle-sprain-2025",
+    "title": "Management of Acute Ankle Sprains: Common Questions and Answers",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "41533404"
+  },
+  {
+    "slug": "aafp-ankle-recovery-2025",
+    "title": "Recovering From an Ankle Sprain",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "41533405"
+  },
+  {
+    "slug": "zhang-ankle-instability-2025",
+    "title": "Effectiveness of Exercise Therapy on Chronic Ankle Instability: A Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "40188228",
+    "doi": "10.1038/s41598-025-95896-w",
+    "pmcid": "PMC11972327",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11972327/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11972327/pdf/"
+  },
+  {
+    "slug": "liu-lbp-exercise-2025",
+    "title": "Effects of Different Exercise Interventions on Lower Back Pain: A Systematic Review and Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "41625548",
+    "doi": "10.3389/fnhum.2025.1721182",
+    "pmcid": "PMC12857311",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12857311/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12857311/pdf/"
+  },
+  {
+    "slug": "mullaney-triceps-surae-emg-2011",
+    "title": "EMG Analysis of the Triceps Surae Muscle Complex During Achilles Tendon Rehabilitation Program Exercises",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1177/1941738111416911",
+    "pmcid": "PMC3445221",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445221/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3445221/pdf/"
+  },
+  {
+    "slug": "borreani-unstable-ankle-emg-2013",
+    "title": "Exercise Intensity Progression for Exercises on Unstable and Stable Platforms Based on Ankle Muscle Activation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23999147",
+    "doi": "10.1016/j.gaitpost.2013.08.006"
+  },
+  {
+    "slug": "wagemans-ankle-reinjury-2022",
+    "title": "Exercise-Based Rehabilitation Reduces Reinjury Following Acute Lateral Ankle Sprain",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35134061",
+    "doi": "10.1371/journal.pone.0262023",
+    "pmcid": "PMC8824326",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8824326/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8824326/pdf/"
+  },
+  {
+    "slug": "buchanan-elbow-strategies-1989",
+    "title": "Strategies for Muscle Activation During Isometric Torque Generation at the Human Elbow",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "2600619",
+    "doi": "10.1152/jn.1989.62.6.1201",
+    "fulltextUrl": "http://intl-jn.physiology.org/cgi/content/abstract/62/6/1201"
+  },
+  {
+    "slug": "marcolin-curl-variants-emg-2018",
+    "title": "Differences in EMG of Biceps Brachii and Brachioradialis While Performing Three Variants of Curl",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "30013836",
+    "doi": "10.7717/peerj.5165",
+    "pmcid": "PMC6047503",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6047503/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6047503/pdf/"
+  },
+  {
+    "slug": "karanasios-lateral-elbow-2021",
+    "title": "Exercise Interventions in Lateral Elbow Tendinopathy Have Better Outcomes Than Passive Interventions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33148599",
+    "doi": "10.1136/bjsports-2020-102525"
+  },
+  {
+    "slug": "forman-wrist-flexion-extension-emg-2020",
+    "title": "Characterizing Forearm Muscle Activity During Dynamic Wrist Flexion-Extension Movement",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "32636014",
+    "doi": "10.1016/j.jbiomech.2020.109908"
+  },
+  {
+    "slug": "shimose-wrist-extension-grip-2011",
+    "title": "Effect of Submaximal Isometric Wrist Extension Training on Grip Strength",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "20931218",
+    "doi": "10.1007/s00421-010-1675-4"
+  },
+  {
+    "slug": "akbas-grip-strength-meta-2025",
+    "title": "Hand-Focused Strength and Proprioceptive Training for Improving Grip Strength and Manual Dexterity: A Systematic Review and Meta-Analysis",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/jcm14196882",
+    "pmcid": "PMC12524766",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12524766/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12524766/pdf/"
+  },
+  {
+    "slug": "brosseau-hand-oa-guidelines-2018",
+    "title": "The Ottawa Panel Guidelines on Programmes Involving Therapeutic Exercise for the Management of Hand Osteoarthritis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29911409",
+    "doi": "10.1177/0269215518780973"
+  },
+  {
+    "slug": "de-ridder-trunk-extension-emg-2013",
+    "title": "Posterior Muscle Chain Activity During Various Extension Exercises: An Observational Study",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "23834759",
+    "doi": "10.1186/1471-2474-14-204",
+    "pmcid": "PMC3716991",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3716991/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3716991/pdf/"
+  },
+  {
+    "slug": "lee-thoracic-multifidus-rotation-2005",
+    "title": "Differential Activation of the Thoracic Multifidus and Longissimus Thoracis During Trunk Rotation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "15834328",
+    "doi": "10.1097/01.brs.0000158956.77897.ec"
+  },
+  {
+    "slug": "cornwall-transversospinal-morphology-2011",
+    "title": "Functional Morphology of the Thoracolumbar Transversospinal Muscles",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21242870",
+    "doi": "10.1097/BRS.0b013e3181f79629"
+  },
+  {
+    "slug": "de-troyer-intercostal-action-2005",
+    "title": "Respiratory Action of the Intercostal Muscles",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "15788709",
+    "doi": "10.1152/physrev.00007.2004"
+  },
+  {
+    "slug": "hirose-bridge-emg-2018",
+    "title": "Differences in the Electromyographic Activity of the Hamstring, Gluteus Maximus, and Erector Spinae Muscles in a Variety of Kinetic Changes",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "30102684",
+    "doi": "10.1519/JSC.0000000000002747"
+  },
+  {
+    "slug": "khosrokiani-core-stabilization-2021",
+    "title": "Hip and Core Muscle Activation During High-Load Core Stabilization Exercises",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "34060953",
+    "doi": "10.1177/19417381211015225",
+    "pmcid": "PMC9112702",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9112702/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9112702/pdf/"
+  },
+  {
+    "slug": "ekstrom-core-rehab-emg-2007",
+    "title": "Electromyographic Analysis of Core Trunk, Hip, and Thigh Muscles During 9 Rehabilitation Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "18560185",
+    "doi": "10.2519/jospt.2007.2471"
+  },
+  {
+    "slug": "luk-bridge-suspension-2021",
+    "title": "Acute Responses of Core Muscle Activity During Bridge Exercises on the Floor vs. The Suspension System",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/ijerph18115908",
+    "pmcid": "PMC8199398",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8199398/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8199398/pdf/"
+  },
+  {
+    "slug": "el-melhat-bridge-hip-position-2022",
+    "title": "Influence of Changing Hip Position on Electromyographic Activities of Selected Trunk Muscles During Bridging Exercises",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jmpt.2024.08.010"
+  },
+  {
+    "slug": "choi-bridge-abduction-2015",
+    "title": "Isometric Hip Abduction Using a Thera-Band Alters Gluteus Maximus Muscle Activity and the Anterior Pelvic Tilt Angle During Bridging Exercise",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jelekin.2014.09.005"
+  },
+  {
+    "slug": "willcox-clamshell-hip-angle-2013",
+    "title": "The Influence of Varying Hip Angle and Pelvis Position on Muscle Recruitment Patterns of the Hip Abductor Muscles During the Clam Exercise",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2013.4004"
+  },
+  {
+    "slug": "nam-sidelying-hip-exercises-2025",
+    "title": "Comparison of the Effects of 3 Side-Lying Exercises on Electromyographic Activities of Lumbopelvic Muscles in Young Females With Hip Abductor Weakness",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jmpt.2025.09.016"
+  },
+  {
+    "slug": "mcbeth-hip-emg-runners-2012",
+    "title": "Hip Muscle Activity During 3 Side-Lying Hip-Strengthening Exercises in Distance Runners",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "22488226",
+    "doi": "10.4085/1062-6050-47.1.15",
+    "pmcid": "PMC3418110",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3418110/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3418110/pdf/"
+  },
+  {
+    "slug": "selkowitz-gluteal-tfl-2013",
+    "title": "Which Exercises Target the Gluteal Muscles While Minimizing Activation of the Tensor Fascia Lata?",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23160432",
+    "doi": "10.2519/jospt.2013.4116"
+  },
+  {
+    "slug": "sidorkewicz-glutmed-tfl-2014",
+    "title": "Examining the Effects of Altering Hip Orientation on Gluteus Medius and Tensor Fascae Latae Interplay",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.clinbiomech.2014.09.002"
+  },
+  {
+    "slug": "barrett-squat-depth-sex-2023",
+    "title": "A Comparison of Squat Depth and Sex on Knee Kinematics and Muscle Activation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "37066975",
+    "doi": "10.1115/1.4062330"
+  },
+  {
+    "slug": "gorsuch-squat-depth-emg-2013",
+    "title": "The Effect of Squat Depth on Multiarticular Muscle Activation in Collegiate Cross-Country Runners",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "23254544",
+    "doi": "10.1519/JSC.0b013e31828055d5",
+    "fulltextUrl": "https://journals.lww.com/nsca-jscr/Fulltext/2013/09000/The_Effect_of_Squat_Depth_on_Multiarticular_Muscle.33.aspx"
+  },
+  {
+    "slug": "coratella-squat-variations-2021",
+    "title": "The Activation of Gluteal, Thigh, and Lower Back Muscles in Different Squat Variations",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "33477561",
+    "doi": "10.3390/ijerph18020772",
+    "pmcid": "PMC7831128",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7831128/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7831128/pdf/"
+  },
+  {
+    "slug": "mccurdy-glutmax-hamstring-2018",
+    "title": "Gluteus Maximus and Hamstring Activation During Selected Weight-Bearing Resistance Exercises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29076958",
+    "doi": "10.1519/JSC.0000000000001893"
+  },
+  {
+    "slug": "caterisano-squat-depth-2002",
+    "title": "The Effect of Back Squat Depth on the EMG Activity of 4 Superficial Hip and Thigh Muscles",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "12173958",
+    "doi": "10.1519/1533-4287(2002)016<0428:teobsd>2.0.co;2"
+  },
+  {
+    "slug": "roldan-jimenez-sit-to-stand-emg-2015",
+    "title": "Muscular Activity and Fatigue in Lower-Limb and Trunk Muscles During Different Sit-to-Stand Tests",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "26506612",
+    "doi": "10.1371/journal.pone.0141675",
+    "pmcid": "PMC4624782",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624782/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4624782/pdf/"
+  },
+  {
+    "slug": "goulart-sit-to-stand-pattern-1999",
+    "title": "Patterned Electromyographic Activity in the Sit-to-Stand Movement",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "10479031",
+    "doi": "10.1016/s1388-2457(99)00109-1"
+  },
+  {
+    "slug": "cuesta-vargas-sit-to-stand-water-2013",
+    "title": "Analysis of the Neuromuscular Activity During Rising From a Chair in Water and on Dry Land",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23834813",
+    "doi": "10.1016/j.jelekin.2013.06.001"
+  },
+  {
+    "slug": "hebert-losier-heel-raise-2012",
+    "title": "Influence of Knee Flexion Angle and Age on Triceps Surae Muscle Activity During Heel Raises",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "22190157",
+    "doi": "10.1519/JSC.0b013e31824435cf"
+  },
+  {
+    "slug": "hali-triceps-surae-motor-units-2019",
+    "title": "Effect of Knee Joint Position on Triceps Surae Motor Unit Recruitment and Firing Rates",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "31292695",
+    "doi": "10.1007/s00221-019-05570-7"
+  },
+  {
+    "slug": "okubo-psoas-slr-2021",
+    "title": "Differential Activation of Psoas Major and Rectus Femoris During Active Straight Leg Raise to End Range",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jelekin.2021.102588"
+  },
+  {
+    "slug": "juan-hip-flexor-activation-2024",
+    "title": "Hip Flexor Muscle Activation During Common Rehabilitation and Strength Exercises",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "39518756",
+    "doi": "10.3390/jcm13216617",
+    "pmcid": "PMC11546833",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11546833/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11546833/pdf/"
+  },
+  {
+    "slug": "thongduang-quad-emg-okc-ckc-2022",
+    "title": "Quadriceps EMG Activity in Closed and Open Kinetic-Chain Exercises",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "36232225",
+    "doi": "10.3390/ijerph191912929",
+    "pmcid": "PMC9566802",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9566802/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9566802/pdf/"
+  },
+  {
+    "slug": "beales-slr-motor-control-2009",
+    "title": "Motor Control Patterns During an Active Straight Leg Raise in Pain-Free Subjects",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "19541502",
+    "doi": "10.1016/j.jelekin.2009.05.003"
+  },
+  {
+    "slug": "hu-psoas-hip-flexor-2011",
+    "title": "Is the Psoas a Hip Flexor in the Active Straight Leg Raise?",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1007/s00586-010-1508-5",
+    "pmcid": "PMC3082678",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082678/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3082678/pdf/"
+  },
+  {
+    "slug": "serner-hip-adduction-emg-2014",
+    "title": "EMG Evaluation of Hip Adduction Exercises for Soccer Players",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23511698",
+    "doi": "10.1136/bjsports-2012-091746"
+  },
+  {
+    "slug": "kato-adductor-hip-angle-2019",
+    "title": "Effect of Hip Angle on Neuromuscular Activation of the Adductor Longus and Adductor Magnus",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "31030295",
+    "doi": "10.1007/s00421-019-04150-5"
+  },
+  {
+    "slug": "benn-adductor-magnus-emg-2018",
+    "title": "Adductor Magnus: An EMG Investigation Into Proximal and Distal Portions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29520841",
+    "doi": "10.1002/ca.23068"
+  },
+  {
+    "slug": "ganderton-glutmed-glutmin-rehab-2017",
+    "title": "Gluteus Minimus and Gluteus Medius Muscle Activity During Common Rehabilitation Exercises",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "29034801",
+    "doi": "10.2519/jospt.2017.7229",
+    "fulltextUrl": "https://www.jospt.org/doi/pdf/10.2519/jospt.2017.7229"
+  },
+  {
+    "slug": "hatefi-squat-hip-rotation-2020",
+    "title": "Squat Muscle Activation Patterns With Hip Rotations",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "32485776",
+    "doi": "10.1055/a-1152-5028"
+  },
+  {
+    "slug": "martins-tfl-medial-rotation-2022",
+    "title": "Tensor Fascia Latae and Gluteal Muscles Myoelectric Responses to Increasing Levels of Hip Medial Rotation Torque",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jbiomech.2022.110944"
+  },
+  {
+    "slug": "coratella-overhead-press-2022",
+    "title": "Front vs Back and Barbell vs Machine Overhead Press",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35936912",
+    "doi": "10.3389/fphys.2022.825880",
+    "pmcid": "PMC9354811",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9354811/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9354811/pdf/"
+  },
+  {
+    "slug": "paoli-shoulder-rom-emg-2010",
+    "title": "Influence of Different Ranges of Motion on Selective Recruitment of Shoulder Muscles",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "20508462",
+    "doi": "10.1519/JSC.0b013e3181d756ea",
+    "fulltextUrl": "http://nsca.allenpress.com/nscaonline/?request=get-abstract&issn=1064-8011&volume=024&issue=06&page=1578"
+  },
+  {
+    "slug": "saeterbakken-shoulder-press-2013",
+    "title": "Effects of Body Position and Loading Modality on Muscle Activity and Strength in Shoulder Presses",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "23096062",
+    "doi": "10.1519/JSC.0b013e318276b873",
+    "fulltextUrl": "https://journals.lww.com/nsca-jscr/Fulltext/2013/07000/Effects_of_Body_Position_and_Loading_Modality_on.10.aspx"
+  },
+  {
+    "slug": "blazkiewicz-overhead-equipment-2022",
+    "title": "The Effect of the Weight and Type of Equipment on Shoulder and Back Muscle Activity During the Overhead Press",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/s22249762",
+    "pmcid": "PMC9781216",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9781216/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9781216/pdf/"
+  },
+  {
+    "slug": "williams-unstable-overhead-2020",
+    "title": "Activity of Shoulder Stabilizers and Prime Movers During an Unstable Overhead Press",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29889776",
+    "doi": "10.1519/JSC.0000000000002660"
+  },
+  {
+    "slug": "cools-rotator-cuff-exercises-2020",
+    "title": "EMG Analysis of Selected Shoulder Exercises for Patients With Symptomatic Degenerative Rotator Cuff Tears",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "32951644",
+    "doi": "10.1016/j.jse.2020.03.019"
+  },
+  {
+    "slug": "greis-subscapularis-liftoff-1996",
+    "title": "Validation of the Lift-Off Test and Analysis of Subscapularis Activity",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "8883677",
+    "doi": "10.1177/036354659602400505"
+  },
+  {
+    "slug": "ginn-subscapularis-ir-2017",
+    "title": "Is Subscapularis Recruited in a Similar Manner During Shoulder IR Exercises and Belly Press and Lift Off Tests?",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jsams.2016.10.018"
+  },
+  {
+    "slug": "suenaga-ir-arm-positions-2003",
+    "title": "EMG Analysis of Internal Rotational Motion of the Shoulder in Various Arm Positions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "14564277",
+    "doi": "10.1016/s1058-2746(03)00169-1"
+  },
+  {
+    "slug": "pennock-bear-hug-positions-2011",
+    "title": "The Influence of Arm and Shoulder Position on the Bear-Hug, Belly-Press, and Lift-Off Tests",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21300808",
+    "doi": "10.1177/0363546510392710"
+  },
+  {
+    "slug": "gaudet-isokinetic-shoulder-2018",
+    "title": "Muscle Recruitment Patterns of the Subscapularis, Serratus Anterior and Other Shoulder Girdle Muscles During Isokinetic IR and ER",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1080/02640414.2017.1347697"
+  },
+  {
+    "slug": "park-pushup-plus-serratus-2014",
+    "title": "Comparison of Pectoralis Major and Serratus Anterior Muscle Activities During Different Push-Up Plus Exercises",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "24618724",
+    "doi": "10.1519/JSC.0000000000000443",
+    "fulltextUrl": "https://journals.lww.com/nsca-jscr/Fulltext/2014/09000/Comparison_of_Pectoralis_Major_and_Serratus.18.aspx"
+  },
+  {
+    "slug": "marcolin-pushup-variants-2015",
+    "title": "Selective Activation of Shoulder, Trunk, and Arm Muscles: A Comparative Analysis of Different Push-Up Variants",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "26488636",
+    "doi": "10.4085/1062-6050-50.9.09",
+    "pmcid": "PMC4732391",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732391/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732391/pdf/"
+  },
+  {
+    "slug": "youdas-pushup-comparison-2010",
+    "title": "Comparison of Muscle-Activation Patterns During the Conventional Push-Up and Perfect Pushup Exercises",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1519/jsc.0b013e3181cc23b0",
+    "fulltextUrl": "https://journals.lww.com/nsca-jscr/fulltext/2010/12000/comparison_of_muscle_activation_patterns_during.21.aspx"
+  },
+  {
+    "slug": "kang-pushup-plus-meta-2019",
+    "title": "Serratus Anterior and Upper Trapezius EMG Analysis of the Push-Up Plus Exercise: A Systematic Review and Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "31584855",
+    "doi": "10.4085/1062-6050-237-18",
+    "pmcid": "PMC6863690",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6863690/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6863690/pdf/"
+  },
+  {
+    "slug": "herrington-press-up-progressions-2015",
+    "title": "EMG Analysis of Shoulder Muscles During Press-Up Variations and Progressions",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1016/j.jelekin.2014.10.002",
+    "fulltextUrl": "https://salford-repository.worktribe.com/preview/3629432/2024.04.29.24306539v1.full.pdf"
+  },
+  {
+    "slug": "ho-pushup-upper-extremity-2019",
+    "title": "Examining Upper Extremity Muscle Demand During Selected Push-Up Variants",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "30660043",
+    "doi": "10.1016/j.jelekin.2018.12.008"
+  },
+  {
+    "slug": "lang-shoulder-rotator-elevation-2021",
+    "title": "Activation Patterns of Shoulder Internal and External Rotators During Pure Axial Moment Generation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34020122",
+    "doi": "10.1016/j.jbiomech.2021.110503"
+  },
+  {
+    "slug": "juker-psoas-curl-up-1998",
+    "title": "Quantitative Intramuscular Myoelectric Activity of Lumbar Portions of Psoas and the Abdominal Wall",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "9502361",
+    "doi": "10.1097/00005768-199802000-00020",
+    "fulltextUrl": "https://journals.lww.com/acsm-msse/Fulltext/1998/02000/Quantitative_intramuscular_myoelectric_activity_of.20.aspx"
+  },
+  {
+    "slug": "dogan-functional-rom-upper-extremity-2019",
+    "title": "Functional Range of Motion in the Upper Extremity and Trunk Joints",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "30875600",
+    "doi": "10.1016/j.gaitpost.2019.02.024"
+  },
+  {
+    "slug": "gates-rom-upper-limb-adl-2015",
+    "title": "Range of Motion Requirements for Upper-Limb Activities of Daily Living",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "26185472",
+    "doi": "10.2147/MDER.S83756",
+    "pmcid": "PMC4501219",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4501219/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4501219/pdf/"
+  },
+  {
+    "slug": "skals-lifting-loading-2021",
+    "title": "Effects of Load Mass and Position on Dynamic Loading During Lifting",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34126573",
+    "doi": "10.1016/j.apergo.2021.103491"
+  },
+  {
+    "slug": "forman-functional-capacity-2017",
+    "title": "Prioritizing Functional Capacity as a Principal End Point",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "28336790",
+    "doi": "10.1161/CIR.0000000000000483",
+    "pmcid": "PMC7252210",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7252210/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7252210/pdf/"
+  },
+  {
+    "slug": "mcgrath-grip-mortality-2018",
+    "title": "Handgrip Strength, Function, and Mortality in Older Adults",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "29933349",
+    "doi": "10.1249/MSS.0000000000001683",
+    "pmcid": "PMC9487904",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9487904/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9487904/pdf/"
+  },
+  {
+    "slug": "dodds-grip-normative-2014",
+    "title": "Grip Strength Across the Life Course: Normative Data From Twelve British Studies",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "25474696",
+    "doi": "10.1371/journal.pone.0113637",
+    "pmcid": "PMC4256164",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256164/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256164/pdf/"
+  },
+  {
+    "slug": "steiber-grip-normative-german-2016",
+    "title": "Strong or Weak Handgrip? Normative Reference Values for the German Population",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "27701433",
+    "doi": "10.1371/journal.pone.0163917",
+    "pmcid": "PMC5049850",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5049850/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5049850/pdf/"
+  },
+  {
+    "slug": "namdari-shoulder-rom-adl-2012",
+    "title": "Defining Functional Shoulder Range of Motion for Activities of Daily Living",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23218727",
+    "doi": "10.1016/j.gaitpost.2012.11.005"
+  },
+  {
+    "slug": "rundquist-shoulder-kinematics-adl-2009",
+    "title": "Three-Dimensional Shoulder Kinematics to Complete Activities of Daily Living",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "19620827",
+    "doi": "10.1097/PHM.0b013e3181ae0733"
+  },
+  {
+    "slug": "ogawa-hand-behind-back-2025",
+    "title": "Upper-Limb, Scapular, and Thoracic Spine Motions During Hand-Behind-Back Movements",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "40359619",
+    "doi": "10.1016/j.jbiomech.2025.112733"
+  },
+  {
+    "slug": "johnson-shoulder-rom-outcomes-2023",
+    "title": "A Comparison of Quantitative and Qualitative Shoulder ROM With Patient-Reported Outcomes",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jse.2023.02.133"
+  },
+  {
+    "slug": "magermans-upper-extremity-adl-2005",
+    "title": "Requirements for Upper Extremity Motions During Activities of Daily Living",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "15890439",
+    "doi": "10.1016/j.clinbiomech.2005.02.006"
+  },
+  {
+    "slug": "fujita-dressing-stroke-2018",
+    "title": "Quantifying Lower Extremity and Trunk Function for Dressing in Stroke Patients",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29334332",
+    "doi": "10.1080/10749357.2018.1426240"
+  },
+  {
+    "slug": "sah-hip-rom-real-life-2022",
+    "title": "How Much Hip Motion Is Used in Real-Life Activities?",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "35307530",
+    "doi": "10.1016/j.arth.2022.03.052"
+  },
+  {
+    "slug": "tanaka-hip-rom-satisfaction-2022",
+    "title": "Intraoperative Hip ROM Predicts Postoperative Patient Satisfaction",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1007/s11999-012-2533-y",
+    "pmcid": "PMC3528933",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3528933/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3528933/pdf/"
+  },
+  {
+    "slug": "sadeh-sit-to-stand-biomechanics-2023",
+    "title": "Biomechanical and Neuromuscular Control of Sit-to-Stand in Young and Older Adults",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "37639862",
+    "doi": "10.1016/j.clinbiomech.2023.106068"
+  },
+  {
+    "slug": "smith-assistive-devices-tha-2016",
+    "title": "Assistive Devices, Hip Precautions, Environmental Modifications and Training",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "27374001",
+    "doi": "10.1002/14651858.CD010815.pub2",
+    "pmcid": "PMC6458012",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6458012/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6458012/pdf/"
+  },
+  {
+    "slug": "mcnaught-hip-precaution-compliance-2022",
+    "title": "Patient Compliance With Hip Precautions 12 Weeks Post-THA",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1007/s00402-021-03837-9"
+  },
+  {
+    "slug": "goeb-modified-precautions-tha-2021",
+    "title": "Early Recovery Outcomes With Modified Postoperative Precautions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33840540",
+    "doi": "10.1016/j.arth.2021.03.038"
+  },
+  {
+    "slug": "king-bathroom-transfers-2017",
+    "title": "Effect of Bathroom Aids and Age on Balance Control During Bathing Transfers",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29135427",
+    "doi": "10.5014/ajot.2017.027136"
+  },
+  {
+    "slug": "alcazar-sit-to-stand-power-2021",
+    "title": "Threshold of Relative Muscle Power Required to Rise From a Chair",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34107507",
+    "doi": "10.1249/MSS.0000000000002717"
+  },
+  {
+    "slug": "burton-floor-rise-biomechanics-2023",
+    "title": "The Biomechanics of Healthy Older Adults Rising From the Floor",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "36834201",
+    "doi": "10.3390/ijerph20043507",
+    "pmcid": "PMC9958992",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9958992/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9958992/pdf/"
+  },
+  {
+    "slug": "schwickert-floor-rise-strategies-2016",
+    "title": "Model Development to Study Strategies of Younger and Older Adults Getting Up From the Floor",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "26130427",
+    "doi": "10.1007/s40520-015-0397-1"
+  },
+  {
+    "slug": "araujo-sitting-rising-mortality-2025",
+    "title": "Sitting-Rising Test Scores Predict Natural and CV Causes of Deaths",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "40569873",
+    "doi": "10.1093/eurjpc/zwaf325"
+  },
+  {
+    "slug": "brito-sitting-rising-predictor-2014",
+    "title": "Ability to Sit and Rise From the Floor as a Predictor of All-Cause Mortality",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1177/2047487312471759"
+  },
+  {
+    "slug": "burton-floor-rise-interventions-2020",
+    "title": "Are Interventions Effective for Floor Rise in Older Adults?",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "31939202",
+    "doi": "10.1007/s40520-019-01459-1"
+  },
+  {
+    "slug": "klima-floor-rise-community-2016",
+    "title": "Standing From the Floor in Community-Dwelling Older Adults",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "26291641",
+    "doi": "10.1123/japa.2015-0081"
+  },
+  {
+    "slug": "mann-running-biomechanics-1980",
+    "title": "Biomechanics of Walking, Running, and Sprinting",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "7416353",
+    "doi": "10.1177/036354658000800510",
+    "fulltextUrl": "http://journal.ajsm.org/cgi/content/abstract/8/5/345"
+  },
+  {
+    "slug": "willer-running-muscle-groups-2024",
+    "title": "How Humans Run Faster: Neuromechanical Contributions of Functional Muscle Groups",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "39049546",
+    "doi": "10.1111/sms.14690"
+  },
+  {
+    "slug": "chen-running-stiffness-2025",
+    "title": "Interaction Between Muscle Activation, Co-Activation, and LE Stiffness in Runners",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1249/mss.0000000000003794"
+  },
+  {
+    "slug": "vernillo-graded-running-2020",
+    "title": "Biomechanics of Graded Running: Part I",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "32396672",
+    "doi": "10.1111/sms.13708"
+  },
+  {
+    "slug": "alexander-bed-rise-assessment-1992",
+    "title": "Quantitative Assessment of Bed Rise Difficulty",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "1607584",
+    "doi": "10.1111/j.1532-5415.1992.tb01960.x"
+  },
+  {
+    "slug": "kafri-rolling-muscle-activation-2005",
+    "title": "Activation of Selected Frontal Trunk and Extremities Muscles During Rolling",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "15920304",
+    "doi": "10.3233/nre-2005-20208"
+  },
+  {
+    "slug": "smith-sit-to-stand-model-2020",
+    "title": "A Musculoskeletal Modelling Approach to Explain Sit-to-Stand Difficulties",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "31685221",
+    "doi": "10.1016/j.jbiomech.2019.109451",
+    "fulltextUrl": "http://hdl.handle.net/10044/1/74324"
+  },
+  {
+    "slug": "vinstrup-patient-transfer-load-2024",
+    "title": "Ergonomic Challenges in Healthcare: Physical Load During Patient Transfers",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "39655249",
+    "doi": "10.3389/fpubh.2024.1459595",
+    "pmcid": "PMC11625819",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11625819/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11625819/pdf/"
+  },
+  {
+    "slug": "dul-shoulder-load-workplace-1988",
+    "title": "A Biomechanical Model to Quantify Shoulder Load at the Work Place",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23915888",
+    "doi": "10.1016/0268-0033(88)90057-5"
+  },
+  {
+    "slug": "watterworth-overhead-duty-cycle-2025",
+    "title": "Estimating Maximum Acceptable Duty Cycles for Overhead Exertions",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "40845798",
+    "doi": "10.1016/j.jelekin.2025.103049"
+  },
+  {
+    "slug": "cobian-cervical-lumbar-adl-2013",
+    "title": "Active Cervical and Lumbar ROM During ADL Performance",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1097/brs.0b013e3182a2119c"
+  },
+  {
+    "slug": "waersted-overhead-shoulder-disorders-2020",
+    "title": "Work Above Shoulder Level and Shoulder Complaints: A Systematic Review",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "32572582",
+    "doi": "10.1007/s00420-020-01551-4",
+    "pmcid": "PMC7519900",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7519900/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7519900/pdf/"
+  },
+  {
+    "slug": "gill-shoulder-rom-population-2020",
+    "title": "Shoulder ROM in the General Population",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1097/00130561-200015020-00005"
+  },
+  {
+    "slug": "alonso-fernandez-copenhagen-2022",
+    "title": "Effects of Copenhagen Adduction Exercise on Muscle Architecture and Adductor Flexibility",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35682148",
+    "doi": "10.3390/ijerph19116563",
+    "pmcid": "PMC9180184",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9180184/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9180184/pdf/"
+  },
+  {
+    "slug": "daehlin-copenhagen-loading-2025",
+    "title": "Three-Dimensional Hip and Knee Loading During the Copenhagen Adductor Exercise",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "41370869",
+    "doi": "10.1016/j.jbiomech.2025.113116"
+  },
+  {
+    "slug": "maloy-groin-injuries-2025",
+    "title": "Groin Pain and Injuries: Evaluation and Management",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "40238976"
+  },
+  {
+    "slug": "almeida-groin-pain-cochrane-2013",
+    "title": "Conservative Interventions for Exercise-Related Groin Pain",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1002/14651858.cd016137",
+    "pmcid": "PMC12461783",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12461783/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12461783/pdf/"
+  },
+  {
+    "slug": "munoz-nordic-vs-razor-2023",
+    "title": "Eccentric Force and EMG Comparison: Nordic Hamstring vs Razor Hamstring Curl",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1371/journal.pone.0293938",
+    "pmcid": "PMC10723670",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10723670/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10723670/pdf/"
+  },
+  {
+    "slug": "sahinis-hamstring-activation-review-2025",
+    "title": "Differences in Activation Between Semitendinosus and Biceps Femoris During Hamstring Exercises: Systematic Review",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1080/02640414.2025.2486879"
+  },
+  {
+    "slug": "van-hooren-hamstring-forces-2022",
+    "title": "Muscle Forces and Fascicle Behavior During Three Hamstring Exercises",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "35307884",
+    "doi": "10.1111/sms.14158",
+    "pmcid": "PMC9314024",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9314024/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9314024/pdf/"
+  },
+  {
+    "slug": "guruhan-eccentric-hamstring-2021",
+    "title": "Muscle Activation Differences During Eccentric Hamstring Exercises",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "32857686",
+    "doi": "10.1177/1941738120938649",
+    "pmcid": "PMC8167351",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8167351/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8167351/pdf/"
+  },
+  {
+    "slug": "bourne-hamstring-exercise-selection-2017",
+    "title": "Impact of Exercise Selection on Hamstring Muscle Activation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "27467123",
+    "doi": "10.1136/bjsports-2015-095739"
+  },
+  {
+    "slug": "sarabon-nordic-hamstring-variations-2019",
+    "title": "Kinematic and EMG Analysis of Nordic Hamstring Variations",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "31644582",
+    "doi": "10.1371/journal.pone.0223437",
+    "pmcid": "PMC6808554",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6808554/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6808554/pdf/"
+  },
+  {
+    "slug": "hoogvliet-epicondylitis-2013",
+    "title": "Exercise Therapy and Mobilisation for Lateral and Medial Epicondylitis",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23709519",
+    "doi": "10.1136/bjsports-2012-091990"
+  },
+  {
+    "slug": "stasinopoulos-lateral-elbow-2005",
+    "title": "Exercise Programme for Lateral Elbow Tendinopathy",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "16306504",
+    "doi": "10.1136/bjsm.2005.019836",
+    "pmcid": "PMC1725102",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1725102/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1725102/pdf/"
+  },
+  {
+    "slug": "coombes-lateral-epicondylalgia-2013",
+    "title": "Corticosteroid Injection, Physiotherapy, or Both for Lateral Epicondylalgia",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29913915",
+    "doi": "10.1016/j.sjpain.2013.05.001"
+  },
+  {
+    "slug": "mcqueen-lateral-elbow-strengthening-2020",
+    "title": "Role of Strengthening in Nonoperative Lateral Epicondyle Tendinopathy",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33250396",
+    "doi": "10.1016/j.jht.2020.10.009"
+  },
+  {
+    "slug": "deveza-thumb-oa-conservative-2021",
+    "title": "Efficacy of Conservative Therapies for Thumb Base OA",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34314816",
+    "doi": "10.1016/j.joca.2021.07.010"
+  },
+  {
+    "slug": "thakker-thumb-cmc-nma-2025",
+    "title": "Most Clinically Effective Nonoperative Interventions for Thumb CMC OA: Network Meta-Analysis",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "39560669",
+    "doi": "10.1097/CORR.0000000000003300",
+    "pmcid": "PMC11936637",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11936637/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11936637/pdf/"
+  },
+  {
+    "slug": "algar-thumb-cmc-delphi-2022",
+    "title": "Assessment and Treatment of Nonsurgical Thumb CMC OA: Modified Delphi",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jht.2023.08.008"
+  },
+  {
+    "slug": "jenkins-thoracic-kyphosis-2021",
+    "title": "Treatments for Decreasing Thoracic Hyperkyphosis: Systematic Review",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34963629",
+    "doi": "10.1016/j.spinee.2021.12.011"
+  },
+  {
+    "slug": "katzman-spine-strengthening-kyphosis-2017",
+    "title": "Targeted Spine Strengthening for Hyperkyphosis: SHEAF RCT",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1007/s00198-017-4109-x",
+    "pmcid": "PMC5873977",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873977/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5873977/pdf/"
+  },
+  {
+    "slug": "garber-acsm-exercise-quantity-2011",
+    "title": "ACSM Position Stand: Quantity and Quality of Exercise",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21694556",
+    "doi": "10.1249/MSS.0b013e318213fefb"
+  },
+  {
+    "slug": "youdas-calf-stretch-rom-2003",
+    "title": "Static Stretching of the Calf on Ankle Dorsiflexion ROM",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2003.33.7.408"
+  },
+  {
+    "slug": "plandowska-hamstring-stretch-lbp-2024",
+    "title": "Active Hamstring Stretching and Core Control for LBP During Prolonged Sitting",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "39274261",
+    "doi": "10.3390/jcm13175048",
+    "pmcid": "PMC11396236",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11396236/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11396236/pdf/"
+  },
+  {
+    "slug": "iranmanesh-hip-flexor-stretch-lbp-2025",
+    "title": "Dynamic Stretching of Hip Flexors on Hip ROM and Pain in Football Players With LBP",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1519/00126548-199906000-00021"
+  },
+  {
+    "slug": "preece-hip-flexor-pelvic-tilt-2021",
+    "title": "Pelvic Tilt Before and After Hip Flexor Stretching",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "34090549",
+    "doi": "10.1016/j.jmpt.2020.09.006"
+  },
+  {
+    "slug": "kelly-rotator-cuff-testing-1996",
+    "title": "Manual Muscle Examination for Rotator Cuff Strength",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "8883676",
+    "doi": "10.1177/036354659602400504"
+  },
+  {
+    "slug": "decker-subscapularis-rehab-2003",
+    "title": "Subscapularis Activity During Selected Rehabilitation Exercises",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "12531769",
+    "doi": "10.1177/03635465030310010601",
+    "fulltextUrl": "http://journal.ajsm.org/cgi/content/abstract/31/1/126"
+  },
+  {
+    "slug": "maeo-triceps-overhead-hypertrophy-2023",
+    "title": "Triceps Brachii Hypertrophy: Overhead vs Neutral Arm Position",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "35819335",
+    "doi": "10.1080/17461391.2022.2100279",
+    "fulltextUrl": "https://doi.org/10.1080/17461391.2022.2100279"
+  },
+  {
+    "slug": "alves-triceps-shoulder-position-2018",
+    "title": "Effect of Shoulder Position on Triceps Activity in Dumbbell Extensions",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.23736/s0022-4707.17.06849-9"
+  },
+  {
+    "slug": "radford-calf-stretch-meta-2006",
+    "title": "Does Stretching Increase Ankle Dorsiflexion ROM?",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1136/bjsm.2006.029348",
+    "pmcid": "PMC2465055",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2465055/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2465055/pdf/"
+  },
+  {
+    "slug": "smith-foam-rolling-dorsiflexion-2019",
+    "title": "Static Stretching and Foam Rolling on Ankle Dorsiflexion ROM",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1249/mss.0000000000001964"
+  },
+  {
+    "slug": "dinh-calf-stretch-wb-vs-nwb-2011",
+    "title": "Calf Stretching: Non-Weight Bearing vs Weight Bearing",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1055/s-0030-1268505"
+  },
+  {
+    "slug": "bader-forearm-rotation-emg-2018",
+    "title": "Muscle Activity During Maximal Isometric Forearm Rotation",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "29305049",
+    "doi": "10.1016/j.jbiomech.2017.12.011"
+  },
+  {
+    "slug": "gordon-forearm-pronation-supination-2004",
+    "title": "EMG Activity During Maximum Isometric Pronation and Supination",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "14656682",
+    "doi": "10.1016/S0736-0266(03)00115-3"
+  },
+  {
+    "slug": "eladoumikdachi-interossei-anatomy-2002",
+    "title": "Anatomy of the Intrinsic Hand Muscles Revisited: Part I. Interossei",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "12360058",
+    "doi": "10.1097/01.PRS.0000024442.72140.56"
+  },
+  {
+    "slug": "stamenkovic-adductor-pollicis-pcsa-2014",
+    "title": "PCSA of Oblique vs Transverse Head of Adductor Pollicis",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1002/mus.23933"
+  },
+  {
+    "slug": "cooney-thumb-emg-1985",
+    "title": "EMG Analysis of the Thumb: Isometric Forces in Pinch and Grasp",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "3980932",
+    "doi": "10.1016/s0363-5023(85)80106-4"
+  },
+  {
+    "slug": "fox-grip-emg-2019",
+    "title": "EMG Analysis of Grip",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "31841415",
+    "doi": "10.1109/TNSRE.2019.2959449"
+  },
+  {
+    "slug": "murai-dip-extension-2012",
+    "title": "Combinatorial Roles of Extrinsic and Intrinsic Muscles in DIP Extension Strength",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "pmid": "22135009",
+    "doi": "10.1002/jor.22021",
+    "fulltextUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jor.22021"
+  },
+  {
+    "slug": "crowley-lumbricals-2021",
+    "title": "The Lumbricals Are Not the Workhorse of Digital Extension",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "33328128",
+    "doi": "10.1016/j.jhsa.2020.10.022"
+  },
+  {
+    "slug": "johanson-thumb-pinch-2001",
+    "title": "Thumb Muscle Activation During Stable and Unstable Pinch Tasks",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "11466647",
+    "doi": "10.1053/jhsu.2001.26188"
+  },
+  {
+    "slug": "huesler-muscle-synchronization-1998",
+    "title": "Task Dependence of Muscle Synchronization in Hand Muscles",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "9694193",
+    "doi": "10.1097/00001756-199807130-00003"
+  },
+  {
+    "slug": "elliott-cervical-extensors-2010",
+    "title": "Craniocervical Orientation Affects Cervical Extensor Muscle Activation",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.apmr.2010.05.014"
+  },
+  {
+    "slug": "dugailly-suboccipital-modeling-2011",
+    "title": "Musculoskeletal Modeling of the Suboccipital Spine",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "21178840",
+    "doi": "10.1097/BRS.0b013e3181dc844a"
+  },
+  {
+    "slug": "reinold-supraspinatus-deltoid-2008",
+    "title": "EMG Analysis of Supraspinatus and Deltoid During 3 Rehabilitation Exercises",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/s0162-0908(08)79368-1"
+  },
+  {
+    "slug": "kijkunasathian-supraspinatus-isolation-2023",
+    "title": "Preferable Shoulder Position to Isolate Supraspinatus",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "37013546",
+    "doi": "10.1186/s12891-023-06372-3",
+    "pmcid": "PMC10069100",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10069100/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10069100/pdf/"
+  },
+  {
+    "slug": "holmgren-subacromial-exercise-2012",
+    "title": "Specific Exercise Strategy on Need for Surgery in Subacromial Impingement",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "22349588",
+    "doi": "10.1136/bmj.e787",
+    "pmcid": "PMC3282676",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282676/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3282676/pdf/"
+  },
+  {
+    "slug": "dube-fitt-rotator-cuff-2024",
+    "title": "FITT Odyssey: Exercise Programs for Rotator Cuff Shoulder Pain",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "38832666",
+    "doi": "10.2519/jospt.2024.12452"
+  },
+  {
+    "slug": "thigpen-scapular-kinematics-2006",
+    "title": "Scapular Kinematics During Supraspinatus Exercises: Full Can vs Empty Can",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.4085/1062-6050-50.9.06",
+    "pmcid": "PMC4732390",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732390/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4732390/pdf/"
+  },
+  {
+    "slug": "boettcher-empty-full-can-2009",
+    "title": "Empty Can and Full Can Tests Do Not Selectively Activate Supraspinatus",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "19054712",
+    "doi": "10.1016/j.jsams.2008.09.005"
+  },
+  {
+    "slug": "ha-infraspinatus-selective-2013",
+    "title": "Selective Activation of the Infraspinatus Muscle",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "23675794",
+    "doi": "10.4085/1062-6050-48.2.18",
+    "pmcid": "PMC3655748",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3655748/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3655748/pdf/"
+  },
+  {
+    "slug": "kurokawa-er-pet-imaging-2014",
+    "title": "Shoulder ER Muscle Activity Pattern: PET Imaging in Adduction vs Abduction",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.jse.2013.12.021"
+  },
+  {
+    "slug": "yu-prone-er-strategies-2021",
+    "title": "Strategies for Controlling Axial Shoulder Rotation Change Muscle Activity",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "32920111",
+    "doi": "10.1016/j.jse.2020.08.031"
+  },
+  {
+    "slug": "sung-shoulder-abduction-angle-2026",
+    "title": "Effects of Shoulder Abduction Angle and Elastic Band on Shoulder Muscle Activity",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "41559205",
+    "doi": "10.1038/s41598-025-34767-w",
+    "pmcid": "PMC12868783",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12868783/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12868783/pdf/"
+  },
+  {
+    "slug": "song-pf-loading-exercises-2023",
+    "title": "PF Joint Loading Across 35 Exercises and ADLs",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.1177/03635465231175160",
+    "pmcid": "PMC10315869",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10315869/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10315869/pdf/"
+  },
+  {
+    "slug": "kernozek-pf-visual-feedback-2020",
+    "title": "Visual Feedback Reduces PF Forces During Squatting",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.clinbiomech.2020.105050"
+  },
+  {
+    "slug": "chen-pfp-emg-2018",
+    "title": "EMG of Hip and Knee Muscles in PFP: Observational Study",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/j.physio.2015.03.1305"
+  },
+  {
+    "slug": "irish-vmo-vl-ckc-okc-2010",
+    "title": "CKC vs OKC: VMO and VL Activity",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.3233/ies-1995-5201"
+  },
+  {
+    "slug": "tang-vmo-vl-2001",
+    "title": "VMO and VL Activity in OKC and CKC in PFP",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.3233/ies-1995-5201"
+  },
+  {
+    "slug": "pereira-pfp-squats-review-2022",
+    "title": "PFP Risk Associated With Squats: Systematic Review",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.3390/ijerph19159241",
+    "pmcid": "PMC9367913",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9367913/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9367913/pdf/"
+  },
+  {
+    "slug": "glaviano-pfp-wb-exercises-2022",
+    "title": "Gluteal and Quad Differences in WB Exercises With PFP",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.5040/9781718225350.ch-005"
+  },
+  {
+    "slug": "miao-vmo-hip-adduction-2015",
+    "title": "VMO and VL During Semisquat With Hip Adduction in PFP",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1016/s1050-6411(01)00024-4"
+  },
+  {
+    "slug": "neal-pfp-best-practice-2024",
+    "title": "Best Practice Guide for PFP",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1680/cbpg.36505"
+  },
+  {
+    "slug": "van-der-heijden-pfp-cochrane-2015",
+    "title": "Exercise for PFP Syndrome",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "26158920"
+  },
+  {
+    "slug": "duong-knee-pain-review-2023",
+    "title": "Evaluation and Treatment of Knee Pain",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "38142260",
+    "doi": "10.1007/s00402-023-05163-8"
+  },
+  {
+    "slug": "stevens-alfredson-lower-volume-2014",
+    "title": "Alfredson vs Lower Volume Protocol for Achilles",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.2519/jospt.2014.4720"
+  },
+  {
+    "slug": "habets-eccentric-achilles-review-2015",
+    "title": "Eccentric Exercise in Achilles Tendinopathy: Systematic Review",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "26500703",
+    "doi": "10.1186/s13047-015-0114-5",
+    "pmcid": "PMC4617485",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4617485/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4617485/pdf/"
+  },
+  {
+    "slug": "van-der-plas-alfredson-5year-2012",
+    "title": "5-Year Follow-Up of Alfredson's Heel-Drop Programme",
+    "source": "pubmed",
+    "freeFulltext": true,
+    "pmid": "22075719",
+    "doi": "10.1136/bjsports-2011-090035",
+    "pmcid": "PMC3277725",
+    "fulltextUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3277725/",
+    "pdfUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3277725/pdf/"
+  },
+  {
+    "slug": "malliaras-tendinopathy-loading-2013",
+    "title": "Achilles and Patellar Tendinopathy Loading Programmes: Systematic Review",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "23494258",
+    "doi": "10.1007/s40279-013-0019-z"
+  },
+  {
+    "slug": "beyer-hsr-vs-eccentric-2015",
+    "title": "HSR vs Eccentric Training for Achilles Tendinopathy: RCT",
+    "source": "crossref",
+    "freeFulltext": false,
+    "doi": "10.1007/s00167-009-1006-7"
+  },
+  {
+    "slug": "martin-achilles-cpg-2018",
+    "title": "Achilles Tendinopathy CPG Revision 2018",
+    "source": "europepmc",
+    "freeFulltext": true,
+    "doi": "10.2519/jospt.2018.0302",
+    "fulltextUrl": "https://www.jospt.org/doi/pdf/10.2519/jospt.2018.0302"
+  },
+  {
+    "slug": "wilson-achilles-exercise-review-2018",
+    "title": "Exercise, Orthoses and Splinting for Achilles Tendinopathy",
+    "source": "pubmed",
+    "freeFulltext": false,
+    "pmid": "30170996",
+    "doi": "10.1136/bjsports-2017-098913"
+  }
+]

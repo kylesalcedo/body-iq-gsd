@@ -252,7 +252,7 @@ export async function getExercisesGroupedByRegion() {
   // Build grouped result
   const grouped = regions.map((region) => {
     const exerciseIds = regionExerciseIds.get(region.slug) ?? new Set();
-    const exercises = [...exerciseIds]
+    const exercises = Array.from(exerciseIds)
       .map((id) => exerciseById.get(id))
       .filter(Boolean)
       .sort((a, b) => a!.name.localeCompare(b!.name));

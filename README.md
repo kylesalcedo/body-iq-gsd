@@ -58,17 +58,26 @@ Open [http://localhost:3000](http://localhost:3000) to view the explorer.
 |--------|-------|
 | Regions | 10 |
 | Joints | 24 |
-| Movements | 60 |
-| Muscles | 60 |
-| Movement–Muscle Links | 162 |
-| Functional Tasks | 11 |
-| Exercises | 45 |
-| Exercise–Muscle Links | 157 |
-| Cues | 135 |
-| Regressions | 67 |
-| Progressions | 82 |
-| Research Sources | 36 |
-| Source–Entity Links | 364 |
+| Movements | 66 |
+| Muscles | 107 |
+| Movement–Muscle Links | 301 |
+| Functional Tasks | 19 |
+| Exercises | 103 |
+| Exercise–Muscle Links | 390 |
+| Exercise–Movement Links | 247 |
+| Cues | 363 |
+| Regressions | 155 |
+| Progressions | 174 |
+| Research Sources | 282 |
+| Source–Entity Links | 737 |
+
+### Research Sources & Evidence
+
+- **282 research sources** — journal articles, systematic reviews, clinical practice guidelines, and textbooks
+- **274 with DOIs**, **192 with PubMed IDs**, **75 with PMC IDs**
+- **98 free fulltext articles** with direct links (75 with PDF URLs)
+- Sources resolved via PubMed, CrossRef, and Europe PMC APIs
+- Re-run resolution: `npx tsx scripts/resolve-sources.ts`
 
 ### Regions Covered
 
@@ -76,7 +85,7 @@ Cervical Spine, Thoracic Spine, Shoulder, Elbow, Wrist, Hand, Lumbar Spine, Hip,
 
 ### Evidence-Based Exercise Coverage
 
-Each region includes research-backed "top 3" exercises selected from systematic reviews, meta-analyses, and clinical practice guidelines (31 peer-reviewed sources, 2008–2025). Exercises include EMG-derived muscle activation data, dosing recommendations, and evidence notes with citations.
+103 exercises across all 10 regions, each with research-backed muscle activation data, dosing recommendations, cues, regressions, progressions, and evidence notes with citations. Sources span 282 peer-reviewed references (1980–2026).
 
 ### Muscle Role Weighting
 
@@ -95,9 +104,36 @@ The web explorer provides:
 - **Dashboard** — counts for all entity types with quick navigation
 - **Entity list pages** — all entity types with status badges and confidence indicators
 - **Entity detail pages** — full anatomy (O/I/A/N/B), weighted muscle roles, related entities, sources
+- **Exercise Finder** — filter by region, joint, movement, muscle, functional task, role, status, confidence
+- **Sources** — filter by free fulltext / PDF available, with direct download links
 - **Validation Queue** — lists draft items, low confidence entries, items flagged for review
+- **API Reference** — interactive API docs with live "Try it" explorer
 - **Global Search** — search across all entity types with debounced instant results
-- **Sidebar Navigation** — Regions, Joints, Movements, Muscles, Tasks, Exercises, Sources, Validation Queue
+- **Sidebar Navigation** — Regions, Joints, Movements, Muscles, Tasks, Exercises, Sources, API Reference, Validation Queue
+
+## API
+
+All endpoints return JSON. Interactive docs at [/api-docs](http://localhost:3000/api-docs).
+
+| Endpoint | Description |
+|----------|-------------|
+| `GET /api/stats` | Knowledge graph statistics |
+| `GET /api/search?q=` | Search across all entity types |
+| `GET /api/exercises` | List/filter exercises (region, muscle, movement, task, role, status, confidence) |
+| `GET /api/exercises/:slug` | Full exercise detail with muscles, movements, cues, sources |
+| `GET /api/exercises/filters` | Available filter options |
+| `GET /api/muscles` | List/search muscles |
+| `GET /api/sources` | Sources with fulltext/PDF filtering |
+
+### RAG Integration
+
+Get all sources with free PDF links for RAG ingestion:
+
+```
+GET /api/sources?filter=pdf&format=rag
+```
+
+Returns 75 sources with direct PMC PDF URLs, minimal payload (slug, title, authors, year, journal, doi, pmid, pmcid, fulltextUrl, pdfUrl).
 
 ## Scripts
 
@@ -111,6 +147,15 @@ pnpm db:generate      # Regenerate Prisma client
 pnpm validate:schemas # Run Zod schema validation tests
 pnpm data:quality     # Run data quality checks
 ```
+
+### Source Resolution
+
+```bash
+# Resolve DOIs, PMIDs, PMC IDs, and free fulltext URLs for all sources
+npx tsx scripts/resolve-sources.ts
+```
+
+Uses PubMed, CrossRef, and Europe PMC APIs (no auth required). Results cached in `scripts/resolved-sources.json`.
 
 ## Data Quality Checks
 
@@ -139,18 +184,20 @@ Entity statuses: `draft` → `needs_review` → `reviewed` → `verified` (or `d
 
 ```
 ├── prisma/
-│   ├── schema.prisma          # Database schema (15 models)
+│   ├── schema.prisma          # Database schema
 │   └── seed/                  # Seed data scripts
 │       ├── seed.ts            # Orchestrator
 │       ├── regions.ts         # 10 anatomical regions
 │       ├── joints.ts          # 24 joints
-│       ├── movements.ts       # 60 movements
-│       ├── muscles.ts         # 60 muscles + 162 weighted links
-│       ├── functional-tasks.ts # 11 functional tasks
-│       ├── exercises.ts       # 45 exercises with full details
-│       └── sources.ts         # 36 research sources + targeted evidence links
+│       ├── movements.ts       # 66 movements
+│       ├── muscles.ts         # 107 muscles + 301 weighted links
+│       ├── functional-tasks.ts # 19 functional tasks
+│       ├── exercises.ts       # 103 exercises with full details
+│       └── sources.ts         # 282 research sources + evidence links
 ├── scripts/
-│   └── data-quality.ts        # Data quality checker
+│   ├── data-quality.ts        # Data quality checker
+│   ├── resolve-sources.ts     # DOI/PMID/fulltext resolver
+│   └── resolved-sources.json  # Cached resolution results
 ├── src/
 │   ├── app/                   # Next.js App Router pages
 │   │   ├── page.tsx           # Dashboard
@@ -160,45 +207,16 @@ Entity statuses: `draft` → `needs_review` → `reviewed` → `verified` (or `d
 │   │   ├── muscles/           # Muscle list + detail
 │   │   ├── tasks/             # Functional task list + detail
 │   │   ├── exercises/         # Exercise list + detail
-│   │   ├── sources/           # Source list + detail
+│   │   ├── sources/           # Source list + detail (fulltext/PDF filtering)
+│   │   ├── finder/            # Exercise finder with faceted filters
 │   │   ├── validation/        # Validation queue
-│   │   └── api/search/        # Search API route
+│   │   ├── api-docs/          # Interactive API reference
+│   │   └── api/               # REST API routes
 │   ├── components/            # Shared UI components
-│   │   ├── badges.tsx         # Status, confidence, role badges
-│   │   ├── search.tsx         # Global search bar
-│   │   ├── sidebar.tsx        # Navigation sidebar
-│   │   └── ui-helpers.tsx     # Card, links, headers
 │   └── lib/
 │       ├── prisma.ts          # Prisma client singleton
 │       ├── queries.ts         # Data access functions
 │       ├── utils.ts           # Utility functions
 │       └── schemas/           # Zod validation schemas
-│           ├── index.ts       # All entity schemas
-│           └── validate.ts    # Schema test runner
 └── agent-instructions.md      # Original project spec
 ```
-
-## Future Roadmap
-
-### MVP (current)
-- ✅ Normalized schema with validation metadata
-- ✅ Weighted muscle-movement/exercise relationships
-- ✅ Seed dataset with accurate PT content
-- ✅ Explorer UI with search and navigation
-- ✅ Validation queue
-- ✅ Data quality scripts
-
-### v1
-- Inline editing of entities from the explorer
-- Editorial review workflow (approve/dispute/comment)
-- Bulk import/export (CSV/JSON)
-- Relationship graph visualization
-- Advanced filtering and faceted search
-
-### v2
-- Exercise program generator
-- Anatomy learning mode
-- Movement coaching tools
-- Clinical documentation assistant
-- RAG knowledge base integration
-- Content generation pipelines

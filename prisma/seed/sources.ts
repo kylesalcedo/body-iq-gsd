@@ -3571,6 +3571,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "EMG study: multifidus activation increases 9.7-16.9% MVIC with increased lumbar lordosis during quadruped exercises in chronic LBP patients.",
       confidence: 0.85,
+      doi: "10.1123/jab.2020-0040",
     },
     {
       slug: "rizzo-lbp-cochrane-2025",
@@ -3581,6 +3582,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Overview of Cochrane reviews for non-pharmacological LBP treatments. Exercise broadly supported with no clear superiority of one type.",
       confidence: 0.95,
+      doi: "10.1002/14651858.CD014691.pub2",
+      pmid: "40139265",
+      pmcid: "PMC11945228",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11945228/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11945228/pdf/",
     },
     {
       slug: "foster-lbp-lancet-2018",
@@ -3591,6 +3597,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Lancet series on LBP prevention and treatment. Supervised exercise programs recommended for chronic LBP.",
       confidence: 0.95,
+      doi: "10.1016/S0140-6736(18)30489-6",
+      pmid: "29573872",
     },
     {
       slug: "clael-lumbar-extensors-2021",
@@ -3601,6 +3609,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review with meta-analysis: exercise improves lumbar extensor strength, endurance, and EMG activity in non-specific LBP.",
       confidence: 0.90,
+      doi: "10.1038/s41598-021-96403-7",
+      pmcid: "PMC8376921",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8376921/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8376921/pdf/",
     },
     {
       slug: "katz-lumbar-stenosis-2022",
@@ -3611,6 +3623,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "JAMA review of lumbar spinal stenosis diagnosis and management. Flexion-based exercises commonly included in conservative programs.",
       confidence: 0.95,
+      doi: "10.1016/j.jocn.2022.04.042",
+      pmid: "35597059",
     },
     {
       slug: "comer-lss-exercise-2024",
@@ -3621,6 +3635,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review: flexion exercises, stretches, and trunk strengthening common in successful LSS interventions.",
       confidence: 0.90,
+      doi: "10.1177/02692155231201048",
+      pmcid: "PMC10829420",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10829420/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10829420/pdf/",
     },
     {
       slug: "calik-thoracic-mobilization-2025",
@@ -3631,6 +3649,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT: 6-week thoracic mobilization program improved acromio-humeral distance, reduced kyphosis angle, and improved shoulder function in SIS.",
       confidence: 0.85,
+      doi: "10.1007/s00586-025-09144-w",
     },
     {
       slug: "haik-thoracic-manipulation-2017",
@@ -3641,6 +3660,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT showing short-term benefits of thoracic spine manipulation for shoulder impingement syndrome.",
       confidence: 0.85,
+      doi: "10.1016/j.apmr.2017.02.003",
     },
     {
       slug: "hunter-sis-thoracic-posture-2020",
@@ -3651,6 +3671,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "SIS patients show reduced thoracic extension ROM (mean difference 7.8°) and increased kyphosis (6.2°) compared to controls.",
       confidence: 0.85,
+      doi: "10.1093/ptj/pzz182",
+      pmid: "31825488",
+      fulltextUrl: "https://academic.oup.com/ptj/article-pdf/100/4/677/33098003/pzz182.pdf",
     },
     {
       slug: "choi-sis-biomechanical-2023",
@@ -3661,6 +3684,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Case-control study analyzing shoulder and thoracic biomechanics in subacromial impingement syndrome.",
       confidence: 0.80,
+      doi: "10.1097/md.0000000000032760",
+      pmcid: "PMC9875974",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9875974/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9875974/pdf/",
     },
     {
       slug: "oleary-cervical-flexor-specificity-2007",
@@ -3671,6 +3698,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "CCF results in significantly less SCM and anterior scalene activation compared to conventional cervical flexion.",
       confidence: 0.90,
+      doi: "10.1016/j.jelekin.2005.10.006",
+      pmid: "16423538",
     },
     {
       slug: "cagnie-fmri-cervical-2008",
@@ -3681,6 +3710,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Functional MRI shows CCF preferentially activates longus capitis vs conventional flexion.",
       confidence: 0.90,
+      doi: "10.1152/japplphysiol.00918.2007",
     },
     {
       slug: "domenech-dcf-endurance-2011",
@@ -3691,6 +3721,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Normative DCF endurance: Men 38.9±20.1s, Women 29.4±13.7s. Establishes baseline for clinical comparison.",
       confidence: 0.85,
+      doi: "10.1016/j.pmrj.2010.10.023",
+      pmid: "21333948",
     },
     {
       slug: "selistre-cervical-tests-2021",
@@ -3701,6 +3733,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of cervical muscle testing reliability. CCFT has moderate inter-rater reliability (ICC 0.66).",
       confidence: 0.90,
+      doi: "10.3390/s21248399",
+      pmid: "34960492",
+      pmcid: "PMC8703969",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8703969/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8703969/pdf/",
     },
     {
       slug: "araujo-ccf-measurement-2020",
@@ -3711,6 +3748,9 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Systematic review of CCFT measurement properties. Valid for assessing deep cervical flexor function.",
       confidence: 0.90,
+      doi: "10.1093/ptj/pzaa072",
+      pmid: "32313944",
+      fulltextUrl: "https://academic.oup.com/ptj/article-pdf/100/7/1094/33581952/pzaa072.pdf",
     },
     {
       slug: "iqbal-dcf-training-2021",
@@ -3721,6 +3761,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "DCF training protocol: 5 progressive stages (22-30 mmHg), 10s holds, 10 reps. Significant improvements in neck pain and endurance.",
       confidence: 0.85,
+      doi: "10.1155/2021/7190808",
+      pmcid: "PMC7817289",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7817289/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7817289/pdf/",
     },
     {
       slug: "falla-dcf-emg-technique-2006",
@@ -3731,6 +3775,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Validated EMG technique for assessing deep cervical flexor muscles during craniocervical flexion.",
       confidence: 0.90,
+      doi: "10.1016/j.jelekin.2005.10.003",
+      pmid: "16359872",
     },
     {
       slug: "lehecka-glute-squeeze-2019",
@@ -3741,6 +3787,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "8-week gluteal squeeze training significantly improved hip extension strength bilaterally.",
       confidence: 0.80,
+      doi: "10.7717/peerj.7287",
+      pmid: "31328046",
+      pmcid: "PMC6622157",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6622157/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6622157/pdf/",
     },
     {
       slug: "collings-gluteal-emg-force-2025",
@@ -3751,6 +3802,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Caution: EMG amplitude may not correlate with muscle force for exercise selection. Important methodological consideration.",
       confidence: 0.90,
+      doi: "10.1249/MSS.0000000000003733",
+      pmid: "40263750",
     },
     {
       slug: "del-monte-kettlebell-hamstring-2020",
@@ -3761,6 +3814,8 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Hip hinge kettlebell swing produces greatest hamstring EMG compared to squat or double knee extension variations.",
       confidence: 0.85,
+      doi: "10.1519/JSC.0000000000002254",
+      pmid: "28930870",
     },
     {
       slug: "edinborough-kettlebell-lumbar-2016",
@@ -3771,6 +3826,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Kettlebell swings can fatigue lumbar extensors, though less than isolated lumbar extension exercises.",
       confidence: 0.80,
+      doi: "10.1519/jsc.0000000000001215",
     },
     {
       slug: "michaud-hip-hinge-sensors-2021",
@@ -3781,6 +3837,10 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Wearable sensor study: neutral spine maintenance during hip hinge is critical for LBP injury prevention.",
       confidence: 0.80,
+      doi: "10.3390/s21165487",
+      pmcid: "PMC8402067",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8402067/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8402067/pdf/",
     },
     {
       slug: "scaff-lbp-prevention-2024",
@@ -3791,6 +3851,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "Cochrane review: exercise broadly recommended for non-specific LBP prevention.",
       confidence: 0.95,
+      doi: "10.1111/obr.13875",
+      pmid: "39622629",
+      pmcid: "PMC11884966",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11884966/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11884966/pdf/",
     },
     {
       slug: "george-lbp-management-2021",
@@ -3801,6 +3866,11 @@ export async function seedSources() {
       sourceType: "guideline",
       description: "JOSPT clinical practice guideline for acute and chronic LBP management. Exercise is a primary intervention.",
       confidence: 0.95,
+      doi: "10.2519/jospt.2021.0304",
+      pmid: "34719942",
+      pmcid: "PMC10508241",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10508241/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10508241/pdf/",
     },
     {
       slug: "alghadir-retro-walking-2019",
@@ -3811,6 +3881,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "6-week retro walking: greater pain reduction (1.8 vs 1.0, p=0.01), disability reduction (4.8 vs 2.2, p=0.008), and quad strength gain (1.7kg vs 0.7kg, p=0.008) vs control.",
       confidence: 0.85,
+      doi: "10.1186/s40478-019-0838-8",
+      pmid: "31753024",
+      pmcid: "PMC6868786",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6868786/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6868786/pdf/",
     },
     {
       slug: "chen-backward-walking-2021",
@@ -3821,6 +3896,11 @@ export async function seedSources() {
       sourceType: "journal",
       description: "4-week backward walking improved static stability, reduced pain, and improved function in knee OA.",
       confidence: 0.80,
+      doi: "10.1155/2021/5574966",
+      pmid: "34221078",
+      pmcid: "PMC8213492",
+      fulltextUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8213492/",
+      pdfUrl: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8213492/pdf/",
     },
     {
       slug: "goonasegaran-retro-walking-2022",
@@ -3831,6 +3911,7 @@ export async function seedSources() {
       sourceType: "journal",
       description: "RCT: retro walking non-inferior to forward walking for knee OA symptom improvement.",
       confidence: 0.80,
+      doi: "10.23736/s0022-4707.20.11686-4",
     },
   ];
 

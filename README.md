@@ -62,20 +62,20 @@ Open [http://localhost:3000](http://localhost:3000) to view the explorer.
 | Muscles | 107 |
 | Movement–Muscle Links | 301 |
 | Functional Tasks | 19 |
-| Exercises | 103 |
-| Exercise–Muscle Links | 390 |
-| Exercise–Movement Links | 247 |
-| Cues | 363 |
-| Regressions | 155 |
-| Progressions | 174 |
-| Research Sources | 282 |
-| Source–Entity Links | 737 |
+| Exercises | 117 |
+| Exercise–Muscle Links | 466 |
+| Exercise–Movement Links | 287 |
+| Cues | 428 |
+| Regressions | 181 |
+| Progressions | 202 |
+| Research Sources | 309 |
+| Source–Entity Links | 765 |
 
 ### Research Sources & Evidence
 
-- **282 research sources** — journal articles, systematic reviews, clinical practice guidelines, and textbooks
-- **274 with DOIs**, **192 with PubMed IDs**, **75 with PMC IDs**
-- **98 free fulltext articles** with direct links (75 with PDF URLs)
+- **309 research sources** — journal articles, systematic reviews, clinical practice guidelines, and textbooks
+- **274 with DOIs**, **192 with PubMed IDs**, **86 with PMC IDs**
+- **111 free fulltext articles** with direct links (86 with PDF URLs)
 - Sources resolved via PubMed, CrossRef, and Europe PMC APIs
 - Re-run resolution: `npx tsx scripts/resolve-sources.ts`
 
@@ -85,7 +85,7 @@ Cervical Spine, Thoracic Spine, Shoulder, Elbow, Wrist, Hand, Lumbar Spine, Hip,
 
 ### Evidence-Based Exercise Coverage
 
-103 exercises across all 10 regions, each with research-backed muscle activation data, dosing recommendations, cues, regressions, progressions, and evidence notes with citations. Sources span 282 peer-reviewed references (1980–2026).
+117 exercises across all 10 regions, each with research-backed muscle activation data, dosing recommendations, cues, regressions, progressions, and evidence notes with citations. Sources span 309 peer-reviewed references (1980–2026).
 
 ### Muscle Role Weighting
 
@@ -157,6 +157,27 @@ npx tsx scripts/resolve-sources.ts
 
 Uses PubMed, CrossRef, and Europe PMC APIs (no auth required). Results cached in `scripts/resolved-sources.json`.
 
+## Adding New Exercises
+
+The standard workflow for adding exercises:
+
+1. **Create a research prompt** in `prompts/` listing the exercises with specific questions about EMG data, dosing, clinical indications, and citations
+2. **Run the prompt** through OpenEvidence or a similar clinical evidence tool
+3. **Save the response** in `research/` for reference
+4. **Add exercises** to `prisma/seed/exercises.ts` following the existing format (slug, name, description, muscles, movements, cues, regressions, progressions, sources)
+5. **Add new sources** to `prisma/seed/sources.ts` with citation metadata
+6. **Resolve source identifiers**: `npx tsx scripts/resolve-sources.ts` — fetches DOIs, PMIDs, PMC IDs, and free fulltext/PDF links
+7. **Merge resolved data** back into sources.ts: `npx tsx scripts/merge-resolved-sources.ts`
+8. **Seed the database**: `pnpm db:seed`
+9. **Verify** in the explorer UI and update README counts
+
+Each exercise should include:
+- Target muscles with roles (primary, secondary, stabilizer)
+- Evidence-based dosing from RCTs or systematic reviews
+- 3-5 coaching cues
+- At least 2 regressions and 2 progressions
+- Linked research sources with citations
+
 ## Data Quality Checks
 
 The `pnpm data:quality` script detects:
@@ -192,8 +213,8 @@ Entity statuses: `draft` → `needs_review` → `reviewed` → `verified` (or `d
 │       ├── movements.ts       # 66 movements
 │       ├── muscles.ts         # 107 muscles + 301 weighted links
 │       ├── functional-tasks.ts # 19 functional tasks
-│       ├── exercises.ts       # 103 exercises with full details
-│       └── sources.ts         # 282 research sources + evidence links
+│       ├── exercises.ts       # 117 exercises with full details
+│       └── sources.ts         # 309 research sources + evidence links
 ├── scripts/
 │   ├── data-quality.ts        # Data quality checker
 │   ├── resolve-sources.ts     # DOI/PMID/fulltext resolver

@@ -325,8 +325,9 @@ export async function getExercise(slug: string) {
  * thumb) are NOT aliased — they keep their own columns.
  */
 const COLUMN_ALIASES: Record<string, string> = {
-  "Dorsiflexion": "Flexion",
-  "Plantarflexion": "Extension",
+  // Ankle dorsiflexion/plantarflexion are intentionally NOT aliased — they
+  // are unique, clinically distinct movements and deserve their own columns
+  // so users don't conflate them with shoulder/hip/etc. flexion/extension.
   "Radial Deviation": "Abduction",
   "Ulnar Deviation": "Adduction",
 };
@@ -492,6 +493,8 @@ export async function getPlannerData(): Promise<PlannerData> {
     "External Rotation",
     "Pronation",
     "Supination",
+    "Dorsiflexion",
+    "Plantarflexion",
     "Inversion",
     "Eversion",
     "Elevation",

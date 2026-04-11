@@ -82,18 +82,16 @@ For each classification, cite the standard anatomical reference (Kapandji, Neuma
 - Adduction
 - Internal Rotation
 - External Rotation
-- (Note: the grid aliases Dorsiflexion → Flexion and Plantarflexion → Extension. Is this clinically acceptable?)
+- (Note: Dorsiflexion and Plantarflexion have their own columns and are NOT aliased to Flexion/Extension — they are clinically distinct movements.)
 
 ---
 
 ## Bonus questions
 
 1. Our grid currently aliases the following as synonyms. Are these anatomically defensible for a workout planner context?
-   - Dorsiflexion ≡ Ankle Flexion
-   - Plantarflexion ≡ Ankle Extension
    - Radial Deviation ≡ Wrist Abduction
    - Ulnar Deviation ≡ Wrist Adduction
-   - If any should be reverted (kept as unique columns), explain why.
+   - If either should be reverted (kept as unique columns), explain why.
 
 2. Are there any movements we're **missing entirely** that a workout planner should expose?
    - e.g., thoracic outlet mobility, cervical retraction (separate from extension), rib cage rotation, pelvic tilt, hip hiking, scapular posterior tilt, glenohumeral joint distraction, etc.

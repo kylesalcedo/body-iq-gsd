@@ -192,10 +192,16 @@ model Exercise {
   dosing      String?      // e.g. "3x10-15 reps, 2-3x/week" — from RCTs
   emgNotes    String?      // EMG activation summary with citations
   evidenceLevel String?    // e.g. "strong", "moderate", "limited", "expert-opinion"
-  // Media (future video support)
+  // Media (legacy single-video fields — prefer ExerciseVideo going forward)
   imageUrl    String?      // exercise illustration/photo URL
   videoUrl    String?      // exercise demonstration video URL
   videoType   String?      // e.g. "youtube", "vimeo", "hosted", "generated"
+  // Structured positioning (used for exercise detail + future AI video generation)
+  startPosition String?    // e.g. "supine, knees bent 90°, feet flat, arms at side"
+  endPosition   String?    // e.g. "hips lifted into bridge, shoulders-knees in a line"
+  rom           String?    // e.g. "0-90° hip flexion", "neutral to full pronation"
+  cameraView    String?    // preferred camera angle: "lateral", "anterior", "posterior", "3/4"
+  videoPrompt   String?    // canonical prompt for AI video generation, filled iteratively
   // Difficulty & Equipment
   difficulty  String?      // e.g. "beginner", "intermediate", "advanced"
   equipment   String[]     @default([])  // e.g. ["resistance-band", "foam-roller"]
@@ -215,8 +221,41 @@ model Exercise {
   cues        Cue[]
   regressions Regression[]
   progressions Progression[]
+  videos      ExerciseVideo[]
   tags        TagOnEntity[]
   sources     SourceOnEntity[]
+}
+
+// ─── Exercise Video ──────────────────────────────────────────────────────────
+// Multiple videos per exercise (AI-generated, YouTube-linked, hosted clinician,
+// etc.) with quality ranking and clinician verification. See
+// docs/video-generation-roadmap.md for the phased rollout plan.
+
+model ExerciseVideo {
+  id          String   @id @default(cuid())
+  exerciseId  String
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  // What kind of video this is
+  videoType   String   // "youtube-embed" | "youtube-link" | "hosted" | "ai-generated" | "image-sequence"
+  url         String?  // external URL (YouTube, CDN, etc.)
+  thumbnailUrl String?
+  // Generation metadata (AI videos only)
+  prompt      String?  // the prompt used to generate this video
+  model       String?  // e.g. "seedance-v1", "veo-3", "sora", "runway-gen3"
+  generatedAt DateTime?
+  // Review gate — clinician must verify AI-generated videos before promoting
+  verified    Boolean  @default(false)
+  verifiedBy  String?
+  verifiedAt  DateTime?
+  quality     Int?     // 1-5 subjective rating from reviewer
+  // Ordering / preference
+  priority    Int      @default(0)  // higher = shown first
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([exerciseId])
+  @@index([verified])
 }
 
 model ExerciseMovement {

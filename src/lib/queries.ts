@@ -303,6 +303,244 @@ export async function getExercise(slug: string) {
   });
 }
 
+// ─── Workout Planner Grid ────────────────────────────────────────────────────
+
+/**
+ * Strip a region/joint-specific prefix from a movement name to produce a
+ * shareable row label. Example: "Shoulder Flexion" → "Flexion",
+ * "Cervical Lateral Flexion" → "Lateral Flexion", "Forearm Pronation" → "Pronation".
+ *
+ * Designed so movements from different joints in the same conceptual category
+ * (flexion, extension, rotation, etc.) collapse into one row in the planner grid.
+ */
+/**
+ * Aliases: regionally-named movements that are anatomical synonyms for a more
+ * general movement. Collapsing these into the general column eliminates
+ * sparse single-region columns (e.g., the ankle's "Dorsiflexion" only had
+ * entries in the Ankle row — it's really the ankle's flavor of flexion).
+ *
+ * Only includes cases where the movement concept is genuinely equivalent,
+ * just regionally named. Concepts that are distinct (e.g., Pronation/Supination
+ * of the forearm, Inversion/Eversion at the subtalar joint, Opposition of the
+ * thumb) are NOT aliased — they keep their own columns.
+ */
+const COLUMN_ALIASES: Record<string, string> = {
+  "Dorsiflexion": "Flexion",
+  "Plantarflexion": "Extension",
+  "Radial Deviation": "Abduction",
+  "Ulnar Deviation": "Adduction",
+};
+
+function deriveMovementColumnKey(movementName: string, regionName: string): string {
+  // Region → ordered list of prefixes to try (longest first so multi-word prefixes win).
+  // Hand intentionally retains "Finger"/"Thumb" prefixes — they're functionally
+  // distinct sub-categories within the Hand region.
+  const prefixesByRegion: Record<string, string[]> = {
+    "Shoulder": ["Shoulder ", "Scapular "],
+    "Elbow": ["Forearm ", "Elbow "],
+    "Wrist": ["Wrist "], // Radial/Ulnar Deviation handled via COLUMN_ALIASES below
+    "Hand": [], // keep Finger/Thumb prefixes
+    "Hip": ["Hip "],
+    "Knee": ["Knee "],
+    "Ankle": ["Foot ", "Ankle "],
+    "Cervical Spine": ["Upper Cervical ", "Cervical "],
+    "Thoracic Spine": ["Thoracic "],
+    "Lumbar Spine": ["Lumbar "],
+  };
+
+  let key = movementName;
+  for (const prefix of prefixesByRegion[regionName] ?? []) {
+    if (key.startsWith(prefix)) {
+      key = key.slice(prefix.length).trim();
+      break;
+    }
+  }
+
+  // Collapse joint-suffix variants for hand movements:
+  //   "Finger Flexion (DIP)" / "Finger Flexion (PIP)" / "Finger Flexion (MCP)" → "Finger Flexion"
+  //   "Thumb Extension (IP)" / "Thumb Extension (MCP)" → "Thumb Extension"
+  // Standard practice in workout planning is to treat these as one composite movement;
+  // joint-specific variants live on the exercise detail page.
+  key = key.replace(/\s*\((MCP|PIP|DIP|IP)\)\s*$/, "");
+
+  // Collapse regional synonyms to their general movement category
+  if (COLUMN_ALIASES[key]) key = COLUMN_ALIASES[key];
+
+  return key;
+}
+
+/** Normalize equipment slugs (e.g. collapse "dumbbells" → "dumbbell"). */
+function normalizeEquipment(slug: string): string {
+  if (slug === "dumbbells") return "dumbbell";
+  return slug;
+}
+
+export type PlannerExercise = {
+  id: string;
+  slug: string;
+  name: string;
+  equipment: string[];
+  muscles: { role: string; name: string; slug: string }[];
+};
+
+export type PlannerData = {
+  regions: { slug: string; name: string }[];
+  movementColumns: string[];
+  // cells[regionSlug][movementColumn] = list of exercises
+  cells: Record<string, Record<string, PlannerExercise[]>>;
+  equipment: string[];
+};
+
+export async function getPlannerData(): Promise<PlannerData> {
+  const movements = await prisma.movement.findMany({
+    select: {
+      id: true,
+      name: true,
+      joint: {
+        select: {
+          region: { select: { slug: true, name: true, sortOrder: true } },
+        },
+      },
+      exercises: {
+        select: {
+          exercise: {
+            select: {
+              id: true,
+              slug: true,
+              name: true,
+              equipment: true,
+              muscles: {
+                select: {
+                  role: true,
+                  muscle: { select: { name: true, slug: true } },
+                },
+                orderBy: { role: "asc" },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  // Collect regions (deduped + sorted)
+  const regionMap = new Map<string, { slug: string; name: string; sortOrder: number }>();
+  for (const m of movements) {
+    const r = m.joint.region;
+    if (!regionMap.has(r.slug)) {
+      regionMap.set(r.slug, { slug: r.slug, name: r.name, sortOrder: r.sortOrder });
+    }
+  }
+  const regions = Array.from(regionMap.values())
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name))
+    .map(({ slug, name }) => ({ slug, name }));
+
+  // Build cells: regionSlug → movementColumn → exercises
+  const cells: Record<string, Record<string, PlannerExercise[]>> = {};
+  // Track exercise IDs per (region, column) to avoid duplicates when multiple
+  // movements within a region collapse to the same column key.
+  const seen: Record<string, Record<string, Set<string>>> = {};
+
+  for (const m of movements) {
+    const region = m.joint.region;
+    const colKey = deriveMovementColumnKey(m.name, region.name);
+
+    if (!cells[region.slug]) cells[region.slug] = {};
+    if (!cells[region.slug][colKey]) cells[region.slug][colKey] = [];
+    if (!seen[region.slug]) seen[region.slug] = {};
+    if (!seen[region.slug][colKey]) seen[region.slug][colKey] = new Set();
+
+    for (const link of m.exercises) {
+      const ex = link.exercise;
+      if (seen[region.slug][colKey].has(ex.id)) continue;
+      seen[region.slug][colKey].add(ex.id);
+      cells[region.slug][colKey].push({
+        id: ex.id,
+        slug: ex.slug,
+        name: ex.name,
+        equipment: Array.from(new Set(ex.equipment.map(normalizeEquipment))),
+        muscles: ex.muscles.map((em) => ({
+          role: em.role,
+          name: em.muscle.name,
+          slug: em.muscle.slug,
+        })),
+      });
+    }
+  }
+
+  // Sort exercises in each cell by name for stable ordering
+  for (const region of Object.values(cells)) {
+    for (const list of Object.values(region)) {
+      list.sort((a, b) => a.name.localeCompare(b.name));
+    }
+  }
+
+  // Sort movement columns: pair-based anatomical order, hand-specific moves at the end.
+  const orderHints = [
+    "Flexion",
+    "Extension",
+    "Upper Flexion",
+    "Upper Extension",
+    "Lateral Flexion",
+    "Rotation",
+    "Upper Rotation",
+    "Abduction",
+    "Adduction",
+    "Horizontal Abduction",
+    "Horizontal Adduction",
+    "Internal Rotation",
+    "External Rotation",
+    "Pronation",
+    "Supination",
+    "Inversion",
+    "Eversion",
+    "Elevation",
+    "Depression",
+    "Protraction",
+    "Retraction",
+    "Upward Rotation",
+    "Downward Rotation",
+    "Finger Flexion",
+    "Finger Extension",
+    "Finger Abduction",
+    "Finger Adduction",
+    "Thumb Flexion",
+    "Thumb Extension",
+    "Thumb Abduction",
+    "Thumb Adduction",
+    "Thumb Opposition",
+  ];
+  const orderIndex = (label: string) => {
+    const exact = orderHints.indexOf(label);
+    return exact !== -1 ? exact : 999;
+  };
+
+  // Collect every unique movement column across all regions
+  const columnSet = new Set<string>();
+  for (const region of Object.values(cells)) {
+    for (const col of Object.keys(region)) columnSet.add(col);
+  }
+  const movementColumns = Array.from(columnSet).sort((a, b) => {
+    const oa = orderIndex(a);
+    const ob = orderIndex(b);
+    if (oa !== ob) return oa - ob;
+    return a.localeCompare(b);
+  });
+
+  // Collect all equipment values across all exercises
+  const equipmentSet = new Set<string>();
+  for (const region of Object.values(cells)) {
+    for (const list of Object.values(region)) {
+      for (const ex of list) {
+        for (const eq of ex.equipment) equipmentSet.add(eq);
+      }
+    }
+  }
+  const equipment = Array.from(equipmentSet).sort();
+
+  return { regions, movementColumns, cells, equipment };
+}
+
 // ─── Sources ─────────────────────────────────────────────────────────────────
 
 export async function getSources() {

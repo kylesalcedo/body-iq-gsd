@@ -29,6 +29,9 @@ export default async function MovementDetailPage({ params }: { params: { slug: s
         </Card>
       )}
 
+      {/* Range of Motion */}
+      <RomCard movement={movement} />
+
       {/* Muscles with role weights */}
       <Card className="mb-6">
         <SectionTitle>Muscles ({movement.muscles.length})</SectionTitle>
@@ -114,5 +117,72 @@ export default async function MovementDetailPage({ params }: { params: { slug: s
         </Card>
       )}
     </div>
+  );
+}
+
+// ─── ROM display ─────────────────────────────────────────────────────────────
+
+function formatRange(
+  min: number | null | undefined,
+  max: number | null | undefined,
+  unit: string | null | undefined,
+): string | null {
+  if (min == null && max == null) return null;
+  const u = unit === "degrees" || !unit ? "°" : ` ${unit}`;
+  if (min != null && max != null) {
+    if (min === max) return `${max}${u}`;
+    return `${min}–${max}${u}`;
+  }
+  return `${max ?? min}${u}`;
+}
+
+function RomCard({ movement }: { movement: any }) {
+  const arom = formatRange(movement.aromMin, movement.aromMax, movement.romUnit);
+  const prom = formatRange(movement.promMin, movement.promMax, movement.romUnit);
+  const hasNumeric = arom != null || prom != null;
+  const hasNotes = !!movement.romNotes;
+
+  // Only render if we have something to show
+  if (!hasNumeric && !hasNotes) return null;
+
+  return (
+    <Card className="mb-6 border-l-4 border-l-indigo-400">
+      <SectionTitle>Normal Range of Motion</SectionTitle>
+
+      {hasNumeric && (
+        <div className="mb-3 grid grid-cols-2 gap-4">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
+              AROM
+            </div>
+            <div className="mt-1 text-2xl font-bold text-gray-900">
+              {arom ?? <span className="text-lg text-gray-300">—</span>}
+            </div>
+            <div className="mt-0.5 text-[10px] text-gray-400">Active range</div>
+          </div>
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
+              PROM
+            </div>
+            <div className="mt-1 text-2xl font-bold text-gray-900">
+              {prom ?? <span className="text-lg text-gray-300">—</span>}
+            </div>
+            <div className="mt-0.5 text-[10px] text-gray-400">Passive range</div>
+          </div>
+        </div>
+      )}
+
+      {movement.romNotes && (
+        <p className="text-xs italic leading-relaxed text-gray-600">
+          {movement.romNotes}
+        </p>
+      )}
+
+      {movement.romSource && (
+        <p className="mt-2 text-[10px] text-gray-400">
+          Source: {movement.romSource}
+        </p>
+      )}
+    </Card>
   );
 }

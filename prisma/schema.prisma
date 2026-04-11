@@ -76,6 +76,17 @@ model Movement {
   description String?
   plane       String?      // sagittal, frontal, transverse
   axis        String?      // e.g. "medial-lateral", "anterior-posterior", "longitudinal"
+  // Normal Range of Motion (published reference values)
+  // AROM = active, PROM = passive. Values in `romUnit` (default "degrees").
+  // For non-goniometric movements (scapular translations, thumb opposition),
+  // the Int fields are null and the measurement approach is described in romNotes.
+  aromMin     Int?
+  aromMax     Int?
+  promMin     Int?
+  promMax     Int?
+  romUnit     String?      @default("degrees")
+  romNotes    String?
+  romSource   String?      // e.g. "AAOS Joint Motion", "Norkin & White 2016"
   // Validation
   status      EntityStatus @default(draft)
   confidence  Float        @default(0.5)

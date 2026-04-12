@@ -120,20 +120,52 @@ export async function GET(request: NextRequest) {
     where.AND = AND;
   }
 
+  // Explicit select locks the v1 contract (see docs/api-v1.md §Endpoint 3).
+  // Mirrors /api/exercises/:slug so list and detail return identical per-item shapes.
   const exercises = await prisma.exercise.findMany({
     where,
     orderBy: { name: "asc" },
-    include: {
+    select: {
+      slug: true,
+      name: true,
+      description: true,
+      dosing: true,
+      emgNotes: true,
+      evidenceLevel: true,
+      difficulty: true,
+      equipment: true,
+      bodyPosition: true,
+      imageUrl: true,
+      videoUrl: true,
+      videoType: true,
+      confidence: true,
+      status: true,
+      notes: true,
       muscles: {
-        include: { muscle: { select: { slug: true, name: true } } },
+        select: {
+          role: true,
+          notes: true,
+          muscle: {
+            select: {
+              slug: true,
+              name: true,
+              origin: true,
+              insertion: true,
+              action: true,
+              innervation: true,
+            },
+          },
+        },
         orderBy: { role: "asc" },
       },
       movements: {
-        include: {
+        select: {
           movement: {
             select: {
               slug: true,
               name: true,
+              plane: true,
+              axis: true,
               joint: {
                 select: {
                   slug: true,
@@ -146,12 +178,45 @@ export async function GET(request: NextRequest) {
         },
       },
       functionalTasks: {
-        include: { functionalTask: { select: { slug: true, name: true, category: true } } },
+        select: {
+          functionalTask: {
+            select: {
+              slug: true,
+              name: true,
+              description: true,
+              category: true,
+            },
+          },
+        },
       },
-      cues: { orderBy: { order: "asc" } },
-      regressions: { orderBy: { order: "asc" } },
-      progressions: { orderBy: { order: "asc" } },
-      sources: { include: { source: { select: { slug: true, title: true } } } },
+      cues: {
+        select: { text: true, cueType: true },
+        orderBy: { order: "asc" },
+      },
+      regressions: {
+        select: { name: true, description: true },
+        orderBy: { order: "asc" },
+      },
+      progressions: {
+        select: { name: true, description: true },
+        orderBy: { order: "asc" },
+      },
+      sources: {
+        select: {
+          notes: true,
+          source: {
+            select: {
+              slug: true,
+              title: true,
+              authors: true,
+              year: true,
+              journal: true,
+              doi: true,
+              sourceType: true,
+            },
+          },
+        },
+      },
     },
   });
 

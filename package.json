@@ -12,6 +12,7 @@
     "db:studio": "prisma studio",
     "db:generate": "prisma generate",
     "validate:schemas": "tsx src/lib/schemas/validate.ts",
+    "contract:test": "tsx src/lib/schemas/contract-test.ts",
     "data:quality": "tsx scripts/data-quality.ts"
   },
   "dependencies": {

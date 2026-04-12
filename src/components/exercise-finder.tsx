@@ -24,7 +24,6 @@ interface Filters {
 }
 
 interface ExerciseResult {
-  id: string;
   slug: string;
   name: string;
   description: string;
@@ -512,7 +511,7 @@ export function ExerciseFinder() {
                 if (expandedIds.size === exercises.length) {
                   setExpandedIds(new Set());
                 } else {
-                  setExpandedIds(new Set(exercises.map((e) => e.id)));
+                  setExpandedIds(new Set(exercises.map((e) => e.slug)));
                 }
               }}
               className="text-xs text-gray-600 border border-gray-200 rounded px-2.5 py-1.5 hover:bg-gray-50 transition-colors"
@@ -539,10 +538,10 @@ export function ExerciseFinder() {
           <div className="space-y-3">
             {exercises.map((e) => (
               <ExerciseCard
-                key={e.id}
+                key={e.slug}
                 exercise={e}
-                expanded={expandedIds.has(e.id)}
-                onToggle={() => toggleExpanded(e.id)}
+                expanded={expandedIds.has(e.slug)}
+                onToggle={() => toggleExpanded(e.slug)}
               />
             ))}
           </div>

@@ -8,6 +8,8 @@ import { SearchBar } from "@/components/search";
 const navItems = [
   { label: "Exercise Finder", href: "/finder", icon: "🔍" },
   { label: "Workout Planner", href: "/planner", icon: "🗓️" },
+  { label: "Gait Cycle", href: "/gait", icon: "🚶" },
+  { label: "Hand Assessment", href: "/hand-assessment", icon: "✋" },
   { label: "Regions", href: "/regions", icon: "🗺️" },
   { label: "Joints", href: "/joints", icon: "🔗" },
   { label: "Movements", href: "/movements", icon: "↔️" },

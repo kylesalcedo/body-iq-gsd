@@ -29,4 +29,46 @@ tmp/
 
 # Runtime state
 .bg-shell/
-.bg-shell/
+
+# Private working notes — research prompts, raw LLM responses, internal docs
+private/
+prompts/
+research/
+notes/
+scratch/
+TODO.md
+NOTES.md
+*.draft.md
+
+# Agent / IDE local state
+.claude/
+.claude.json
+CLAUDE.local.md
+.cursor/
+.aider*
+.continue/
+.mcp.json
+
+# Database dumps & local backups
+*.sql
+*.sql.gz
+*.dump
+*.sqlite
+*.sqlite3
+*.db
+backups/
+pg_dump*
+prisma/*.db
+prisma/migrations/dev/
+
+# Secrets / credentials (belt-and-suspenders — .env already excluded above)
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.crt
+credentials*.json
+service-account*.json
+gcp-*.json
+.envrc

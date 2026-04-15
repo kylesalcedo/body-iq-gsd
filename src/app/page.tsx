@@ -1,67 +1,143 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
-export default async function Home() {
-  const counts = {
-    regions: await prisma.region.count(),
-    joints: await prisma.joint.count(),
-    movements: await prisma.movement.count(),
-    muscles: await prisma.muscle.count(),
-    functionalTasks: await prisma.functionalTask.count(),
-    exercises: await prisma.exercise.count(),
-    sources: await prisma.researchSource.count(),
-  };
+export const dynamic = "force-dynamic";
 
-  const stats = [
-    { label: "Regions", count: counts.regions, href: "/regions", icon: "🗺️" },
-    { label: "Joints", count: counts.joints, href: "/joints", icon: "🔗" },
-    { label: "Movements", count: counts.movements, href: "/movements", icon: "↔️" },
-    { label: "Muscles", count: counts.muscles, href: "/muscles", icon: "💪" },
-    { label: "Functional Tasks", count: counts.functionalTasks, href: "/tasks", icon: "🎯" },
-    { label: "Exercises", count: counts.exercises, href: "/exercises", icon: "🏋️" },
-    { label: "Sources", count: counts.sources, href: "/sources", icon: "📚" },
-  ];
+const menu = [
+  {
+    href: "/finder",
+    icon: "🔍",
+    label: "Exercise Finder",
+    blurb: "Filter the full exercise library by muscle, movement, equipment, or difficulty.",
+  },
+  {
+    href: "/planner",
+    icon: "🗓️",
+    label: "Workout Planner",
+    blurb: "Region × movement grid — pick a cell to see every exercise that trains it.",
+  },
+  {
+    href: "/gait",
+    icon: "🚶",
+    label: "Gait Cycle",
+    blurb: "The 8 Rancho phases with kinematics, EMG, and phase-specific exercises.",
+  },
+  {
+    href: "/hand-assessment",
+    icon: "✋",
+    label: "Hand Assessment",
+    blurb: "Pinch/grip normatives, intrinsic outcome measures, clinical tests (WIP).",
+  },
+  {
+    href: "/regions",
+    icon: "🗺️",
+    label: "Regions",
+    blurb: "Body regions (cervical, shoulder, hip, etc.) grouping their joints.",
+  },
+  {
+    href: "/joints",
+    icon: "🔗",
+    label: "Joints",
+    blurb: "Every articulation with its type and the movements it performs.",
+  },
+  {
+    href: "/movements",
+    icon: "↔️",
+    label: "Movements",
+    blurb: "Joint motions with plane, axis, AROM/PROM, and prime movers.",
+  },
+  {
+    href: "/muscles",
+    icon: "💪",
+    label: "Muscles",
+    blurb: "Origin, insertion, innervation, blood supply, and actions.",
+  },
+  {
+    href: "/tasks",
+    icon: "🎯",
+    label: "Functional Tasks",
+    blurb: "ADLs and sport tasks mapped to the movements they require.",
+  },
+  {
+    href: "/exercises",
+    icon: "🏋️",
+    label: "Exercises",
+    blurb: "Full library with dosing, EMG %MVIC, cues, regressions, progressions.",
+  },
+  {
+    href: "/sources",
+    icon: "📚",
+    label: "Sources",
+    blurb: "Peer-reviewed citations backing every entity in the graph.",
+  },
+  {
+    href: "/api-docs",
+    icon: "⚡",
+    label: "API Reference",
+    blurb: "v1 JSON endpoints for external consumers, with Zod-validated contracts.",
+  },
+  {
+    href: "/validation",
+    icon: "✅",
+    label: "Validation Queue",
+    blurb: "Entities in draft or needs-review — clinician sign-off workflow.",
+  },
+];
+
+export default async function Home() {
+  const [regions, joints, movements, muscles, exercises, sources] = await Promise.all([
+    prisma.region.count(),
+    prisma.joint.count(),
+    prisma.movement.count(),
+    prisma.muscle.count(),
+    prisma.exercise.count(),
+    prisma.researchSource.count(),
+  ]);
+
+  const totals = [
+    ["regions", regions],
+    ["joints", joints],
+    ["movements", movements],
+    ["muscles", muscles],
+    ["exercises", exercises],
+    ["sources", sources],
+  ] as const;
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-gray-900">Movement Knowledge Engine</h1>
+    <div className="mx-auto max-w-3xl px-6 py-12">
+      <h1 className="text-3xl font-bold text-gray-900">Body IQ</h1>
       <p className="mt-2 text-gray-600">
-        Browse and validate the biomechanics knowledge graph.
+        A biomechanics knowledge graph — anatomy, movement, evidence-based exercise.
       </p>
 
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {stats.map((s) => (
-          <Link
-            key={s.href}
-            href={s.href}
-            className="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
-          >
-            <span className="text-3xl">{s.icon}</span>
-            <span className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">{s.count}</span>
-              <span className="text-sm text-gray-500">{s.label}</span>
-            </span>
-          </Link>
+      <p className="mt-4 text-sm text-gray-500">
+        {totals.map(([label, n], i) => (
+          <span key={label}>
+            {i > 0 && <span className="mx-2 text-gray-300">·</span>}
+            <span className="font-semibold text-gray-700">{n.toLocaleString()}</span>{" "}
+            {label}
+          </span>
         ))}
-      </div>
+      </p>
 
-      <div className="mt-8 rounded-lg border border-indigo-200 bg-indigo-50 p-4">
-        <h2 className="font-semibold text-indigo-800">Tools</h2>
-        <div className="mt-2 flex flex-wrap gap-3">
-          <Link
-            href="/finder"
-            className="inline-flex items-center rounded-md bg-indigo-100 px-3 py-1.5 text-sm font-medium text-indigo-800 hover:bg-indigo-200 transition-colors"
-          >
-            🔍 Exercise Finder
-          </Link>
-          <Link
-            href="/validation"
-            className="inline-flex items-center rounded-md bg-amber-100 px-3 py-1.5 text-sm font-medium text-amber-800 hover:bg-amber-200 transition-colors"
-          >
-            ✅ Validation Queue
-          </Link>
-        </div>
-      </div>
+      <ul className="mt-10 divide-y divide-gray-100 border-t border-b border-gray-100">
+        {menu.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className="flex items-start gap-4 py-3 transition-colors hover:bg-gray-50"
+            >
+              <span className="mt-0.5 w-6 shrink-0 text-center text-lg">{item.icon}</span>
+              <span className="flex-1">
+                <span className="block text-sm font-medium text-gray-900 group-hover:text-indigo-700">
+                  {item.label}
+                </span>
+                <span className="block text-sm text-gray-500">{item.blurb}</span>
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

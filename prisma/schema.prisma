@@ -233,8 +233,43 @@ model Exercise {
   regressions Regression[]
   progressions Progression[]
   videos      ExerciseVideo[]
+  gaitPhases  ExerciseGaitPhase[]
   tags        TagOnEntity[]
   sources     SourceOnEntity[]
+}
+
+// ─── Gait Cycle Layer ────────────────────────────────────────────────────────
+// The 8 Rancho Los Amigos phases. Exercises can be linked to the phase(s)
+// they primarily address (e.g., eccentric step-downs → Loading Response).
+
+model GaitPhase {
+  id             String              @id @default(cuid())
+  slug           String              @unique
+  name           String
+  shortName      String?             // e.g. "IC", "LR"
+  cycleStartPct  Int                 // % of gait cycle start (0-100)
+  cycleEndPct    Int                 // % of gait cycle end
+  phaseGroup     String              // "stance" or "swing"
+  order          Int                 @default(0)
+  kinematics     String?             // per-joint kinematics summary
+  kinetics       String?             // GRF, moments, powers
+  muscleActivity String?             // primary muscles + EMG timing
+  functionalGoal String?
+  commonDeficits String?             // typical deviations + impairments
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  exercises      ExerciseGaitPhase[]
+}
+
+model ExerciseGaitPhase {
+  id          String    @id @default(cuid())
+  rationale   String?   // how this exercise addresses the phase
+  exerciseId  String
+  exercise    Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  gaitPhaseId String
+  gaitPhase   GaitPhase @relation(fields: [gaitPhaseId], references: [id], onDelete: Cascade)
+
+  @@unique([exerciseId, gaitPhaseId])
 }
 
 // ─── Exercise Video ──────────────────────────────────────────────────────────

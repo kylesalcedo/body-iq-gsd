@@ -6,6 +6,8 @@ import { seedMuscles, seedMovementMuscleLinks } from "./muscles";
 import { seedFunctionalTasks } from "./functional-tasks";
 import { seedExercises } from "./exercises";
 import { seedSources } from "./sources";
+import { seedGaitAndScapularExtension } from "./extensions/gait-scapular";
+import { seedHandIntrinsicsExtension } from "./extensions/hand-intrinsics";
 
 async function main() {
   console.log("🦴 Body IQ — Seeding knowledge graph...\n");
@@ -25,6 +27,10 @@ async function main() {
 
   // Evidence layer
   await seedSources();
+
+  // Extensions (additive — new regions, movements, gait phases, exercises)
+  await seedGaitAndScapularExtension();
+  await seedHandIntrinsicsExtension();
 
   // Summary
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);

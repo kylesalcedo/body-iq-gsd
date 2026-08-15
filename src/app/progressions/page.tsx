@@ -18,9 +18,27 @@ function chipClass(kind: Kind, linked: boolean) {
   return `${base} ${linked ? map[kind].on : map[kind].off}`;
 }
 
-function Chip({ kind, name, matchedSlug }: { kind: Kind; name: string; matchedSlug: string | null }) {
+// A typed edge knows *what changes* between the two exercises — surface it as a
+// tooltip. See wiki/decisions/2026-08-05-progression-edges.md.
+const MECHANISM_LABEL: Record<string, string> = {
+  leverage: "harder by leverage — longer moment arm",
+  range: "harder by range — more joint excursion",
+  unilateral: "harder by loading one limb",
+  stability: "harder by reduced base of support",
+  tempo: "harder by time under tension",
+  contraction_type: "harder by contraction type — isometric → eccentric → full",
+  added_load: "harder by added external load",
+  speed: "harder by rate of force development",
+  volume: "harder by volume",
+  complexity: "harder by coordination demand",
+};
+
+function Chip({ kind, name, matchedSlug, mechanism }: { kind: Kind; name: string; matchedSlug: string | null; mechanism?: string | null }) {
   const cls = chipClass(kind, !!matchedSlug);
-  return matchedSlug ? <Link href={`/exercises/${matchedSlug}`} className={cls}>{name}</Link> : <span className={cls}>{name}</span>;
+  const title = mechanism ? MECHANISM_LABEL[mechanism] ?? mechanism : undefined;
+  return matchedSlug
+    ? <Link href={`/exercises/${matchedSlug}`} className={cls} title={title}>{name}</Link>
+    : <span className={cls} title={title}>{name}</span>;
 }
 
 export default async function ProgressionsPage() {
@@ -72,13 +90,13 @@ export default async function ProgressionsPage() {
                 {ls.map((l) => (
                   <Fragment key={l.slug}>
                     <div className="flex flex-wrap justify-end gap-1.5 border-t py-2" style={{ borderColor: UI.line }}>
-                      {l.regressions.map((r, i) => <Chip key={i} kind="regression" name={r.name} matchedSlug={r.matchedSlug} />)}
+                      {l.regressions.map((r, i) => <Chip key={i} kind="regression" name={r.name} matchedSlug={r.matchedSlug} mechanism={r.mechanism} />)}
                     </div>
                     <div className="flex justify-center border-t px-3 py-2" style={{ borderColor: UI.line }}>
                       <Chip kind="base" name={l.name} matchedSlug={l.slug} />
                     </div>
                     <div className="flex flex-wrap justify-start gap-1.5 border-t py-2" style={{ borderColor: UI.line }}>
-                      {l.progressions.map((p, i) => <Chip key={i} kind="progression" name={p.name} matchedSlug={p.matchedSlug} />)}
+                      {l.progressions.map((p, i) => <Chip key={i} kind="progression" name={p.name} matchedSlug={p.matchedSlug} mechanism={p.mechanism} />)}
                     </div>
                   </Fragment>
                 ))}

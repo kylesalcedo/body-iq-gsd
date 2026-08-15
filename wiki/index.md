@@ -34,6 +34,7 @@ Institutional memory for **Body IQ**. Domain facts live in the database
 - [[decisions/2026-07-04-discovery-views]] — progression ladders, body map, coverage heatmap
 - [[decisions/2026-07-04-nav-and-discovery-ux]] — grouped nav + discovery-view UX refinements
 - [[decisions/2026-07-04-validator-agent]] — report-only, human-in-the-loop validation assistant
+- [[decisions/2026-08-05-progression-edges]] — progression/regression as typed FK edges with a mechanism
 
 ## Sources
 Third-party sources (PDFs, PRDs, threads) go in `raw/` (gitignored). File a

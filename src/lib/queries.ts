@@ -572,8 +572,17 @@ export async function getPlannerData(): Promise<PlannerData> {
 export type LadderStep = {
   name: string;
   description: string;
-  /** slug of a real Exercise whose name matches this step, if any (best-effort) */
+  /**
+   * Slug of the Exercise this step refers to. Comes from the FK edge
+   * (`targetExerciseId`) when the step is linked; falls back to a best-effort
+   * normalized-name match for legacy prose steps. Null = a stub step with no
+   * node yet. See wiki/decisions/2026-08-05-progression-edges.md.
+   */
   matchedSlug: string | null;
+  /** Why the target is harder/easier, when the edge is typed. */
+  mechanism: string | null;
+  /** True when matchedSlug came from the FK edge rather than a name guess. */
+  linked: boolean;
 };
 
 export type ProgressionLadder = {
@@ -600,16 +609,22 @@ function normalizeExerciseName(name: string): string {
 
 /**
  * Progression ladders: each exercise rendered as
- * regression ← exercise → progression. Regressions/Progressions are prose rows
- * (not FK edges), so step names are best-effort linkified to real exercises by
- * normalized-name match. See wiki/concepts/knowledge-graph-model.md.
+ * regression ← exercise → progression.
+ *
+ * A step resolves to a real exercise in one of two ways: the FK edge
+ * (`targetExerciseId`) when it is a typed difficulty edge, or — for legacy
+ * prose steps — a best-effort normalized-name match. The FK always wins, and
+ * supplies the target's real name so the chip reads properly rather than
+ * echoing whatever string the author typed. See
+ * wiki/decisions/2026-08-05-progression-edges.md.
  */
 export async function getProgressionLadders(): Promise<ProgressionLadder[]> {
+  const targetInclude = { targetExercise: { select: { slug: true, name: true } } };
   const exercises = await prisma.exercise.findMany({
     orderBy: { name: "asc" },
     include: {
-      regressions: { orderBy: { order: "asc" } },
-      progressions: { orderBy: { order: "asc" } },
+      regressions: { orderBy: { order: "asc" }, include: targetInclude },
+      progressions: { orderBy: { order: "asc" }, include: targetInclude },
       movements: {
         include: {
           movement: {
@@ -656,14 +671,18 @@ export async function getProgressionLadders(): Promise<ProgressionLadder[]> {
       regionSlug: region?.slug ?? "unassigned",
       regionName: region?.name ?? "Unassigned",
       regressions: e.regressions.map((r) => ({
-        name: r.name,
+        name: r.targetExercise?.name ?? r.name,
         description: r.description,
-        matchedSlug: matchStep(r.name),
+        matchedSlug: r.targetExercise?.slug ?? matchStep(r.name),
+        mechanism: r.mechanism ?? null,
+        linked: !!r.targetExercise,
       })),
       progressions: e.progressions.map((p) => ({
-        name: p.name,
+        name: p.targetExercise?.name ?? p.name,
         description: p.description,
-        matchedSlug: matchStep(p.name),
+        matchedSlug: p.targetExercise?.slug ?? matchStep(p.name),
+        mechanism: p.mechanism ?? null,
+        linked: !!p.targetExercise,
       })),
     });
   }

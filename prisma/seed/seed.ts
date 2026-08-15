@@ -33,6 +33,7 @@ import { seedGoalsTaxonomyExtension } from "./extensions/goals-taxonomy";
 import { seedGoalLinksExtension } from "./extensions/goal-links";
 import { seedDataIntegrityExtension } from "./extensions/data-integrity";
 import { seedApplyAuditExtension } from "./extensions/apply-audit";
+import { seedBodyweightLaddersExtension } from "./extensions/bodyweight-ladders";
 
 async function main() {
   console.log("🦴 Body IQ — Seeding knowledge graph...\n");
@@ -83,6 +84,7 @@ async function main() {
   await seedGoalLinksExtension();
   await seedDataIntegrityExtension();
   await seedApplyAuditExtension(); // LAST: survives reg/prog recreation above
+  await seedBodyweightLaddersExtension(); // after apply-audit — same reason
 
   // Summary
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);

@@ -115,9 +115,14 @@ Whether to render it as a small graph/flow diagram vs stacked columns.
 
 ---
 
-## Candidate future ADR (not a feature)
+## Candidate future ADR (not a feature)  ✅ WRITTEN (2026-08-05)
 
 Promote `Regression` / `Progression` from prose rows to real FK edges between
 Exercise records, so progression ladders are hard graph edges rather than the
 current best-effort name match. See note in
 [[concepts/knowledge-graph-model]].
+
+Now [[decisions/2026-08-05-progression-edges]] — status *proposed*. Adds a
+`ProgressionMechanism` enum (why the next rung is harder) alongside the FK, and
+makes `criterion` the expected gate/trigger. First content drop against it:
+`prisma/seed/extensions/bodyweight-ladders.ts`.

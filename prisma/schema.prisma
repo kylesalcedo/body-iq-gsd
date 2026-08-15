@@ -17,6 +17,23 @@ enum EntityStatus {
   disputed
 }
 
+// Why the target of a progression/regression edge is harder (or easier) than
+// its source — what actually changes between the two exercises. Categorical,
+// not numeric: difficulty is not a total order. See
+// wiki/decisions/2026-08-05-progression-edges.md.
+enum ProgressionMechanism {
+  leverage         // external moment arm / centre-of-mass position
+  range            // joint excursion at the same leverage
+  unilateral       // load shifted toward one limb
+  stability        // base-of-support or surface demand
+  tempo            // time under tension, pauses
+  contraction_type // isometric → eccentric-only → full concentric+eccentric
+  added_load       // external mass
+  speed            // rate of force development
+  volume           // reps / sets / duration only
+  complexity       // coordination or sequencing demand
+}
+
 enum MuscleRole {
   primary
   secondary
@@ -401,6 +418,7 @@ model Regression {
   order       Int      @default(0)
   // Difficulty-graph edge: when the regression exists as its own Exercise node
   criterion        String?   // clinical trigger to regress (e.g. "pain >3/10 during reps")
+  mechanism        ProgressionMechanism? // what makes the target easier
   targetExerciseId String?
   targetExercise   Exercise? @relation("RegressionTarget", fields: [targetExerciseId], references: [id], onDelete: SetNull)
   exerciseId  String
@@ -416,6 +434,7 @@ model Progression {
   order       Int      @default(0)
   // Difficulty-graph edge: when the progression exists as its own Exercise node
   criterion        String?   // achievement gate to progress (e.g. "3x10 pain-free with 2s holds")
+  mechanism        ProgressionMechanism? // what makes the target harder
   targetExerciseId String?
   targetExercise   Exercise? @relation("ProgressionTarget", fields: [targetExerciseId], references: [id], onDelete: SetNull)
   exerciseId  String

@@ -2,6 +2,44 @@
 
 Append-only. `grep "^## \[" wiki/log.md | tail -10` for recent activity.
 
+## [2026-08-14] fix | FHIR links 404'd on the static demo — two causes
+(1) The Pages workflow deletes `src/app/api/**` before the export build, so
+`/api/exercises/<slug>/fhir` was never deployed. (2) `/exercises/[slug]` used a
+raw `<a href="/api/…">`, which `basePath` does not rewrite — it pointed outside
+the repo subpath and would break under any basePath deploy. Fixed by adding
+`src/lib/static-mode.ts` (`fhirHref` / `withBasePath`), exporting FHIR resources
+to `public/fhir/` in CI before the API routes are removed, and stating the
+snapshot caveat on both call sites plus the demo banner. Verified with a real
+`STATIC_EXPORT=1 PAGES_BASE_PATH=/body-iq` build: links resolve to
+`/body-iq/fhir/<slug>.json`, 306 files present in `out/fhir/`, no `/api/` hrefs
+left in the output. See [[concepts/static-demo]].
+
+## [2026-08-05] decision | Progression/regression as typed graph edges (proposed)
+`targetExerciseId` becomes the canonical link instead of best-effort name
+matching in `getProgressionLadders`; new `ProgressionMechanism` enum records
+*why* the next rung is harder (leverage, range, unilateral, stability, tempo,
+contraction_type, added_load, speed, volume, complexity); `criterion` carries
+the gate/trigger; one authored rung materializes both directions. Additive and
+nullable — no v1 API break. ADR: [[decisions/2026-08-05-progression-edges]].
+
+## [2026-08-05] change | Bodyweight progression ladders (drafted, not seeded)
+`extensions/bodyweight-ladders.ts` + JSON: 15 new nodes filling the middle of
+the push/pull/squat/hinge/core ladders (knee push-up, floor push-up, diamond,
+archer, dead hang, scapular pull-up, band-assisted + negative pull-up, support
+hold, negative dip, single-leg glute bridge, assisted pistol, foot-supported →
+tuck → full L-sit) and 31 typed rungs across 7 ladders. Rung ORDER is community
+consensus — recorded as an `expert-opinion` source at confidence 0.35 and
+linked to every node; the anatomy links under each node are unsourced pending
+the normal sourcing pass. Runs after apply-audit for the same reason it does.
+Seeded 2026-08-14: 320 exercises, 31 typed progression edges + 31 mirrored
+regressions. `getProgressionLadders` now prefers the FK over the name match and
+takes the chip label from the target (`Negative Dip → Dip` only resolves via the
+FK), and `/progressions` shows the mechanism as a tooltip.
+
+Still outstanding: the two `pnpm data:quality` checks the ADR calls for
+(edges missing a `criterion`; name-matched-but-unlinked steps). 510 of 524
+legacy prose steps remain unlinked — the incremental backfill the ADR describes.
+
 ## [2026-08-04] change | API detail routes (muscle/region/joint) + dataset-backed MCP server (7 tools)
 
 ## [2026-08-04] change | Data-integrity pass + versioned dataset export (JSON/SQLite/schema) + release CI

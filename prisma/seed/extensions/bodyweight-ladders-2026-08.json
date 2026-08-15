@@ -1,0 +1,753 @@
+{
+  "source": {
+    "slug": "bodyweight-progression-consensus-2026",
+    "title": "Community-consensus bodyweight progression sequences",
+    "authors": "r/bodyweightfitness Recommended Routine contributors; allied coaching material",
+    "year": 2026,
+    "sourceType": "expert-opinion",
+    "url": "https://www.reddit.com/r/bodyweightfitness/wiki/kb/recommended_routine",
+    "description": "Widely used, community-maintained bodyweight progression sequences. Consensus practice, not primary evidence: the sequences are reproducible and broadly agreed on across coaching sources, but the ORDER has not been tested in controlled trials. Cited here only to justify rung ordering. The muscle, movement, and functional links under each rung carry their own sources and are not sourced to this record.",
+    "confidence": 0.35
+  },
+
+  "exercises": [
+    {
+      "slug": "knee-push-up",
+      "name": "Knee Push-Up",
+      "description": "Horizontal press performed with the knees on the floor and the ankles crossed, shortening the lever between the hands and the ground-contact point so the arms and trunk support less of the body's weight than in a floor push-up.",
+      "rationale": "Bridges hand-elevated push-ups and the floor push-up. Retains the hand position, scapular mechanics, and trunk brace of the full movement while reducing the external moment about the shoulders.",
+      "category": "strength",
+      "difficulty": "beginner",
+      "bodyPosition": "prone",
+      "equipment": ["exercise mat (optional, for knee comfort)"],
+      "dosing": "3×8–12, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "prone, hands under the shoulders, knees on the floor, ankles crossed, shoulders-hips-knees in one line",
+      "endPosition": "elbows extended, scapulae protracted, shoulder-to-knee line unchanged",
+      "rom": "full elbow flexion to extension; roughly 0–45° shoulder horizontal abduction",
+      "cameraView": "lateral",
+      "movementSlugs": ["elbow-flexion", "elbow-extension", "shoulder-horizontal-adduction", "scapular-protraction"],
+      "muscleRoles": [
+        { "muscleSlug": "pectoralis-major", "role": "primary" },
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "anterior-deltoid", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer", "notes": "Holds the scapulae protracted against the ribcage; winging here is the usual reason to stay at this rung." },
+        { "muscleSlug": "rectus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "gluteus-maximus", "role": "stabilizer", "notes": "Holds the hips in line; sagging indicates the trunk, not the arms, is the limiter." }
+      ],
+      "functionalTaskSlugs": ["pushing-objects", "floor-transfers"],
+      "cues": [
+        { "text": "Push the floor away from you", "cueType": "verbal", "focus": "external" },
+        { "text": "Keep one straight line from your shoulders to your knees", "cueType": "verbal", "focus": "external" },
+        { "text": "Lower until your chest is about a fist's width from the floor", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "push-up",
+      "name": "Push-Up",
+      "description": "The floor push-up: a closed-chain horizontal press supporting roughly two-thirds of bodyweight through the hands, with the trunk held as a rigid lever from shoulders to ankles.",
+      "rationale": "The reference horizontal pressing pattern — the standard against which incline and knee variants are graded, and the entry point for the harder narrow-base and unilateral variants.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": "prone",
+      "equipment": ["none (bodyweight)"],
+      "dosing": "3×5–12, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "prone plank position, hands under the shoulders, feet together, shoulders-hips-ankles in one line",
+      "endPosition": "elbows extended, scapulae protracted at lockout, trunk line unchanged",
+      "rom": "full elbow flexion to extension; chest to within a fist's width of the floor",
+      "cameraView": "lateral",
+      "movementSlugs": ["elbow-flexion", "elbow-extension", "shoulder-horizontal-adduction", "scapular-protraction"],
+      "muscleRoles": [
+        { "muscleSlug": "pectoralis-major", "role": "primary" },
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "anterior-deltoid", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer", "notes": "Closed-chain protraction; a common rationale for the push-up plus variation." },
+        { "muscleSlug": "rectus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "external-oblique", "role": "stabilizer" },
+        { "muscleSlug": "gluteus-maximus", "role": "stabilizer" },
+        { "muscleSlug": "erector-spinae", "role": "stabilizer", "notes": "Resists lumbar extension against the anterior load." }
+      ],
+      "functionalTaskSlugs": ["pushing-objects", "floor-transfers", "kneeling-getting-up"],
+      "cues": [
+        { "text": "Screw your hands into the floor as you press", "cueType": "verbal", "focus": "external" },
+        { "text": "Squeeze your glutes so your hips travel with your chest, not behind it", "cueType": "verbal", "focus": "external" },
+        { "text": "Keep your elbows about 45° from your ribs, not flared to the sides", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "diamond-push-up",
+      "name": "Diamond Push-Up",
+      "description": "Push-up with the hands together beneath the sternum, index fingers and thumbs forming a triangle. The narrow base increases the elbow-extension demand and reduces the pectoral contribution relative to a shoulder-width push-up.",
+      "rationale": "A push-up progression that adds difficulty through hand position rather than body angle — useful when the goal is elbow-extensor strength and the athlete already owns the full-range push-up.",
+      "category": "strength",
+      "difficulty": "intermediate-advanced",
+      "bodyPosition": "prone",
+      "equipment": ["none (bodyweight)"],
+      "dosing": "3×5–10, 2×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "prone plank position, hands together under the sternum forming a triangle, feet together",
+      "endPosition": "elbows extended, chest over the hands, trunk line unchanged",
+      "rom": "full elbow flexion to extension; chest to the hands",
+      "cameraView": "lateral",
+      "movementSlugs": ["elbow-flexion", "elbow-extension", "shoulder-horizontal-adduction", "scapular-protraction"],
+      "muscleRoles": [
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "pectoralis-major", "role": "secondary", "notes": "Contribution falls relative to a shoulder-width push-up as the hands narrow." },
+        { "muscleSlug": "anterior-deltoid", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "rectus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "gluteus-maximus", "role": "stabilizer" }
+      ],
+      "functionalTaskSlugs": ["pushing-objects"],
+      "cues": [
+        { "text": "Keep your elbows brushing your ribs on the way down", "cueType": "verbal", "focus": "external" },
+        { "text": "Stop if your wrists complain — the narrow hand position loads them more", "cueType": "verbal", "focus": "internal" }
+      ]
+    },
+    {
+      "slug": "archer-push-up",
+      "name": "Archer Push-Up",
+      "description": "Push-up performed with the hands set wide and the descent biased to one side: the near arm flexes through full range while the far arm stays nearly straight, shifting most of the load onto a single limb.",
+      "rationale": "The standard bridge between the two-arm push-up and one-arm pressing. Loads one shoulder toward its unilateral capacity while the trailing arm supplies a graded, self-selected amount of assistance.",
+      "category": "strength",
+      "difficulty": "advanced",
+      "bodyPosition": "prone",
+      "equipment": ["none (bodyweight)"],
+      "dosing": "3×3–6 per side, 2×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "prone plank position with the hands set roughly 1.5× shoulder-width apart, feet wide for base",
+      "endPosition": "chest lowered over the working hand, the opposite arm straight and abducted",
+      "rom": "full elbow flexion to extension on the working side; near-full elbow extension maintained on the trailing side",
+      "cameraView": "anterior",
+      "movementSlugs": ["elbow-flexion", "elbow-extension", "shoulder-horizontal-adduction", "shoulder-horizontal-abduction", "scapular-protraction"],
+      "muscleRoles": [
+        { "muscleSlug": "pectoralis-major", "role": "primary" },
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "anterior-deltoid", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "external-oblique", "role": "stabilizer", "notes": "Resists the trunk rotation created by the asymmetric load." },
+        { "muscleSlug": "internal-oblique", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "gluteus-maximus", "role": "stabilizer" }
+      ],
+      "functionalTaskSlugs": ["pushing-objects"],
+      "cues": [
+        { "text": "Keep your hips square to the floor — don't let the trailing side roll open", "cueType": "verbal", "focus": "external" },
+        { "text": "The straight arm is a kickstand, not a second pressing arm", "cueType": "verbal", "focus": "imagery" }
+      ]
+    },
+    {
+      "slug": "dead-hang",
+      "name": "Dead Hang",
+      "description": "Passive hang from an overhead bar with the elbows straight and the shoulders allowed to elevate, building grip endurance and tolerance to loaded overhead shoulder flexion.",
+      "rationale": "The entry point to every hanging progression. Grip endurance, not pulling strength, is the usual limiter early on, and this rung isolates it while accustoming the shoulder to axial load.",
+      "category": "strength",
+      "difficulty": "beginner",
+      "bodyPosition": "hanging",
+      "equipment": ["pull-up bar"],
+      "dosing": "3 holds × 20–45 s, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "hanging from a bar, hands shoulder-width in a pronated grip, arms straight, feet clear of the floor",
+      "endPosition": "position held; shoulders relaxed toward the ears, ribcage down",
+      "rom": "static hold at end-range shoulder flexion",
+      "cameraView": "anterior",
+      "movementSlugs": ["finger-flexion", "shoulder-flexion", "scapular-elevation"],
+      "muscleRoles": [
+        { "muscleSlug": "flexor-digitorum-profundus", "role": "primary" },
+        { "muscleSlug": "flexor-digitorum-superficialis", "role": "primary" },
+        { "muscleSlug": "flexor-carpi-ulnaris", "role": "secondary" },
+        { "muscleSlug": "trapezius-upper", "role": "secondary" },
+        { "muscleSlug": "supraspinatus", "role": "stabilizer" },
+        { "muscleSlug": "infraspinatus", "role": "stabilizer" },
+        { "muscleSlug": "latissimus-dorsi", "role": "stabilizer" }
+      ],
+      "functionalTaskSlugs": ["gripping-cup", "reaching-overhead"],
+      "goalSlugs": ["improve-grip-strength", "improve-pull-up"],
+      "cues": [
+        { "text": "Let your shoulders come up toward your ears — this one is meant to be passive", "cueType": "verbal", "focus": "external" },
+        { "text": "Breathe normally and keep your ribs down rather than arching", "cueType": "verbal", "focus": "internal" }
+      ]
+    },
+    {
+      "slug": "scapular-pull-up",
+      "name": "Scapular Pull-Up",
+      "description": "From a dead hang, the shoulders are actively depressed and the scapulae retracted and downwardly rotated to raise the body a few centimetres, with the elbows staying straight throughout.",
+      "rationale": "Teaches the scapular initiation that precedes elbow flexion in a pull-up. Athletes who skip this rung typically pull with the elbows from a passive hang and shrug under load.",
+      "category": "motor-control",
+      "difficulty": "beginner-intermediate",
+      "bodyPosition": "hanging",
+      "equipment": ["pull-up bar"],
+      "dosing": "3×6–10 with a 2 s hold at the top, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "passive dead hang, arms straight, shoulders elevated",
+      "endPosition": "shoulders depressed away from the ears, chest slightly lifted, elbows still straight",
+      "rom": "scapular depression and downward rotation only; no elbow flexion",
+      "cameraView": "posterior",
+      "movementSlugs": ["scapular-depression", "scapular-downward-rotation", "scapular-retraction"],
+      "muscleRoles": [
+        { "muscleSlug": "trapezius-lower", "role": "primary" },
+        { "muscleSlug": "latissimus-dorsi", "role": "secondary" },
+        { "muscleSlug": "rhomboid-major", "role": "secondary" },
+        { "muscleSlug": "teres-major", "role": "secondary" },
+        { "muscleSlug": "trapezius-middle", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "flexor-digitorum-profundus", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["improve-pull-up", "shoulder-injury-prevention"],
+      "cues": [
+        { "text": "Pull your shoulders down away from your ears while your arms stay locked", "cueType": "verbal", "focus": "external" },
+        { "text": "Think of making yourself taller through the chest, not shorter through the arms", "cueType": "verbal", "focus": "imagery" }
+      ]
+    },
+    {
+      "slug": "band-assisted-pull-up",
+      "name": "Band-Assisted Pull-Up",
+      "description": "Full-range pull-up performed with a resistance band looped over the bar and under the knee or foot, offsetting a portion of bodyweight — most at the bottom of the range, least near the top.",
+      "rationale": "Preserves the full pulling arc while reducing load, so the pattern is trained rather than approximated. Band assistance is largest exactly where most athletes fail, which is also its main limitation.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": "hanging",
+      "equipment": ["pull-up bar", "resistance band"],
+      "dosing": "3×5–8, 2–3×/week, reducing band thickness over time (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "full hang with one knee or foot in the band loop, arms straight, shoulders depressed",
+      "endPosition": "chin clear of the bar, elbows at the sides, chest toward the bar",
+      "rom": "full hang to chin-over-bar",
+      "cameraView": "anterior",
+      "movementSlugs": ["shoulder-extension", "shoulder-adduction", "elbow-flexion", "scapular-depression", "scapular-downward-rotation"],
+      "muscleRoles": [
+        { "muscleSlug": "latissimus-dorsi", "role": "primary" },
+        { "muscleSlug": "biceps-brachii", "role": "secondary" },
+        { "muscleSlug": "brachialis", "role": "secondary" },
+        { "muscleSlug": "brachioradialis", "role": "secondary" },
+        { "muscleSlug": "teres-major", "role": "secondary" },
+        { "muscleSlug": "trapezius-lower", "role": "secondary" },
+        { "muscleSlug": "rhomboid-major", "role": "secondary" },
+        { "muscleSlug": "posterior-deltoid", "role": "synergist" },
+        { "muscleSlug": "flexor-digitorum-profundus", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["improve-pull-up"],
+      "cues": [
+        { "text": "Start each rep by setting the shoulders down, then pull", "cueType": "verbal", "focus": "external" },
+        { "text": "Drive your elbows toward your back pockets", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "negative-pull-up",
+      "name": "Negative Pull-Up",
+      "description": "Eccentric-only pull-up: the athlete steps or jumps to the top position with the chin over the bar, then lowers under control to a full hang over three to five seconds.",
+      "rationale": "Eccentric capacity exceeds concentric capacity, so a negative can be loaded at full bodyweight before a full pull-up is possible. The controlled lower is also where scapular control tends to break down first.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": "hanging",
+      "equipment": ["pull-up bar", "step"],
+      "dosing": "3–5 sets × 3–5 lowers of 3–5 s, 2×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "top of the pull-up, chin over the bar, reached by stepping or jumping up",
+      "endPosition": "full hang, arms straight, shoulders under control rather than dropped",
+      "rom": "chin-over-bar to full hang, eccentric only",
+      "cameraView": "anterior",
+      "movementSlugs": ["shoulder-flexion", "elbow-extension", "scapular-elevation", "scapular-upward-rotation"],
+      "muscleRoles": [
+        { "muscleSlug": "latissimus-dorsi", "role": "primary", "notes": "Working eccentrically to control shoulder flexion." },
+        { "muscleSlug": "biceps-brachii", "role": "secondary" },
+        { "muscleSlug": "brachialis", "role": "secondary" },
+        { "muscleSlug": "teres-major", "role": "secondary" },
+        { "muscleSlug": "trapezius-lower", "role": "secondary" },
+        { "muscleSlug": "rhomboid-major", "role": "secondary" },
+        { "muscleSlug": "flexor-digitorum-profundus", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["improve-pull-up"],
+      "cues": [
+        { "text": "Count five seconds on the way down — the last inch is the one that matters", "cueType": "verbal", "focus": "external" },
+        { "text": "Arrive at the bottom, don't fall into it", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "parallel-bar-support-hold",
+      "name": "Parallel Bar Support Hold",
+      "description": "Isometric hold at the top of a dip: arms locked, shoulders actively depressed away from the ears, trunk vertical and braced, feet clear of the floor.",
+      "rationale": "Establishes the locked-out support position before any dipping range is added. Shoulder shrugging or a collapsed chest here reliably predicts anterior shoulder pain once the descent is introduced.",
+      "category": "motor-control",
+      "difficulty": "beginner-intermediate",
+      "bodyPosition": null,
+      "equipment": ["parallel bars or dip station"],
+      "dosing": "3 holds × 20–40 s, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "supported on straight arms between parallel bars, hands at the hips, feet clear of the floor",
+      "endPosition": "position held; shoulders depressed, elbows locked, ribs down, legs still",
+      "rom": "static hold at full elbow extension",
+      "cameraView": "lateral",
+      "movementSlugs": ["scapular-depression", "elbow-extension"],
+      "muscleRoles": [
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "trapezius-lower", "role": "primary", "notes": "Holds the scapulae depressed; failure here is what produces the shrugged support position." },
+        { "muscleSlug": "pectoralis-major", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "latissimus-dorsi", "role": "stabilizer" },
+        { "muscleSlug": "rectus-abdominis", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["shoulder-injury-prevention"],
+      "cues": [
+        { "text": "Push the bars down and away so your shoulders sit below your ears", "cueType": "verbal", "focus": "external" },
+        { "text": "Keep your ribs stacked over your hips rather than swinging", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "negative-dip",
+      "name": "Negative Dip",
+      "description": "Eccentric-only dip: from a locked-out support hold, the body is lowered under control until the upper arms are roughly parallel to the bars, then the athlete steps off and resets to the top.",
+      "rationale": "Adds range to the support hold without requiring the concentric strength to return. Also the safest place to find an individual's pain-free depth before the full dip is attempted.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": null,
+      "equipment": ["parallel bars or dip station"],
+      "dosing": "3–4 sets × 3–5 lowers of 3–5 s, 2×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "locked-out support hold between parallel bars, shoulders depressed",
+      "endPosition": "upper arms roughly parallel to the bars, chest inclined slightly forward, shoulders still set",
+      "rom": "full elbow extension to approximately 90° elbow flexion, eccentric only",
+      "cameraView": "lateral",
+      "movementSlugs": ["shoulder-extension", "elbow-flexion", "scapular-depression"],
+      "muscleRoles": [
+        { "muscleSlug": "pectoralis-major", "role": "primary", "notes": "Working eccentrically; the sternal fibres load progressively as the shoulder extends." },
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "anterior-deltoid", "role": "secondary" },
+        { "muscleSlug": "trapezius-lower", "role": "stabilizer" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "rhomboid-major", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["shoulder-injury-prevention"],
+      "cues": [
+        { "text": "Lower only as far as you can keep the shoulders down — depth is earned, not forced", "cueType": "verbal", "focus": "external" },
+        { "text": "Lean the chest slightly forward as you descend so you stay over the bars", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "single-leg-glute-bridge",
+      "name": "Single-Leg Glute Bridge",
+      "description": "Bridge performed with one leg extended, so a single hip extends against the full weight of the pelvis and trunk while the pelvis is held level in the frontal plane.",
+      "rationale": "Roughly doubles the hip-extension demand of a two-leg bridge without adding external load, and introduces a frontal-plane pelvic-control requirement that the bilateral version does not test.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": "supine",
+      "equipment": ["exercise mat (optional)"],
+      "dosing": "3×8–12 per side, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "supine, one knee bent with the foot flat, the other leg extended in line with the thigh, arms at the sides",
+      "endPosition": "hips lifted so shoulders, hips and the stance knee form a line, pelvis level side to side",
+      "rom": "full available hip extension from the floor",
+      "cameraView": "lateral",
+      "movementSlugs": ["hip-extension"],
+      "muscleRoles": [
+        { "muscleSlug": "gluteus-maximus", "role": "primary" },
+        { "muscleSlug": "hamstrings", "role": "secondary", "notes": "Cramping here usually means the glutes are underworking, not that the hamstrings are weak." },
+        { "muscleSlug": "gluteus-medius", "role": "stabilizer", "notes": "Prevents pelvic drop on the unsupported side." },
+        { "muscleSlug": "quadratus-lumborum", "role": "stabilizer" },
+        { "muscleSlug": "erector-spinae", "role": "stabilizer" },
+        { "muscleSlug": "transversus-abdominis", "role": "stabilizer" }
+      ],
+      "functionalTaskSlugs": ["squat-to-stand", "walking", "stair-climbing"],
+      "goalSlugs": ["improve-single-leg-strength", "improve-posterior-chain"],
+      "cues": [
+        { "text": "Keep your hip bones level as you lift — imagine balancing a glass of water on your pelvis", "cueType": "verbal", "focus": "imagery" },
+        { "text": "Drive through the heel of the standing foot", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "assisted-pistol-squat",
+      "name": "Assisted Pistol Squat",
+      "description": "Single-leg squat to full depth with the non-stance leg held forward, using a light held counterweight or a fingertip on a support to offset the balance and hip-flexor demand.",
+      "rationale": "Separates the strength requirement of a pistol squat from its balance and hip-flexor requirements, which usually fail first. A held counterweight shifts the centre of mass forward and makes full depth reachable without changing the pattern.",
+      "category": "strength",
+      "difficulty": "intermediate",
+      "bodyPosition": "standing",
+      "equipment": ["dumbbell (light counterweight)", "support surface or dowel (optional balance assist)"],
+      "dosing": "3×5–8 per side, 2×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "standing on one leg, opposite leg extended forward, a light weight held at arm's length in front of the chest",
+      "endPosition": "full-depth single-leg squat, free leg clear of the floor, heel of the stance foot down",
+      "rom": "full available knee and hip flexion on the stance side; requires substantial ankle dorsiflexion",
+      "cameraView": "lateral",
+      "movementSlugs": ["knee-flexion", "knee-extension", "hip-flexion", "hip-extension", "ankle-dorsiflexion"],
+      "muscleRoles": [
+        { "muscleSlug": "quadriceps", "role": "primary" },
+        { "muscleSlug": "gluteus-maximus", "role": "primary" },
+        { "muscleSlug": "hamstrings", "role": "secondary" },
+        { "muscleSlug": "iliopsoas", "role": "secondary", "notes": "Holds the free leg horizontal; endurance here is often the true limiter, not stance-leg strength." },
+        { "muscleSlug": "gluteus-medius", "role": "stabilizer" },
+        { "muscleSlug": "soleus", "role": "stabilizer" },
+        { "muscleSlug": "tibialis-anterior", "role": "stabilizer" }
+      ],
+      "functionalTaskSlugs": ["squat-to-stand", "single-leg-balance", "stair-climbing"],
+      "goalSlugs": ["improve-single-leg-strength", "improve-squat"],
+      "cues": [
+        { "text": "Reach the weight forward as you sit back — it works as a counterbalance", "cueType": "verbal", "focus": "external" },
+        { "text": "Keep the whole stance foot on the floor; if the heel lifts, ankle mobility is the limiter", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "foot-supported-l-sit",
+      "name": "Foot-Supported L-Sit",
+      "description": "L-sit entry on parallettes or blocks with the heels resting on the floor, so the shoulders and trunk carry the support demand while the legs remain partly unloaded.",
+      "rationale": "Isolates the scapular depression and elbow lockout of the L-sit before any hip-flexor load is added. Most athletes fail the full hold at the shoulders, not the abdominals, and this rung addresses that first.",
+      "category": "motor-control",
+      "difficulty": "beginner-intermediate",
+      "bodyPosition": null,
+      "equipment": ["parallettes or yoga blocks"],
+      "dosing": "3 holds × 20–30 s, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "seated between parallettes, hands on the handles, legs straight ahead with the heels on the floor",
+      "endPosition": "hips lifted clear of the floor, arms locked, shoulders depressed, heels still in light contact",
+      "rom": "static hold; hips flexed to approximately 90°",
+      "cameraView": "lateral",
+      "movementSlugs": ["scapular-depression", "elbow-extension", "hip-flexion"],
+      "muscleRoles": [
+        { "muscleSlug": "trapezius-lower", "role": "primary" },
+        { "muscleSlug": "triceps-brachii", "role": "primary" },
+        { "muscleSlug": "rectus-abdominis", "role": "secondary" },
+        { "muscleSlug": "iliopsoas", "role": "secondary" },
+        { "muscleSlug": "latissimus-dorsi", "role": "stabilizer" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "pectoralis-major", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["improve-core-strength"],
+      "cues": [
+        { "text": "Push the handles down until your shoulders drop below your ears", "cueType": "verbal", "focus": "external" },
+        { "text": "Keep your elbows locked — bent arms mean this rung is still too hard", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "tuck-l-sit",
+      "name": "Tuck L-Sit",
+      "description": "Support hold with the knees drawn toward the chest and the feet clear of the floor, shortening the lower-limb lever so the hip flexors and abdominals hold a compact mass.",
+      "rationale": "The classic leverage regression of the L-sit: identical shoulder and trunk demand, far shorter resistance arm at the hip. Time under tension can be built here before the legs are extended.",
+      "category": "motor-control",
+      "difficulty": "intermediate",
+      "bodyPosition": null,
+      "equipment": ["parallettes or yoga blocks"],
+      "dosing": "3 holds × 15–30 s, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "supported on straight arms between parallettes, shoulders depressed, knees drawn to the chest",
+      "endPosition": "position held; feet clear of the floor, knees at chest height, arms locked",
+      "rom": "static hold; hips and knees flexed",
+      "cameraView": "lateral",
+      "movementSlugs": ["scapular-depression", "elbow-extension", "hip-flexion", "knee-flexion"],
+      "muscleRoles": [
+        { "muscleSlug": "rectus-abdominis", "role": "primary" },
+        { "muscleSlug": "iliopsoas", "role": "primary" },
+        { "muscleSlug": "trapezius-lower", "role": "secondary" },
+        { "muscleSlug": "triceps-brachii", "role": "secondary" },
+        { "muscleSlug": "external-oblique", "role": "stabilizer" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "latissimus-dorsi", "role": "stabilizer" }
+      ],
+      "goalSlugs": ["improve-core-strength"],
+      "cues": [
+        { "text": "Round your lower back slightly and pull the knees up, rather than leaning back", "cueType": "verbal", "focus": "external" },
+        { "text": "Shoulders stay down the whole time — if they shrug, the hold is over", "cueType": "verbal", "focus": "external" }
+      ]
+    },
+    {
+      "slug": "l-sit",
+      "name": "L-Sit",
+      "description": "Support hold on parallettes or the floor with the legs straight and horizontal, hips flexed to about 90° and knees extended — the full-length lower-limb lever held against gravity.",
+      "rationale": "A combined scapular-depression, elbow-extension and hip-flexion isometric held at a long lever. Widely used as a bodyweight benchmark for straight-arm support strength and compression.",
+      "category": "strength",
+      "difficulty": "advanced",
+      "bodyPosition": null,
+      "equipment": ["parallettes or yoga blocks"],
+      "dosing": "4–6 holds × 5–15 s, 2–3×/week (consensus programming, not RCT-derived)",
+      "evidenceLevel": "expert-opinion",
+      "startPosition": "supported on straight arms between parallettes, shoulders depressed, legs together and straight",
+      "endPosition": "position held; legs horizontal, knees locked, toes pointed, hips clear of the floor",
+      "rom": "static hold; approximately 90° hip flexion with full knee extension",
+      "cameraView": "lateral",
+      "movementSlugs": ["scapular-depression", "elbow-extension", "hip-flexion", "knee-extension"],
+      "muscleRoles": [
+        { "muscleSlug": "iliopsoas", "role": "primary" },
+        { "muscleSlug": "rectus-abdominis", "role": "primary" },
+        { "muscleSlug": "rectus-femoris", "role": "secondary", "notes": "Contributes to hip flexion while the knee is held extended." },
+        { "muscleSlug": "quadriceps", "role": "secondary", "notes": "Holds knee extension against the weight of the shank." },
+        { "muscleSlug": "trapezius-lower", "role": "secondary" },
+        { "muscleSlug": "triceps-brachii", "role": "secondary" },
+        { "muscleSlug": "serratus-anterior", "role": "stabilizer" },
+        { "muscleSlug": "latissimus-dorsi", "role": "stabilizer" },
+        { "muscleSlug": "hamstrings", "role": "lengthening", "notes": "Straight-knee hip flexion loads the hamstrings at length; limited extensibility, not abdominal strength, is often what caps the hold." }
+      ],
+      "goalSlugs": ["improve-core-strength", "improve-hamstring-flexibility"],
+      "cues": [
+        { "text": "Point your toes and squeeze your knees straight", "cueType": "verbal", "focus": "external" },
+        { "text": "Push down through the handles until your hips clear the floor, then lift the legs", "cueType": "verbal", "focus": "external" }
+      ]
+    }
+  ],
+
+  "edges": [
+    {
+      "ladder": "horizontal-push",
+      "from": "wall-push-up",
+      "to": "countertop-incline-push-up",
+      "mechanism": "leverage",
+      "gate": "3×12 wall push-ups with the trunk rigid and the scapulae protracting at lockout",
+      "regressWhen": "Shoulder or wrist pain above 3/10, or the hips break the shoulder-to-heel line",
+      "note": "Lowering the hand height increases the proportion of bodyweight the arms must support; the movement itself is unchanged."
+    },
+    {
+      "ladder": "horizontal-push",
+      "from": "countertop-incline-push-up",
+      "to": "knee-push-up",
+      "mechanism": "leverage",
+      "gate": "3×12 at counter height with a 2 s lowering phase",
+      "regressWhen": "Hips sag, elbows flare past 60°, or the athlete cannot complete 8 reps"
+    },
+    {
+      "ladder": "horizontal-push",
+      "from": "knee-push-up",
+      "to": "push-up",
+      "mechanism": "leverage",
+      "gate": "3×10 knee push-ups holding a straight shoulder-to-knee line throughout",
+      "regressWhen": "The hips drop or pike within the first three reps",
+      "note": "Moving the ground-contact point from knees to toes lengthens the resistance arm; roughly 50% to 65% of bodyweight at the hands."
+    },
+    {
+      "ladder": "horizontal-push",
+      "from": "push-up",
+      "to": "diamond-push-up",
+      "mechanism": "leverage",
+      "gate": "3×10 full push-ups with the chest to a fist's height and no hip sag",
+      "regressWhen": "Wrist or medial elbow pain, or the elbows flare away from the ribs"
+    },
+    {
+      "ladder": "horizontal-push",
+      "from": "push-up",
+      "to": "archer-push-up",
+      "mechanism": "unilateral",
+      "gate": "3×12 full push-ups with a controlled 2 s eccentric",
+      "regressWhen": "The trunk rotates toward the trailing arm or the working shoulder cannot reach full depth"
+    },
+
+    {
+      "ladder": "vertical-push",
+      "from": "chair-triceps-dip",
+      "to": "parallel-bar-support-hold",
+      "mechanism": "stability",
+      "gate": "3×12 chair dips that are pain-free at the front of the shoulder",
+      "regressWhen": "Anterior shoulder pain, or the shoulders shrug toward the ears in support"
+    },
+    {
+      "ladder": "vertical-push",
+      "from": "parallel-bar-support-hold",
+      "to": "negative-dip",
+      "mechanism": "contraction_type",
+      "gate": "3 holds × 30 s with the shoulders actively depressed and the elbows locked",
+      "regressWhen": "The elbows unlock, the shoulders shrug, or the hold falls below 15 s"
+    },
+    {
+      "ladder": "vertical-push",
+      "from": "negative-dip",
+      "to": "parallel-bar-dip",
+      "mechanism": "contraction_type",
+      "gate": "3×5 lowers of 3–5 s to upper-arm-parallel with no shoulder shrug",
+      "regressWhen": "The descent becomes uncontrolled, or depth cannot be reached without anterior shoulder pain"
+    },
+
+    {
+      "ladder": "horizontal-pull",
+      "from": "doorway-isometric-row",
+      "to": "towel-row",
+      "mechanism": "contraction_type",
+      "gate": "3 holds × 20 s with scapular retraction maintained and no upper-trap dominance",
+      "regressWhen": "The shoulders rise toward the ears or the hold cannot be sustained for 10 s"
+    },
+    {
+      "ladder": "horizontal-pull",
+      "from": "towel-row",
+      "to": "inverted-row",
+      "mechanism": "leverage",
+      "gate": "3×12 towel rows through full elbow flexion with the scapulae retracting first",
+      "regressWhen": "The hips drop, or the pull is initiated at the elbows rather than the scapulae"
+    },
+
+    {
+      "ladder": "vertical-pull",
+      "from": "dead-hang",
+      "to": "scapular-pull-up",
+      "mechanism": "range",
+      "gate": "3 hangs × 30 s with a controlled shoulder girdle and no grip failure",
+      "regressWhen": "Grip fails before 15 s, or shoulder pain occurs in the hang"
+    },
+    {
+      "ladder": "vertical-pull",
+      "from": "scapular-pull-up",
+      "to": "band-assisted-pull-up",
+      "mechanism": "range",
+      "gate": "3×8 scapular pull-ups with visible, controlled scapular depression",
+      "regressWhen": "The elbows bend to produce the lift, or the shoulders cannot depress under load",
+      "note": "Adds the full elbow-flexion arc on top of the scapular arc; the band offsets bodyweight so the pattern, not the load, is what is trained."
+    },
+    {
+      "ladder": "vertical-pull",
+      "from": "band-assisted-pull-up",
+      "to": "negative-pull-up",
+      "mechanism": "contraction_type",
+      "gate": "3×8 band-assisted pull-ups with the chin clearing the bar on every rep",
+      "regressWhen": "Chin no longer clears the bar, or the athlete kips to complete reps"
+    },
+    {
+      "ladder": "vertical-pull",
+      "from": "negative-pull-up",
+      "to": "chin-up",
+      "mechanism": "contraction_type",
+      "gate": "3×5 lowers of 5 s from chin-over-bar to a full hang",
+      "regressWhen": "The lower takes under 2 s, or the shoulders drop uncontrolled at the bottom"
+    },
+    {
+      "ladder": "vertical-pull",
+      "from": "chin-up",
+      "to": "pull-up",
+      "mechanism": "leverage",
+      "gate": "3×5 chin-ups through full range without kipping",
+      "regressWhen": "Range shortens or the athlete kips",
+      "note": "Pronating the grip reduces the mechanical advantage of the elbow flexors and shifts demand toward the latissimus dorsi."
+    },
+
+    {
+      "ladder": "squat",
+      "from": "countertop-supported-squat",
+      "to": "sit-to-stand",
+      "mechanism": "stability",
+      "gate": "3×12 supported squats using fingertip contact only",
+      "regressWhen": "Knee pain above 3/10, or the athlete needs to pull on the support to rise"
+    },
+    {
+      "ladder": "squat",
+      "from": "sit-to-stand",
+      "to": "squat",
+      "mechanism": "range",
+      "gate": "5×5 sit-to-stands from a standard chair without hand push-off",
+      "regressWhen": "The athlete drops onto the seat rather than controlling the descent"
+    },
+    {
+      "ladder": "squat",
+      "from": "squat",
+      "to": "jump-squat",
+      "mechanism": "speed",
+      "gate": "3×15 bodyweight squats to full depth with the heels flat",
+      "regressWhen": "Landing is stiff or noisy, or knee pain occurs on landing"
+    },
+    {
+      "ladder": "squat",
+      "from": "squat",
+      "to": "split-squat-bulgarian",
+      "mechanism": "unilateral",
+      "gate": "3×15 bodyweight squats to full depth with a neutral spine",
+      "regressWhen": "The knee collapses inward, or depth is lost across a set"
+    },
+    {
+      "ladder": "squat",
+      "from": "split-squat-bulgarian",
+      "to": "single-leg-sit-to-stand",
+      "mechanism": "unilateral",
+      "gate": "3×10 per side with the front knee tracking over the mid-foot",
+      "regressWhen": "The athlete cannot balance without hand support, or the trunk pitches forward to complete reps"
+    },
+    {
+      "ladder": "squat",
+      "from": "single-leg-sit-to-stand",
+      "to": "assisted-pistol-squat",
+      "mechanism": "range",
+      "gate": "3×8 per side from a chair-height seat without hand support",
+      "regressWhen": "The heel lifts, or the athlete cannot reach the seat under control"
+    },
+    {
+      "ladder": "squat",
+      "from": "assisted-pistol-squat",
+      "to": "single-leg-squat-pistol",
+      "mechanism": "stability",
+      "gate": "3×5 per side with only a light counterweight and no external support",
+      "regressWhen": "Balance is lost, or full depth requires pulling on a support"
+    },
+
+    {
+      "ladder": "hinge",
+      "from": "bridge",
+      "to": "single-leg-glute-bridge",
+      "mechanism": "unilateral",
+      "gate": "3×15 bridges with a level pelvis and no hamstring cramping",
+      "regressWhen": "The pelvis drops on the unsupported side, or the hamstrings cramp"
+    },
+    {
+      "ladder": "hinge",
+      "from": "single-leg-glute-bridge",
+      "to": "hip-thrust",
+      "mechanism": "range",
+      "gate": "3×10 per side with less than a hand's width of pelvic drop",
+      "regressWhen": "Lumbar extension replaces hip extension at the top"
+    },
+    {
+      "ladder": "hinge",
+      "from": "bodyweight-hip-hinge",
+      "to": "romanian-deadlift",
+      "mechanism": "added_load",
+      "gate": "3×10 hinges to mid-shin with a neutral lumbar spine held throughout",
+      "regressWhen": "The lumbar spine flexes, or the movement becomes a squat rather than a hinge"
+    },
+    {
+      "ladder": "hinge",
+      "from": "romanian-deadlift",
+      "to": "nordic-hamstring-curl",
+      "mechanism": "contraction_type",
+      "gate": "3×8 RDLs with a controlled eccentric and a neutral spine at end range",
+      "regressWhen": "The athlete cannot control the descent past 30° of knee flexion, or hamstring pain occurs",
+      "note": "Shifts the posterior-chain demand from hip extension to supramaximal eccentric knee flexion — a different mechanism, not simply more load."
+    },
+
+    {
+      "ladder": "core",
+      "from": "front-plank",
+      "to": "hollow-body-hold",
+      "mechanism": "leverage",
+      "gate": "3 holds × 45 s with a level pelvis and no lumbar extension",
+      "regressWhen": "The low back arches off the floor, or the hold falls below 15 s"
+    },
+    {
+      "ladder": "core",
+      "from": "hollow-body-hold",
+      "to": "hanging-leg-raise",
+      "mechanism": "range",
+      "gate": "3 holds × 30 s with the low back flat to the floor",
+      "regressWhen": "The athlete swings, or the low back leaves the floor in the hold"
+    },
+    {
+      "ladder": "core",
+      "from": "hollow-body-hold",
+      "to": "foot-supported-l-sit",
+      "mechanism": "leverage",
+      "gate": "3 holds × 30 s with the low back flat to the floor",
+      "regressWhen": "The shoulders shrug, or the elbows cannot stay locked"
+    },
+    {
+      "ladder": "core",
+      "from": "foot-supported-l-sit",
+      "to": "tuck-l-sit",
+      "mechanism": "leverage",
+      "gate": "3 holds × 20 s with the shoulders depressed and the elbows locked",
+      "regressWhen": "The feet cannot leave the floor without shrugging"
+    },
+    {
+      "ladder": "core",
+      "from": "tuck-l-sit",
+      "to": "l-sit",
+      "mechanism": "leverage",
+      "gate": "3 holds × 15 s with the hips clear of the floor and the knees at chest height",
+      "regressWhen": "The knees cannot stay extended, or hamstring tightness prevents horizontal legs",
+      "note": "Extending the knees roughly doubles the resistance arm at the hip; hamstring extensibility, not abdominal strength, is often the limiter."
+    }
+  ]
+}

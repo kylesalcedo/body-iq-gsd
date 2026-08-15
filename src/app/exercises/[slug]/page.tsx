@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getExercise } from "@/lib/queries";
 import { StatusBadge, ConfidenceBadge, RoleBadge } from "@/components/badges";
 import { EntityLink, PageHeader, Card, SectionTitle, EmptyState } from "@/components/ui-helpers";
+import { fhirHref, IS_STATIC } from "@/lib/static-mode";
 
 function CategoryBadge({ category }: { category: string | null }) {
   if (!category) return null;
@@ -133,14 +134,23 @@ export default async function ExerciseDetailPage(props: { params: Promise<{ slug
           <span aria-hidden>◇</span> Evidence chain
         </Link>
         <a
-          href={`/api/exercises/${exercise.slug}/fhir`}
+          href={fhirHref(exercise.slug)}
           target="_blank"
           rel="noopener noreferrer"
+          title={
+            IS_STATIC
+              ? "FHIR R4 ActivityDefinition — a build-time snapshot served as a static file in this demo"
+              : "FHIR R4 ActivityDefinition — generated live from the database"
+          }
           className="inline-flex items-center gap-1.5 rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 hover:border-indigo-300 hover:bg-indigo-100 transition-colors"
         >
           <span aria-hidden>⚕</span> View FHIR resource
+          {IS_STATIC && <span className="font-normal text-indigo-500">(snapshot)</span>}
         </a>
-        <span className="text-xs text-gray-400">movements → muscles → citations · and the interoperable FHIR form</span>
+        <span className="text-xs text-gray-400">
+          movements → muscles → citations · and the interoperable FHIR form
+          {IS_STATIC && " · served as a static snapshot here, not the live API route"}
+        </span>
       </div>
       {/* Why include it — clinical rationale */}
       {(exercise as any).rationale && (

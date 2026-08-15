@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { PageHeader, Card, SectionTitle, UI } from "@/components/ui-helpers";
+import { fhirHref, IS_STATIC } from "@/lib/static-mode";
 
 export const metadata = { title: "Data Model — Body IQ" };
 
@@ -202,10 +203,30 @@ export default async function SchemaPage() {
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="rounded-md border p-4" style={{ borderColor: UI.line, background: "#f7f7f7" }}>
             <div className="text-sm font-semibold" style={{ color: UI.ink }}>FHIR R4 ActivityDefinition</div>
-            <p className="mt-1 text-xs" style={{ color: UI.sub }}>Every exercise renders as a standard FHIR resource, live. Portable into any FHIR-capable EHR or care-plan engine.</p>
+            <p className="mt-1 text-xs" style={{ color: UI.sub }}>
+              Every exercise renders as a standard FHIR resource
+              {IS_STATIC ? "" : ", live"}. Portable into any FHIR-capable EHR or care-plan engine.
+            </p>
             <div className="mt-2">
-              <ProseLink href="/api/exercises/squat/fhir" target="_blank">View example (squat) →</ProseLink>
+              {/* Raw anchor, not next/link: in the static demo this points at a
+                  .json file rather than a route. fhirHref applies basePath. */}
+              <a
+                href={fhirHref("squat")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium underline underline-offset-2"
+                style={{ color: UI.ink }}
+              >
+                View example (squat) →
+              </a>
             </div>
+            {IS_STATIC && (
+              <p className="mt-2 text-xs" style={{ color: UI.sub }}>
+                In this static demo the resources are build-time snapshots under{" "}
+                <span className="font-mono">/fhir/&lt;slug&gt;.json</span> — the live API route needs the
+                full app.
+              </p>
+            )}
           </div>
           <div className="rounded-md border p-4" style={{ borderColor: UI.line }}>
             <div className="text-sm font-semibold" style={{ color: UI.ink }}>EntityCode — terminology mapping</div>

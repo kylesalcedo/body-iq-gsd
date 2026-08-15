@@ -35,6 +35,10 @@ export function DemoBanner() {
               The <strong>JSON API</strong> and the <strong>API &ldquo;Try it&rdquo; playground</strong> aren&rsquo;t included.
             </li>
             <li>
+              <strong>FHIR resources</strong> are build-time snapshots served as static files, not the
+              live <span className="font-mono text-xs">/api/exercises/&lt;slug&gt;/fhir</span> route.
+            </li>
+            <li>
               The data is a <strong>snapshot</strong> — it refreshes only when the demo is rebuilt, not live from the database.
             </li>
           </ul>

@@ -55,6 +55,14 @@ jobs:
       - run: pnpm db:push
       - run: pnpm db:seed
 
+      # The live FHIR route (/api/exercises/[slug]/fhir) is removed below with
+      # the rest of the API, so emit the same resources as static files first.
+      # `public/` is copied into `out/` by the export build, making them
+      # available at /fhir/<slug>.json — where src/lib/static-mode.ts points
+      # the "View FHIR resource" links in static mode.
+      - name: Export FHIR resources as static files
+        run: pnpm export:fhir public/fhir
+
       # API route handlers can't be statically exported — the static demo has
       # no server, so drop them before building. (CI checkout is disposable.)
       - name: Remove server-only code for static export

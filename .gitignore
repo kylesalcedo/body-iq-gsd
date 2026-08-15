@@ -81,3 +81,7 @@ exports/
 
 # Static export output (GitHub Pages)
 out/
+
+# FHIR snapshots generated into public/ during the Pages build
+# (`pnpm export:fhir public/fhir`) — build artifact, not source.
+public/fhir/
